@@ -1,0 +1,17 @@
+/*
+ * Fahrzeug.h
+ *
+ *  Created on: 21.10.2024
+ *      Author: vogel
+ */
+
+#ifndef FAHRZEUG_H_
+#define FAHRZEUG_H_
+
+class Fahrzeug {
+public:
+	Fahrzeug();
+	virtual ~Fahrzeug();
+};
+
+#endif /* FAHRZEUG_H_ */

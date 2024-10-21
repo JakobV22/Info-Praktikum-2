@@ -1,0 +1,21 @@
+/*
+ * Fahrzeug.h
+ *
+ *  Created on: 21.10.2024
+ *      Author: vogel
+ */
+#include <string>
+
+#ifndef FAHRZEUG_H_
+#define FAHRZEUG_H_
+
+class Fahrzeug {
+private:
+	std::string p_sName;
+	int p_iID;
+public:
+	Fahrzeug();
+	virtual ~Fahrzeug();
+};
+
+#endif /* FAHRZEUG_H_ */

@@ -1,0 +1,20 @@
+/*
+ * main.cpp
+ *
+ *  Created on: 22.10.2024
+ *      Author: vogel
+ */
+#include "Fahrzeug.h"
+
+void vAufgabe_1(){
+	Fahrzeug fF1;
+
+}
+
+
+int main() {
+	vAufgabe_1();
+}
+
+
+

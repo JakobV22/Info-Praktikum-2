@@ -1,0 +1,291 @@
+00:02:55 **** Rebuild of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -o Aufgabenblock_1.exe Fahrzeug.o 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o):crt0_c.c:(.text+0x46): undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+00:03:01 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -o Aufgabenblock_1.exe Fahrzeug.o 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o):crt0_c.c:(.text+0x46): undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+00:03:03 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -o Aufgabenblock_1.exe Fahrzeug.o 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o):crt0_c.c:(.text+0x46): undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+00:03:04 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -o Aufgabenblock_1.exe Fahrzeug.o 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o):crt0_c.c:(.text+0x46): undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+00:03:05 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -o Aufgabenblock_1.exe Fahrzeug.o 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o):crt0_c.c:(.text+0x46): undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+00:03:06 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -o Aufgabenblock_1.exe Fahrzeug.o 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o):crt0_c.c:(.text+0x46): undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+00:03:06 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -o Aufgabenblock_1.exe Fahrzeug.o 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o):crt0_c.c:(.text+0x46): undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+00:03:07 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -o Aufgabenblock_1.exe Fahrzeug.o 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o):crt0_c.c:(.text+0x46): undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+00:03:08 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -o Aufgabenblock_1.exe Fahrzeug.o 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o):crt0_c.c:(.text+0x46): undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+00:03:08 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -o Aufgabenblock_1.exe Fahrzeug.o 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o):crt0_c.c:(.text+0x46): undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+00:03:09 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -o Aufgabenblock_1.exe Fahrzeug.o 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o):crt0_c.c:(.text+0x46): undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+00:17:59 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -o Aufgabenblock_1.exe Fahrzeug.o 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o):crt0_c.c:(.text+0x46): undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+00:19:14 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Aufgabenblock_1.exe Fahrzeug.o main.o 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o):crt0_c.c:(.text+0x46): undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+00:19:30 **** Building Selected Files of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+00:22:44 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+In file included from ..\Fahrzeug.cpp:8:
+..\Fahrzeug.h:17:20: error: ISO C++ forbids in-class initialization of non-const static member 'Fahrzeug::p_iMaxID'
+   17 |         static int p_iMaxID = 0;
+      |                    ^~~~~~~~
+00:25:09 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+In file included from ..\Fahrzeug.cpp:8:
+..\Fahrzeug.h:17:20: error: ISO C++ forbids in-class initialization of non-const static member 'Fahrzeug::p_iMaxID'
+   17 |         static int p_iMaxID = 0;
+      |                    ^~~~~~~~
+00:25:16 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp: In constructor 'Fahrzeug::Fahrzeug(std::string)':
+..\Fahrzeug.cpp:12:14: error: 'cout' is not a member of 'std'
+   12 |         std::cout<< "Objekt wurde mit Nichtstandardkonstruktor erstellt: " << p_sName << p_iID << std::endl;
+      |              ^~~~
+..\Fahrzeug.cpp:9:1: note: 'std::cout' is defined in header '<iostream>'; did you forget to '#include <iostream>'?
+    8 | #include "Fahrzeug.h"
+  +++ |+#include <iostream>
+    9 | 
+..\Fahrzeug.cpp:12:104: error: 'endl' is not a member of 'std'
+   12 |         std::cout<< "Objekt wurde mit Nichtstandardkonstruktor erstellt: " << p_sName << p_iID << std::endl;
+      |                                                                                                        ^~~~
+..\Fahrzeug.cpp:9:1: note: 'std::endl' is defined in header '<ostream>'; did you forget to '#include <ostream>'?
+    8 | #include "Fahrzeug.h"
+  +++ |+#include <ostream>
+    9 | 
+00:25:46 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp: In constructor 'Fahrzeug::Fahrzeug(std::string)':
+..\Fahrzeug.cpp:12:14: error: 'cout' is not a member of 'std'
+   12 |         std::cout<< "Objekt wurde mit Nichtstandardkonstruktor erstellt: " << p_sName << p_iID << std::endl;
+      |              ^~~~
+..\Fahrzeug.cpp:9:1: note: 'std::cout' is defined in header '<iostream>'; did you forget to '#include <iostream>'?
+    8 | #include "Fahrzeug.h"
+  +++ |+#include <iostream>
+    9 | 
+..\Fahrzeug.cpp:12:104: error: 'endl' is not a member of 'std'
+   12 |         std::cout<< "Objekt wurde mit Nichtstandardkonstruktor erstellt: " << p_sName << p_iID << std::endl;
+      |                                                                                                        ^~~~
+..\Fahrzeug.cpp:9:1: note: 'std::endl' is defined in header '<ostream>'; did you forget to '#include <ostream>'?
+    8 | #include "Fahrzeug.h"
+  +++ |+#include <ostream>
+    9 | 
+00:25:51 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -o Aufgabenblock_1.exe Fahrzeug.o main.o 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt0_c.o):crt0_c.c:(.text+0x46): undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+00:28:50 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp:10:1: error: definition of explicitly-defaulted 'Fahrzeug::Fahrzeug()'
+   10 | Fahrzeug::Fahrzeug() {
+      | ^~~~~~~~
+In file included from ..\Fahrzeug.cpp:8:
+..\Fahrzeug.h:22:9: note: 'constexpr Fahrzeug::Fahrzeug()' explicitly defaulted here
+   22 |         Fahrzeug() = default;
+      |         ^~~~~~~~
+00:29:12 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -o Aufgabenblock_1.exe Fahrzeug.o main.o 
+00:32:05 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Aufgabenblock_1.exe Fahrzeug.o main.o 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: main.o: in function `bool std::__constant_string_p<char>(char const*)':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:10: multiple definition of `Fahrzeug::Fahrzeug()'; Fahrzeug.o:C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:10: first defined here
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: main.o: in function `bool std::__constant_string_p<char>(char const*)':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:10: multiple definition of `Fahrzeug::Fahrzeug()'; Fahrzeug.o:C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:10: first defined here
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: main.o: in function `Fahrzeug::Fahrzeug(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:15: multiple definition of `Fahrzeug::Fahrzeug(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; Fahrzeug.o:C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:15: first defined here
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: main.o: in function `Fahrzeug::Fahrzeug(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:15: multiple definition of `Fahrzeug::Fahrzeug(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; Fahrzeug.o:C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:15: first defined here
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: main.o: in function `Fahrzeug::~Fahrzeug()':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:21: multiple definition of `Fahrzeug::~Fahrzeug()'; Fahrzeug.o:C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:21: first defined here
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: main.o: in function `Fahrzeug::~Fahrzeug()':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:21: multiple definition of `Fahrzeug::~Fahrzeug()'; Fahrzeug.o:C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:21: first defined here
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: main.o: in function `Fahrzeug::~Fahrzeug()':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:21: multiple definition of `Fahrzeug::~Fahrzeug()'; Fahrzeug.o:C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:21: first defined here
+collect2.exe: error: ld returned 1 exit status
+00:37:11 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -o Aufgabenblock_1.exe Fahrzeug.o main.o 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: main.o: in function `bool std::__constant_string_p<char>(char const*)':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:10: multiple definition of `Fahrzeug::Fahrzeug()'; Fahrzeug.o:C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:10: first defined here
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: main.o: in function `bool std::__constant_string_p<char>(char const*)':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:10: multiple definition of `Fahrzeug::Fahrzeug()'; Fahrzeug.o:C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:10: first defined here
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: main.o: in function `Fahrzeug::Fahrzeug(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:15: multiple definition of `Fahrzeug::Fahrzeug(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; Fahrzeug.o:C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:15: first defined here
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: main.o: in function `Fahrzeug::Fahrzeug(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:15: multiple definition of `Fahrzeug::Fahrzeug(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; Fahrzeug.o:C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:15: first defined here
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: main.o: in function `Fahrzeug::~Fahrzeug()':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:22: multiple definition of `Fahrzeug::~Fahrzeug()'; Fahrzeug.o:C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:22: first defined here
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: main.o: in function `Fahrzeug::~Fahrzeug()':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:22: multiple definition of `Fahrzeug::~Fahrzeug()'; Fahrzeug.o:C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:22: first defined here
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: main.o: in function `Fahrzeug::~Fahrzeug()':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:22: multiple definition of `Fahrzeug::~Fahrzeug()'; Fahrzeug.o:C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:22: first defined here
+collect2.exe: error: ld returned 1 exit status
+00:38:44 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -o Aufgabenblock_1.exe Fahrzeug.o main.o 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: main.o: in function `bool std::__constant_string_p<char>(char const*)':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:10: multiple definition of `Fahrzeug::Fahrzeug()'; Fahrzeug.o:C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:10: first defined here
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: main.o: in function `bool std::__constant_string_p<char>(char const*)':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:10: multiple definition of `Fahrzeug::Fahrzeug()'; Fahrzeug.o:C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:10: first defined here
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: main.o: in function `Fahrzeug::Fahrzeug(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:15: multiple definition of `Fahrzeug::Fahrzeug(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; Fahrzeug.o:C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:15: first defined here
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: main.o: in function `Fahrzeug::Fahrzeug(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:15: multiple definition of `Fahrzeug::Fahrzeug(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'; Fahrzeug.o:C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:15: first defined here
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: main.o: in function `Fahrzeug::~Fahrzeug()':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:22: multiple definition of `Fahrzeug::~Fahrzeug()'; Fahrzeug.o:C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:22: first defined here
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: main.o: in function `Fahrzeug::~Fahrzeug()':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:22: multiple definition of `Fahrzeug::~Fahrzeug()'; Fahrzeug.o:C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:22: first defined here
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: main.o: in function `Fahrzeug::~Fahrzeug()':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:22: multiple definition of `Fahrzeug::~Fahrzeug()'; Fahrzeug.o:C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_1\Debug/../Fahrzeug.cpp:22: first defined here
+collect2.exe: error: ld returned 1 exit status
+00:38:47 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Aufgabenblock_1.exe Fahrzeug.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+Info: Nothing to build for Aufgabenblock_1
+00:43:19 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void vAufgabe_1()':
+..\main.cpp:11:19: warning: unused variable 'fF2' [-Wunused-variable]
+   11 |         Fahrzeug* fF2 = new Fahrzeug;
+      |                   ^~~
+g++ -o Aufgabenblock_1.exe Fahrzeug.o main.o 
+00:44:06 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void vAufgabe_1()':
+..\main.cpp:11:19: warning: unused variable 'fF2' [-Wunused-variable]
+   11 |         Fahrzeug* fF2 = new Fahrzeug;
+      |                   ^~~
+..\main.cpp:12:19: warning: unused variable 'fF3' [-Wunused-variable]
+   12 |         Fahrzeug* fF3 = new Fahrzeug("Pimmel");
+      |                   ^~~
+g++ -o Aufgabenblock_1.exe Fahrzeug.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+00:45:10 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -o Aufgabenblock_1.exe Fahrzeug.o main.o 
+00:45:45 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Aufgabenblock_1.exe Fahrzeug.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+00:55:50 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+00:55:58 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+In file included from ..\Fahrzeug.cpp:8:
+..\Fahrzeug.h:18:20: error: ISO C++ forbids in-class initialization of non-const static member 'Fahrzeug::p_iMaxID'
+   18 |         static int p_iMaxID = 0;
+      |                    ^~~~~~~~
+..\Fahrzeug.cpp: In constructor 'Fahrzeug::Fahrzeug()':
+..\Fahrzeug.cpp:11:15: error: assignment of read-only member 'Fahrzeug::p_iID'
+   11 |         p_iID = p_iMaxID++;
+      |         ~~~~~~^~~~~~~~~~~~
+01:00:19 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+In file included from ..\main.cpp:7:
+..\Fahrzeug.h:18:20: error: ISO C++ forbids in-class initialization of non-const static member 'Fahrzeug::p_iMaxID'
+   18 |         static int p_iMaxID = 0;
+      |                    ^~~~~~~~
+01:02:41 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+In file included from ..\main.cpp:7:
+..\Fahrzeug.h:18:20: error: ISO C++ forbids in-class initialization of non-const static member 'Fahrzeug::p_iMaxID'
+   18 |         static int p_iMaxID = 0;
+      |                    ^~~~~~~~
+01:02:45 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp:10:1: error: definition of explicitly-defaulted 'Fahrzeug::Fahrzeug()'
+   10 | Fahrzeug::Fahrzeug() {
+      | ^~~~~~~~
+In file included from ..\Fahrzeug.cpp:8:
+..\Fahrzeug.h:22:9: note: 'constexpr Fahrzeug::Fahrzeug()' explicitly defaulted here
+   22 |         Fahrzeug() = default;
+      |         ^~~~~~~~
+01:02:58 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp:10:1: error: definition of explicitly-defaulted 'Fahrzeug::Fahrzeug()'
+   10 | Fahrzeug::Fahrzeug() {
+      | ^~~~~~~~
+In file included from ..\Fahrzeug.cpp:8:
+..\Fahrzeug.h:22:9: note: 'constexpr Fahrzeug::Fahrzeug()' explicitly defaulted here
+   22 |         Fahrzeug() = default;
+      |         ^~~~~~~~
+01:03:00 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1

@@ -1,0 +1,18 @@
+/*
+ * Fahrzeug.cpp
+ *
+ *  Created on: 21.10.2024
+ *      Author: vogel
+ */
+
+#include "Fahrzeug.h"
+
+Fahrzeug::Fahrzeug() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Fahrzeug::~Fahrzeug() {
+	// TODO Auto-generated destructor stub
+}
+
