@@ -1,0 +1,46 @@
+/*
+ * main.cpp
+ *
+ *  Created on: 22.10.2024
+ *      Author: vogel
+ */
+#include "Fahrzeug.h"
+#include <memory>
+#include <vector>
+void vAufgabe_1() {
+	Fahrzeug fF1("F0");
+	Fahrzeug *pF2 = new Fahrzeug("F1");
+	Fahrzeug *pF3 = new Fahrzeug("F2");
+
+	std::unique_ptr<Fahrzeug> pF4 = std::make_unique<Fahrzeug>("F3 (unique)");
+	std::unique_ptr<Fahrzeug> pF5 = std::make_unique<Fahrzeug>("F4 (unique)");
+	std::shared_ptr<Fahrzeug> pF6 = std::make_shared<Fahrzeug>("F5 (shared)");
+	std::shared_ptr<Fahrzeug> pF7 = std::make_shared<Fahrzeug>("F6 (shared)");
+	std::shared_ptr<Fahrzeug> pF7x;
+	std::unique_ptr<Fahrzeug> pF4x;
+
+	std::cout << "Anzahl Referenzen auf F6: " << pF7.use_count() << std::endl;
+	pF7x = pF7;
+	std::cout << "Anzahl Referenzen auf F6 (nach Zuweisung pF7x): "
+			<< pF7.use_count() << std::endl;
+
+	// pF4x = pF4; gibt natürlich Fehelermeldung, da unique pointer
+
+	std::vector<std::unique_ptr<Fahrzeug>> vUniqueFahrzeugVector;
+	vUniqueFahrzeugVector.push_back(pF4);
+	vUniqueFahrzeugVector.push_back(pF5);
+	vUniqueFahrzeugVector.push_back(pF6);
+	vUniqueFahrzeugVector.push_back(pF7);
+
+
+
+
+	delete pF2;
+	delete pF3;
+
+}
+
+int main() {
+	vAufgabe_1();
+}
+

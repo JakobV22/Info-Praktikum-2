@@ -289,3 +289,981 @@ g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "
 g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
 g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
 Info: Nothing to build for Aufgabenblock_1
+Info: Nothing to build for Aufgabenblock_1
+Info: Nothing to build for Aufgabenblock_1
+Info: Nothing to build for Aufgabenblock_1
+Info: Nothing to build for Aufgabenblock_1
+Info: Nothing to build for Aufgabenblock_1
+Info: Nothing to build for Aufgabenblock_1
+Info: Nothing to build for Aufgabenblock_1
+Info: Nothing to build for Aufgabenblock_1
+Info: Nothing to build for Aufgabenblock_1
+11:30:18 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void vAufgabe_1()':
+..\main.cpp:16:46: error: conversion from '<unresolved overloaded function type>' to non-scalar type 'std::unique_ptr<Fahrzeug>' requested
+   16 |         std::unique_ptr<Fahrzeug> pF4 = std::make_unique<Fahrzeug>;
+      |                                         ~~~~~^~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:17:16: error: 'fF2' was not declared in this scope; did you mean 'pF2'?
+   17 |         delete fF2;
+      |                ^~~
+      |                pF2
+..\main.cpp:18:16: error: 'fF3' was not declared in this scope; did you mean 'pF3'?
+   18 |         delete fF3;
+      |                ^~~
+      |                pF3
+..\main.cpp:12:19: warning: unused variable 'pF2' [-Wunused-variable]
+   12 |         Fahrzeug* pF2 = new Fahrzeug;
+      |                   ^~~
+..\main.cpp:13:19: warning: unused variable 'pF3' [-Wunused-variable]
+   13 |         Fahrzeug* pF3 = new Fahrzeug("Pimmel");
+      |                   ^~~
+11:30:39 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void vAufgabe_1()':
+..\main.cpp:16:46: error: conversion from '<unresolved overloaded function type>' to non-scalar type 'std::unique_ptr<Fahrzeug>' requested
+   16 |         std::unique_ptr<Fahrzeug> pF4 = std::make_unique<Fahrzeug>;
+      |                                         ~~~~~^~~~~~~~~~~~~~~~~~~~~
+11:32:01 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Aufgabenblock_1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:32:13 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Aufgabenblock_1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:33:00 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Aufgabenblock_1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:33:06 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Aufgabenblock_1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:33:18 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Aufgabenblock_1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:34:06 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+11:34:25 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+11:41:24 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+11:42:13 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+11:44:03 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void vAufgabe_1()':
+..\main.cpp:27:16: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>& std::unique_ptr<_Tp, _Dp>::operator=(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+   27 |         pF4x = pF4;
+      |                ^~~
+In file included from c:\mingw64\include\c++\11.2.0\memory:76,
+                 from ..\main.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:469:19: note: declared here
+  469 |       unique_ptr& operator=(const unique_ptr&) = delete;
+      |                   ^~~~~~~~
+11:53:02 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void vAufgabe_1()':
+..\main.cpp:29:21: error: 'unique_ptr' was not declared in this scope; did you mean 'std::unique_ptr'?
+   29 |         std::vector<unique_ptr<Fahrzeug>> vUniqueFahrzeugVector;
+      |                     ^~~~~~~~~~
+      |                     std::unique_ptr
+In file included from c:\mingw64\include\c++\11.2.0\memory:76,
+                 from ..\main.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:242:11: note: 'std::unique_ptr' declared here
+  242 |     class unique_ptr
+      |           ^~~~~~~~~~
+..\main.cpp:29:32: error: template argument 1 is invalid
+   29 |         std::vector<unique_ptr<Fahrzeug>> vUniqueFahrzeugVector;
+      |                                ^~~~~~~~
+..\main.cpp:29:32: error: template argument 2 is invalid
+..\main.cpp:29:40: error: expected unqualified-id before '>' token
+   29 |         std::vector<unique_ptr<Fahrzeug>> vUniqueFahrzeugVector;
+      |                                        ^~
+11:53:57 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+11:55:55 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void vAufgabe_1()':
+..\main.cpp:32:40: error: no matching function for call to 'std::vector<std::unique_ptr<Fahrzeug> >::push_back(std::shared_ptr<Fahrzeug>&)'
+   32 |         vUniqueFahrzeugVector.push_back(pF6);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+In file included from c:\mingw64\include\c++\11.2.0\vector:67,
+                 from ..\main.cpp:9:
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1187:7: note: candidate: 'void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::unique_ptr<Fahrzeug>; _Alloc = std::allocator<std::unique_ptr<Fahrzeug> >; std::vector<_Tp, _Alloc>::value_type = std::unique_ptr<Fahrzeug>]'
+ 1187 |       push_back(const value_type& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1187:35: note:   no known conversion for argument 1 from 'std::shared_ptr<Fahrzeug>' to 'const value_type&' {aka 'const std::unique_ptr<Fahrzeug>&'}
+ 1187 |       push_back(const value_type& __x)
+      |                 ~~~~~~~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1203:7: note: candidate: 'void std::vector<_Tp, _Alloc>::push_back(std::vector<_Tp, _Alloc>::value_type&&) [with _Tp = std::unique_ptr<Fahrzeug>; _Alloc = std::allocator<std::unique_ptr<Fahrzeug> >; std::vector<_Tp, _Alloc>::value_type = std::unique_ptr<Fahrzeug>]'
+ 1203 |       push_back(value_type&& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1203:30: note:   no known conversion for argument 1 from 'std::shared_ptr<Fahrzeug>' to 'std::vector<std::unique_ptr<Fahrzeug> >::value_type&&' {aka 'std::unique_ptr<Fahrzeug>&&'}
+ 1203 |       push_back(value_type&& __x)
+      |                 ~~~~~~~~~~~~~^~~
+..\main.cpp:33:40: error: no matching function for call to 'std::vector<std::unique_ptr<Fahrzeug> >::push_back(std::shared_ptr<Fahrzeug>&)'
+   33 |         vUniqueFahrzeugVector.push_back(pF7);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+In file included from c:\mingw64\include\c++\11.2.0\vector:67,
+                 from ..\main.cpp:9:
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1187:7: note: candidate: 'void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::unique_ptr<Fahrzeug>; _Alloc = std::allocator<std::unique_ptr<Fahrzeug> >; std::vector<_Tp, _Alloc>::value_type = std::unique_ptr<Fahrzeug>]'
+ 1187 |       push_back(const value_type& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1187:35: note:   no known conversion for argument 1 from 'std::shared_ptr<Fahrzeug>' to 'const value_type&' {aka 'const std::unique_ptr<Fahrzeug>&'}
+ 1187 |       push_back(const value_type& __x)
+      |                 ~~~~~~~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1203:7: note: candidate: 'void std::vector<_Tp, _Alloc>::push_back(std::vector<_Tp, _Alloc>::value_type&&) [with _Tp = std::unique_ptr<Fahrzeug>; _Alloc = std::allocator<std::unique_ptr<Fahrzeug> >; std::vector<_Tp, _Alloc>::value_type = std::unique_ptr<Fahrzeug>]'
+ 1203 |       push_back(value_type&& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1203:30: note:   no known conversion for argument 1 from 'std::shared_ptr<Fahrzeug>' to 'std::vector<std::unique_ptr<Fahrzeug> >::value_type&&' {aka 'std::unique_ptr<Fahrzeug>&&'}
+ 1203 |       push_back(value_type&& __x)
+      |                 ~~~~~~~~~~~~~^~~
+In file included from c:\mingw64\include\c++\11.2.0\x86_64-w64-mingw32\bits\c++allocator.h:33,
+                 from c:\mingw64\include\c++\11.2.0\bits\allocator.h:46,
+                 from c:\mingw64\include\c++\11.2.0\string:41,
+                 from ..\Fahrzeug.h:7,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ext\new_allocator.h: In instantiation of 'void __gnu_cxx::new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = std::unique_ptr<Fahrzeug>; _Args = {const std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> >&}; _Tp = std::unique_ptr<Fahrzeug>]':
+c:\mingw64\include\c++\11.2.0\bits\alloc_traits.h:512:17:   required from 'static void std::allocator_traits<std::allocator<_CharT> >::construct(std::allocator_traits<std::allocator<_CharT> >::allocator_type&, _Up*, _Args&& ...) [with _Up = std::unique_ptr<Fahrzeug>; _Args = {const std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> >&}; _Tp = std::unique_ptr<Fahrzeug>; std::allocator_traits<std::allocator<_CharT> >::allocator_type = std::allocator<std::unique_ptr<Fahrzeug> >]'
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1192:30:   required from 'void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::unique_ptr<Fahrzeug>; _Alloc = std::allocator<std::unique_ptr<Fahrzeug> >; std::vector<_Tp, _Alloc>::value_type = std::unique_ptr<Fahrzeug>]'
+..\main.cpp:30:33:   required from here
+c:\mingw64\include\c++\11.2.0\ext\new_allocator.h:162:11: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+  162 |         { ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\memory:76,
+                 from ..\main.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:468:7: note: declared here
+  468 |       unique_ptr(const unique_ptr&) = delete;
+      |       ^~~~~~~~~~
+11:56:32 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void vAufgabe_1()':
+..\main.cpp:32:40: error: no matching function for call to 'std::vector<std::unique_ptr<Fahrzeug> >::push_back(std::shared_ptr<Fahrzeug>&)'
+   32 |         vUniqueFahrzeugVector.push_back(pF6);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+In file included from c:\mingw64\include\c++\11.2.0\vector:67,
+                 from ..\main.cpp:9:
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1187:7: note: candidate: 'void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::unique_ptr<Fahrzeug>; _Alloc = std::allocator<std::unique_ptr<Fahrzeug> >; std::vector<_Tp, _Alloc>::value_type = std::unique_ptr<Fahrzeug>]'
+ 1187 |       push_back(const value_type& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1187:35: note:   no known conversion for argument 1 from 'std::shared_ptr<Fahrzeug>' to 'const value_type&' {aka 'const std::unique_ptr<Fahrzeug>&'}
+ 1187 |       push_back(const value_type& __x)
+      |                 ~~~~~~~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1203:7: note: candidate: 'void std::vector<_Tp, _Alloc>::push_back(std::vector<_Tp, _Alloc>::value_type&&) [with _Tp = std::unique_ptr<Fahrzeug>; _Alloc = std::allocator<std::unique_ptr<Fahrzeug> >; std::vector<_Tp, _Alloc>::value_type = std::unique_ptr<Fahrzeug>]'
+ 1203 |       push_back(value_type&& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1203:30: note:   no known conversion for argument 1 from 'std::shared_ptr<Fahrzeug>' to 'std::vector<std::unique_ptr<Fahrzeug> >::value_type&&' {aka 'std::unique_ptr<Fahrzeug>&&'}
+ 1203 |       push_back(value_type&& __x)
+      |                 ~~~~~~~~~~~~~^~~
+..\main.cpp:33:40: error: no matching function for call to 'std::vector<std::unique_ptr<Fahrzeug> >::push_back(std::shared_ptr<Fahrzeug>&)'
+   33 |         vUniqueFahrzeugVector.push_back(pF7);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+In file included from c:\mingw64\include\c++\11.2.0\vector:67,
+                 from ..\main.cpp:9:
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1187:7: note: candidate: 'void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::unique_ptr<Fahrzeug>; _Alloc = std::allocator<std::unique_ptr<Fahrzeug> >; std::vector<_Tp, _Alloc>::value_type = std::unique_ptr<Fahrzeug>]'
+ 1187 |       push_back(const value_type& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1187:35: note:   no known conversion for argument 1 from 'std::shared_ptr<Fahrzeug>' to 'const value_type&' {aka 'const std::unique_ptr<Fahrzeug>&'}
+ 1187 |       push_back(const value_type& __x)
+      |                 ~~~~~~~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1203:7: note: candidate: 'void std::vector<_Tp, _Alloc>::push_back(std::vector<_Tp, _Alloc>::value_type&&) [with _Tp = std::unique_ptr<Fahrzeug>; _Alloc = std::allocator<std::unique_ptr<Fahrzeug> >; std::vector<_Tp, _Alloc>::value_type = std::unique_ptr<Fahrzeug>]'
+ 1203 |       push_back(value_type&& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1203:30: note:   no known conversion for argument 1 from 'std::shared_ptr<Fahrzeug>' to 'std::vector<std::unique_ptr<Fahrzeug> >::value_type&&' {aka 'std::unique_ptr<Fahrzeug>&&'}
+ 1203 |       push_back(value_type&& __x)
+      |                 ~~~~~~~~~~~~~^~~
+11:57:33 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+11:58:13 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+12:01:21 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void vAufgabe_1()':
+..\main.cpp:38:40: error: no matching function for call to 'std::vector<std::shared_ptr<Fahrzeug> >::push_back(std::unique_ptr<Fahrzeug>&)'
+   38 |         vSharedFahrzeugVector.push_back(pF4);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+In file included from c:\mingw64\include\c++\11.2.0\vector:67,
+                 from ..\main.cpp:9:
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1187:7: note: candidate: 'void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::shared_ptr<Fahrzeug>; _Alloc = std::allocator<std::shared_ptr<Fahrzeug> >; std::vector<_Tp, _Alloc>::value_type = std::shared_ptr<Fahrzeug>]'
+ 1187 |       push_back(const value_type& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1187:35: note:   no known conversion for argument 1 from 'std::unique_ptr<Fahrzeug>' to 'const value_type&' {aka 'const std::shared_ptr<Fahrzeug>&'}
+ 1187 |       push_back(const value_type& __x)
+      |                 ~~~~~~~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1203:7: note: candidate: 'void std::vector<_Tp, _Alloc>::push_back(std::vector<_Tp, _Alloc>::value_type&&) [with _Tp = std::shared_ptr<Fahrzeug>; _Alloc = std::allocator<std::shared_ptr<Fahrzeug> >; std::vector<_Tp, _Alloc>::value_type = std::shared_ptr<Fahrzeug>]'
+ 1203 |       push_back(value_type&& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1203:30: note:   no known conversion for argument 1 from 'std::unique_ptr<Fahrzeug>' to 'std::vector<std::shared_ptr<Fahrzeug> >::value_type&&' {aka 'std::shared_ptr<Fahrzeug>&&'}
+ 1203 |       push_back(value_type&& __x)
+      |                 ~~~~~~~~~~~~~^~~
+..\main.cpp:39:40: error: no matching function for call to 'std::vector<std::shared_ptr<Fahrzeug> >::push_back(std::unique_ptr<Fahrzeug>&)'
+   39 |         vSharedFahrzeugVector.push_back(pF5);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+In file included from c:\mingw64\include\c++\11.2.0\vector:67,
+                 from ..\main.cpp:9:
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1187:7: note: candidate: 'void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::shared_ptr<Fahrzeug>; _Alloc = std::allocator<std::shared_ptr<Fahrzeug> >; std::vector<_Tp, _Alloc>::value_type = std::shared_ptr<Fahrzeug>]'
+ 1187 |       push_back(const value_type& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1187:35: note:   no known conversion for argument 1 from 'std::unique_ptr<Fahrzeug>' to 'const value_type&' {aka 'const std::shared_ptr<Fahrzeug>&'}
+ 1187 |       push_back(const value_type& __x)
+      |                 ~~~~~~~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1203:7: note: candidate: 'void std::vector<_Tp, _Alloc>::push_back(std::vector<_Tp, _Alloc>::value_type&&) [with _Tp = std::shared_ptr<Fahrzeug>; _Alloc = std::allocator<std::shared_ptr<Fahrzeug> >; std::vector<_Tp, _Alloc>::value_type = std::shared_ptr<Fahrzeug>]'
+ 1203 |       push_back(value_type&& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:1203:30: note:   no known conversion for argument 1 from 'std::unique_ptr<Fahrzeug>' to 'std::vector<std::shared_ptr<Fahrzeug> >::value_type&&' {aka 'std::shared_ptr<Fahrzeug>&&'}
+ 1203 |       push_back(value_type&& __x)
+      |                 ~~~~~~~~~~~~~^~~
+12:01:53 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+12:03:02 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+12:04:05 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+12:04:24 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+12:07:11 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+12:08:13 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+12:08:47 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+12:10:45 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+Info: Nothing to build for Aufgabenblock_1
+12:23:04 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp: In constructor 'Fahrzeug::Fahrzeug(std::string)':
+..\Fahrzeug.cpp:22:32: error: expected primary-expression before 'sName'
+   22 | Fahrzeug::Fahrzeug(std::string sName, double dMaxGeschwindikeit) :
+      |                                ^~~~~
+..\Fahrzeug.cpp:22:39: error: expected primary-expression before 'double'
+   22 | Fahrzeug::Fahrzeug(std::string sName, double dMaxGeschwindikeit) :
+      |                                       ^~~~~~
+..\Fahrzeug.cpp:22:64: error: cannot call constructor 'Fahrzeug::Fahrzeug' directly [-fpermissive]
+   22 | Fahrzeug::Fahrzeug(std::string sName, double dMaxGeschwindikeit) :
+      |                                                                ^
+..\Fahrzeug.cpp:22:64: note: for a function-style cast, remove the redundant '::Fahrzeug'
+..\Fahrzeug.cpp:32:22: error: expected ';' before '{' token
+   32 | Fahrzeug::~Fahrzeug() {
+      |                      ^~
+      |                      ;
+..\Fahrzeug.cpp:34:2: error: expected '}' at end of input
+   34 | }
+      |  ^
+..\Fahrzeug.cpp:18:1: note: to match this '{'
+   18 | {
+      | ^
+12:23:51 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Aufgabenblock_1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:23:59 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+12:25:53 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+12:39:32 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+12:40:06 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+12:45:02 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+12:47:19 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+12:49:34 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+12:51:42 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+13:02:49 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp:37:13: error: no declaration matches 'void Fahrzeug::vKopf()'
+   37 | static void Fahrzeug::vKopf(){
+      |             ^~~~~~~~
+..\Fahrzeug.cpp:37:13: note: no functions named 'void Fahrzeug::vKopf()'
+In file included from ..\Fahrzeug.cpp:8:
+..\Fahrzeug.h:13:7: note: 'class Fahrzeug' defined here
+   13 | class Fahrzeug {
+      |       ^~~~~~~~
+13:03:07 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp:37:29: error: cannot declare member function 'static void Fahrzeug::vKopf()' to have static linkage [-fpermissive]
+   37 | static void Fahrzeug::vKopf(){
+      |                             ^
+..\Fahrzeug.cpp: In static member function 'static void Fahrzeug::vKopf()':
+..\Fahrzeug.cpp:38:237: error: invalid use of member 'Fahrzeug::p_dMaxGeschwindigkeit' in static member function
+   38 |         std::cout << std::resetiosflags (std::ios::right) <<std::setiosflags (std::ios::left) << std::setw(5) <<"ID"<<std::resetiosflags (std::ios::left) <<std::setiosflags (std::ios::right) <<std::setw(10) << "Name" <<std::setw(20) << p_dMaxGeschwindigkeit<<std::setw(15) << p_dGesamtstrecke<<std::endl;
+      |                                                                                                                                                                                                                                             ^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\Fahrzeug.cpp:8:
+..\Fahrzeug.h:20:16: note: declared here
+   20 |         double p_dMaxGeschwindigkeit = 0;
+      |                ^~~~~~~~~~~~~~~~~~~~~
+..\Fahrzeug.cpp:38:277: error: invalid use of member 'Fahrzeug::p_dGesamtstrecke' in static member function
+   38 |         std::cout << std::resetiosflags (std::ios::right) <<std::setiosflags (std::ios::left) << std::setw(5) <<"ID"<<std::resetiosflags (std::ios::left) <<std::setiosflags (std::ios::right) <<std::setw(10) << "Name" <<std::setw(20) << p_dMaxGeschwindigkeit<<std::setw(15) << p_dGesamtstrecke<<std::endl;
+      |                                                                                                                                                                                                                                                                                     ^~~~~~~~~~~~~~~~
+In file included from ..\Fahrzeug.cpp:8:
+..\Fahrzeug.h:21:16: note: declared here
+   21 |         double p_dGesamtstrecke = 0;
+      |                ^~~~~~~~~~~~~~~~
+13:04:05 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp:37:29: error: cannot declare member function 'static void Fahrzeug::vKopf()' to have static linkage [-fpermissive]
+   37 | static void Fahrzeug::vKopf(){
+      |                             ^
+13:04:31 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+13:06:37 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+13:08:08 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+13:08:44 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+13:10:44 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+13:12:35 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+13:13:34 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+13:15:54 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+13:16:39 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+13:34:21 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+15:19:48 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp: In member function 'void Fahrzeug::vSimulieren()':
+..\Fahrzeug.cpp:48:16: error: 'dGlobaleZeit' does not name a type
+   48 |         extern dGlobaleZeit;
+      |                ^~~~~~~~~~~~
+15:20:06 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+15:21:22 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+15:23:05 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+15:25:04 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+15:36:47 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void vAufgabe_1a()':
+..\main.cpp:72:83: error: no matching function for call to 'std::unique_ptr<Fahrzeug>::unique_ptr(std::string&, double&)'
+   72 |         std::unique_ptr<Fahrzeug> fNewFahrzeug(sNameInput, dMaxGeschwindikeitInput);
+      |                                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\memory:76,
+                 from ..\main.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:350:9: note: candidate: 'template<class _Up, class> std::unique_ptr<_Tp, _Dp>::unique_ptr(std::auto_ptr<_Up>&&) [with _Up = _Up; <template-parameter-2-2> = <template-parameter-1-2>; _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+  350 |         unique_ptr(auto_ptr<_Up>&& __u) noexcept;
+      |         ^~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:350:9: note:   template argument deduction/substitution failed:
+..\main.cpp:72:83: note:   'std::string' {aka 'std::__cxx11::basic_string<char>'} is not derived from 'std::auto_ptr<_Up>'
+   72 |         std::unique_ptr<Fahrzeug> fNewFahrzeug(sNameInput, dMaxGeschwindikeitInput);
+      |                                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\memory:76,
+                 from ..\main.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:340:9: note: candidate: 'template<class _Up, class _Ep, class> std::unique_ptr<_Tp, _Dp>::unique_ptr(std::unique_ptr<_Up, _Ep>&&) [with _Up = _Up; _Ep = _Ep; <template-parameter-2-3> = <template-parameter-1-3>; _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+  340 |         unique_ptr(unique_ptr<_Up, _Ep>&& __u) noexcept
+      |         ^~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:340:9: note:   template argument deduction/substitution failed:
+..\main.cpp:72:83: note:   'std::string' {aka 'std::__cxx11::basic_string<char>'} is not derived from 'std::unique_ptr<_Tp, _Dp>'
+   72 |         std::unique_ptr<Fahrzeug> fNewFahrzeug(sNameInput, dMaxGeschwindikeitInput);
+      |                                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\memory:76,
+                 from ..\main.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:320:19: note: candidate: 'template<class _Del, class> constexpr std::unique_ptr<_Tp, _Dp>::unique_ptr(std::nullptr_t) [with _Del = _Del; <template-parameter-2-2> = <template-parameter-1-2>; _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+  320 |         constexpr unique_ptr(nullptr_t) noexcept
+      |                   ^~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:320:19: note:   template argument deduction/substitution failed:
+..\main.cpp:72:83: note:   candidate expects 1 argument, 2 provided
+   72 |         std::unique_ptr<Fahrzeug> fNewFahrzeug(sNameInput, dMaxGeschwindikeitInput);
+      |                                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\memory:76,
+                 from ..\main.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:314:9: note: candidate: 'template<class _Del, class _DelUnref> std::unique_ptr<_Tp, _Dp>::unique_ptr(std::unique_ptr<_Tp, _Dp>::pointer, std::__enable_if_t<std::is_lvalue_reference<_Del>::value, _DelUnref&&>) [with _Del = _Del; _DelUnref = _DelUnref; _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]' (deleted)
+  314 |         unique_ptr(pointer,
+      |         ^~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:314:9: note:   template argument deduction/substitution failed:
+..\main.cpp:72:48: note:   cannot convert 'sNameInput' (type 'std::string' {aka 'std::__cxx11::basic_string<char>'}) to type 'std::unique_ptr<Fahrzeug>::pointer' {aka 'Fahrzeug*'}
+   72 |         std::unique_ptr<Fahrzeug> fNewFahrzeug(sNameInput, dMaxGeschwindikeitInput);
+      |                                                ^~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\memory:76,
+                 from ..\main.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:306:9: note: candidate: 'template<class _Del, class> std::unique_ptr<_Tp, _Dp>::unique_ptr(std::unique_ptr<_Tp, _Dp>::pointer, std::__enable_if_t<(! std::is_lvalue_reference<_Del>::value), _Del&&>) [with _Del = _Del; <template-parameter-2-2> = <template-parameter-1-2>; _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+  306 |         unique_ptr(pointer __p,
+      |         ^~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:306:9: note:   template argument deduction/substitution failed:
+..\main.cpp:72:48: note:   cannot convert 'sNameInput' (type 'std::string' {aka 'std::__cxx11::basic_string<char>'}) to type 'std::unique_ptr<Fahrzeug>::pointer' {aka 'Fahrzeug*'}
+   72 |         std::unique_ptr<Fahrzeug> fNewFahrzeug(sNameInput, dMaxGeschwindikeitInput);
+      |                                                ^~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\memory:76,
+                 from ..\main.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:294:9: note: candidate: 'template<class _Del, class> std::unique_ptr<_Tp, _Dp>::unique_ptr(std::unique_ptr<_Tp, _Dp>::pointer, const deleter_type&) [with _Del = _Del; <template-parameter-2-2> = <template-parameter-1-2>; _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+  294 |         unique_ptr(pointer __p, const deleter_type& __d) noexcept
+      |         ^~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:294:9: note:   template argument deduction/substitution failed:
+..\main.cpp:72:48: note:   cannot convert 'sNameInput' (type 'std::string' {aka 'std::__cxx11::basic_string<char>'}) to type 'std::unique_ptr<Fahrzeug>::pointer' {aka 'Fahrzeug*'}
+   72 |         std::unique_ptr<Fahrzeug> fNewFahrzeug(sNameInput, dMaxGeschwindikeitInput);
+      |                                                ^~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\memory:76,
+                 from ..\main.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:281:9: note: candidate: 'template<class _Del, class> std::unique_ptr<_Tp, _Dp>::unique_ptr(std::unique_ptr<_Tp, _Dp>::pointer) [with _Del = _Del; <template-parameter-2-2> = <template-parameter-1-2>; _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+  281 |         unique_ptr(pointer __p) noexcept
+      |         ^~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:281:9: note:   template argument deduction/substitution failed:
+..\main.cpp:72:83: note:   candidate expects 1 argument, 2 provided
+   72 |         std::unique_ptr<Fahrzeug> fNewFahrzeug(sNameInput, dMaxGeschwindikeitInput);
+      |                                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\memory:76,
+                 from ..\main.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:269:19: note: candidate: 'template<class _Del, class> constexpr std::unique_ptr<_Tp, _Dp>::unique_ptr() [with _Del = _Del; <template-parameter-2-2> = <template-parameter-1-2>; _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+  269 |         constexpr unique_ptr() noexcept
+      |                   ^~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:269:19: note:   template argument deduction/substitution failed:
+..\main.cpp:72:83: note:   candidate expects 0 arguments, 2 provided
+   72 |         std::unique_ptr<Fahrzeug> fNewFahrzeug(sNameInput, dMaxGeschwindikeitInput);
+      |                                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\memory:76,
+                 from ..\main.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:327:7: note: candidate: 'std::unique_ptr<_Tp, _Dp>::unique_ptr(std::unique_ptr<_Tp, _Dp>&&) [with _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+  327 |       unique_ptr(unique_ptr&&) = default;
+      |       ^~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:327:7: note:   candidate expects 1 argument, 2 provided
+15:38:17 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+15:39:30 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+15:46:35 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void vGesamtAusgabe(std::vector<std::unique_ptr<Fahrzeug> >)':
+..\main.cpp:14:26: error: 'unique_ptr' was not declared in this scope; did you mean 'std::unique_ptr'?
+   14 |         for (std::vector<unique_ptr<Fahrzeug>>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                          ^~~~~~~~~~
+      |                          std::unique_ptr
+In file included from c:\mingw64\include\c++\11.2.0\memory:76,
+                 from ..\main.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:242:11: note: 'std::unique_ptr' declared here
+  242 |     class unique_ptr
+      |           ^~~~~~~~~~
+..\main.cpp:14:37: error: template argument 1 is invalid
+   14 |         for (std::vector<unique_ptr<Fahrzeug>>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                     ^~~~~~~~
+..\main.cpp:14:37: error: template argument 2 is invalid
+..\main.cpp:14:45: error: expected unqualified-id before '>' token
+   14 |         for (std::vector<unique_ptr<Fahrzeug>>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                             ^~
+..\main.cpp:14:45: error: expected ';' before '>' token
+   14 |         for (std::vector<unique_ptr<Fahrzeug>>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                             ^~
+      |                                             ;
+..\main.cpp:14:45: error: expected primary-expression before '>' token
+   14 |         for (std::vector<unique_ptr<Fahrzeug>>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                             ^~
+..\main.cpp:14:49: error: '::iterator' has not been declared; did you mean 'std::iterator'?
+   14 |         for (std::vector<unique_ptr<Fahrzeug>>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                                 ^~~~~~~~
+      |                                                 std::iterator
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:65,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Fahrzeug.h:7,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator_base_types.h:127:12: note: 'std::iterator' declared here
+  127 |     struct iterator
+      |            ^~~~~~~~
+..\main.cpp:14:57: error: expected ';' before 'it'
+   14 |         for (std::vector<unique_ptr<Fahrzeug>>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                                         ^~~
+      |                                                         ;
+..\main.cpp:14:58: error: 'it' was not declared in this scope; did you mean 'int'?
+   14 |         for (std::vector<unique_ptr<Fahrzeug>>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                                          ^~
+      |                                                          int
+..\main.cpp:14:101: error: expected ')' before ';' token
+   14 |         for (std::vector<unique_ptr<Fahrzeug>>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |             ~                                                                                       ^~
+      |                                                                                                     )
+..\main.cpp:14:9: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   14 |         for (std::vector<unique_ptr<Fahrzeug>>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |         ^~~
+..\main.cpp:14:104: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   14 |         for (std::vector<unique_ptr<Fahrzeug>>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                                                                                        ^~
+..\main.cpp:14:104: error: 'it' was not declared in this scope; did you mean 'int'?
+   14 |         for (std::vector<unique_ptr<Fahrzeug>>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                                                                                        ^~
+      |                                                                                                        int
+..\main.cpp: In function 'void vAufgabe_1()':
+..\main.cpp:37:23: error: too few arguments to function 'void vGesamtAusgabe(std::vector<std::unique_ptr<Fahrzeug> >)'
+   37 |         vGesamtAusgabe();
+      |         ~~~~~~~~~~~~~~^~
+..\main.cpp:12:6: note: declared here
+   12 | void vGesamtAusgabe(std::vector<std::unique_ptr<Fahrzeug>> vecUniquePointerFahrzeugVector){
+      |      ^~~~~~~~~~~~~~
+15:48:04 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void vGesamtAusgabe(std::vector<std::unique_ptr<Fahrzeug> >)':
+..\main.cpp:14:26: error: 'unique_ptr' was not declared in this scope; did you mean 'std::unique_ptr'?
+   14 |         for (std::vector<unique_ptr>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                          ^~~~~~~~~~
+      |                          std::unique_ptr
+In file included from c:\mingw64\include\c++\11.2.0\memory:76,
+                 from ..\main.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:242:11: note: 'std::unique_ptr' declared here
+  242 |     class unique_ptr
+      |           ^~~~~~~~~~
+..\main.cpp:14:36: error: template argument 1 is invalid
+   14 |         for (std::vector<unique_ptr>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                    ^
+..\main.cpp:14:36: error: template argument 2 is invalid
+..\main.cpp:14:47: error: expected ';' before 'it'
+   14 |         for (std::vector<unique_ptr>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                               ^~~
+      |                                               ;
+..\main.cpp:14:48: error: 'it' was not declared in this scope; did you mean 'int'?
+   14 |         for (std::vector<unique_ptr>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                                ^~
+      |                                                int
+..\main.cpp:14:136: error: expected ')' before ';' token
+   14 |         for (std::vector<unique_ptr>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |             ~                                                                                                                          ^
+      |                                                                                                                                        )
+..\main.cpp:14:9: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   14 |         for (std::vector<unique_ptr>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |         ^~~
+..\main.cpp:14:138: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   14 |         for (std::vector<unique_ptr>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                                                                                                                          ^~
+..\main.cpp:14:39: warning: unused variable 'iterator' [-Wunused-variable]
+   14 |         for (std::vector<unique_ptr>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                       ^~~~~~~~
+..\main.cpp:14:140: error: 'it' was not declared in this scope; did you mean 'int'?
+   14 |         for (std::vector<unique_ptr>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                                                                                                                            ^~
+      |                                                                                                                                            int
+..\main.cpp: In function 'void vAufgabe_1()':
+..\main.cpp:37:23: error: too few arguments to function 'void vGesamtAusgabe(std::vector<std::unique_ptr<Fahrzeug> >)'
+   37 |         vGesamtAusgabe();
+      |         ~~~~~~~~~~~~~~^~
+..\main.cpp:12:6: note: declared here
+   12 | void vGesamtAusgabe(std::vector<std::unique_ptr<Fahrzeug>> vecUniquePointerFahrzeugVector){
+      |      ^~~~~~~~~~~~~~
+15:48:29 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void vGesamtAusgabe(std::vector<std::unique_ptr<Fahrzeug> >)':
+..\main.cpp:15:22: error: 'class std::unique_ptr<Fahrzeug>' has no member named 'vAusgeben'
+   15 |                 *it->vAusgeben();
+      |                      ^~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_1()':
+..\main.cpp:37:23: error: too few arguments to function 'void vGesamtAusgabe(std::vector<std::unique_ptr<Fahrzeug> >)'
+   37 |         vGesamtAusgabe();
+      |         ~~~~~~~~~~~~~~^~
+..\main.cpp:12:6: note: declared here
+   12 | void vGesamtAusgabe(std::vector<std::unique_ptr<Fahrzeug>> vecUniquePointerFahrzeugVector){
+      |      ^~~~~~~~~~~~~~
+15:48:46 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void vGesamtAusgabe(std::vector<std::unique_ptr<Fahrzeug> >)':
+..\main.cpp:15:22: error: 'class std::unique_ptr<Fahrzeug>' has no member named 'vAusgeben'
+   15 |                 *it->vAusgeben();
+      |                      ^~~~~~~~~
+15:49:25 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+15:50:18 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+In file included from c:\mingw64\include\c++\11.2.0\memory:66,
+                 from ..\main.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h: In instantiation of '_ForwardIterator std::uninitialized_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = __gnu_cxx::__normal_iterator<const std::unique_ptr<Fahrzeug>*, std::vector<std::unique_ptr<Fahrzeug> > >; _ForwardIterator = std::unique_ptr<Fahrzeug>*]':
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h:333:37:   required from '_ForwardIterator std::__uninitialized_copy_a(_InputIterator, _InputIterator, _ForwardIterator, std::allocator<_Tp>&) [with _InputIterator = __gnu_cxx::__normal_iterator<const std::unique_ptr<Fahrzeug>*, std::vector<std::unique_ptr<Fahrzeug> > >; _ForwardIterator = std::unique_ptr<Fahrzeug>*; _Tp = std::unique_ptr<Fahrzeug>]'
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:558:31:   required from 'std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&) [with _Tp = std::unique_ptr<Fahrzeug>; _Alloc = std::allocator<std::unique_ptr<Fahrzeug> >]'
+..\main.cpp:80:16:   required from here
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h:138:72: error: static assertion failed: result type must be constructible from value type of input range
+  138 |       static_assert(is_constructible<_ValueType2, decltype(*__first)>::value,
+      |                                                                        ^~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h:138:72: note: 'std::integral_constant<bool, false>::value' evaluates to false
+15:50:40 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+In file included from c:\mingw64\include\c++\11.2.0\memory:66,
+                 from ..\main.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h: In instantiation of '_ForwardIterator std::uninitialized_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = __gnu_cxx::__normal_iterator<const std::unique_ptr<Fahrzeug>*, std::vector<std::unique_ptr<Fahrzeug> > >; _ForwardIterator = std::unique_ptr<Fahrzeug>*]':
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h:333:37:   required from '_ForwardIterator std::__uninitialized_copy_a(_InputIterator, _InputIterator, _ForwardIterator, std::allocator<_Tp>&) [with _InputIterator = __gnu_cxx::__normal_iterator<const std::unique_ptr<Fahrzeug>*, std::vector<std::unique_ptr<Fahrzeug> > >; _ForwardIterator = std::unique_ptr<Fahrzeug>*; _Tp = std::unique_ptr<Fahrzeug>]'
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:558:31:   required from 'std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&) [with _Tp = std::unique_ptr<Fahrzeug>; _Alloc = std::allocator<std::unique_ptr<Fahrzeug> >]'
+..\main.cpp:80:16:   required from here
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h:138:72: error: static assertion failed: result type must be constructible from value type of input range
+  138 |       static_assert(is_constructible<_ValueType2, decltype(*__first)>::value,
+      |                                                                        ^~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h:138:72: note: 'std::integral_constant<bool, false>::value' evaluates to false
+15:51:41 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+15:53:40 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'void vAufgabe_1a()':
+..\main.cpp:80:47: error: could not convert 'vecFahrzeugVector.std::vector<std::unique_ptr<Fahrzeug> >::begin()' from 'std::vector<std::unique_ptr<Fahrzeug> >::iterator' to 'std::vector<std::unique_ptr<Fahrzeug> >'
+   80 |         vGesamtAusgabe(vecFahrzeugVector.begin());
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~^~
+      |                                               |
+      |                                               std::vector<std::unique_ptr<Fahrzeug> >::iterator
+15:54:44 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+In file included from c:\mingw64\include\c++\11.2.0\memory:66,
+                 from ..\main.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h: In instantiation of '_ForwardIterator std::uninitialized_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = __gnu_cxx::__normal_iterator<const std::unique_ptr<Fahrzeug>*, std::vector<std::unique_ptr<Fahrzeug> > >; _ForwardIterator = std::unique_ptr<Fahrzeug>*]':
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h:333:37:   required from '_ForwardIterator std::__uninitialized_copy_a(_InputIterator, _InputIterator, _ForwardIterator, std::allocator<_Tp>&) [with _InputIterator = __gnu_cxx::__normal_iterator<const std::unique_ptr<Fahrzeug>*, std::vector<std::unique_ptr<Fahrzeug> > >; _ForwardIterator = std::unique_ptr<Fahrzeug>*; _Tp = std::unique_ptr<Fahrzeug>]'
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:558:31:   required from 'std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&) [with _Tp = std::unique_ptr<Fahrzeug>; _Alloc = std::allocator<std::unique_ptr<Fahrzeug> >]'
+..\main.cpp:80:16:   required from here
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h:138:72: error: static assertion failed: result type must be constructible from value type of input range
+  138 |       static_assert(is_constructible<_ValueType2, decltype(*__first)>::value,
+      |                                                                        ^~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h:138:72: note: 'std::integral_constant<bool, false>::value' evaluates to false
+16:06:00 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:12:33: error: 'u_ptrFahrzeug' was not declared in this scope; did you mean 'Fahrzeug'?
+   12 | void vGesamtAusgabe(std::vector<u_ptrFahrzeug> vecUniquePointerFahrzeugVector){
+      |                                 ^~~~~~~~~~~~~
+      |                                 Fahrzeug
+..\main.cpp:12:46: error: template argument 1 is invalid
+   12 | void vGesamtAusgabe(std::vector<u_ptrFahrzeug> vecUniquePointerFahrzeugVector){
+      |                                              ^
+..\main.cpp:12:46: error: template argument 2 is invalid
+..\main.cpp: In function 'void vGesamtAusgabe(int)':
+..\main.cpp:14:26: error: 'u_ptrFahrzeug' was not declared in this scope; did you mean 'Fahrzeug'?
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                          ^~~~~~~~~~~~~
+      |                          Fahrzeug
+..\main.cpp:14:39: error: template argument 1 is invalid
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                       ^
+..\main.cpp:14:39: error: template argument 2 is invalid
+..\main.cpp:14:50: error: expected ';' before 'it'
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                                  ^~~
+      |                                                  ;
+..\main.cpp:14:51: error: 'it' was not declared in this scope; did you mean 'int'?
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                                   ^~
+      |                                                   int
+..\main.cpp:14:87: error: request for member 'begin' in 'vecUniquePointerFahrzeugVector', which is of non-class type 'int'
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                                                                       ^~~~~
+..\main.cpp:14:134: error: request for member 'end' in 'vecUniquePointerFahrzeugVector', which is of non-class type 'int'
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                                                                                                                      ^~~
+..\main.cpp:14:139: error: expected ')' before ';' token
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |             ~                                                                                                                             ^
+      |                                                                                                                                           )
+..\main.cpp:14:9: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |         ^~~
+..\main.cpp:14:141: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                                                                                                                             ^~
+..\main.cpp:14:42: warning: unused variable 'iterator' [-Wunused-variable]
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                          ^~~~~~~~
+..\main.cpp:14:143: error: 'it' was not declared in this scope; did you mean 'int'?
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                                                                                                                               ^~
+      |                                                                                                                                               int
+..\main.cpp: In function 'void vAufgabe_1a()':
+..\main.cpp:81:24: error: cannot convert 'std::vector<std::unique_ptr<Fahrzeug> >' to 'int'
+   81 |         vGesamtAusgabe(vecFahrzeugVector);
+      |                        ^~~~~~~~~~~~~~~~~
+      |                        |
+      |                        std::vector<std::unique_ptr<Fahrzeug> >
+..\main.cpp:12:48: note:   initializing argument 1 of 'void vGesamtAusgabe(int)'
+   12 | void vGesamtAusgabe(std::vector<u_ptrFahrzeug> vecUniquePointerFahrzeugVector){
+      |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+16:07:33 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:12:33: error: 'u_ptrFahrzeug' was not declared in this scope; did you mean 'Fahrzeug'?
+   12 | void vGesamtAusgabe(std::vector<u_ptrFahrzeug> vecUniquePointerFahrzeugVector){
+      |                                 ^~~~~~~~~~~~~
+      |                                 Fahrzeug
+..\main.cpp:12:46: error: template argument 1 is invalid
+   12 | void vGesamtAusgabe(std::vector<u_ptrFahrzeug> vecUniquePointerFahrzeugVector){
+      |                                              ^
+..\main.cpp:12:46: error: template argument 2 is invalid
+..\main.cpp: In function 'void vGesamtAusgabe(int)':
+..\main.cpp:14:26: error: 'u_ptrFahrzeug' was not declared in this scope; did you mean 'Fahrzeug'?
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                          ^~~~~~~~~~~~~
+      |                          Fahrzeug
+..\main.cpp:14:39: error: template argument 1 is invalid
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                       ^
+..\main.cpp:14:39: error: template argument 2 is invalid
+..\main.cpp:14:50: error: expected ';' before 'it'
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                                  ^~~
+      |                                                  ;
+..\main.cpp:14:51: error: 'it' was not declared in this scope; did you mean 'int'?
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                                   ^~
+      |                                                   int
+..\main.cpp:14:87: error: request for member 'begin' in 'vecUniquePointerFahrzeugVector', which is of non-class type 'int'
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                                                                       ^~~~~
+..\main.cpp:14:134: error: request for member 'end' in 'vecUniquePointerFahrzeugVector', which is of non-class type 'int'
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                                                                                                                      ^~~
+..\main.cpp:14:139: error: expected ')' before ';' token
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |             ~                                                                                                                             ^
+      |                                                                                                                                           )
+..\main.cpp:14:9: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |         ^~~
+..\main.cpp:14:141: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                                                                                                                             ^~
+..\main.cpp:14:42: warning: unused variable 'iterator' [-Wunused-variable]
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                          ^~~~~~~~
+..\main.cpp:14:143: error: 'it' was not declared in this scope; did you mean 'int'?
+   14 |         for (std::vector<u_ptrFahrzeug>::iterator it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+      |                                                                                                                                               ^~
+      |                                                                                                                                               int
+..\main.cpp: In function 'void vAufgabe_1a()':
+..\main.cpp:66:21: error: 'u_ptrFahrzeug' was not declared in this scope; did you mean 'Fahrzeug'?
+   66 |         std::vector<u_ptrFahrzeug> vecFahrzeugVector;
+      |                     ^~~~~~~~~~~~~
+      |                     Fahrzeug
+..\main.cpp:66:34: error: template argument 1 is invalid
+   66 |         std::vector<u_ptrFahrzeug> vecFahrzeugVector;
+      |                                  ^
+..\main.cpp:66:34: error: template argument 2 is invalid
+..\main.cpp:78:22: error: expected ';' before 'fNewFahrzeug'
+   78 |         u_ptrFahrzeug  fNewFahrzeug = std::make_unique<Fahrzeug>(sNameInput, dMaxGeschwindikeitInput);
+      |                      ^ ~~~~~~~~~~~~
+      |                      ;
+..\main.cpp:79:27: error: request for member 'push_back' in 'vecFahrzeugVector', which is of non-class type 'int'
+   79 |         vecFahrzeugVector.push_back(move(fNewFahrzeug));
+      |                           ^~~~~~~~~
+..\main.cpp:79:42: error: 'fNewFahrzeug' was not declared in this scope; did you mean 'Fahrzeug'?
+   79 |         vecFahrzeugVector.push_back(move(fNewFahrzeug));
+      |                                          ^~~~~~~~~~~~
+      |                                          Fahrzeug
+..\main.cpp:79:37: error: 'move' was not declared in this scope; did you mean 'std::move'?
+   79 |         vecFahrzeugVector.push_back(move(fNewFahrzeug));
+      |                                     ^~~~
+      |                                     std::move
+In file included from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Fahrzeug.h:7,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:644:5: note: 'std::move' declared here
+  644 |     move(_II __first, _II __last, _OI __result)
+      |     ^~~~
+..\main.cpp:77:16: warning: unused variable 'dMaxGeschwindikeitInput' [-Wunused-variable]
+   77 |         double dMaxGeschwindikeitInput = stod(sGeschwindigkeitInput);
+      |                ^~~~~~~~~~~~~~~~~~~~~~~
+16:08:20 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+In file included from c:\mingw64\include\c++\11.2.0\memory:66,
+                 from ..\main.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h: In instantiation of '_ForwardIterator std::uninitialized_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = __gnu_cxx::__normal_iterator<const std::unique_ptr<Fahrzeug>*, std::vector<std::unique_ptr<Fahrzeug> > >; _ForwardIterator = std::unique_ptr<Fahrzeug>*]':
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h:333:37:   required from '_ForwardIterator std::__uninitialized_copy_a(_InputIterator, _InputIterator, _ForwardIterator, std::allocator<_Tp>&) [with _InputIterator = __gnu_cxx::__normal_iterator<const std::unique_ptr<Fahrzeug>*, std::vector<std::unique_ptr<Fahrzeug> > >; _ForwardIterator = std::unique_ptr<Fahrzeug>*; _Tp = std::unique_ptr<Fahrzeug>]'
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:558:31:   required from 'std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&) [with _Tp = std::unique_ptr<Fahrzeug>; _Alloc = std::allocator<std::unique_ptr<Fahrzeug> >]'
+..\main.cpp:85:16:   required from here
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h:138:72: error: static assertion failed: result type must be constructible from value type of input range
+  138 |       static_assert(is_constructible<_ValueType2, decltype(*__first)>::value,
+      |                                                                        ^~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h:138:72: note: 'std::integral_constant<bool, false>::value' evaluates to false
+16:10:27 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+In file included from c:\mingw64\include\c++\11.2.0\memory:66,
+                 from ..\main.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h: In instantiation of '_ForwardIterator std::uninitialized_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = __gnu_cxx::__normal_iterator<const std::unique_ptr<Fahrzeug>*, std::vector<std::unique_ptr<Fahrzeug> > >; _ForwardIterator = std::unique_ptr<Fahrzeug>*]':
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h:333:37:   required from '_ForwardIterator std::__uninitialized_copy_a(_InputIterator, _InputIterator, _ForwardIterator, std::allocator<_Tp>&) [with _InputIterator = __gnu_cxx::__normal_iterator<const std::unique_ptr<Fahrzeug>*, std::vector<std::unique_ptr<Fahrzeug> > >; _ForwardIterator = std::unique_ptr<Fahrzeug>*; _Tp = std::unique_ptr<Fahrzeug>]'
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:558:31:   required from 'std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&) [with _Tp = std::unique_ptr<Fahrzeug>; _Alloc = std::allocator<std::unique_ptr<Fahrzeug> >]'
+..\main.cpp:85:16:   required from here
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h:138:72: error: static assertion failed: result type must be constructible from value type of input range
+  138 |       static_assert(is_constructible<_ValueType2, decltype(*__first)>::value,
+      |                                                                        ^~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h:138:72: note: 'std::integral_constant<bool, false>::value' evaluates to false
+16:10:37 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+In file included from c:\mingw64\include\c++\11.2.0\memory:66,
+                 from ..\main.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h: In instantiation of '_ForwardIterator std::uninitialized_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = __gnu_cxx::__normal_iterator<const std::unique_ptr<Fahrzeug>*, std::vector<std::unique_ptr<Fahrzeug> > >; _ForwardIterator = std::unique_ptr<Fahrzeug>*]':
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h:333:37:   required from '_ForwardIterator std::__uninitialized_copy_a(_InputIterator, _InputIterator, _ForwardIterator, std::allocator<_Tp>&) [with _InputIterator = __gnu_cxx::__normal_iterator<const std::unique_ptr<Fahrzeug>*, std::vector<std::unique_ptr<Fahrzeug> > >; _ForwardIterator = std::unique_ptr<Fahrzeug>*; _Tp = std::unique_ptr<Fahrzeug>]'
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:558:31:   required from 'std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&) [with _Tp = std::unique_ptr<Fahrzeug>; _Alloc = std::allocator<std::unique_ptr<Fahrzeug> >]'
+..\main.cpp:85:16:   required from here
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h:138:72: error: static assertion failed: result type must be constructible from value type of input range
+  138 |       static_assert(is_constructible<_ValueType2, decltype(*__first)>::value,
+      |                                                                        ^~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h:138:72: note: 'std::integral_constant<bool, false>::value' evaluates to false
+16:16:07 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+In file included from c:\mingw64\include\c++\11.2.0\memory:66,
+                 from ..\main.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h: In instantiation of '_ForwardIterator std::uninitialized_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = __gnu_cxx::__normal_iterator<const std::unique_ptr<Fahrzeug>*, std::vector<std::unique_ptr<Fahrzeug> > >; _ForwardIterator = std::unique_ptr<Fahrzeug>*]':
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h:333:37:   required from '_ForwardIterator std::__uninitialized_copy_a(_InputIterator, _InputIterator, _ForwardIterator, std::allocator<_Tp>&) [with _InputIterator = __gnu_cxx::__normal_iterator<const std::unique_ptr<Fahrzeug>*, std::vector<std::unique_ptr<Fahrzeug> > >; _ForwardIterator = std::unique_ptr<Fahrzeug>*; _Tp = std::unique_ptr<Fahrzeug>]'
+c:\mingw64\include\c++\11.2.0\bits\stl_vector.h:558:31:   required from 'std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&) [with _Tp = std::unique_ptr<Fahrzeug>; _Alloc = std::allocator<std::unique_ptr<Fahrzeug> >]'
+..\main.cpp:85:16:   required from here
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h:138:72: error: static assertion failed: result type must be constructible from value type of input range
+  138 |       static_assert(is_constructible<_ValueType2, decltype(*__first)>::value,
+      |                                                                        ^~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_uninitialized.h:138:72: note: 'std::integral_constant<bool, false>::value' evaluates to false
+16:24:30 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+16:25:48 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+Info: Nothing to build for Aufgabenblock_1
