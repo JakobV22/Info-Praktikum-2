@@ -1,0 +1,19 @@
+/*
+ * PKW.cpp
+ *
+ *  Created on: 28.10.2024
+ *      Author: vogel
+ */
+
+#include "PKW.h"
+#include "Fahrzeug.h"
+
+PKW::PKW() {
+	// TODO Auto-generated constructor stub
+
+}
+
+PKW::~PKW() {
+	// TODO Auto-generated destructor stub
+}
+

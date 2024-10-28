@@ -15,9 +15,14 @@ typedef std::unique_ptr<Fahrzeug> u_ptrFahrzeug;
 
 void vGesamtAusgabe(std::vector<u_ptrFahrzeug>& vecUniquePointerFahrzeugVector){
 	Fahrzeug::vKopf();
+	for (dGlobaleZeit = 0.0; dGlobaleZeit < 5; dGlobaleZeit += 0.1){
+
+
 	for (auto it = vecUniquePointerFahrzeugVector.begin() ; it != vecUniquePointerFahrzeugVector.end(); ++it){
+		(*it)->vSimulieren();
 		(*it)->vAusgeben();
 		std::cout << "\n" << std::endl;
+	}
 	}
 }
 void vAufgabe_1() {

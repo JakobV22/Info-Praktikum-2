@@ -6,7 +6,7 @@
  */
 
 #include "Fahrzeug.h"
-#include <iomanip>
+
 
 Fahrzeug::Fahrzeug() {
 	p_dLetzteAktualisierung = dGlobaleZeit;
@@ -41,8 +41,9 @@ void Fahrzeug::vKopf() {
 			<< std::resetiosflags(std::ios::left)
 			<< std::setiosflags(std::ios::right) << std::setw(5) << "Name"
 			<< std::setw(20) << "MaxGeschwindigkeit" << std::setw(15)
-			<< "Gesamtstrecke" << std::endl;
-	std::cout << std::setfill('-') << std::setw(50) << "-" << std::endl;
+			<< "Gesamtstrecke" << std::setw(20) << "Gesamtverbrauch"
+			<< std::setw(15) << "Tankinhalt" << std::endl;
+	std::cout << std::setfill('-') << std::setw(85) << "-" << std::endl;
 	std::cout << std::setfill(' ');
 
 }
@@ -58,7 +59,6 @@ void Fahrzeug::vAusgeben() {
 }
 void Fahrzeug::vSimulieren() {
 
-
 	if (p_dLetzteAktualisierung != dGlobaleZeit) {
 		double dZeitVergangen = dGlobaleZeit - p_dLetzteAktualisierung;
 		p_dGesamtstrecke += (dZeitVergangen * p_dMaxGeschwindigkeit);
@@ -67,4 +67,7 @@ void Fahrzeug::vSimulieren() {
 
 	}
 
+}
+double Fahrzeug::dTanken(double dMenge) {
+	return 0;
 }

@@ -1,0 +1,18 @@
+/*
+ * PKW.h
+ *
+ *  Created on: 28.10.2024
+ *      Author: vogel
+ */
+
+#ifndef PKW_H_
+#define PKW_H_
+#include "Fahrzeug.h"
+
+class PKW: public Fahrzeug {
+public:
+	PKW();
+	virtual ~PKW();
+};
+
+#endif /* PKW_H_ */

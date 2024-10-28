@@ -1,0 +1,25 @@
+/*
+ * PKW.cpp
+ *
+ *  Created on: 28.10.2024
+ *      Author: vogel
+ */
+
+#include "PKW.h"
+
+
+PKW::PKW() {
+	Fahrzeug();
+
+}
+PKW::PKW(std::string sName, double dMaxGeschwindigkeit, const double dVerbrauch):
+		Fahrzeug(sName, dMaxGeschwindigkeit),
+		p_dVerbrauch(dVerbrauch){
+
+}
+
+
+PKW::~PKW() {
+	// TODO Auto-generated destructor stub
+}
+

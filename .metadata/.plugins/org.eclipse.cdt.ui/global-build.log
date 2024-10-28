@@ -1267,3 +1267,305 @@ g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\
 g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
 Info: Nothing to build for Aufgabenblock_1
 Info: Nothing to build for Aufgabenblock_1
+22:50:15 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrzeug.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+23:01:53 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+In file included from ..\Fahrrad.cpp:8:
+..\Fahrrad.h:11:32: error: expected class-name before '{' token
+   11 | class Fahrrad: public Fahrzeug {
+      |                                ^
+23:02:12 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+In file included from ..\Fahrrad.cpp:8:
+..\Fahrrad.h:11:32: error: expected class-name before '{' token
+   11 | class Fahrrad: public Fahrzeug {
+      |                                ^
+23:02:44 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+23:04:23 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+In file included from ..\PKW.cpp:9:
+..\Fahrzeug.h:32:9: error: member 'vKopf' cannot be declared both 'virtual' and 'static'
+   32 |         virtual static void vKopf();
+      |         ^~~~~~~ ~~~~~~
+23:04:33 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+23:12:51 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+23:37:07 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp: In constructor 'Fahrzeug::Fahrzeug(std::string)':
+..\Fahrzeug.cpp:18:42: error: mem-initializer for 'Fahrzeug::p_sName' follows constructor delegation
+   18 |                 Fahrzeug(), p_sName(sName) {
+      |                                          ^
+..\Fahrzeug.cpp: In constructor 'Fahrzeug::Fahrzeug(std::string, double)':
+..\Fahrzeug.cpp:26:85: error: mem-initializer for 'Fahrzeug::p_dMaxGeschwindigkeit' follows constructor delegation
+   26 |                                 (dMaxGeschwindigkeit >= 0) ? dMaxGeschwindigkeit : 0) {
+      |                                                                                     ^
+23:41:46 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+In file included from ..\Fahrzeug.cpp:8:
+..\Fahrzeug.h: In constructor 'Fahrzeug::Fahrzeug(std::string)':
+..\Fahrzeug.h:24:16: warning: 'Fahrzeug::p_dLetzteAktualisierung' will be initialized after [-Wreorder]
+   24 |         double p_dLetzteAktualisierung = 0;
+      |                ^~~~~~~~~~~~~~~~~~~~~~~
+..\Fahrzeug.h:18:21: warning:   'std::string Fahrzeug::p_sName' [-Wreorder]
+   18 |         std::string p_sName = "";
+      |                     ^~~~~~~
+..\Fahrzeug.cpp:17:1: warning:   when initialized here [-Wreorder]
+   17 | Fahrzeug::Fahrzeug(std::string sName) :
+      | ^~~~~~~~
+In file included from ..\Fahrzeug.cpp:8:
+..\Fahrzeug.h: In constructor 'Fahrzeug::Fahrzeug(std::string, double)':
+..\Fahrzeug.h:24:16: warning: 'Fahrzeug::p_dLetzteAktualisierung' will be initialized after [-Wreorder]
+   24 |         double p_dLetzteAktualisierung = 0;
+      |                ^~~~~~~~~~~~~~~~~~~~~~~
+..\Fahrzeug.h:18:21: warning:   'std::string Fahrzeug::p_sName' [-Wreorder]
+   18 |         std::string p_sName = "";
+      |                     ^~~~~~~
+..\Fahrzeug.cpp:24:1: warning:   when initialized here [-Wreorder]
+   24 | Fahrzeug::Fahrzeug(std::string sName, double dMaxGeschwindigkeit) :
+      | ^~~~~~~~
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+..\PKW.cpp: In constructor 'PKW::PKW(std::string, double, double, double)':
+..\PKW.cpp:23:44: error: no matching function for call to 'Fahrzeug::Fahrzeug(std::string&, double&, const double&)'
+   23 |                 p_dTankvolumen(dTankvolumen){
+      |                                            ^
+In file included from ..\PKW.h:10,
+                 from ..\PKW.cpp:8:
+..\Fahrzeug.h:29:9: note: candidate: 'Fahrzeug::Fahrzeug(std::string, double)'
+   29 |         Fahrzeug(std::string sName, double dMaxGeschwindigkeit);
+      |         ^~~~~~~~
+..\Fahrzeug.h:29:9: note:   candidate expects 2 arguments, 3 provided
+..\Fahrzeug.h:28:9: note: candidate: 'Fahrzeug::Fahrzeug(std::string)'
+   28 |         Fahrzeug(std::string sName);
+      |         ^~~~~~~~
+..\Fahrzeug.h:28:9: note:   candidate expects 1 argument, 3 provided
+..\Fahrzeug.h:27:9: note: candidate: 'Fahrzeug::Fahrzeug()'
+   27 |         Fahrzeug();
+      |         ^~~~~~~~
+..\Fahrzeug.h:27:9: note:   candidate expects 0 arguments, 3 provided
+..\Fahrzeug.h:14:7: note: candidate: 'Fahrzeug::Fahrzeug(const Fahrzeug&)'
+   14 | class Fahrzeug {
+      |       ^~~~~~~~
+..\Fahrzeug.h:14:7: note:   candidate expects 1 argument, 3 provided
+23:43:57 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+..\PKW.cpp: In constructor 'PKW::PKW(std::string, double, double, double)':
+..\PKW.cpp:22:64: error: no matching function for call to 'Fahrzeug::Fahrzeug(std::string&, double&, const double&)'
+   22 |                 Fahrzeug(sName, dMaxGeschwindigkeit, dVerbrauch) {
+      |                                                                ^
+In file included from ..\PKW.h:10,
+                 from ..\PKW.cpp:8:
+..\Fahrzeug.h:29:9: note: candidate: 'Fahrzeug::Fahrzeug(std::string, double)'
+   29 |         Fahrzeug(std::string sName, double dMaxGeschwindigkeit);
+      |         ^~~~~~~~
+..\Fahrzeug.h:29:9: note:   candidate expects 2 arguments, 3 provided
+..\Fahrzeug.h:28:9: note: candidate: 'Fahrzeug::Fahrzeug(std::string)'
+   28 |         Fahrzeug(std::string sName);
+      |         ^~~~~~~~
+..\Fahrzeug.h:28:9: note:   candidate expects 1 argument, 3 provided
+..\Fahrzeug.h:27:9: note: candidate: 'Fahrzeug::Fahrzeug()'
+   27 |         Fahrzeug();
+      |         ^~~~~~~~
+..\Fahrzeug.h:27:9: note:   candidate expects 0 arguments, 3 provided
+..\Fahrzeug.h:14:7: note: candidate: 'Fahrzeug::Fahrzeug(const Fahrzeug&)'
+   14 | class Fahrzeug {
+      |       ^~~~~~~~
+..\Fahrzeug.h:14:7: note:   candidate expects 1 argument, 3 provided
+..\PKW.cpp:23:24: error: assignment of read-only member 'PKW::p_dTankvolumen'
+   23 |         p_dTankvolumen = dTankvolumen;
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+23:45:17 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+23:57:55 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+..\Fahrrad.cpp:14:8: error: default argument given for parameter 1 of 'double Fahrrad::dTanken(double)' [-fpermissive]
+   14 | double Fahrrad::dTanken(double dMenge = std::numeric_limits<double>::infinity()){
+      |        ^~~~~~~
+In file included from ..\Fahrrad.cpp:8:
+..\Fahrrad.h:16:24: note: previous specification in 'virtual double Fahrrad::dTanken(double)' here
+   16 |         virtual double dTanken(double dMenge = std::numeric_limits<double>::infinity());
+      |                        ^~~~~~~
+23:58:36 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+In file included from ..\Fahrzeug.cpp:8:
+..\Fahrzeug.h: In constructor 'Fahrzeug::Fahrzeug(std::string)':
+..\Fahrzeug.h:24:16: warning: 'Fahrzeug::p_dLetzteAktualisierung' will be initialized after [-Wreorder]
+   24 |         double p_dLetzteAktualisierung = 0;
+      |                ^~~~~~~~~~~~~~~~~~~~~~~
+..\Fahrzeug.h:18:21: warning:   'std::string Fahrzeug::p_sName' [-Wreorder]
+   18 |         std::string p_sName = "";
+      |                     ^~~~~~~
+..\Fahrzeug.cpp:17:1: warning:   when initialized here [-Wreorder]
+   17 | Fahrzeug::Fahrzeug(std::string sName) :
+      | ^~~~~~~~
+In file included from ..\Fahrzeug.cpp:8:
+..\Fahrzeug.h: In constructor 'Fahrzeug::Fahrzeug(std::string, double)':
+..\Fahrzeug.h:24:16: warning: 'Fahrzeug::p_dLetzteAktualisierung' will be initialized after [-Wreorder]
+   24 |         double p_dLetzteAktualisierung = 0;
+      |                ^~~~~~~~~~~~~~~~~~~~~~~
+..\Fahrzeug.h:18:21: warning:   'std::string Fahrzeug::p_sName' [-Wreorder]
+   18 |         std::string p_sName = "";
+      |                     ^~~~~~~
+..\Fahrzeug.cpp:24:1: warning:   when initialized here [-Wreorder]
+   24 | Fahrzeug::Fahrzeug(std::string sName, double dMaxGeschwindigkeit) :
+      | ^~~~~~~~
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: Fahrzeug.o:Fahrzeug.cpp:(.rdata$_ZTV8Fahrzeug[_ZTV8Fahrzeug]+0x30): undefined reference to `Fahrzeug::dTanken(double)'
+collect2.exe: error: ld returned 1 exit status
+23:59:07 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: Fahrzeug.o:Fahrzeug.cpp:(.rdata$_ZTV8Fahrzeug[_ZTV8Fahrzeug]+0x30): undefined reference to `Fahrzeug::dTanken(double)'
+collect2.exe: error: ld returned 1 exit status
+23:59:13 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: Fahrzeug.o:Fahrzeug.cpp:(.rdata$_ZTV8Fahrzeug[_ZTV8Fahrzeug]+0x30): undefined reference to `Fahrzeug::dTanken(double)'
+collect2.exe: error: ld returned 1 exit status
+23:59:16 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: Fahrzeug.o:Fahrzeug.cpp:(.rdata$_ZTV8Fahrzeug[_ZTV8Fahrzeug]+0x30): undefined reference to `Fahrzeug::dTanken(double)'
+collect2.exe: error: ld returned 1 exit status
+00:00:40 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+In file included from ..\Fahrzeug.cpp:8:
+..\Fahrzeug.h: In constructor 'Fahrzeug::Fahrzeug(std::string)':
+..\Fahrzeug.h:24:16: warning: 'Fahrzeug::p_dLetzteAktualisierung' will be initialized after [-Wreorder]
+   24 |         double p_dLetzteAktualisierung = 0;
+      |                ^~~~~~~~~~~~~~~~~~~~~~~
+..\Fahrzeug.h:18:21: warning:   'std::string Fahrzeug::p_sName' [-Wreorder]
+   18 |         std::string p_sName = "";
+      |                     ^~~~~~~
+..\Fahrzeug.cpp:17:1: warning:   when initialized here [-Wreorder]
+   17 | Fahrzeug::Fahrzeug(std::string sName) :
+      | ^~~~~~~~
+In file included from ..\Fahrzeug.cpp:8:
+..\Fahrzeug.h: In constructor 'Fahrzeug::Fahrzeug(std::string, double)':
+..\Fahrzeug.h:24:16: warning: 'Fahrzeug::p_dLetzteAktualisierung' will be initialized after [-Wreorder]
+   24 |         double p_dLetzteAktualisierung = 0;
+      |                ^~~~~~~~~~~~~~~~~~~~~~~
+..\Fahrzeug.h:18:21: warning:   'std::string Fahrzeug::p_sName' [-Wreorder]
+   18 |         std::string p_sName = "";
+      |                     ^~~~~~~
+..\Fahrzeug.cpp:24:1: warning:   when initialized here [-Wreorder]
+   24 | Fahrzeug::Fahrzeug(std::string sName, double dMaxGeschwindigkeit) :
+      | ^~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+00:01:53 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+00:02:05 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: Fahrzeug.o:Fahrzeug.cpp:(.rdata$_ZTV8Fahrzeug[_ZTV8Fahrzeug]+0x30): undefined reference to `Fahrzeug::dTanken(double)'
+collect2.exe: error: ld returned 1 exit status
+00:04:11 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: Fahrzeug.o:Fahrzeug.cpp:(.rdata$_ZTV8Fahrzeug[_ZTV8Fahrzeug]+0x30): undefined reference to `Fahrzeug::dTanken(double)'
+collect2.exe: error: ld returned 1 exit status
+00:04:16 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+00:09:18 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+..\PKW.cpp: In member function 'virtual void PKW::vSimulieren()':
+..\PKW.cpp:48:12: error: expected ';' before '{' token
+   48 | PKW::~PKW() {
+      |            ^~
+      |            ;
+..\PKW.cpp:50:2: error: expected '}' at end of input
+   50 | }
+      |  ^
+..\PKW.cpp:37:25: note: to match this '{'
+   37 | void PKW::vSimulieren() {
+      |                         ^
+00:09:37 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+00:21:07 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+..\PKW.cpp: In member function 'virtual void PKW::vAusgeben()':
+..\PKW.cpp:58:27: error: 'setw' is not a member of 'std'
+   58 |         std::cout << std::setw(15) << (p_dGesamtstrecke * p_dVerbrauch)/100.00 << std::setw(15) << p_dTankinhalt;
+      |                           ^~~~
+..\PKW.cpp:58:88: error: 'setw' is not a member of 'std'
+   58 |         std::cout << std::setw(15) << (p_dGesamtstrecke * p_dVerbrauch)/100.00 << std::setw(15) << p_dTankinhalt;
+      |                                                                                        ^~~~
+00:21:44 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+00:21:51 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+00:23:22 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp:9:1: error: 'kk' does not name a type
+    9 | kk
+      | ^~
+00:23:32 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+00:24:53 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+00:25:48 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+Info: Nothing to build for Aufgabenblock_1

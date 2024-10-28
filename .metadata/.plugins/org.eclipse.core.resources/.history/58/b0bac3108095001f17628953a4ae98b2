@@ -1,0 +1,28 @@
+/*
+ * PKW.h
+ *
+ *  Created on: 28.10.2024
+ *      Author: vogel
+ */
+
+#ifndef PKW_H_
+#define PKW_H_
+#include "Fahrzeug.h"
+#include <limits>
+
+class PKW: public Fahrzeug {
+
+protected:
+	const double p_dVerbrauch = 0;
+	const double p_dTankvolumen = 55;
+	double p_dTankinhalt = 0;
+
+public:
+	PKW();
+	PKW(std::string sName, double dMaxGeschwindigkeit, const double dVerbrauch);
+	PKW(std::string sName, double dMaxGeschwindigkeit, const double dVerbrauch, double dTankvolumen);
+	double dTanken(double dMenge = std::numeric_limits<double>::infinity());
+	virtual ~PKW();
+};
+
+#endif /* PKW_H_ */
