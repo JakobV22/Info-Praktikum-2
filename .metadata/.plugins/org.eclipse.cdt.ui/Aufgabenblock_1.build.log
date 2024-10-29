@@ -1,1 +1,43 @@
-Info: Nothing to build for Aufgabenblock_1
+23:40:23 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:14:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   14 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_3()':
+..\main.cpp:179:41: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>& std::unique_ptr<_Tp, _Dp>::operator=(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+  179 |         vecFahrzeuge[2] = vecFahrzeuge[0];
+      |                                         ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Fahrzeug.h:10,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:469:19: note: declared here
+  469 |       unique_ptr& operator=(const unique_ptr&) = delete;
+      |                   ^~~~~~~~
+..\main.cpp:180:41: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>& std::unique_ptr<_Tp, _Dp>::operator=(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+  180 |         vecFahrzeuge[0] = vecFahrzeuge[1];
+      |                                         ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Fahrzeug.h:10,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:469:19: note: declared here
+  469 |       unique_ptr& operator=(const unique_ptr&) = delete;
+      |                   ^~~~~~~~
+..\main.cpp:181:41: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>& std::unique_ptr<_Tp, _Dp>::operator=(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+  181 |         vecFahrzeuge[5] = vecFahrzeuge[0];
+      |                                         ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Fahrzeug.h:10,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:469:19: note: declared here
+  469 |       unique_ptr& operator=(const unique_ptr&) = delete;
+      |                   ^~~~~~~~
+
+23:40:24 Build Failed. 3 errors, 1 warnings. (took 711ms)
+

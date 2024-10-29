@@ -18,13 +18,15 @@ protected:
 
 public:
 	PKW();
+	PKW(const PKW&) = delete;
 	PKW(std::string sName, double dMaxGeschwindigkeit, const double dVerbrauch);
 	PKW(std::string sName, double dMaxGeschwindigkeit, const double dVerbrauch,
 			double dTankvolumen);
 	virtual double dTanken(double dMenge =
 			std::numeric_limits<double>::infinity()) override;
 	virtual void vSimulieren() override;
-	virtual void vAusgeben () override;
+	virtual void vAusgeben (std::ostream& o) const override;
+
 	virtual ~PKW();
 };
 
