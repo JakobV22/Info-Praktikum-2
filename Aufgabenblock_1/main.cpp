@@ -15,13 +15,19 @@ extern double dGlobaleZeit = 0.0;
 typedef std::unique_ptr<Fahrzeug> u_ptrFahrzeug;
 
 
-
+/**
+ * Überladung des << Operators für ostream Objekte
+ * Ermöglicht das direkte und geordnete Ausgeben von Attributen von Fahrzeug Objekten
+ */
 std::ostream& operator<< (std::ostream& o, const Fahrzeug& f ) {
 	f.vAusgeben(o);
 	return o;
 
 }
-
+/**
+ * Simuliert alle Fahrzeug Objekte aus Vektor über bestimmte Zeit
+ *  Gibt aktualisierte Daten jeweils über Konsole aus
+ */
 void vGesamtAusgabe1a(
 		std::vector<u_ptrFahrzeug> &vecUniquePointerFahrzeugVector) {
 	Fahrzeug::vKopf();
@@ -35,6 +41,10 @@ void vGesamtAusgabe1a(
 		}
 	}
 }
+/**
+ * Simuliert alle Fahrzeug Objekte in übergebenem Vektor ein mal
+ * gibt aktualisierte Daten in Konsole aus
+ */
 void vGesamtAusgabe2(
 		std::vector<u_ptrFahrzeug> &vecUniquePointerFahrzeugVector) {
 
@@ -45,6 +55,11 @@ void vGesamtAusgabe2(
 		std::cout << "\n" << std::endl;
 	}
 }
+
+/**
+ * vAufgabe_1 Hauptsächlich zum Testen grundlegender Funktionen
+ * Auskomentiert, das Methode "Ausgeben" ersetzt durch Überladung des << Operators
+ */
 
 void vAufgabe_1() {
 //	Fahrzeug fF1("F0");
@@ -95,6 +110,13 @@ void vAufgabe_1() {
 //	delete pF3;
 //
 }
+
+
+
+/**
+ * vAufgabe_1a liest name und Maximalgeschwindigkeit für 3 Fahrzeuge in Konsole ein, speichert erzeugte Objekte in Vektor,
+ * und ruft vGesamtAusgabe1a zur Simulation über bestimmte Zeit und Ausgabe auf
+ */
 void vAufgabe_1a() {
 
 	std::vector<u_ptrFahrzeug> vecFahrzeugVector;
@@ -115,17 +137,24 @@ void vAufgabe_1a() {
 	vGesamtAusgabe1a(vecFahrzeugVector);
 
 }
+
+/**
+ * Liest Anzahl zu erzeugender PKWs und Fahrräder aus Konsole ein
+ * Konstruiert entsprechende Objekte und verwaltet sie in std::vector
+ * Simuliert bis 3h, tankt dann auf (nur PKWs logisch) und simuliert weitere 2h
+ * gibt bei jedem Sim Schritt vollständige aktualisierte Daten aus
+ */
 void vAufgabe_2() {
 	std::vector<u_ptrFahrzeug> vecFahrzeugVector;
 	std::string sInput;
 	std::cout << "Wie viele PKWs? " << std::endl;
 	std::cin >> sInput;
-	int iIntInput1 = stoi(sInput);
+	int iIntInput1 = stoi(sInput);						//Einlesen der Inputs aus Konsole
 	std::cout << "Wie viele Fahrräder? " << std::endl;
 	std::cin >> sInput;
 	int iIntInput2 = stoi(sInput);
 
-	for (int i = 0; i < iIntInput1; i++) {
+	for (int i = 0; i < iIntInput1; i++) {					//Erstellung der Objekte
 		std::string sName = "PKW" + std::to_string(i + 1);
 		std::unique_ptr<PKW> fNewPKW = std::make_unique<PKW>(sName, 100, 5);
 		vecFahrzeugVector.push_back(move(fNewPKW));
@@ -139,21 +168,29 @@ void vAufgabe_2() {
 		vecFahrzeugVector.push_back(move(fNewFahrrad));
 
 	}
-	Fahrzeug::vKopf();
-	for (; dGlobaleZeit < 3.0; dGlobaleZeit += 0.25) {
+	Fahrzeug::vKopf();										//Erhöhung der Globalen Zeit
+	for (; dGlobaleZeit < 3.0; dGlobaleZeit += 0.25) {		// jeweils Aufruf von vGesamtAsugabe2 zur Simulation und Asugabe aller Objekte des Vektors
 		vGesamtAusgabe2(vecFahrzeugVector);
 	}
-	for (auto it = vecFahrzeugVector.begin(); it < vecFahrzeugVector.end();
+	for (auto it = vecFahrzeugVector.begin(); it < vecFahrzeugVector.end();		//Tanken nach 3h
 			it++) {
 		(*it)->dTanken();
 	}
-	for (; dGlobaleZeit < 5.0; dGlobaleZeit += 0.25) {
+	for (; dGlobaleZeit < 5.0; dGlobaleZeit += 0.25) {			//weitere Simulation
 		vGesamtAusgabe2(vecFahrzeugVector);
 
 	}
 }
+
+
+
+/**
+ * Test der überladenen Operatoren <<, = und <
+ */
 void vAufgabe_3(){
 	std::vector<std::unique_ptr<Fahrzeug>> vecFahrzeuge;
+
+	//Erstellung von Objekten aller 3 Klassen
 	for (int i = 1; i<4; i++){
 		std::unique_ptr<Fahrzeug> fF1 = std::make_unique<Fahrzeug>("FZ"+std::to_string(i),i*10);
 		vecFahrzeuge.push_back(move(fF1));
@@ -168,30 +205,33 @@ void vAufgabe_3(){
 			vecFahrzeuge.push_back(move(fF1));
 		}
 	Fahrzeug::vKopf();
+
+	//Ein Simulationschritt für alle Objekte
 	dGlobaleZeit++;
 	for (auto it = vecFahrzeuge.begin(); it < vecFahrzeuge.end(); it++){
-		std::cout << *(*it) << std::endl;
 		(*it)->vSimulieren();
+		std::cout << *(*it) << std::endl;
+
 	}
-
-	//alles quatsch mit dereferenzierung
-	std::cout << " 0 kleiner 1:" << (vecFahrzeuge[0] < vecFahrzeuge[1]) << std::endl;
-	std::cout << " 1 kleiner 0:" << (vecFahrzeuge[1] < vecFahrzeuge[0]) << std::endl;
-	std::cout << " 7 kleiner 8:" << (vecFahrzeuge[7] < vecFahrzeuge[8]) << std::endl;
-	*(vecFahrzeuge[2].get()) = *(vecFahrzeuge[0].get());
-	*(vecFahrzeuge[0]) = *(vecFahrzeuge[1]);
-	(*vecFahrzeuge[5]) = *(vecFahrzeuge[0]);
-
+	//Ausgabe von ausgewählten Abfragen zur Überprüfung der Funktion der neuen Operatoren
+		std::cout << " 0 kleiner 1:" << (*(vecFahrzeuge[0]) < *(vecFahrzeuge[1])) << std::endl;
+		std::cout << " 1 kleiner 0:" << (*(vecFahrzeuge[1]) < *(vecFahrzeuge[0])) << std::endl;
+		std::cout << " 7 kleiner 8:" << (*(vecFahrzeuge[7]) < *(vecFahrzeuge[8])) << std::endl;
+		*(vecFahrzeuge[2]) = *(vecFahrzeuge[0]);
+		*(vecFahrzeuge[0]) = *(vecFahrzeuge[1]);
+		*(vecFahrzeuge[5]) = *(vecFahrzeuge[0]);
 
 
 
-	Fahrzeug::vKopf();
-		for (auto it = vecFahrzeuge.begin(); it < vecFahrzeuge.end(); it++){
-			std::cout << *(*it) << std::endl;
 
-		}
+		Fahrzeug::vKopf();
+			for (auto it = vecFahrzeuge.begin(); it < vecFahrzeuge.end(); it++){
+				std::cout << *(*it) << std::endl;
+
+			}
+
+
 }
-
 
 int main() {
 

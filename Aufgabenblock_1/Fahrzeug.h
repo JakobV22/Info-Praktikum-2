@@ -3,6 +3,10 @@
  *
  *  Created on: 21.10.2024
  *      Author: vogel
+ *
+ *
+ *      Basisklasse
+ *      enthält grundlegende Methoden
  */
 #include <string>
 #include <iostream>

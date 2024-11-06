@@ -3,6 +3,8 @@
  *
  *  Created on: 28.10.2024
  *      Author: vogel
+ *
+ *      erbt von Basisklasse Fahrzeug
  */
 
 #ifndef FAHRRAD_H_
