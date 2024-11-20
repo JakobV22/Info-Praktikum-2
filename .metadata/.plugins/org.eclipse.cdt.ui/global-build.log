@@ -4563,3 +4563,166 @@ g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\
       |               ^~~~~~~~~~~~
 g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
 g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+11:31:02 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:14:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   14 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+11:57:45 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:14:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   14 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Aufgabenblock_1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:57:49 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+11:58:02 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:14:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   14 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+12:10:49 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:14:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   14 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'int main()':
+..\main.cpp:257:9: error: expected ',' or ';' before 'vAufgabe_2'
+  257 |         vAufgabe_2();
+      |         ^~~~~~~~~~
+12:10:59 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:14:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   14 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+12:12:07 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:14:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   14 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+12:26:23 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:14:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   14 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:90:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   90 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+..\main.cpp:93:17: error: 'fabs' was not declared in this scope; did you mean 'labs'?
+   93 |             if (fabs(dGlobaleZeit - 3.0) < dTakt/2)
+      |                 ^~~~
+      |                 labs
+..\main.cpp: At global scope:
+..\main.cpp:283:8: error: redefinition of 'double dEpsilon'
+  283 | double dEpsilon = 0.001;
+      |        ^~~~~~~~
+..\main.cpp:72:8: note: 'double dEpsilon' previously defined here
+   72 | double dEpsilon = 0.001;
+      |        ^~~~~~~~
+12:26:54 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:15:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   15 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:91:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   91 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: At global scope:
+..\main.cpp:284:8: error: redefinition of 'double dEpsilon'
+  284 | double dEpsilon = 0.001;
+      |        ^~~~~~~~
+..\main.cpp:73:8: note: 'double dEpsilon' previously defined here
+   73 | double dEpsilon = 0.001;
+      |        ^~~~~~~~
+12:27:17 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:15:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   15 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:91:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+   91 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Aufgabenblock_1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:27:22 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+12:45:51 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:15:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   15 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp:253:8: error: redefinition of 'double dEpsilon'
+  253 | double dEpsilon = 0.001;
+      |        ^~~~~~~~
+..\main.cpp:73:8: note: 'double dEpsilon' previously defined here
+   73 | double dEpsilon = 0.001;
+      |        ^~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+12:46:23 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:15:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   15 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Aufgabenblock_1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:46:27 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+17:02:42 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+17:03:40 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:15:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   15 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Aufgabenblock_1.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+17:03:47 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
+Info: Internal Builder is used for build
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 

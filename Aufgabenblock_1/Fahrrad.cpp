@@ -40,8 +40,12 @@ double Fahrrad::dTanken(double dMenge) {
  */
 double Fahrrad::dGeschwindigkeit() const {
 
-	double dNewGeschwindigkeit = p_dMaxGeschwindigkeit
-			* (1 - p_dGesamtstrecke * 0.005);
+	int iMultiplierIndex = p_dGesamtstrecke / 20;
+	double dNewGeschwindigkeit = p_dMaxGeschwindigkeit;
+	for (int i = 0; i< iMultiplierIndex; i++){
+		dNewGeschwindigkeit *= 0.9;
+	}
+
 	if (dNewGeschwindigkeit < 12)
 		return 12.00;
 	else

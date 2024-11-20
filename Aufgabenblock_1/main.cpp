@@ -10,16 +10,16 @@
 #include <memory>
 #include <vector>
 #include <string.h>
+#include <math.h>
 
 extern double dGlobaleZeit = 0.0;
 typedef std::unique_ptr<Fahrzeug> u_ptrFahrzeug;
-
 
 /**
  * Überladung des << Operators für ostream Objekte
  * Ermöglicht das direkte und geordnete Ausgeben von Attributen von Fahrzeug Objekten
  */
-std::ostream& operator<< (std::ostream& o, const Fahrzeug& f ) {
+std::ostream& operator<<(std::ostream &o, const Fahrzeug &f) {
 	f.vAusgeben(o);
 	return o;
 
@@ -60,6 +60,17 @@ void vGesamtAusgabe2(
  * vAufgabe_1 Hauptsächlich zum Testen grundlegender Funktionen
  * Auskomentiert, das Methode "Ausgeben" ersetzt durch Überladung des << Operators
  */
+
+#include <iostream>
+#include <vector>
+#include <iomanip>
+#include <algorithm>
+#include "PKW.h"
+#include "Fahrrad.h"
+
+using namespace std;
+extern double dGlobaleZeit;
+
 
 void vAufgabe_1() {
 //	Fahrzeug fF1("F0");
@@ -111,8 +122,6 @@ void vAufgabe_1() {
 //
 }
 
-
-
 /**
  * vAufgabe_1a liest name und Maximalgeschwindigkeit für 3 Fahrzeuge in Konsole ein, speichert erzeugte Objekte in Vektor,
  * und ruft vGesamtAusgabe1a zur Simulation über bestimmte Zeit und Ausgabe auf
@@ -149,12 +158,12 @@ void vAufgabe_2() {
 	std::string sInput;
 	std::cout << "Wie viele PKWs? " << std::endl;
 	std::cin >> sInput;
-	int iIntInput1 = stoi(sInput);						//Einlesen der Inputs aus Konsole
+	int iIntInput1 = stoi(sInput);			//Einlesen der Inputs aus Konsole
 	std::cout << "Wie viele Fahrräder? " << std::endl;
 	std::cin >> sInput;
 	int iIntInput2 = stoi(sInput);
 
-	for (int i = 0; i < iIntInput1; i++) {					//Erstellung der Objekte
+	for (int i = 0; i < iIntInput1; i++) {				//Erstellung der Objekte
 		std::string sName = "PKW" + std::to_string(i + 1);
 		std::unique_ptr<PKW> fNewPKW = std::make_unique<PKW>(sName, 100, 5);
 		vecFahrzeugVector.push_back(move(fNewPKW));
@@ -168,74 +177,115 @@ void vAufgabe_2() {
 		vecFahrzeugVector.push_back(move(fNewFahrrad));
 
 	}
-	Fahrzeug::vKopf();										//Erhöhung der Globalen Zeit
-	for (; dGlobaleZeit < 3.0; dGlobaleZeit += 0.25) {		// jeweils Aufruf von vGesamtAsugabe2 zur Simulation und Asugabe aller Objekte des Vektors
+	Fahrzeug::vKopf();								//Erhöhung der Globalen Zeit
+	for (; dGlobaleZeit < 3.0; dGlobaleZeit += 0.25) {// jeweils Aufruf von vGesamtAsugabe2 zur Simulation und Asugabe aller Objekte des Vektors
 		vGesamtAusgabe2(vecFahrzeugVector);
 	}
-	for (auto it = vecFahrzeugVector.begin(); it < vecFahrzeugVector.end();		//Tanken nach 3h
+	for (auto it = vecFahrzeugVector.begin(); it < vecFahrzeugVector.end();//Tanken nach 3h
 			it++) {
 		(*it)->dTanken();
 	}
-	for (; dGlobaleZeit < 5.0; dGlobaleZeit += 0.25) {			//weitere Simulation
+	for (; dGlobaleZeit < 5.0; dGlobaleZeit += 0.25) {		//weitere Simulation
 		vGesamtAusgabe2(vecFahrzeugVector);
 
 	}
 }
 
-
-
 /**
  * Test der überladenen Operatoren <<, = und <
  */
-void vAufgabe_3(){
+void vAufgabe_3() {
 	std::vector<std::unique_ptr<Fahrzeug>> vecFahrzeuge;
 
 	//Erstellung von Objekten aller 3 Klassen
-	for (int i = 1; i<4; i++){
-		std::unique_ptr<Fahrzeug> fF1 = std::make_unique<Fahrzeug>("FZ"+std::to_string(i),i*10);
+	for (int i = 1; i < 4; i++) {
+		std::unique_ptr<Fahrzeug> fF1 = std::make_unique<Fahrzeug>(
+				"FZ" + std::to_string(i), i * 10);
 		vecFahrzeuge.push_back(move(fF1));
 	}
-	for (int i = 1; i<4; i++){
-			std::unique_ptr<PKW> fF1 = std::make_unique<PKW>("PKW"+std::to_string(i),i*10, i*3);
-			vecFahrzeuge.push_back(move(fF1));
-		}
+	for (int i = 1; i < 4; i++) {
+		std::unique_ptr<PKW> fF1 = std::make_unique<PKW>(
+				"PKW" + std::to_string(i), i * 10, i * 3);
+		vecFahrzeuge.push_back(move(fF1));
+	}
 
-	for (int i = 1; i<4; i++){
-			std::unique_ptr<Fahrrad>  fF1 = std::make_unique<Fahrrad>("FR"+std::to_string(i),i*10);
-			vecFahrzeuge.push_back(move(fF1));
-		}
+	for (int i = 1; i < 4; i++) {
+		std::unique_ptr<Fahrrad> fF1 = std::make_unique<Fahrrad>(
+				"FR" + std::to_string(i), i * 10);
+		vecFahrzeuge.push_back(move(fF1));
+	}
 	Fahrzeug::vKopf();
 
 	//Ein Simulationschritt für alle Objekte
 	dGlobaleZeit++;
-	for (auto it = vecFahrzeuge.begin(); it < vecFahrzeuge.end(); it++){
+	for (auto it = vecFahrzeuge.begin(); it < vecFahrzeuge.end(); it++) {
 		(*it)->vSimulieren();
 		std::cout << *(*it) << std::endl;
 
 	}
 	//Ausgabe von ausgewählten Abfragen zur Überprüfung der Funktion der neuen Operatoren
-		std::cout << " 0 kleiner 1:" << (*(vecFahrzeuge[0]) < *(vecFahrzeuge[1])) << std::endl;
-		std::cout << " 1 kleiner 0:" << (*(vecFahrzeuge[1]) < *(vecFahrzeuge[0])) << std::endl;
-		std::cout << " 7 kleiner 8:" << (*(vecFahrzeuge[7]) < *(vecFahrzeuge[8])) << std::endl;
-		*(vecFahrzeuge[2]) = *(vecFahrzeuge[0]);
-		*(vecFahrzeuge[0]) = *(vecFahrzeuge[1]);
-		*(vecFahrzeuge[5]) = *(vecFahrzeuge[0]);
+	std::cout << " 0 kleiner 1:" << (*(vecFahrzeuge[0]) < *(vecFahrzeuge[1]))
+			<< std::endl;
+	std::cout << " 1 kleiner 0:" << (*(vecFahrzeuge[1]) < *(vecFahrzeuge[0]))
+			<< std::endl;
+	std::cout << " 7 kleiner 8:" << (*(vecFahrzeuge[7]) < *(vecFahrzeuge[8]))
+			<< std::endl;
+	*(vecFahrzeuge[2]) = *(vecFahrzeuge[0]);
+	*(vecFahrzeuge[0]) = *(vecFahrzeuge[1]);
+	*(vecFahrzeuge[5]) = *(vecFahrzeuge[0]);
 
+	Fahrzeug::vKopf();
+	for (auto it = vecFahrzeuge.begin(); it < vecFahrzeuge.end(); it++) {
+		std::cout << *(*it) << std::endl;
 
-
-
-		Fahrzeug::vKopf();
-			for (auto it = vecFahrzeuge.begin(); it < vecFahrzeuge.end(); it++){
-				std::cout << *(*it) << std::endl;
-
-			}
-
+	}
 
 }
+#include <iostream>
+#include <vector>
+#include <iomanip>
+#include <algorithm>
+#include "PKW.h"
+#include "Fahrrad.h"
 
+using namespace std;
+extern double dGlobaleZeit;
+double dEpsilon = 0.001;
+void vAufgabe_AB1() {
+
+    int l = 0; // Laufindex für gezielte AUsgabe
+    vector<int> ausgabe{15};
+    double dTakt = 0.3;
+
+    std::vector<unique_ptr<Fahrzeug>> vecFahrzeuge;
+    vecFahrzeuge.push_back(make_unique <PKW>("Audi", 229, 9.6));
+    vecFahrzeuge.push_back(make_unique <Fahrrad>("BMX", 24.7));
+    for (dGlobaleZeit = 0; dGlobaleZeit < 10; dGlobaleZeit += dTakt)
+    {
+        auto itL = find(ausgabe.begin(), ausgabe.end(), l);
+        if (itL != ausgabe.end()) {
+            std::cout << std::endl << l <<  " Globalezeit = " << dGlobaleZeit << std::endl;
+            Fahrzeug::vKopf();
+        }
+
+        for (int i = 0; i < vecFahrzeuge.size(); i++)
+        {
+            vecFahrzeuge[i]->vSimulieren();
+            if (fabs(dGlobaleZeit - 3.0) < dTakt/2)
+            {
+                vecFahrzeuge[i]->dTanken();
+            }
+            if (itL != ausgabe.end()) {
+                std::cout << *vecFahrzeuge[i] << endl;
+            }
+        }
+        l++;
+    }
+    char c;
+    std::cin >> c;
+}
 int main() {
-
-vAufgabe_3();
+	vAufgabe_2();
 
 }
 
