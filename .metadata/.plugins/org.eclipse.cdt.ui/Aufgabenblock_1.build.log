@@ -1,6 +1,1 @@
-17:03:47 **** Incremental Build of configuration Debug for project Aufgabenblock_1 ****
-Info: Internal Builder is used for build
-g++ "-LC:\\boost\\libs" -o Aufgabenblock_1.exe Fahrrad.o Fahrzeug.o PKW.o main.o -lws2_32 
-
-17:03:47 Build Finished. 0 errors, 0 warnings. (took 254ms)
-
+Info: Nothing to build for Aufgabenblock_1
