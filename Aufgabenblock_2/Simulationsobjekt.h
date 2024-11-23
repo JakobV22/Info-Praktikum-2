@@ -30,6 +30,7 @@ public:
 	virtual ~Simulationsobjekt();
 	virtual void vSimulieren() = 0;
 	virtual void vAusgeben(std::ostream& o) const;
+	std::string vGetName();
 };
 
 #endif /* SIMULATIONSOBJEKT_H_ */

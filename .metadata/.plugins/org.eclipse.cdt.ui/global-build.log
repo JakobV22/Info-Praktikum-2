@@ -2071,3 +2071,1083 @@ g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp"
 g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
 g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
 g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+09:59:17 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+In file included from ..\Weg.cpp:8:
+..\Weg.h:23:102: error: could not convert 'std::numeric_limits<int>::max()' from 'int' to 'Tempolimit'
+   23 |         Weg(std::string sName, double dLaenge, Tempolimit eTempolimit = std::numeric_limits<int>::max());
+      |                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+      |                                                                                                      |
+      |                                                                                                      int
+..\Weg.h:19:65: error: cannot convert 'int' to 'Tempolimit' in initialization
+   19 |         Tempolimit p_eTempolimit = std::numeric_limits<int>::max();
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+      |                                                                 |
+      |                                                                 int
+..\Weg.cpp:16:46: error: could not convert 'std::numeric_limits<int>::max()' from 'int' to 'Tempolimit'
+   16 |                 std::numeric_limits<int>::max()) :
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+      |                                              |
+      |                                              int
+..\Weg.cpp:15:1: error: default argument given for parameter 3 of 'Weg::Weg(std::string, double, Tempolimit)' [-fpermissive]
+   15 | Weg::Weg(std::string sName, double dLaenge, Tempolimit eTempolimit =
+      | ^~~
+In file included from ..\Weg.cpp:8:
+..\Weg.h:23:9: note: previous specification in 'Weg::Weg(std::string, double, Tempolimit)' here
+   23 |         Weg(std::string sName, double dLaenge, Tempolimit eTempolimit = std::numeric_limits<int>::max());
+      |         ^~~
+Info: Nothing to build for Aufgabenblock_1
+10:03:28 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+..\Weg.cpp:15:1: error: default argument given for parameter 3 of 'Weg::Weg(std::string, double, Tempolimit)' [-fpermissive]
+   15 | Weg::Weg(std::string sName, double dLaenge, Tempolimit eTempolimit = Tempolimit::Autobahn) :
+      | ^~~
+In file included from ..\Weg.cpp:8:
+..\Weg.h:23:9: note: previous specification in 'Weg::Weg(std::string, double, Tempolimit)' here
+   23 |         Weg(std::string sName, double dLaenge, Tempolimit eTempolimit = Tempolimit::Autobahn);
+      |         ^~~
+Info: Nothing to build for Aufgabenblock_1
+10:05:17 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+10:16:52 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+..\Weg.cpp: In member function 'virtual void Weg::vSimulieren()':
+..\Weg.cpp:32:48: error: no match for 'operator<' (operand types are 'std::_List_iterator<std::unique_ptr<Fahrzeug> >' and 'std::__cxx11::list<std::unique_ptr<Fahrzeug> >::iterator')
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                             ~~ ^ ~~~~~~~~~~~~~~~~~~
+      |                                             |                    |
+      |                                             |                    _List_iterator<[...]>
+      |                                             _List_iterator<[...]>
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:64,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_pair.h:489:5: note: candidate: 'template<class _T1, class _T2> constexpr bool std::operator<(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)'
+  489 |     operator<(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_pair.h:489:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::pair<_T1, _T2>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:67,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:425:5: note: candidate: 'template<class _Iterator> constexpr bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)'
+  425 |     operator<(const reverse_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:425:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::reverse_iterator<_Iterator>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:67,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:464:5: note: candidate: 'template<class _IteratorL, class _IteratorR> constexpr bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)'
+  464 |     operator<(const reverse_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:464:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::reverse_iterator<_Iterator>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:67,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:1557:5: note: candidate: 'template<class _IteratorL, class _IteratorR> constexpr bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)'
+ 1557 |     operator<(const move_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:1557:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::move_iterator<_IteratorL>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:67,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:1613:5: note: candidate: 'template<class _Iterator> constexpr bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)'
+ 1613 |     operator<(const move_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:1613:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::move_iterator<_IteratorL>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\basic_string.h:48,
+                 from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\string_view:588:5: note: candidate: 'template<class _CharT, class _Traits> constexpr bool std::operator<(std::basic_string_view<_CharT, _Traits>, std::basic_string_view<_CharT, _Traits>)'
+  588 |     operator< (basic_string_view<_CharT, _Traits> __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\string_view:588:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'std::basic_string_view<_CharT, _Traits>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\basic_string.h:48,
+                 from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\string_view:594:5: note: candidate: 'template<class _CharT, class _Traits> constexpr bool std::operator<(std::basic_string_view<_CharT, _Traits>, std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >)'
+  594 |     operator< (basic_string_view<_CharT, _Traits> __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\string_view:594:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'std::basic_string_view<_CharT, _Traits>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\basic_string.h:48,
+                 from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\string_view:601:5: note: candidate: 'template<class _CharT, class _Traits> constexpr bool std::operator<(std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >, std::basic_string_view<_CharT, _Traits>)'
+  601 |     operator< (__type_identity_t<basic_string_view<_CharT, _Traits>> __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\string_view:601:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'std::basic_string_view<_CharT, _Traits>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6339:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+ 6339 |     operator<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6339:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6352:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const _CharT*)'
+ 6352 |     operator<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6352:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6364:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+ 6364 |     operator<(const _CharT* __lhs,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6364:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   mismatched types 'const _CharT*' and 'std::_List_iterator<std::unique_ptr<Fahrzeug> >'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\tuple:39,
+                 from c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:37,
+                 from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\array:311:5: note: candidate: 'template<class _Tp, long long unsigned int _Nm> bool std::operator<(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)'
+  311 |     operator<(const array<_Tp, _Nm>& __a, const array<_Tp, _Nm>& __b)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\array:311:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::array<_Tp, _Nm>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:37,
+                 from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\tuple:1555:5: note: candidate: 'template<class ... _TElements, class ... _UElements> constexpr bool std::operator<(const std::tuple<_Tps ...>&, const std::tuple<_UTypes ...>&)'
+ 1555 |     operator<(const tuple<_TElements...>& __t,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\tuple:1555:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::tuple<_Tps ...>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:795:5: note: candidate: 'template<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)'
+  795 |     operator<(const unique_ptr<_Tp, _Dp>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:795:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::unique_ptr<_Tp, _Dp>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:807:5: note: candidate: 'template<class _Tp, class _Dp> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)'
+  807 |     operator<(const unique_ptr<_Tp, _Dp>& __x, nullptr_t)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:807:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::unique_ptr<_Tp, _Dp>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:816:5: note: candidate: 'template<class _Tp, class _Dp> bool std::operator<(std::nullptr_t, const std::unique_ptr<_Tp, _Dp>&)'
+  816 |     operator<(nullptr_t, const unique_ptr<_Tp, _Dp>& __x)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:816:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::__cxx11::list<std::unique_ptr<Fahrzeug> >::iterator' is not derived from 'const std::unique_ptr<_Tp, _Dp>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\list:63,
+                 from ..\Simulationsobjekt.h:13,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:2050:5: note: candidate: 'template<class _Tp, class _Alloc> bool std::operator<(const std::__cxx11::list<_Tp, _Alloc>&, const std::__cxx11::list<_Tp, _Alloc>&)'
+ 2050 |     operator<(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:2050:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::__cxx11::list<_Tp, _Alloc>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\ios_base.h:46,
+                 from c:\mingw64\include\c++\11.2.0\ios:42,
+                 from c:\mingw64\include\c++\11.2.0\ostream:38,
+                 from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\system_error:253:3: note: candidate: 'bool std::operator<(const std::error_code&, const std::error_code&)'
+  253 |   operator<(const error_code& __lhs, const error_code& __rhs) noexcept
+      |   ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\system_error:253:31: note:   no known conversion for argument 1 from 'std::_List_iterator<std::unique_ptr<Fahrzeug> >' to 'const std::error_code&'
+  253 |   operator<(const error_code& __lhs, const error_code& __rhs) noexcept
+      |             ~~~~~~~~~~~~~~~~~~^~~~~
+c:\mingw64\include\c++\11.2.0\system_error:381:3: note: candidate: 'bool std::operator<(const std::error_condition&, const std::error_condition&)'
+  381 |   operator<(const error_condition& __lhs,
+      |   ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\system_error:381:36: note:   no known conversion for argument 1 from 'std::_List_iterator<std::unique_ptr<Fahrzeug> >' to 'const std::error_condition&'
+  381 |   operator<(const error_condition& __lhs,
+      |             ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+Info: Nothing to build for Aufgabenblock_1
+10:16:56 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+..\Weg.cpp: In member function 'virtual void Weg::vSimulieren()':
+..\Weg.cpp:32:48: error: no match for 'operator<' (operand types are 'std::_List_iterator<std::unique_ptr<Fahrzeug> >' and 'std::__cxx11::list<std::unique_ptr<Fahrzeug> >::iterator')
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                             ~~ ^ ~~~~~~~~~~~~~~~~~~
+      |                                             |                    |
+      |                                             |                    _List_iterator<[...]>
+      |                                             _List_iterator<[...]>
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:64,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_pair.h:489:5: note: candidate: 'template<class _T1, class _T2> constexpr bool std::operator<(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)'
+  489 |     operator<(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_pair.h:489:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::pair<_T1, _T2>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:67,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:425:5: note: candidate: 'template<class _Iterator> constexpr bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)'
+  425 |     operator<(const reverse_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:425:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::reverse_iterator<_Iterator>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:67,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:464:5: note: candidate: 'template<class _IteratorL, class _IteratorR> constexpr bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)'
+  464 |     operator<(const reverse_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:464:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::reverse_iterator<_Iterator>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:67,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:1557:5: note: candidate: 'template<class _IteratorL, class _IteratorR> constexpr bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)'
+ 1557 |     operator<(const move_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:1557:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::move_iterator<_IteratorL>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:67,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:1613:5: note: candidate: 'template<class _Iterator> constexpr bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)'
+ 1613 |     operator<(const move_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:1613:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::move_iterator<_IteratorL>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\basic_string.h:48,
+                 from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\string_view:588:5: note: candidate: 'template<class _CharT, class _Traits> constexpr bool std::operator<(std::basic_string_view<_CharT, _Traits>, std::basic_string_view<_CharT, _Traits>)'
+  588 |     operator< (basic_string_view<_CharT, _Traits> __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\string_view:588:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'std::basic_string_view<_CharT, _Traits>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\basic_string.h:48,
+                 from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\string_view:594:5: note: candidate: 'template<class _CharT, class _Traits> constexpr bool std::operator<(std::basic_string_view<_CharT, _Traits>, std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >)'
+  594 |     operator< (basic_string_view<_CharT, _Traits> __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\string_view:594:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'std::basic_string_view<_CharT, _Traits>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\basic_string.h:48,
+                 from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\string_view:601:5: note: candidate: 'template<class _CharT, class _Traits> constexpr bool std::operator<(std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >, std::basic_string_view<_CharT, _Traits>)'
+  601 |     operator< (__type_identity_t<basic_string_view<_CharT, _Traits>> __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\string_view:601:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'std::basic_string_view<_CharT, _Traits>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6339:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+ 6339 |     operator<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6339:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6352:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const _CharT*)'
+ 6352 |     operator<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6352:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6364:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+ 6364 |     operator<(const _CharT* __lhs,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6364:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   mismatched types 'const _CharT*' and 'std::_List_iterator<std::unique_ptr<Fahrzeug> >'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\tuple:39,
+                 from c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:37,
+                 from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\array:311:5: note: candidate: 'template<class _Tp, long long unsigned int _Nm> bool std::operator<(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)'
+  311 |     operator<(const array<_Tp, _Nm>& __a, const array<_Tp, _Nm>& __b)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\array:311:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::array<_Tp, _Nm>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:37,
+                 from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\tuple:1555:5: note: candidate: 'template<class ... _TElements, class ... _UElements> constexpr bool std::operator<(const std::tuple<_Tps ...>&, const std::tuple<_UTypes ...>&)'
+ 1555 |     operator<(const tuple<_TElements...>& __t,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\tuple:1555:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::tuple<_Tps ...>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:795:5: note: candidate: 'template<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)'
+  795 |     operator<(const unique_ptr<_Tp, _Dp>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:795:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::unique_ptr<_Tp, _Dp>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:807:5: note: candidate: 'template<class _Tp, class _Dp> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)'
+  807 |     operator<(const unique_ptr<_Tp, _Dp>& __x, nullptr_t)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:807:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::unique_ptr<_Tp, _Dp>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:816:5: note: candidate: 'template<class _Tp, class _Dp> bool std::operator<(std::nullptr_t, const std::unique_ptr<_Tp, _Dp>&)'
+  816 |     operator<(nullptr_t, const unique_ptr<_Tp, _Dp>& __x)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:816:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::__cxx11::list<std::unique_ptr<Fahrzeug> >::iterator' is not derived from 'const std::unique_ptr<_Tp, _Dp>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\list:63,
+                 from ..\Simulationsobjekt.h:13,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:2050:5: note: candidate: 'template<class _Tp, class _Alloc> bool std::operator<(const std::__cxx11::list<_Tp, _Alloc>&, const std::__cxx11::list<_Tp, _Alloc>&)'
+ 2050 |     operator<(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:2050:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::__cxx11::list<_Tp, _Alloc>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\ios_base.h:46,
+                 from c:\mingw64\include\c++\11.2.0\ios:42,
+                 from c:\mingw64\include\c++\11.2.0\ostream:38,
+                 from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\system_error:253:3: note: candidate: 'bool std::operator<(const std::error_code&, const std::error_code&)'
+  253 |   operator<(const error_code& __lhs, const error_code& __rhs) noexcept
+      |   ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\system_error:253:31: note:   no known conversion for argument 1 from 'std::_List_iterator<std::unique_ptr<Fahrzeug> >' to 'const std::error_code&'
+  253 |   operator<(const error_code& __lhs, const error_code& __rhs) noexcept
+      |             ~~~~~~~~~~~~~~~~~~^~~~~
+c:\mingw64\include\c++\11.2.0\system_error:381:3: note: candidate: 'bool std::operator<(const std::error_condition&, const std::error_condition&)'
+  381 |   operator<(const error_condition& __lhs,
+      |   ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\system_error:381:36: note:   no known conversion for argument 1 from 'std::_List_iterator<std::unique_ptr<Fahrzeug> >' to 'const std::error_condition&'
+  381 |   operator<(const error_condition& __lhs,
+      |             ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+Info: Nothing to build for Aufgabenblock_1
+10:18:34 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+..\Weg.cpp: In member function 'virtual void Weg::vSimulieren()':
+..\Weg.cpp:32:48: error: no match for 'operator<' (operand types are 'std::_List_iterator<std::unique_ptr<Fahrzeug> >' and 'std::__cxx11::list<std::unique_ptr<Fahrzeug> >::iterator')
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                             ~~ ^ ~~~~~~~~~~~~~~~~~~
+      |                                             |                    |
+      |                                             |                    _List_iterator<[...]>
+      |                                             _List_iterator<[...]>
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:64,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_pair.h:489:5: note: candidate: 'template<class _T1, class _T2> constexpr bool std::operator<(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)'
+  489 |     operator<(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_pair.h:489:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::pair<_T1, _T2>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:67,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:425:5: note: candidate: 'template<class _Iterator> constexpr bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)'
+  425 |     operator<(const reverse_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:425:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::reverse_iterator<_Iterator>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:67,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:464:5: note: candidate: 'template<class _IteratorL, class _IteratorR> constexpr bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)'
+  464 |     operator<(const reverse_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:464:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::reverse_iterator<_Iterator>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:67,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:1557:5: note: candidate: 'template<class _IteratorL, class _IteratorR> constexpr bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)'
+ 1557 |     operator<(const move_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:1557:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::move_iterator<_IteratorL>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:67,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:1613:5: note: candidate: 'template<class _Iterator> constexpr bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)'
+ 1613 |     operator<(const move_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:1613:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::move_iterator<_IteratorL>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\basic_string.h:48,
+                 from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\string_view:588:5: note: candidate: 'template<class _CharT, class _Traits> constexpr bool std::operator<(std::basic_string_view<_CharT, _Traits>, std::basic_string_view<_CharT, _Traits>)'
+  588 |     operator< (basic_string_view<_CharT, _Traits> __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\string_view:588:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'std::basic_string_view<_CharT, _Traits>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\basic_string.h:48,
+                 from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\string_view:594:5: note: candidate: 'template<class _CharT, class _Traits> constexpr bool std::operator<(std::basic_string_view<_CharT, _Traits>, std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >)'
+  594 |     operator< (basic_string_view<_CharT, _Traits> __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\string_view:594:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'std::basic_string_view<_CharT, _Traits>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\basic_string.h:48,
+                 from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\string_view:601:5: note: candidate: 'template<class _CharT, class _Traits> constexpr bool std::operator<(std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >, std::basic_string_view<_CharT, _Traits>)'
+  601 |     operator< (__type_identity_t<basic_string_view<_CharT, _Traits>> __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\string_view:601:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'std::basic_string_view<_CharT, _Traits>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6339:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+ 6339 |     operator<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6339:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6352:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const _CharT*)'
+ 6352 |     operator<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6352:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6364:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+ 6364 |     operator<(const _CharT* __lhs,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6364:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   mismatched types 'const _CharT*' and 'std::_List_iterator<std::unique_ptr<Fahrzeug> >'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\tuple:39,
+                 from c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:37,
+                 from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\array:311:5: note: candidate: 'template<class _Tp, long long unsigned int _Nm> bool std::operator<(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)'
+  311 |     operator<(const array<_Tp, _Nm>& __a, const array<_Tp, _Nm>& __b)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\array:311:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::array<_Tp, _Nm>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:37,
+                 from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\tuple:1555:5: note: candidate: 'template<class ... _TElements, class ... _UElements> constexpr bool std::operator<(const std::tuple<_Tps ...>&, const std::tuple<_UTypes ...>&)'
+ 1555 |     operator<(const tuple<_TElements...>& __t,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\tuple:1555:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::tuple<_Tps ...>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:795:5: note: candidate: 'template<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)'
+  795 |     operator<(const unique_ptr<_Tp, _Dp>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:795:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::unique_ptr<_Tp, _Dp>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:807:5: note: candidate: 'template<class _Tp, class _Dp> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)'
+  807 |     operator<(const unique_ptr<_Tp, _Dp>& __x, nullptr_t)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:807:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::unique_ptr<_Tp, _Dp>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:816:5: note: candidate: 'template<class _Tp, class _Dp> bool std::operator<(std::nullptr_t, const std::unique_ptr<_Tp, _Dp>&)'
+  816 |     operator<(nullptr_t, const unique_ptr<_Tp, _Dp>& __x)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:816:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::__cxx11::list<std::unique_ptr<Fahrzeug> >::iterator' is not derived from 'const std::unique_ptr<_Tp, _Dp>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\list:63,
+                 from ..\Simulationsobjekt.h:13,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:2050:5: note: candidate: 'template<class _Tp, class _Alloc> bool std::operator<(const std::__cxx11::list<_Tp, _Alloc>&, const std::__cxx11::list<_Tp, _Alloc>&)'
+ 2050 |     operator<(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:2050:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:32:67: note:   'std::_List_iterator<std::unique_ptr<Fahrzeug> >' is not derived from 'const std::__cxx11::list<_Tp, _Alloc>'
+   32 |         for(auto it = p_pFahrzeuge.begin(); it < p_pFahrzeuge.end(); it++){
+      |                                                                   ^
+In file included from c:\mingw64\include\c++\11.2.0\bits\ios_base.h:46,
+                 from c:\mingw64\include\c++\11.2.0\ios:42,
+                 from c:\mingw64\include\c++\11.2.0\ostream:38,
+                 from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\system_error:253:3: note: candidate: 'bool std::operator<(const std::error_code&, const std::error_code&)'
+  253 |   operator<(const error_code& __lhs, const error_code& __rhs) noexcept
+      |   ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\system_error:253:31: note:   no known conversion for argument 1 from 'std::_List_iterator<std::unique_ptr<Fahrzeug> >' to 'const std::error_code&'
+  253 |   operator<(const error_code& __lhs, const error_code& __rhs) noexcept
+      |             ~~~~~~~~~~~~~~~~~~^~~~~
+c:\mingw64\include\c++\11.2.0\system_error:381:3: note: candidate: 'bool std::operator<(const std::error_condition&, const std::error_condition&)'
+  381 |   operator<(const error_condition& __lhs,
+      |   ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\system_error:381:36: note:   no known conversion for argument 1 from 'std::_List_iterator<std::unique_ptr<Fahrzeug> >' to 'const std::error_condition&'
+  381 |   operator<(const error_condition& __lhs,
+      |             ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+Info: Nothing to build for Aufgabenblock_1
+10:19:51 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+10:20:06 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+10:22:17 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+10:22:23 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+..\Weg.cpp: In member function 'virtual void Weg::vSimulieren()':
+..\Weg.cpp:33:22: error: invalid use of incomplete type 'class Fahrzeug'
+   33 |                 (*it)->vSimulieren();
+      |                      ^~
+In file included from ..\Weg.cpp:8:
+..\Weg.h:12:7: note: forward declaration of 'class Fahrzeug'
+   12 | class Fahrzeug;
+      |       ^~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'void std::default_delete<_Tp>::operator()(_Tp*) const [with _Tp = Fahrzeug]':
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:361:17:   required from 'std::unique_ptr<_Tp, _Dp>::~unique_ptr() [with _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+c:\mingw64\include\c++\11.2.0\ext\new_allocator.h:168:13:   required from 'void __gnu_cxx::new_allocator<_Tp>::destroy(_Up*) [with _Up = std::unique_ptr<Fahrzeug>; _Tp = std::_List_node<std::unique_ptr<Fahrzeug> >]'
+c:\mingw64\include\c++\11.2.0\bits\alloc_traits.h:531:15:   required from 'static void std::allocator_traits<std::allocator<_CharT> >::destroy(std::allocator_traits<std::allocator<_CharT> >::allocator_type&, _Up*) [with _Up = std::unique_ptr<Fahrzeug>; _Tp = std::_List_node<std::unique_ptr<Fahrzeug> >; std::allocator_traits<std::allocator<_CharT> >::allocator_type = std::allocator<std::_List_node<std::unique_ptr<Fahrzeug> > >]'
+c:\mingw64\include\c++\11.2.0\bits\list.tcc:77:31:   required from 'void std::__cxx11::_List_base<_Tp, _Alloc>::_M_clear() [with _Tp = std::unique_ptr<Fahrzeug>; _Alloc = std::allocator<std::unique_ptr<Fahrzeug> >]'
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:499:9:   required from 'std::__cxx11::_List_base<_Tp, _Alloc>::~_List_base() [with _Tp = std::unique_ptr<Fahrzeug>; _Alloc = std::allocator<std::unique_ptr<Fahrzeug> >]'
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:673:7:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:83:23: error: invalid application of 'sizeof' to incomplete type 'Fahrzeug'
+   83 |         static_assert(sizeof(_Tp)>0,
+      |                       ^~~~~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+10:22:28 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+10:41:10 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+..\Weg.cpp: In member function 'virtual void Weg::vAusgeben(std::ostream&) const':
+..\Weg.cpp:44:37: error: 'std::string Simulationsobjekt::p_sName' is protected within this context
+   44 |                         o << (*it)->p_sName << " ";
+      |                                     ^~~~~~~
+In file included from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+..\Simulationsobjekt.h:21:21: note: declared protected here
+   21 |         std::string p_sName = "";
+      |                     ^~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+10:43:48 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Simulationsobjekt.o "..\\Simulationsobjekt.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:15:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   15 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Weg.o main.o 
+10:45:12 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:15:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   15 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+10:47:18 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_4()':
+..\main.cpp:289:43: error: no matching function for call to 'Weg::Weg(const char [5], int)'
+  289 |         Weg wTestWeg = new Weg("moin", 100);
+      |                                           ^
+In file included from ..\main.cpp:10:
+..\Weg.h:24:9: note: candidate: 'Weg::Weg(std::string, double, Tempolimit)'
+   24 |         Weg(std::string sName, double dLaenge, Tempolimit eTempolimit);
+      |         ^~~
+..\Weg.h:24:9: note:   candidate expects 3 arguments, 2 provided
+..\Weg.h:23:9: note: candidate: 'Weg::Weg()'
+   23 |         Weg();
+      |         ^~~
+..\Weg.h:23:9: note:   candidate expects 0 arguments, 2 provided
+..\Weg.h:15:7: note: candidate: 'Weg::Weg(const Weg&)'
+   15 | class Weg: public Simulationsobjekt {
+      |       ^~~
+..\Weg.h:15:7: note:   candidate expects 1 argument, 2 provided
+Info: Nothing to build for Aufgabenblock_1
+10:47:22 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_4()':
+..\main.cpp:289:43: error: no matching function for call to 'Weg::Weg(const char [5], int)'
+  289 |         Weg wTestWeg = new Weg("moin", 100);
+      |                                           ^
+In file included from ..\main.cpp:10:
+..\Weg.h:24:9: note: candidate: 'Weg::Weg(std::string, double, Tempolimit)'
+   24 |         Weg(std::string sName, double dLaenge, Tempolimit eTempolimit);
+      |         ^~~
+..\Weg.h:24:9: note:   candidate expects 3 arguments, 2 provided
+..\Weg.h:23:9: note: candidate: 'Weg::Weg()'
+   23 |         Weg();
+      |         ^~~
+..\Weg.h:23:9: note:   candidate expects 0 arguments, 2 provided
+..\Weg.h:15:7: note: candidate: 'Weg::Weg(const Weg&)'
+   15 | class Weg: public Simulationsobjekt {
+      |       ^~~
+..\Weg.h:15:7: note:   candidate expects 1 argument, 2 provided
+Info: Nothing to build for Aufgabenblock_1
+10:47:36 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_4()':
+..\main.cpp:289:43: error: no matching function for call to 'Weg::Weg(const char [5], int)'
+  289 |         Weg wTestWeg = new Weg("moin", 100);
+      |                                           ^
+In file included from ..\main.cpp:10:
+..\Weg.h:24:9: note: candidate: 'Weg::Weg(std::string, double, Tempolimit)'
+   24 |         Weg(std::string sName, double dLaenge, Tempolimit eTempolimit);
+      |         ^~~
+..\Weg.h:24:9: note:   candidate expects 3 arguments, 2 provided
+..\Weg.h:23:9: note: candidate: 'Weg::Weg()'
+   23 |         Weg();
+      |         ^~~
+..\Weg.h:23:9: note:   candidate expects 0 arguments, 2 provided
+..\Weg.h:15:7: note: candidate: 'Weg::Weg(const Weg&)'
+   15 | class Weg: public Simulationsobjekt {
+      |       ^~~
+..\Weg.h:15:7: note:   candidate expects 1 argument, 2 provided
+Info: Nothing to build for Aufgabenblock_1
+10:49:24 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_4()':
+..\main.cpp:289:44: error: no matching function for call to 'Weg::Weg(const char [5], int)'
+  289 |         Weg *wTestWeg = new Weg("moin", 100);
+      |                                            ^
+In file included from ..\main.cpp:10:
+..\Weg.h:24:9: note: candidate: 'Weg::Weg(std::string, double, Tempolimit)'
+   24 |         Weg(std::string sName, double dLaenge, Tempolimit eTempolimit);
+      |         ^~~
+..\Weg.h:24:9: note:   candidate expects 3 arguments, 2 provided
+..\Weg.h:23:9: note: candidate: 'Weg::Weg()'
+   23 |         Weg();
+      |         ^~~
+..\Weg.h:23:9: note:   candidate expects 0 arguments, 2 provided
+..\Weg.h:15:7: note: candidate: 'Weg::Weg(const Weg&)'
+   15 | class Weg: public Simulationsobjekt {
+      |       ^~~
+..\Weg.h:15:7: note:   candidate expects 1 argument, 2 provided
+..\main.cpp:289:14: warning: unused variable 'wTestWeg' [-Wunused-variable]
+  289 |         Weg *wTestWeg = new Weg("moin", 100);
+      |              ^~~~~~~~
+10:49:41 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_4()':
+..\main.cpp:289:44: error: no matching function for call to 'Weg::Weg(const char [5], int)'
+  289 |         Weg *wTestWeg = new Weg("moin", 100);
+      |                                            ^
+In file included from ..\main.cpp:10:
+..\Weg.h:24:9: note: candidate: 'Weg::Weg(std::string, double, Tempolimit)'
+   24 |         Weg(std::string sName, double dLaenge, Tempolimit eTempolimit);
+      |         ^~~
+..\Weg.h:24:9: note:   candidate expects 3 arguments, 2 provided
+..\Weg.h:23:9: note: candidate: 'Weg::Weg()'
+   23 |         Weg();
+      |         ^~~
+..\Weg.h:23:9: note:   candidate expects 0 arguments, 2 provided
+..\Weg.h:15:7: note: candidate: 'Weg::Weg(const Weg&)'
+   15 | class Weg: public Simulationsobjekt {
+      |       ^~~
+..\Weg.h:15:7: note:   candidate expects 1 argument, 2 provided
+..\main.cpp:289:14: warning: unused variable 'wTestWeg' [-Wunused-variable]
+  289 |         Weg *wTestWeg = new Weg("moin", 100);
+      |              ^~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+10:52:11 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_4()':
+..\main.cpp:289:14: warning: unused variable 'wTestWeg' [-Wunused-variable]
+  289 |         Weg *wTestWeg = new Weg("moin", 100);
+      |              ^~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+10:53:11 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+10:53:31 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+10:54:51 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+10:56:18 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+10:57:07 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+10:57:55 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2

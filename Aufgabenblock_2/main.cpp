@@ -7,6 +7,7 @@
 #include "Fahrzeug.h"
 #include "PKW.h"
 #include "Fahrrad.h"
+#include "Weg.h"
 #include <memory>
 #include <vector>
 #include <string.h>
@@ -284,8 +285,13 @@ void vAufgabe_AB1() {
     char c;
     std::cin >> c;
 }
+void vAufgabe_4(){
+	Weg *wTestWeg = new Weg("moin", 100);
+	wTestWeg->vKopf();
+	std::cout<< *wTestWeg << std::endl;
+}
 int main() {
-	vAufgabe_2();
+	vAufgabe_4();
 
 }
 

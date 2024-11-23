@@ -50,4 +50,8 @@ void Simulationsobjekt::vSimulieren() {
 	}
 
 }
+std::string Simulationsobjekt::vGetName(){
+	return p_sName;
+
+}
 
