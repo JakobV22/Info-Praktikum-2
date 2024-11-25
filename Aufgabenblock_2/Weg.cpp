@@ -63,3 +63,24 @@ void Weg::vKopf(){
 	std::cout << std::setfill(' ');
 
 }
+
+/**
+ * Getter Funktion
+ */
+double Weg::dGetLaenge(){
+	return p_dLaenge;
+}
+
+/**
+ * Fahrzeug unique ptr wird auf neuem Weg aufgenommen
+ * Fahrzeug Objekt ruft neueStrecke Funktion auf
+ * unique ptr wird anschließend in Fahrzeugliste des Wegobjektes gemoved
+ */
+void Weg::vAnnahme(std::unique_ptr<Fahrzeug> pFahrzeug){
+	pFahrzeug->vNeueStrecke(*this);
+	p_pFahrzeuge.push_back(move(pFahrzeug));
+}
+void Weg::vAnnahme (std::unique_ptr<Fahrzeug> pFahrzeug, double dStartzeitpunkt){
+	pFahrzeug->vNeueStrecke(*this, dStartzeitpunkt);
+		p_pFahrzeuge.push_front(move(pFahrzeug));
+}

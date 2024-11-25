@@ -12,13 +12,16 @@
 #ifndef FAHRZEUG_H_
 #define FAHRZEUG_H_
 extern double dGlobaleZeit;
-
+class Verhalten;
+class Weg;
 class Fahrzeug: public Simulationsobjekt {
 protected:
 
 
 	double p_dMaxGeschwindigkeit = 0;
 	double p_dGesamtstrecke = 0;
+	std::unique_ptr<Verhalten> p_pVerhalten;
+	double p_dAbschnittStrecke = 0;
 
 
 
@@ -35,6 +38,10 @@ public:
 	virtual double dGeschwindigkeit() const;
 	bool operator < (const Fahrzeug& fFahrzeug2);
 	virtual void operator =(const Fahrzeug& fFahrzeug2);
+	void vNeueStrecke(Weg& rWeg);
+	void vNeueStrecke(Weg& rWeg, double dStartzeitpunkt);
+	double getAbschnittStrecke();
+	std::string getName();
 };
 
 #endif /* FAHRZEUG_H_ */

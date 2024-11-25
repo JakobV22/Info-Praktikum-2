@@ -3151,3 +3151,1023 @@ Info: Internal Builder is used for build
 g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
 g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Weg.o main.o 
 Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+21:42:26 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+In file included from ..\Fahrrad.h:12,
+                 from ..\Fahrrad.cpp:8:
+..\Fahrzeug.h:22:25: error: 'Verhalten' was not declared in this scope
+   22 |         std::unique_ptr<Verhalten> p_pVerhalten;
+      |                         ^~~~~~~~~
+..\Fahrzeug.h:22:34: error: template argument 1 is invalid
+   22 |         std::unique_ptr<Verhalten> p_pVerhalten;
+      |                                  ^
+..\Fahrzeug.h:22:34: error: template argument 2 is invalid
+Info: Nothing to build for Aufgabenblock_1
+21:48:27 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+In file included from ..\Fahrzeug.cpp:9:
+..\Verhalten.h:17:18: warning: unnecessary parentheses in declaration of 'Weg' [-Wparentheses]
+   17 |         Verhalten(&Weg);
+      |                  ^~~~~~
+..\Verhalten.h:17:18: note: remove parentheses
+   17 |         Verhalten(&Weg);
+      |                  ^~~~~~
+      |                  -    -
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+In file included from ..\Verhalten.cpp:8:
+..\Verhalten.h:17:18: warning: unnecessary parentheses in declaration of 'Weg' [-Wparentheses]
+   17 |         Verhalten(&Weg);
+      |                  ^~~~~~
+..\Verhalten.h:17:18: note: remove parentheses
+   17 |         Verhalten(&Weg);
+      |                  ^~~~~~
+      |                  -    -
+..\Verhalten.cpp: In constructor 'Verhalten::Verhalten()':
+..\Verhalten.cpp:10:1: error: uninitialized reference member in 'class Verhalten&' [-fpermissive]
+   10 | Verhalten::Verhalten() {
+      | ^~~~~~~~~
+In file included from ..\Verhalten.cpp:8:
+..\Verhalten.h:17:20: note: 'Verhalten& Verhalten::Weg' should be initialized
+   17 |         Verhalten(&Weg);
+      |                    ^~~
+..\Verhalten.cpp: At global scope:
+..\Verhalten.cpp:14:21: error: expected constructor, destructor, or type conversion before '(' token
+   14 | Verhalten::Verhalten(Weg& wWeg):
+      |                     ^
+Info: Nothing to build for Aufgabenblock_1
+21:49:52 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+In file included from ..\Fahrzeug.cpp:9:
+..\Verhalten.h:17:23: error: expected ')' before 'wWeg'
+   17 |         Verhalten(&Weg wWeg);
+      |                  ~    ^~~~~
+      |                       )
+Info: Nothing to build for Aufgabenblock_1
+21:50:10 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+..\Verhalten.cpp: In constructor 'Verhalten::Verhalten(Weg&)':
+..\Verhalten.cpp:15:9: error: class 'Verhalten' does not have any field named 'p_wWeg'
+   15 |         p_wWeg(&wWeg){
+      |         ^~~~~~
+Info: Nothing to build for Aufgabenblock_1
+21:50:23 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+21:58:37 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+..\Verhalten.cpp: In member function 'double Verhalten::dStrecke(Fahrzeug&, double)':
+..\Verhalten.cpp:25:74: error: invalid use of incomplete type 'class Fahrzeug'
+   25 |                                 double dZurückgelegt = (dZeitIntervall * aFzg.dGeschwindigkeit());
+      |                                                                          ^~~~
+In file included from ..\Verhalten.h:7,
+                 from ..\Verhalten.cpp:8:
+..\Weg.h:12:7: note: forward declaration of 'class Fahrzeug'
+   12 | class Fahrzeug;
+      |       ^~~~~~~~
+..\Verhalten.cpp:26:62: error: 'double Weg::p_dLaenge' is protected within this context
+   26 |                                 if (dZurückgelegt >= p_pWeg->p_dLaenge){
+      |                                                              ^~~~~~~~~
+In file included from ..\Verhalten.h:7,
+                 from ..\Verhalten.cpp:8:
+..\Weg.h:18:16: note: declared protected here
+   18 |         double p_dLaenge = 0;
+      |                ^~~~~~~~~
+..\Verhalten.cpp:27:56: error: 'double Weg::p_dLaenge' is protected within this context
+   27 |                                         return p_pWeg->p_dLaenge;
+      |                                                        ^~~~~~~~~
+In file included from ..\Verhalten.h:7,
+                 from ..\Verhalten.cpp:8:
+..\Weg.h:18:16: note: declared protected here
+   18 |         double p_dLaenge = 0;
+      |                ^~~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+22:01:02 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+Command canceled
+Info: Nothing to build for Aufgabenblock_1
+22:01:06 **** Rebuild of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Simulationsobjekt.o "..\\Simulationsobjekt.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+..\Verhalten.cpp: In member function 'double Verhalten::dStrecke(Fahrzeug&, double)':
+..\Verhalten.cpp:25:74: error: invalid use of incomplete type 'class Fahrzeug'
+   25 |                                 double dZurückgelegt = (dZeitIntervall * aFzg.dGeschwindigkeit());
+      |                                                                          ^~~~
+In file included from ..\Verhalten.h:7,
+                 from ..\Verhalten.cpp:8:
+..\Weg.h:12:7: note: forward declaration of 'class Fahrzeug'
+   12 | class Fahrzeug;
+      |       ^~~~~~~~
+..\Verhalten.cpp:26:62: error: 'double Weg::p_dLaenge' is protected within this context
+   26 |                                 if (dZurückgelegt >= p_pWeg->p_dLaenge){
+      |                                                              ^~~~~~~~~
+In file included from ..\Verhalten.h:7,
+                 from ..\Verhalten.cpp:8:
+..\Weg.h:18:16: note: declared protected here
+   18 |         double p_dLaenge = 0;
+      |                ^~~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+22:01:32 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+..\Verhalten.cpp: In member function 'double Verhalten::dStrecke(Fahrzeug&, double)':
+..\Verhalten.cpp:25:74: error: invalid use of incomplete type 'class Fahrzeug'
+   25 |                                 double dZurückgelegt = (dZeitIntervall * aFzg.dGeschwindigkeit());
+      |                                                                          ^~~~
+In file included from ..\Verhalten.h:7,
+                 from ..\Verhalten.cpp:8:
+..\Weg.h:12:7: note: forward declaration of 'class Fahrzeug'
+   12 | class Fahrzeug;
+      |       ^~~~~~~~
+..\Verhalten.cpp:26:74: error: expected ';' before '{' token
+   26 |                                 if (dZurückgelegt >= p_pWeg->dGetLaenge(){
+      |                                                                          ^
+      |                                                                          ;
+..\Verhalten.cpp:26:51: warning: value computed is not used [-Wunused-value]
+   26 |                                 if (dZurückgelegt >= p_pWeg->dGetLaenge(){
+      |                                     ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+..\Verhalten.cpp:29:33: error: expected primary-expression before 'else'
+   29 |                                 else return dZurückgelegt;
+      |                                 ^~~~
+..\Verhalten.cpp:28:34: error: expected ')' before 'else'
+   28 |                                 }
+      |                                  ^
+      |                                  )
+   29 |                                 else return dZurückgelegt;
+      |                                 ~~~~
+..\Verhalten.cpp:26:36: note: to match this '('
+   26 |                                 if (dZurückgelegt >= p_pWeg->dGetLaenge(){
+      |                                    ^
+..\Verhalten.cpp:30:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   30 | }
+      | ^
+Info: Nothing to build for Aufgabenblock_1
+22:01:40 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+..\Verhalten.cpp: In member function 'double Verhalten::dStrecke(Fahrzeug&, double)':
+..\Verhalten.cpp:25:74: error: invalid use of incomplete type 'class Fahrzeug'
+   25 |                                 double dZurückgelegt = (dZeitIntervall * aFzg.dGeschwindigkeit());
+      |                                                                          ^~~~
+In file included from ..\Verhalten.h:7,
+                 from ..\Verhalten.cpp:8:
+..\Weg.h:12:7: note: forward declaration of 'class Fahrzeug'
+   12 | class Fahrzeug;
+      |       ^~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+22:02:38 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+22:04:46 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp: In member function 'virtual void Fahrzeug::vSimulieren()':
+..\Fahrzeug.cpp:85:66: error: cannot convert 'Fahrzeug*' to 'Fahrzeug&'
+   85 |                         p_dGesamtstrecke += (Verhalten::dStrecke(this, dZeitVergangen));
+      |                                                                  ^~~~
+      |                                                                  |
+      |                                                                  Fahrzeug*
+In file included from ..\Fahrzeug.cpp:9:
+..\Verhalten.h:19:35: note:   initializing argument 1 of 'double Verhalten::dStrecke(Fahrzeug&, double)'
+   19 |         double dStrecke(Fahrzeug& aFzg, double dZeitIntervall);
+      |                         ~~~~~~~~~~^~~~
+Info: Nothing to build for Aufgabenblock_1
+22:04:57 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+In file included from ..\Verhalten.cpp:8:
+..\Verhalten.h:19:25: error: 'Fahrzeug' has not been declared
+   19 |         double dStrecke(Fahrzeug& aFzg, double dZeitIntervall);
+      |                         ^~~~~~~~
+..\Verhalten.cpp:26:8: error: no declaration matches 'double Verhalten::dStrecke(Fahrzeug&, double)'
+   26 | double Verhalten::dStrecke (Fahrzeug& aFzg, double dZeitIntervall){
+      |        ^~~~~~~~~
+In file included from ..\Verhalten.cpp:8:
+..\Verhalten.h:19:16: note: candidate is: 'double Verhalten::dStrecke(int&, double)'
+   19 |         double dStrecke(Fahrzeug& aFzg, double dZeitIntervall);
+      |                ^~~~~~~~
+..\Verhalten.h:11:7: note: 'class Verhalten' defined here
+   11 | class Verhalten {
+      |       ^~~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+22:05:34 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp: In member function 'virtual void Fahrzeug::vSimulieren()':
+..\Fahrzeug.cpp:85:67: error: lvalue required as unary '&' operand
+   85 |                         p_dGesamtstrecke += (Verhalten::dStrecke(&this, dZeitVergangen));
+      |                                                                   ^~~~
+Info: Nothing to build for Aufgabenblock_1
+22:05:44 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp: In member function 'virtual void Fahrzeug::vSimulieren()':
+..\Fahrzeug.cpp:85:66: error: cannot convert 'Fahrzeug*' to 'Fahrzeug&'
+   85 |                         p_dGesamtstrecke += (Verhalten::dStrecke(this, dZeitVergangen));
+      |                                                                  ^~~~
+      |                                                                  |
+      |                                                                  Fahrzeug*
+In file included from ..\Fahrzeug.cpp:9:
+..\Verhalten.h:20:35: note:   initializing argument 1 of 'double Verhalten::dStrecke(Fahrzeug&, double)'
+   20 |         double dStrecke(Fahrzeug& aFzg, double dZeitIntervall);
+      |                         ~~~~~~~~~~^~~~
+Info: Nothing to build for Aufgabenblock_1
+22:05:58 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp: In member function 'virtual void Fahrzeug::vSimulieren()':
+..\Fahrzeug.cpp:85:65: error: cannot call member function 'double Verhalten::dStrecke(Fahrzeug&, double)' without object
+   85 |                         p_dGesamtstrecke += (Verhalten::dStrecke(*this, dZeitVergangen));
+      |                                              ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+22:06:06 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp: In member function 'virtual void Fahrzeug::vSimulieren()':
+..\Fahrzeug.cpp:85:67: error: lvalue required as unary '&' operand
+   85 |                         p_dGesamtstrecke += (Verhalten::dStrecke(&this, dZeitVergangen));
+      |                                                                   ^~~~
+Info: Nothing to build for Aufgabenblock_1
+22:06:30 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp: In member function 'virtual void Fahrzeug::vSimulieren()':
+..\Fahrzeug.cpp:85:66: error: cannot convert 'Fahrzeug*' to 'Fahrzeug&'
+   85 |                         p_dGesamtstrecke += (Verhalten::dStrecke(this, dZeitVergangen));
+      |                                                                  ^~~~
+      |                                                                  |
+      |                                                                  Fahrzeug*
+In file included from ..\Fahrzeug.cpp:9:
+..\Verhalten.h:20:35: note:   initializing argument 1 of 'double Verhalten::dStrecke(Fahrzeug&, double)'
+   20 |         double dStrecke(Fahrzeug& aFzg, double dZeitIntervall);
+      |                         ~~~~~~~~~~^~~~
+Info: Nothing to build for Aufgabenblock_1
+22:07:00 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp: In member function 'virtual void Fahrzeug::vSimulieren()':
+..\Fahrzeug.cpp:85:66: error: cannot convert 'Fahrzeug*' to 'Fahrzeug&'
+   85 |                         p_dGesamtstrecke += (Verhalten::dStrecke(&(*this), dZeitVergangen));
+      |                                                                  ^~~~~~~~
+      |                                                                  |
+      |                                                                  Fahrzeug*
+In file included from ..\Fahrzeug.cpp:9:
+..\Verhalten.h:20:35: note:   initializing argument 1 of 'double Verhalten::dStrecke(Fahrzeug&, double)'
+   20 |         double dStrecke(Fahrzeug& aFzg, double dZeitIntervall);
+      |                         ~~~~~~~~~~^~~~
+Info: Nothing to build for Aufgabenblock_1
+22:10:43 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp: In member function 'virtual void Fahrzeug::vSimulieren()':
+..\Fahrzeug.cpp:85:65: error: no matching function for call to 'Verhalten::dStrecke(Fahrzeug&)'
+   85 |                         p_dGesamtstrecke += (Verhalten::dStrecke(*this), dZeitVergangen));
+      |                                              ~~~~~~~~~~~~~~~~~~~^~~~~~~
+In file included from ..\Fahrzeug.cpp:9:
+..\Verhalten.h:20:16: note: candidate: 'double Verhalten::dStrecke(Fahrzeug&, double)'
+   20 |         double dStrecke(Fahrzeug& aFzg, double dZeitIntervall);
+      |                ^~~~~~~~
+..\Verhalten.h:20:16: note:   candidate expects 2 arguments, 1 provided
+Info: Nothing to build for Aufgabenblock_1
+22:11:03 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp: In member function 'virtual void Fahrzeug::vSimulieren()':
+..\Fahrzeug.cpp:85:65: error: cannot call member function 'double Verhalten::dStrecke(Fahrzeug&, double)' without object
+   85 |                         p_dGesamtstrecke += (Verhalten::dStrecke(*this, dZeitVergangen));
+      |                                              ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+22:11:57 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+22:14:52 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+22:23:14 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+In file included from ..\PKW.h:12,
+                 from ..\PKW.cpp:8:
+..\Fahrzeug.h:39:27: error: 'Weg' has not been declared
+   39 |         void vNeueStrecke(Weg& rWeg);
+      |                           ^~~
+Info: Nothing to build for Aufgabenblock_1
+22:23:46 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp: In member function 'void Fahrzeug::vNeueStrecke(Weg&)':
+..\Fahrzeug.cpp:129:50: error: no match for 'operator*' (operand type is 'Weg')
+  129 |         Verhalten* pNewVerhalten = new Verhalten(*rWeg);
+      |                                                  ^~~~~
+..\Fahrzeug.cpp:130:24: error: no match for 'operator=' (operand types are 'std::unique_ptr<Verhalten>' and 'Verhalten*')
+  130 |         p_pVerhalten = pNewVerhalten;                                                   //alte Instanz gelöscht da unqiue ptr
+      |                        ^~~~~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\Fahrzeug.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:386:9: note: candidate: 'template<class _Up, class _Ep> typename std::enable_if<std::__and_<std::__and_<std::is_convertible<typename std::unique_ptr<_Up, _Ep>::pointer, typename std::__uniq_ptr_impl<_Tp, _Dp>::pointer>, std::__not_<std::is_array<_Up> > >, std::is_assignable<_T2&, _U2&&> >::value, std::unique_ptr<_Tp, _Dp>&>::type std::unique_ptr<_Tp, _Dp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Up = _Up; _Ep = _Ep; _Tp = Verhalten; _Dp = std::default_delete<Verhalten>]'
+  386 |         operator=(unique_ptr<_Up, _Ep>&& __u) noexcept
+      |         ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:386:9: note:   template argument deduction/substitution failed:
+..\Fahrzeug.cpp:130:24: note:   mismatched types 'std::unique_ptr<_Tp, _Dp>' and 'Verhalten*'
+  130 |         p_pVerhalten = pNewVerhalten;                                                   //alte Instanz gelöscht da unqiue ptr
+      |                        ^~~~~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\Fahrzeug.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:371:19: note: candidate: 'std::unique_ptr<_Tp, _Dp>& std::unique_ptr<_Tp, _Dp>::operator=(std::unique_ptr<_Tp, _Dp>&&) [with _Tp = Verhalten; _Dp = std::default_delete<Verhalten>]'
+  371 |       unique_ptr& operator=(unique_ptr&&) = default;
+      |                   ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:371:29: note:   no known conversion for argument 1 from 'Verhalten*' to 'std::unique_ptr<Verhalten>&&'
+  371 |       unique_ptr& operator=(unique_ptr&&) = default;
+      |                             ^~~~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:395:7: note: candidate: 'std::unique_ptr<_Tp, _Dp>& std::unique_ptr<_Tp, _Dp>::operator=(std::nullptr_t) [with _Tp = Verhalten; _Dp = std::default_delete<Verhalten>; std::nullptr_t = std::nullptr_t]'
+  395 |       operator=(nullptr_t) noexcept
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:395:17: note:   no known conversion for argument 1 from 'Verhalten*' to 'std::nullptr_t'
+  395 |       operator=(nullptr_t) noexcept
+      |                 ^~~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+22:25:01 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp: In member function 'void Fahrzeug::vNeueStrecke(Weg&)':
+..\Fahrzeug.cpp:129:80: error: no match for 'operator*' (operand type is 'Weg')
+  129 |         std::unique_ptr<Verhalten> pNewVerhalten = std::make_unique<Verhalten>(*rWeg);
+      |                                                                                ^~~~~
+..\Fahrzeug.cpp:130:24: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>& std::unique_ptr<_Tp, _Dp>::operator=(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = Verhalten; _Dp = std::default_delete<Verhalten>]'
+  130 |         p_pVerhalten = pNewVerhalten;                                                   //alte Instanz gelöscht da unqiue ptr
+      |                        ^~~~~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\Fahrzeug.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:469:19: note: declared here
+  469 |       unique_ptr& operator=(const unique_ptr&) = delete;
+      |                   ^~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+22:25:19 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp: In member function 'void Fahrzeug::vNeueStrecke(Weg&)':
+..\Fahrzeug.cpp:130:24: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>& std::unique_ptr<_Tp, _Dp>::operator=(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = Verhalten; _Dp = std::default_delete<Verhalten>]'
+  130 |         p_pVerhalten = pNewVerhalten;                                                   //alte Instanz gelöscht da unqiue ptr
+      |                        ^~~~~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\Fahrzeug.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:469:19: note: declared here
+  469 |       unique_ptr& operator=(const unique_ptr&) = delete;
+      |                   ^~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+22:25:51 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+22:32:38 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+..\Verhalten.cpp: In member function 'double Verhalten::dStrecke(Fahrzeug&, double)':
+..\Verhalten.cpp:28:58: error: 'double Fahrzeug::p_dAbschnittStrecke' is protected within this context
+   28 |                                 if (dZurückgelegt + aFzg.p_dAbschnittStrecke >= p_pWeg->dGetLaenge()){
+      |                                                          ^~~~~~~~~~~~~~~~~~~
+In file included from ..\Verhalten.cpp:10:
+..\Fahrzeug.h:24:16: note: declared protected here
+   24 |         double p_dAbschnittStrecke = 0;
+      |                ^~~~~~~~~~~~~~~~~~~
+..\Verhalten.cpp:29:77: error: 'double Fahrzeug::p_dAbschnittStrecke' is protected within this context
+   29 |                                         return (p_pWeg->dGetLaenge() - aFzg.p_dAbschnittStrecke) ;
+      |                                                                             ^~~~~~~~~~~~~~~~~~~
+In file included from ..\Verhalten.cpp:10:
+..\Fahrzeug.h:24:16: note: declared protected here
+   24 |         double p_dAbschnittStrecke = 0;
+      |                ^~~~~~~~~~~~~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+22:35:49 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+22:44:08 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+22:50:07 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_5()':
+..\main.cpp:299:22: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+  299 |         Weg1.vAnnahme(fF1);
+      |         ~~~~~~~~~~~~~^~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:468:7: note: declared here
+  468 |       unique_ptr(const unique_ptr&) = delete;
+      |       ^~~~~~~~~~
+In file included from ..\main.cpp:10:
+..\Weg.h:31:49: note:   initializing argument 1 of 'void Weg::vAnnahme(std::unique_ptr<Fahrzeug>)'
+   31 |         void vAnnahme(std::unique_ptr<Fahrzeug> pFahrzeug);
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+..\main.cpp:300:22: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+  300 |         Weg1.vAnnahme(fF2);
+      |         ~~~~~~~~~~~~~^~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:468:7: note: declared here
+  468 |       unique_ptr(const unique_ptr&) = delete;
+      |       ^~~~~~~~~~
+In file included from ..\main.cpp:10:
+..\Weg.h:31:49: note:   initializing argument 1 of 'void Weg::vAnnahme(std::unique_ptr<Fahrzeug>)'
+   31 |         void vAnnahme(std::unique_ptr<Fahrzeug> pFahrzeug);
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+..\main.cpp:301:22: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+  301 |         Weg1.vAnnahme(fF3);
+      |         ~~~~~~~~~~~~~^~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:468:7: note: declared here
+  468 |       unique_ptr(const unique_ptr&) = delete;
+      |       ^~~~~~~~~~
+In file included from ..\main.cpp:10:
+..\Weg.h:31:49: note:   initializing argument 1 of 'void Weg::vAnnahme(std::unique_ptr<Fahrzeug>)'
+   31 |         void vAnnahme(std::unique_ptr<Fahrzeug> pFahrzeug);
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+22:51:12 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+22:51:25 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+22:51:57 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2
+22:52:22 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+22:56:55 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp: In member function 'void Fahrzeug::vNeueStrecke(Weg&)':
+..\Fahrzeug.cpp:132:43: error: no match for 'operator=' (operand types are 'Verhalten' and 'std::remove_reference<std::unique_ptr<Verhalten>&>::type' {aka 'std::unique_ptr<Verhalten>'})
+  132 |         *p_pVerhalten = move(pNewVerhalten);                                                    //alte Instanz gelöscht da unqiue ptr
+      |                                           ^
+In file included from ..\Fahrzeug.cpp:9:
+..\Verhalten.h:12:7: note: candidate: 'constexpr Verhalten& Verhalten::operator=(const Verhalten&)'
+   12 | class Verhalten {
+      |       ^~~~~~~~~
+..\Verhalten.h:12:7: note:   no known conversion for argument 1 from 'std::remove_reference<std::unique_ptr<Verhalten>&>::type' {aka 'std::unique_ptr<Verhalten>'} to 'const Verhalten&'
+22:57:02 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp: In member function 'void Fahrzeug::vNeueStrecke(Weg&)':
+..\Fahrzeug.cpp:132:43: error: no match for 'operator=' (operand types are 'Verhalten' and 'std::remove_reference<std::unique_ptr<Verhalten>&>::type' {aka 'std::unique_ptr<Verhalten>'})
+  132 |         *p_pVerhalten = move(pNewVerhalten);                                                    //alte Instanz gelöscht da unqiue ptr
+      |                                           ^
+In file included from ..\Fahrzeug.cpp:9:
+..\Verhalten.h:12:7: note: candidate: 'constexpr Verhalten& Verhalten::operator=(const Verhalten&)'
+   12 | class Verhalten {
+      |       ^~~~~~~~~
+..\Verhalten.h:12:7: note:   no known conversion for argument 1 from 'std::remove_reference<std::unique_ptr<Verhalten>&>::type' {aka 'std::unique_ptr<Verhalten>'} to 'const Verhalten&'
+Info: Nothing to build for Aufgabenblock_1
+22:57:26 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+22:57:56 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahrrad.o Fahrzeug.o PKW.o Simulationsobjekt.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+23:13:30 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+..\Parken.cpp: In member function 'virtual double Parken::dStrecke(Fahrzeug&, double)':
+..\Parken.cpp:24:22: error: 'cout' is not a member of 'std'
+   24 |                 std::cout << "Startzeit von " << aFzg.getName() << " wurde überschritten" << std::endl;
+      |                      ^~~~
+..\Parken.cpp:9:1: note: 'std::cout' is defined in header '<iostream>'; did you forget to '#include <iostream>'?
+    8 | #include "Parken.h"
+  +++ |+#include <iostream>
+    9 | extern double dGlobaleZeit;
+..\Parken.cpp:24:50: error: invalid use of incomplete type 'class Fahrzeug'
+   24 |                 std::cout << "Startzeit von " << aFzg.getName() << " wurde überschritten" << std::endl;
+      |                                                  ^~~~
+In file included from ..\Parken.h:10,
+                 from ..\Parken.cpp:8:
+..\Verhalten.h:11:7: note: forward declaration of 'class Fahrzeug'
+   11 | class Fahrzeug;
+      |       ^~~~~~~~
+..\Parken.cpp:24:99: error: 'endl' is not a member of 'std'
+   24 |                 std::cout << "Startzeit von " << aFzg.getName() << " wurde überschritten" << std::endl;
+      |                                                                                                   ^~~~
+..\Parken.cpp:9:1: note: 'std::endl' is defined in header '<ostream>'; did you forget to '#include <ostream>'?
+    8 | #include "Parken.h"
+  +++ |+#include <ostream>
+    9 | extern double dGlobaleZeit;
+..\Parken.cpp:25:42: error: invalid use of incomplete type 'class Fahrzeug'
+   25 |                 return (dZeitintervall * aFzg.dGeschwindigkeit());
+      |                                          ^~~~
+In file included from ..\Parken.h:10,
+                 from ..\Parken.cpp:8:
+..\Verhalten.h:11:7: note: forward declaration of 'class Fahrzeug'
+   11 | class Fahrzeug;
+      |       ^~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+23:13:36 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+..\Parken.cpp: In member function 'virtual double Parken::dStrecke(Fahrzeug&, double)':
+..\Parken.cpp:24:22: error: 'cout' is not a member of 'std'
+   24 |                 std::cout << "Startzeit von " << aFzg.getName() << " wurde überschritten" << std::endl;
+      |                      ^~~~
+..\Parken.cpp:9:1: note: 'std::cout' is defined in header '<iostream>'; did you forget to '#include <iostream>'?
+    8 | #include "Parken.h"
+  +++ |+#include <iostream>
+    9 | extern double dGlobaleZeit;
+..\Parken.cpp:24:50: error: invalid use of incomplete type 'class Fahrzeug'
+   24 |                 std::cout << "Startzeit von " << aFzg.getName() << " wurde überschritten" << std::endl;
+      |                                                  ^~~~
+In file included from ..\Parken.h:10,
+                 from ..\Parken.cpp:8:
+..\Verhalten.h:11:7: note: forward declaration of 'class Fahrzeug'
+   11 | class Fahrzeug;
+      |       ^~~~~~~~
+..\Parken.cpp:24:99: error: 'endl' is not a member of 'std'
+   24 |                 std::cout << "Startzeit von " << aFzg.getName() << " wurde überschritten" << std::endl;
+      |                                                                                                   ^~~~
+..\Parken.cpp:9:1: note: 'std::endl' is defined in header '<ostream>'; did you forget to '#include <ostream>'?
+    8 | #include "Parken.h"
+  +++ |+#include <ostream>
+    9 | extern double dGlobaleZeit;
+..\Parken.cpp:25:42: error: invalid use of incomplete type 'class Fahrzeug'
+   25 |                 return (dZeitintervall * aFzg.dGeschwindigkeit());
+      |                                          ^~~~
+In file included from ..\Parken.h:10,
+                 from ..\Parken.cpp:8:
+..\Verhalten.h:11:7: note: forward declaration of 'class Fahrzeug'
+   11 | class Fahrzeug;
+      |       ^~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+23:13:48 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+..\Parken.cpp: In member function 'virtual double Parken::dStrecke(Fahrzeug&, double)':
+..\Parken.cpp:24:22: error: 'cout' is not a member of 'std'
+   24 |                 std::cout << "Startzeit von " << aFzg.getName() << " wurde überschritten" << std::endl;
+      |                      ^~~~
+..\Parken.cpp:9:1: note: 'std::cout' is defined in header '<iostream>'; did you forget to '#include <iostream>'?
+    8 | #include "Parken.h"
+  +++ |+#include <iostream>
+    9 | extern double dGlobaleZeit;
+..\Parken.cpp:24:50: error: invalid use of incomplete type 'class Fahrzeug'
+   24 |                 std::cout << "Startzeit von " << aFzg.getName() << " wurde überschritten" << std::endl;
+      |                                                  ^~~~
+In file included from ..\Parken.h:10,
+                 from ..\Parken.cpp:8:
+..\Verhalten.h:11:7: note: forward declaration of 'class Fahrzeug'
+   11 | class Fahrzeug;
+      |       ^~~~~~~~
+..\Parken.cpp:24:99: error: 'endl' is not a member of 'std'
+   24 |                 std::cout << "Startzeit von " << aFzg.getName() << " wurde überschritten" << std::endl;
+      |                                                                                                   ^~~~
+..\Parken.cpp:9:1: note: 'std::endl' is defined in header '<ostream>'; did you forget to '#include <ostream>'?
+    8 | #include "Parken.h"
+  +++ |+#include <ostream>
+    9 | extern double dGlobaleZeit;
+..\Parken.cpp:25:42: error: invalid use of incomplete type 'class Fahrzeug'
+   25 |                 return (dZeitintervall * aFzg.dGeschwindigkeit());
+      |                                          ^~~~
+In file included from ..\Parken.h:10,
+                 from ..\Parken.cpp:8:
+..\Verhalten.h:11:7: note: forward declaration of 'class Fahrzeug'
+   11 | class Fahrzeug;
+      |       ^~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+23:14:55 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\Fahrzeug.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = Verhalten; _Args = {Weg&}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<Verhalten>]':
+..\Fahrzeug.cpp:131:72:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: invalid new-expression of abstract class type 'Verhalten'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\Fahrzeug.cpp:9:
+..\Verhalten.h:12:7: note:   because the following virtual functions are pure within 'Verhalten':
+   12 | class Verhalten {
+      |       ^~~~~~~~~
+..\Verhalten.h:20:24: note:     'virtual double Verhalten::dStrecke(Fahrzeug&, double)'
+   20 |         virtual double dStrecke(Fahrzeug& aFzg, double dZeitIntervall) = 0;
+      |                        ^~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+23:16:15 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\Fahrzeug.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = Verhalten; _Args = {Weg&}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<Verhalten>]':
+..\Fahrzeug.cpp:131:72:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: invalid new-expression of abstract class type 'Verhalten'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\Fahrzeug.cpp:9:
+..\Verhalten.h:12:7: note:   because the following virtual functions are pure within 'Verhalten':
+   12 | class Verhalten {
+      |       ^~~~~~~~~
+..\Verhalten.h:20:24: note:     'virtual double Verhalten::dStrecke(Fahrzeug&, double)'
+   20 |         virtual double dStrecke(Fahrzeug& aFzg, double dZeitIntervall) = 0;
+      |                        ^~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+23:16:39 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\Fahrzeug.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = Verhalten; _Args = {Weg&}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<Verhalten>]':
+..\Fahrzeug.cpp:131:72:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: invalid new-expression of abstract class type 'Verhalten'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\Fahrzeug.cpp:9:
+..\Verhalten.h:12:7: note:   because the following virtual functions are pure within 'Verhalten':
+   12 | class Verhalten {
+      |       ^~~~~~~~~
+..\Verhalten.h:20:24: note:     'virtual double Verhalten::dStrecke(Fahrzeug&, double)'
+   20 |         virtual double dStrecke(Fahrzeug& aFzg, double dZeitIntervall) = 0;
+      |                        ^~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+23:19:39 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -o Aufgabenblock_2.exe Fahren.o Fahrrad.o Fahrzeug.o PKW.o Parken.o Simulationsobjekt.o Verhalten.o Weg.o main.o 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: Fahren.o:Fahren.cpp:(.rdata$_ZTV6Fahren[_ZTV6Fahren]+0x20): undefined reference to `Fahren::dStrecke(Fahrzeug&, double)'
+collect2.exe: error: ld returned 1 exit status
+23:20:00 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -o Aufgabenblock_2.exe Fahren.o Fahrrad.o Fahrzeug.o PKW.o Parken.o Simulationsobjekt.o Verhalten.o Weg.o main.o 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: Fahren.o:Fahren.cpp:(.rdata$_ZTV6Fahren[_ZTV6Fahren]+0x20): undefined reference to `Fahren::dStrecke(Fahrzeug&, double)'
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for Aufgabenblock_1
+23:20:38 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -o Aufgabenblock_2.exe Fahren.o Fahrrad.o Fahrzeug.o PKW.o Parken.o Simulationsobjekt.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+23:24:02 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+..\Fahren.cpp:19:8: error: no declaration matches 'double Fahren::dStrecke(Fahrzeug&, double)'
+   19 | double Fahren::dStrecke (Fahrzeug& aFzg, double dZeitIntervall){
+      |        ^~~~~~
+In file included from ..\Fahren.cpp:8:
+..\Fahren.h:18:24: note: candidate is: 'virtual double Fahren::dStrecke()'
+   18 |         virtual double dStrecke();
+      |                        ^~~~~~~~
+..\Fahren.h:14:7: note: 'class Fahren' defined here
+   14 | class Fahren: public Verhalten {
+      |       ^~~~~~
+Info: Nothing to build for Aufgabenblock_1
+23:25:24 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+..\Fahren.cpp: In member function 'virtual double Fahren::dStrecke(Fahrzeug&, double)':
+..\Fahren.cpp:21:89: error: invalid use of incomplete type 'class Weg'
+   21 |                                 if (dZurückgelegt + aFzg.getAbschnittStrecke() >= p_pWeg->dGetLaenge()){
+      |                                                                                         ^~
+In file included from ..\Fahren.h:10,
+                 from ..\Fahren.cpp:8:
+..\Verhalten.h:10:7: note: forward declaration of 'class Weg'
+   10 | class Weg;
+      |       ^~~
+..\Fahren.cpp:23:55: error: invalid use of incomplete type 'class Weg'
+   23 |                                         return (p_pWeg->dGetLaenge() - aFzg.getAbschnittStrecke()) ;
+      |                                                       ^~
+In file included from ..\Fahren.h:10,
+                 from ..\Fahren.cpp:8:
+..\Verhalten.h:10:7: note: forward declaration of 'class Weg'
+   10 | class Weg;
+      |       ^~~
+Info: Nothing to build for Aufgabenblock_1
+23:26:13 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\Fahrzeug.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = Verhalten; _Args = {Weg&}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<Verhalten>]':
+..\Fahrzeug.cpp:131:72:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: invalid new-expression of abstract class type 'Verhalten'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\Fahrzeug.cpp:9:
+..\Verhalten.h:12:7: note:   because the following virtual functions are pure within 'Verhalten':
+   12 | class Verhalten {
+      |       ^~~~~~~~~
+..\Verhalten.h:20:24: note:     'virtual double Verhalten::dStrecke(Fahrzeug&, double)'
+   20 |         virtual double dStrecke(Fahrzeug& aFzg, double dZeitIntervall) = 0;
+      |                        ^~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+23:27:17 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\Fahrzeug.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = Verhalten; _Args = {Weg&}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<Verhalten>]':
+..\Fahrzeug.cpp:131:72:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: invalid new-expression of abstract class type 'Verhalten'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\Fahrzeug.cpp:9:
+..\Verhalten.h:12:7: note:   because the following virtual functions are pure within 'Verhalten':
+   12 | class Verhalten {
+      |       ^~~~~~~~~
+..\Verhalten.h:20:24: note:     'virtual double Verhalten::dStrecke(Fahrzeug&, double)'
+   20 |         virtual double dStrecke(Fahrzeug& aFzg, double dZeitIntervall) = 0;
+      |                        ^~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+23:28:43 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\Fahrzeug.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = Verhalten; _Args = {Weg&}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<Verhalten>]':
+..\Fahrzeug.cpp:131:72:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: invalid new-expression of abstract class type 'Verhalten'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\Fahrzeug.cpp:9:
+..\Verhalten.h:12:7: note:   because the following virtual functions are pure within 'Verhalten':
+   12 | class Verhalten {
+      |       ^~~~~~~~~
+..\Verhalten.h:20:24: note:     'virtual double Verhalten::dStrecke(Fahrzeug&, double)'
+   20 |         virtual double dStrecke(Fahrzeug& aFzg, double dZeitIntervall) = 0;
+      |                        ^~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+23:36:11 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\Fahrzeug.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = Fahren; _Args = {Weg&}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<Fahren>]':
+..\Fahrzeug.cpp:136:66:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: no matching function for call to 'Fahren::Fahren(Weg&)'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\Fahrzeug.cpp:11:
+..\Fahren.h:16:9: note: candidate: 'Fahren::Fahren()'
+   16 |         Fahren();
+      |         ^~~~~~
+..\Fahren.h:16:9: note:   candidate expects 0 arguments, 1 provided
+..\Fahren.h:14:7: note: candidate: 'constexpr Fahren::Fahren(const Fahren&)'
+   14 | class Fahren: public Verhalten {
+      |       ^~~~~~
+..\Fahren.h:14:7: note:   no known conversion for argument 1 from 'Weg' to 'const Fahren&'
+Info: Nothing to build for Aufgabenblock_1
+23:39:44 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:27: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |         for (int i = 0; i < vecFahrzeuge.size(); i++)
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -o Aufgabenblock_2.exe Fahren.o Fahrrad.o Fahrzeug.o PKW.o Parken.o Simulationsobjekt.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+23:40:09 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -o Aufgabenblock_2.exe Fahren.o Fahrrad.o Fahrzeug.o PKW.o Parken.o Simulationsobjekt.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+23:43:12 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahren.o Fahrrad.o Fahrzeug.o PKW.o Parken.o Simulationsobjekt.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2
+23:45:29 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahren.o Fahrrad.o Fahrzeug.o PKW.o Parken.o Simulationsobjekt.o Verhalten.o Weg.o main.o 

@@ -72,7 +72,6 @@ void vGesamtAusgabe2(
 using namespace std;
 extern double dGlobaleZeit;
 
-
 void vAufgabe_1() {
 //	Fahrzeug fF1("F0");
 //	Fahrzeug *pF2 = new Fahrzeug("F2");
@@ -254,44 +253,67 @@ extern double dGlobaleZeit;
 double dEpsilon = 0.001;
 void vAufgabe_AB1() {
 
-    int l = 0; // Laufindex für gezielte AUsgabe
-    vector<int> ausgabe{15};
-    double dTakt = 0.3;
+	int l = 0; // Laufindex für gezielte AUsgabe
+	vector<int> ausgabe { 15 };
+	double dTakt = 0.3;
 
-    std::vector<unique_ptr<Fahrzeug>> vecFahrzeuge;
-    vecFahrzeuge.push_back(make_unique <PKW>("Audi", 229, 9.6));
-    vecFahrzeuge.push_back(make_unique <Fahrrad>("BMX", 24.7));
-    for (dGlobaleZeit = 0; dGlobaleZeit < 10; dGlobaleZeit += dTakt)
-    {
-        auto itL = find(ausgabe.begin(), ausgabe.end(), l);
-        if (itL != ausgabe.end()) {
-            std::cout << std::endl << l <<  " Globalezeit = " << dGlobaleZeit << std::endl;
-            Fahrzeug::vKopf();
-        }
+	std::vector<unique_ptr<Fahrzeug>> vecFahrzeuge;
+	vecFahrzeuge.push_back(make_unique<PKW>("Audi", 229, 9.6));
+	vecFahrzeuge.push_back(make_unique<Fahrrad>("BMX", 24.7));
+	for (dGlobaleZeit = 0; dGlobaleZeit < 10; dGlobaleZeit += dTakt) {
+		auto itL = find(ausgabe.begin(), ausgabe.end(), l);
+		if (itL != ausgabe.end()) {
+			std::cout << std::endl << l << " Globalezeit = " << dGlobaleZeit
+					<< std::endl;
+			Fahrzeug::vKopf();
+		}
 
-        for (int i = 0; i < vecFahrzeuge.size(); i++)
-        {
-            vecFahrzeuge[i]->vSimulieren();
-            if (fabs(dGlobaleZeit - 3.0) < dTakt/2)
-            {
-                vecFahrzeuge[i]->dTanken();
-            }
-            if (itL != ausgabe.end()) {
-                std::cout << *vecFahrzeuge[i] << endl;
-            }
-        }
-        l++;
-    }
-    char c;
-    std::cin >> c;
+		for (int i = 0; i < vecFahrzeuge.size(); i++) {
+			vecFahrzeuge[i]->vSimulieren();
+			if (fabs(dGlobaleZeit - 3.0) < dTakt / 2) {
+				vecFahrzeuge[i]->dTanken();
+			}
+			if (itL != ausgabe.end()) {
+				std::cout << *vecFahrzeuge[i] << endl;
+			}
+		}
+		l++;
+	}
+	char c;
+	std::cin >> c;
 }
-void vAufgabe_4(){
+void vAufgabe_4() {
 	Weg *wTestWeg = new Weg("moin", 100);
 	wTestWeg->vKopf();
-	std::cout<< *wTestWeg << std::endl;
+	std::cout << *wTestWeg << std::endl;
+}
+
+void vAufgabe_5() {
+	Weg Weg1("TestWeg", 100);
+	std::unique_ptr<Fahrzeug> fF1 = std::make_unique<Fahrzeug>("fF1", 30);
+	std::unique_ptr<Fahrzeug> fF2 = std::make_unique<Fahrzeug>("fF2", 50);
+	std::unique_ptr<Fahrzeug> fF3 = std::make_unique<Fahrzeug>("fF3", 80);
+	std::unique_ptr<Fahrzeug> fFp1 = std::make_unique<Fahrzeug>("fFp1", 30);
+	std::unique_ptr<Fahrzeug> fFp2 = std::make_unique<Fahrzeug>("fFp2", 50);
+	std::unique_ptr<Fahrzeug> fFp3 = std::make_unique<Fahrzeug>("fFp3", 80);
+	Weg1.vAnnahme(move(fF1));
+	Weg1.vAnnahme(move(fF2));
+	Weg1.vAnnahme(move(fF3));
+	Weg1.vAnnahme(move(fFp1), 0.5);
+	Weg1.vAnnahme(move(fFp2), 1);
+	Weg1.vAnnahme(move(fFp3), 2);
+	Weg1.vKopf();
+	std::cout << Weg1 << std::endl;
+
+	for (; dGlobaleZeit <= 3; dGlobaleZeit += 0.5) {
+		std::cout << "GLOBALE ZEIT: " << dGlobaleZeit << std::endl;
+		Weg1.vSimulieren();
+		std::cout << Weg1 << std::endl;
+	}
+
 }
 int main() {
-	vAufgabe_4();
+	vAufgabe_5();
 
 }
 

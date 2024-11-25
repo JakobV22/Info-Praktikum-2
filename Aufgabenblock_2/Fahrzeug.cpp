@@ -6,6 +6,10 @@
  */
 
 #include "Fahrzeug.h"
+#include "Verhalten.h"
+#include "Weg.h"
+#include "Fahren.h"
+#include "Parken.h"
 
 /**
  * Standardkonstruktor
@@ -53,7 +57,7 @@ void Fahrzeug::vKopf() {
 			<< std::resetiosflags(std::ios::left)
 			<< std::setiosflags(std::ios::right) << std::setw(5) << "Name"
 			<< std::setw(20) << "MaxGeschwindigkeit" << std::setw(15)
-			<< "Gesamtstrecke" << std::setw(20) << "Gesamtverbrauch"
+			<< "Gesamtstrecke" << std::setw(20)<< "Abschnitt Strecke" << std::setw(20) << "Gesamtverbrauch"
 			<< std::setw(15) << "Tankinhalt" << std::setw(15)
 			<< "akt. Geschwindigkeit" << std::endl;
 	std::cout << std::setfill('-') << std::setw(85) << "-" << std::endl;
@@ -69,7 +73,8 @@ void Fahrzeug::vAusgeben(std::ostream &o) const {
 	Simulationsobjekt::vAusgeben(o);
 	o << std::resetiosflags(std::ios::left) << std::setiosflags(std::ios::right)
 			<< std::setw(20) << p_dMaxGeschwindigkeit << std::setw(15)
-			<< p_dGesamtstrecke;
+			<< p_dGesamtstrecke<<std::setw(15)
+			<< p_dAbschnittStrecke;
 
 }
 
@@ -81,7 +86,9 @@ void Fahrzeug::vSimulieren() {
 
 	if (p_dLetzteAktualisierung != dGlobaleZeit) {
 			double dZeitVergangen = dGlobaleZeit - p_dLetzteAktualisierung;
-			p_dGesamtstrecke += (dZeitVergangen * dGeschwindigkeit());
+			double dStreckeGefahren = p_pVerhalten->dStrecke(*this, dZeitVergangen);
+			p_dGesamtstrecke += dStreckeGefahren;
+			p_dAbschnittStrecke += dStreckeGefahren;
 			p_dZeit += dZeitVergangen;
 			p_dLetzteAktualisierung = dGlobaleZeit;
 
@@ -120,4 +127,30 @@ void Fahrzeug::operator =(const Fahrzeug &fFahrzeug2) {
 	p_sName = fFahrzeug2.p_sName;
 	p_dMaxGeschwindigkeit = fFahrzeug2.p_dMaxGeschwindigkeit;
 
+}
+
+/**
+ * Linked neuen Weg zu Fahrzeug Objekt für: Fahrendes Fahrzeug
+ */
+void Fahrzeug::vNeueStrecke(Weg& rWeg){
+	std::unique_ptr<Fahren> pNewVerhalten = std::make_unique<Fahren>(rWeg);
+	p_pVerhalten = move(pNewVerhalten);							//alte Instanz gelöscht da unqiue ptr
+	p_dAbschnittStrecke = 0;
+
+}
+
+/**
+ * Überladung von neueStrecke für den Fall: Parkende Autos
+ */
+void Fahrzeug::vNeueStrecke(Weg& rWeg, double dStartzeitpunkt){
+	std::unique_ptr<Parken> pNewVerhalten = std::make_unique<Parken>(rWeg, dStartzeitpunkt);
+	p_pVerhalten = move(pNewVerhalten);							//alte Instanz gelöscht da unqiue ptr
+	p_dAbschnittStrecke = 0;
+
+}
+double Fahrzeug::getAbschnittStrecke(){
+	return p_dAbschnittStrecke;
+}
+std::string Fahrzeug::getName(){
+	return p_sName;
 }

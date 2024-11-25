@@ -27,6 +27,9 @@ public:
 	virtual void vSimulieren() override;
 	virtual void vAusgeben(std::ostream& o) const override;
 	void vKopf();
+	double dGetLaenge();
+	void vAnnahme(std::unique_ptr<Fahrzeug> pFahrzeug);
+	void vAnnahme (std::unique_ptr<Fahrzeug> pFahrzeug, double dStartzeitpunkt);
 };
 
 #endif /* WEG_H_ */
