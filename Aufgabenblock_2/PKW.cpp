@@ -6,6 +6,8 @@
  */
 
 #include "PKW.h"
+#include "Weg.h"
+#include "Verhalten.h"
 
 /**
  * Standardkonstruktor
@@ -95,7 +97,13 @@ void PKW::vAusgeben(std::ostream& o) const{
 	Fahrzeug::vAusgeben(o);
 	o << std::setw(20) << (p_dGesamtstrecke * p_dVerbrauch)/100.00 << std::setw(15) << p_dTankinhalt << std::setw(15) << dGeschwindigkeit();
 }
+double PKW::dGeschwindigkeit() const{
+	if (p_dMaxGeschwindigkeit > p_pVerhalten->getWeg()->dGetTempolimit()){
+		return p_pVerhalten->getWeg()->dGetTempolimit();
 
+	}
+	else return p_dMaxGeschwindigkeit;
+}
 PKW::~PKW() {
 	// TODO Auto-generated destructor stub
 }

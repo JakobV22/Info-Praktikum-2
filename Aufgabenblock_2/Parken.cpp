@@ -7,7 +7,7 @@
 
 #include "Parken.h"
 #include "Fahrzeug.h"
-
+#include "Losfahren.h"
 Parken::Parken() {
 	// TODO Auto-generated constructor stub
 
@@ -22,7 +22,7 @@ Parken::~Parken() {
 double Parken::dStrecke(Fahrzeug& aFzg, double dZeitintervall){
 	if (dGlobaleZeit <= p_dStartzeitpunkt) return 0;
 	else{
-		std::cout << "Startzeit von " << aFzg.getName() << " wurde überschritten" << std::endl;
+		throw Losfahren(aFzg, *p_pWeg);
 		return (dZeitintervall * aFzg.dGeschwindigkeit());
 	}
 

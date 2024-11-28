@@ -7,6 +7,8 @@
 
 #include "Weg.h"
 #include "Fahrzeug.h"
+#include "Losfahren.h"
+#include "Streckenende.h"
 
 Weg::Weg() :
 		Simulationsobjekt() {
@@ -30,7 +32,12 @@ double Weg::dGetTempolimit() {
 }
 void Weg::vSimulieren(){
 	for(auto it = p_pFahrzeuge.begin(); it != p_pFahrzeuge.end(); it++){
+		try {
 		(*it)->vSimulieren();
+		}
+		catch (Fahrausnahme& e){
+			e.vBearbeiten();
+		}
 	}
 }
 void Weg::vAusgeben(std::ostream& o) const{
@@ -70,6 +77,7 @@ void Weg::vKopf(){
 double Weg::dGetLaenge(){
 	return p_dLaenge;
 }
+
 
 /**
  * Fahrzeug unique ptr wird auf neuem Weg aufgenommen

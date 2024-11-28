@@ -18,7 +18,9 @@ Verhalten::Verhalten(Weg& wWeg):
 	// TODO Auto-generated constructor stub
 
 }
-
+Weg* Verhalten::getWeg(){
+	return p_pWeg;
+}
 Verhalten::~Verhalten() {
 
 }

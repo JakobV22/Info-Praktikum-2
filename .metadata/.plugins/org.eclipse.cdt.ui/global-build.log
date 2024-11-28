@@ -4171,3 +4171,93 @@ g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp"
   271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
       |                                 ~~^~~~~~~~~~~~~~~~~~~~~
 g++ -o Aufgabenblock_2.exe Fahren.o Fahrrad.o Fahrzeug.o PKW.o Parken.o Simulationsobjekt.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+11:57:11 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrausnahme.o "..\\Fahrausnahme.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Losfahren.o "..\\Losfahren.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Streckenende.o "..\\Streckenende.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+12:04:43 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+..\Fahren.cpp: In member function 'virtual double Fahren::dStrecke(Fahrzeug&, double)':
+..\Fahren.cpp:28:73: error: no matching function for call to 'Streckenende::Streckenende(Fahrzeug&, Weg&)'
+   28 |                                         throw Streckenende(aFzg, *p_pWeg);
+      |                                                                         ^
+In file included from ..\Fahren.cpp:10:
+..\Streckenende.h:13:9: note: candidate: 'Streckenende::Streckenende()'
+   13 |         Streckenende();
+      |         ^~~~~~~~~~~~
+..\Streckenende.h:13:9: note:   candidate expects 0 arguments, 2 provided
+..\Streckenende.h:11:7: note: candidate: 'constexpr Streckenende::Streckenende(const Streckenende&)'
+   11 | class Streckenende: public Fahrausnahme {
+      |       ^~~~~~~~~~~~
+..\Streckenende.h:11:7: note:   candidate expects 1 argument, 2 provided
+Info: Nothing to build for Aufgabenblock_1
+12:14:10 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Losfahren.o "..\\Losfahren.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Streckenende.o "..\\Streckenende.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrausnahme.o "..\\Fahrausnahme.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+12:17:44 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+..\Weg.cpp: In member function 'virtual void Weg::vSimulieren()':
+..\Weg.cpp:39:38: error: passing 'const Fahrausnahme' as 'this' argument discards qualifiers [-fpermissive]
+   39 |                         e.vBearbeiten();
+      |                         ~~~~~~~~~~~~~^~
+In file included from ..\Losfahren.h:10,
+                 from ..\Weg.cpp:10:
+..\Fahrausnahme.h:24:22: note:   in call to 'virtual void Fahrausnahme::vBearbeiten()'
+   24 |         virtual void vBearbeiten() = 0;
+      |                      ^~~~~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+12:18:10 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+12:29:49 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+..\PKW.cpp: In member function 'virtual double PKW::dGeschwindigkeit() const':
+..\PKW.cpp:101:61: error: invalid use of member 'double Weg::dGetTempolimit()' (did you forget the '&' ?)
+  101 |         if (p_dMaxGeschwindigkeit > p_pVerhalten->getWeg()->dGetTempolimit){
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+..\PKW.cpp:102:48: error: cannot convert 'Weg::dGetTempolimit' from type 'double (Weg::)()' to type 'double'
+  102 |                 return p_pVerhalten->getWeg()->dGetTempolimit;
+      |                                                ^~~~~~~~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+12:30:30 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+..\PKW.cpp: In member function 'virtual double PKW::dGeschwindigkeit() const':
+..\PKW.cpp:102:48: error: cannot convert 'Weg::dGetTempolimit' from type 'double (Weg::)()' to type 'double'
+  102 |                 return p_pVerhalten->getWeg()->dGetTempolimit;
+      |                                                ^~~~~~~~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+12:30:39 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 

@@ -28,7 +28,7 @@ public:
 			std::numeric_limits<double>::infinity()) override;
 	virtual void vSimulieren() override;
 	virtual void vAusgeben (std::ostream& o) const override;
-
+	virtual double dGeschwindigkeit() const override;
 	virtual ~PKW();
 };
 
