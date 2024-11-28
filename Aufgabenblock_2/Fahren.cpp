@@ -23,10 +23,10 @@ Fahren::~Fahren() {
 }
 
 double Fahren::dStrecke (Fahrzeug& aFzg, double dZeitIntervall){
-				double dZurückgelegt = (dZeitIntervall * aFzg.dGeschwindigkeit());
-				if (dZurückgelegt + aFzg.getAbschnittStrecke() >= p_pWeg->dGetLaenge()){
+				double dZurueckgelegt = (dZeitIntervall * aFzg.dGeschwindigkeit());
+				if (dZurueckgelegt + aFzg.getAbschnittStrecke() >= p_pWeg->dGetLaenge()){
 					throw Streckenende(aFzg, *p_pWeg);
-					return (p_pWeg->dGetLaenge() - aFzg.getAbschnittStrecke()) ;
+					//return (p_pWeg->dGetLaenge() - aFzg.getAbschnittStrecke()) ;
 				}
-				else return dZurückgelegt;
+				else return dZurueckgelegt;
 }

@@ -41,7 +41,11 @@ public:
 	void vNeueStrecke(Weg& rWeg);
 	void vNeueStrecke(Weg& rWeg, double dStartzeitpunkt);
 	double getAbschnittStrecke();
+	double getGesamtstrecke();
 	std::string getName();
+	void setGesamtstrecke(double dGesamtstrecke);
+	void setAbschnittStrecke(double dAbschnittStrecke);
+
 };
 
 #endif /* FAHRZEUG_H_ */

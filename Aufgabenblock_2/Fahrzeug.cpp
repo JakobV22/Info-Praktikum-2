@@ -151,6 +151,16 @@ void Fahrzeug::vNeueStrecke(Weg& rWeg, double dStartzeitpunkt){
 double Fahrzeug::getAbschnittStrecke(){
 	return p_dAbschnittStrecke;
 }
+double Fahrzeug::getGesamtstrecke(){
+	return p_dGesamtstrecke;
+}
 std::string Fahrzeug::getName(){
 	return p_sName;
 }
+void Fahrzeug::setGesamtstrecke(double dGesamtstrecke){
+	p_dGesamtstrecke = dGesamtstrecke;
+}
+void Fahrzeug::setAbschnittStrecke(double dAbschnittStrecke){
+	p_dAbschnittStrecke = dAbschnittStrecke;
+}
+

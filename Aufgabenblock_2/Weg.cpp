@@ -48,7 +48,7 @@ void Weg::vAusgeben(std::ostream& o) const{
 
 	o<<"(";
 	for(auto it = p_pFahrzeuge.begin(); it != p_pFahrzeuge.end(); it++){
-			o << (*it)->vGetName() << " ";
+			o << (*it)->vGetName() << ", Strecke:" << (*it)->getGesamtstrecke();		// ......
 		}
 	o<<")";
 

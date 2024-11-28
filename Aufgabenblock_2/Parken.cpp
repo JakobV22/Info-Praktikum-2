@@ -20,7 +20,7 @@ Parken::~Parken() {
 	// TODO Auto-generated destructor stub
 }
 double Parken::dStrecke(Fahrzeug& aFzg, double dZeitintervall){
-	if (dGlobaleZeit <= p_dStartzeitpunkt) return 0;
+	if (dGlobaleZeit + std::numeric_limits<double>::epsilon() < p_dStartzeitpunkt) return 0;
 	else{
 		throw Losfahren(aFzg, *p_pWeg);
 		return (dZeitintervall * aFzg.dGeschwindigkeit());

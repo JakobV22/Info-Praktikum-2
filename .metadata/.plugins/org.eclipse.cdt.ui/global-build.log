@@ -4261,3 +4261,1217 @@ Info: Nothing to build for Aufgabenblock_1
 Info: Internal Builder is used for build
 g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
 g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+18:23:35 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+18:24:36 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Streckenende.o "..\\Streckenende.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Losfahren.o "..\\Losfahren.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+18:27:19 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Streckenende.o "..\\Streckenende.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+18:45:12 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Losfahren.o "..\\Losfahren.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrausnahme.o "..\\Fahrausnahme.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Streckenende.o "..\\Streckenende.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+18:51:52 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = PKW; _Args = {const char (&)[4], int}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<PKW>]':
+..\main.cpp:293:50:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: no matching function for call to 'PKW::PKW(const char [4], int)'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\main.cpp:8:
+..\PKW.h:25:9: note: candidate: 'PKW::PKW(std::string, double, double, double)'
+   25 |         PKW(std::string sName, double dMaxGeschwindigkeit, const double dVerbrauch,
+      |         ^~~
+..\PKW.h:25:9: note:   candidate expects 4 arguments, 2 provided
+..\PKW.h:24:9: note: candidate: 'PKW::PKW(std::string, double, double)'
+   24 |         PKW(std::string sName, double dMaxGeschwindigkeit, const double dVerbrauch);
+      |         ^~~
+..\PKW.h:24:9: note:   candidate expects 3 arguments, 2 provided
+..\PKW.h:22:9: note: candidate: 'PKW::PKW()'
+   22 |         PKW();
+      |         ^~~
+..\PKW.h:22:9: note:   candidate expects 0 arguments, 2 provided
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = PKW; _Args = {const char (&)[5], int}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<PKW>]':
+..\main.cpp:296:51:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: no matching function for call to 'PKW::PKW(const char [5], int)'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\main.cpp:8:
+..\PKW.h:25:9: note: candidate: 'PKW::PKW(std::string, double, double, double)'
+   25 |         PKW(std::string sName, double dMaxGeschwindigkeit, const double dVerbrauch,
+      |         ^~~
+..\PKW.h:25:9: note:   candidate expects 4 arguments, 2 provided
+..\PKW.h:24:9: note: candidate: 'PKW::PKW(std::string, double, double)'
+   24 |         PKW(std::string sName, double dMaxGeschwindigkeit, const double dVerbrauch);
+      |         ^~~
+..\PKW.h:24:9: note:   candidate expects 3 arguments, 2 provided
+..\PKW.h:22:9: note: candidate: 'PKW::PKW()'
+   22 |         PKW();
+      |         ^~~
+..\PKW.h:22:9: note:   candidate expects 0 arguments, 2 provided
+18:51:57 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = PKW; _Args = {const char (&)[4], int}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<PKW>]':
+..\main.cpp:293:50:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: no matching function for call to 'PKW::PKW(const char [4], int)'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\main.cpp:8:
+..\PKW.h:25:9: note: candidate: 'PKW::PKW(std::string, double, double, double)'
+   25 |         PKW(std::string sName, double dMaxGeschwindigkeit, const double dVerbrauch,
+      |         ^~~
+..\PKW.h:25:9: note:   candidate expects 4 arguments, 2 provided
+..\PKW.h:24:9: note: candidate: 'PKW::PKW(std::string, double, double)'
+   24 |         PKW(std::string sName, double dMaxGeschwindigkeit, const double dVerbrauch);
+      |         ^~~
+..\PKW.h:24:9: note:   candidate expects 3 arguments, 2 provided
+..\PKW.h:22:9: note: candidate: 'PKW::PKW()'
+   22 |         PKW();
+      |         ^~~
+..\PKW.h:22:9: note:   candidate expects 0 arguments, 2 provided
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = PKW; _Args = {const char (&)[5], int}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<PKW>]':
+..\main.cpp:296:51:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: no matching function for call to 'PKW::PKW(const char [5], int)'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\main.cpp:8:
+..\PKW.h:25:9: note: candidate: 'PKW::PKW(std::string, double, double, double)'
+   25 |         PKW(std::string sName, double dMaxGeschwindigkeit, const double dVerbrauch,
+      |         ^~~
+..\PKW.h:25:9: note:   candidate expects 4 arguments, 2 provided
+..\PKW.h:24:9: note: candidate: 'PKW::PKW(std::string, double, double)'
+   24 |         PKW(std::string sName, double dMaxGeschwindigkeit, const double dVerbrauch);
+      |         ^~~
+..\PKW.h:24:9: note:   candidate expects 3 arguments, 2 provided
+..\PKW.h:22:9: note: candidate: 'PKW::PKW()'
+   22 |         PKW();
+      |         ^~~
+..\PKW.h:22:9: note:   candidate expects 0 arguments, 2 provided
+Info: Nothing to build for Aufgabenblock_1
+18:53:22 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+19:02:04 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2
+19:11:02 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+19:21:15 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_6()':
+..\main.cpp:323:27: error: no match for 'operator<<' (operand types are 'std::ostream' {aka 'std::basic_ostream<char>'} and 'std::unique_ptr<PKW>')
+  323 |                 std::cout << fF1 << std::endl;
+      |                 ~~~~~~~~~ ^~ ~~~
+      |                      |       |
+      |                      |       std::unique_ptr<PKW>
+      |                      std::ostream {aka std::basic_ostream<char>}
+..\main.cpp:323:27: note: candidate: 'operator<<(int, int)' (built-in)
+  323 |                 std::cout << fF1 << std::endl;
+      |                 ~~~~~~~~~~^~~~~~
+..\main.cpp:323:27: note:   no known conversion for argument 2 from 'std::unique_ptr<PKW>' to 'int'
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:108:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:108:36: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)' {aka 'std::basic_ostream<char>& (*)(std::basic_ostream<char>&)'}
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:117:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]'
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:117:32: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)' {aka 'std::basic_ios<char>& (*)(std::basic_ios<char>&)'}
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |                  ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:127:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  127 |       operator<<(ios_base& (*__pf) (ios_base&))
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:127:30: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'std::ios_base& (*)(std::ios_base&)'
+  127 |       operator<<(ios_base& (*__pf) (ios_base&))
+      |                  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:166:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  166 |       operator<<(long __n)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:166:23: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'long int'
+  166 |       operator<<(long __n)
+      |                  ~~~~~^~~
+c:\mingw64\include\c++\11.2.0\ostream:170:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  170 |       operator<<(unsigned long __n)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:170:32: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'long unsigned int'
+  170 |       operator<<(unsigned long __n)
+      |                  ~~~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\ostream:174:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  174 |       operator<<(bool __n)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:174:23: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'bool'
+  174 |       operator<<(bool __n)
+      |                  ~~~~~^~~
+In file included from c:\mingw64\include\c++\11.2.0\ostream:826,
+                 from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\ostream.tcc:91:5: note: candidate: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]'
+   91 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\ostream.tcc:92:22: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'short int'
+   92 |     operator<<(short __n)
+      |                ~~~~~~^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:181:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  181 |       operator<<(unsigned short __n)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:181:33: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'short unsigned int'
+  181 |       operator<<(unsigned short __n)
+      |                  ~~~~~~~~~~~~~~~^~~
+In file included from c:\mingw64\include\c++\11.2.0\ostream:826,
+                 from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\ostream.tcc:105:5: note: candidate: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]'
+  105 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\ostream.tcc:106:20: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'int'
+  106 |     operator<<(int __n)
+      |                ~~~~^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:192:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  192 |       operator<<(unsigned int __n)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:192:31: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'unsigned int'
+  192 |       operator<<(unsigned int __n)
+      |                  ~~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\ostream:201:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  201 |       operator<<(long long __n)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:201:28: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'long long int'
+  201 |       operator<<(long long __n)
+      |                  ~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\ostream:205:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  205 |       operator<<(unsigned long long __n)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:205:37: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'long long unsigned int'
+  205 |       operator<<(unsigned long long __n)
+      |                  ~~~~~~~~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\ostream:220:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  220 |       operator<<(double __f)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:220:25: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'double'
+  220 |       operator<<(double __f)
+      |                  ~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\ostream:224:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  224 |       operator<<(float __f)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:224:24: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'float'
+  224 |       operator<<(float __f)
+      |                  ~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\ostream:232:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  232 |       operator<<(long double __f)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:232:30: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'long double'
+  232 |       operator<<(long double __f)
+      |                  ~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\ostream:245:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  245 |       operator<<(const void* __p)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:245:30: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'const void*'
+  245 |       operator<<(const void* __p)
+      |                  ~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\ostream:250:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::nullptr_t) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::nullptr_t = std::nullptr_t]'
+  250 |       operator<<(nullptr_t)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:250:18: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'std::nullptr_t'
+  250 |       operator<<(nullptr_t)
+      |                  ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\ostream:826,
+                 from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\ostream.tcc:119:5: note: candidate: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]'
+  119 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\ostream.tcc:120:34: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'std::basic_ostream<char>::__streambuf_type*' {aka 'std::basic_streambuf<char>*'}
+  120 |     operator<<(__streambuf_type* __sbin)
+      |                ~~~~~~~~~~~~~~~~~~^~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\basic_string.h:48,
+                 from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\string_view:666:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::basic_string_view<_CharT, _Traits>)'
+  666 |     operator<<(basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\string_view:666:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   'std::unique_ptr<PKW>' is not derived from 'std::basic_string_view<_CharT, _Traits>'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6530:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+ 6530 |     operator<<(basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6530:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   'std::unique_ptr<PKW>' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\ios_base.h:46,
+                 from c:\mingw64\include\c++\11.2.0\ios:42,
+                 from c:\mingw64\include\c++\11.2.0\ostream:38,
+                 from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\system_error:263:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)'
+  263 |     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\system_error:263:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'const std::error_code&'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:506:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)'
+  506 |     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:506:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   deduced conflicting types for parameter '_CharT' ('char' and 'std::unique_ptr<PKW>')
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:511:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)'
+  511 |     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:511:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'char'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:517:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)'
+  517 |     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:517:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'char'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:523:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)'
+  523 |     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:523:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'signed char'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:528:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)'
+  528 |     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:528:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'unsigned char'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:589:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)'
+  589 |     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:589:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   mismatched types 'const _CharT*' and 'std::unique_ptr<PKW>'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\ostream:826,
+                 from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\ostream.tcc:321:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)'
+  321 |     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'const char*'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:606:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)'
+  606 |     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:606:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'const char*'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:619:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)'
+  619 |     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:619:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'const signed char*'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:624:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)'
+  624 |     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:624:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'const unsigned char*'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:747:5: note: candidate: 'template<class _Ostream, class _Tp> _Ostream&& std::operator<<(_Ostream&&, const _Tp&)'
+  747 |     operator<<(_Ostream&& __os, const _Tp& __x)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:747:5: note:   template argument deduction/substitution failed:
+c:\mingw64\include\c++\11.2.0\ostream: In substitution of 'template<class _Ostream, class _Tp> _Ostream&& std::operator<<(_Ostream&&, const _Tp&) [with _Ostream = std::basic_ostream<char>&; _Tp = std::unique_ptr<PKW>]':
+..\main.cpp:323:16:   required from here
+c:\mingw64\include\c++\11.2.0\ostream:747:5: error: no type named 'type' in 'struct std::enable_if<false, void>'
+In file included from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\iomanip:79:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)'
+   79 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\iomanip:79:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'std::_Resetiosflags'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\iomanip:109:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)'
+  109 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\iomanip:109:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'std::_Setiosflags'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\iomanip:143:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)'
+  143 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\iomanip:143:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'std::_Setbase'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\iomanip:178:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>)'
+  178 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\iomanip:178:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   'std::unique_ptr<PKW>' is not derived from 'std::_Setfill<_CharT>'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\iomanip:208:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)'
+  208 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\iomanip:208:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'std::_Setprecision'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\iomanip:238:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)'
+  238 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\iomanip:238:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'std::_Setw'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\iomanip:311:5: note: candidate: 'template<class _CharT, class _Traits, class _MoneyT> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_money<_MoneyT>)'
+  311 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\iomanip:311:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   'std::unique_ptr<PKW>' is not derived from 'std::_Put_money<_MoneyT>'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\iomanip:363:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_time<_CharT>)'
+  363 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_time<_CharT> __f)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\iomanip:363:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   'std::unique_ptr<PKW>' is not derived from 'std::_Put_time<_CharT>'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\memory:77,
+                 from ..\main.cpp:11:
+c:\mingw64\include\c++\11.2.0\bits\shared_ptr.h:70:5: note: candidate: 'template<class _Ch, class _Tr, class _Tp, __gnu_cxx::_Lock_policy _Lp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__shared_ptr<_Tp, _Lp>&)'
+   70 |     operator<<(std::basic_ostream<_Ch, _Tr>& __os,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\shared_ptr.h:70:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   'std::unique_ptr<PKW>' is not derived from 'const std::__shared_ptr<_Tp, _Lp>'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+..\main.cpp:23:15: note: candidate: 'std::ostream& operator<<(std::ostream&, const Simulationsobjekt&)'
+   23 | std::ostream& operator<<(std::ostream &o, const Simulationsobjekt &s) {
+      |               ^~~~~~~~
+..\main.cpp:23:68: note:   no known conversion for argument 2 from 'std::unique_ptr<PKW>' to 'const Simulationsobjekt&'
+   23 | std::ostream& operator<<(std::ostream &o, const Simulationsobjekt &s) {
+      |                                           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+19:21:18 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_6()':
+..\main.cpp:323:27: error: no match for 'operator<<' (operand types are 'std::ostream' {aka 'std::basic_ostream<char>'} and 'std::unique_ptr<PKW>')
+  323 |                 std::cout << fF1 << std::endl;
+      |                 ~~~~~~~~~ ^~ ~~~
+      |                      |       |
+      |                      |       std::unique_ptr<PKW>
+      |                      std::ostream {aka std::basic_ostream<char>}
+..\main.cpp:323:27: note: candidate: 'operator<<(int, int)' (built-in)
+  323 |                 std::cout << fF1 << std::endl;
+      |                 ~~~~~~~~~~^~~~~~
+..\main.cpp:323:27: note:   no known conversion for argument 2 from 'std::unique_ptr<PKW>' to 'int'
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:108:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:108:36: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)' {aka 'std::basic_ostream<char>& (*)(std::basic_ostream<char>&)'}
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:117:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]'
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:117:32: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)' {aka 'std::basic_ios<char>& (*)(std::basic_ios<char>&)'}
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |                  ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:127:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  127 |       operator<<(ios_base& (*__pf) (ios_base&))
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:127:30: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'std::ios_base& (*)(std::ios_base&)'
+  127 |       operator<<(ios_base& (*__pf) (ios_base&))
+      |                  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:166:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  166 |       operator<<(long __n)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:166:23: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'long int'
+  166 |       operator<<(long __n)
+      |                  ~~~~~^~~
+c:\mingw64\include\c++\11.2.0\ostream:170:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  170 |       operator<<(unsigned long __n)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:170:32: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'long unsigned int'
+  170 |       operator<<(unsigned long __n)
+      |                  ~~~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\ostream:174:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  174 |       operator<<(bool __n)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:174:23: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'bool'
+  174 |       operator<<(bool __n)
+      |                  ~~~~~^~~
+In file included from c:\mingw64\include\c++\11.2.0\ostream:826,
+                 from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\ostream.tcc:91:5: note: candidate: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]'
+   91 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\ostream.tcc:92:22: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'short int'
+   92 |     operator<<(short __n)
+      |                ~~~~~~^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:181:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  181 |       operator<<(unsigned short __n)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:181:33: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'short unsigned int'
+  181 |       operator<<(unsigned short __n)
+      |                  ~~~~~~~~~~~~~~~^~~
+In file included from c:\mingw64\include\c++\11.2.0\ostream:826,
+                 from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\ostream.tcc:105:5: note: candidate: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]'
+  105 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\ostream.tcc:106:20: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'int'
+  106 |     operator<<(int __n)
+      |                ~~~~^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:192:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  192 |       operator<<(unsigned int __n)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:192:31: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'unsigned int'
+  192 |       operator<<(unsigned int __n)
+      |                  ~~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\ostream:201:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  201 |       operator<<(long long __n)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:201:28: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'long long int'
+  201 |       operator<<(long long __n)
+      |                  ~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\ostream:205:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  205 |       operator<<(unsigned long long __n)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:205:37: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'long long unsigned int'
+  205 |       operator<<(unsigned long long __n)
+      |                  ~~~~~~~~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\ostream:220:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  220 |       operator<<(double __f)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:220:25: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'double'
+  220 |       operator<<(double __f)
+      |                  ~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\ostream:224:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  224 |       operator<<(float __f)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:224:24: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'float'
+  224 |       operator<<(float __f)
+      |                  ~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\ostream:232:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  232 |       operator<<(long double __f)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:232:30: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'long double'
+  232 |       operator<<(long double __f)
+      |                  ~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\ostream:245:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]'
+  245 |       operator<<(const void* __p)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:245:30: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'const void*'
+  245 |       operator<<(const void* __p)
+      |                  ~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\ostream:250:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::nullptr_t) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::nullptr_t = std::nullptr_t]'
+  250 |       operator<<(nullptr_t)
+      |       ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:250:18: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'std::nullptr_t'
+  250 |       operator<<(nullptr_t)
+      |                  ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\ostream:826,
+                 from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\ostream.tcc:119:5: note: candidate: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]'
+  119 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\ostream.tcc:120:34: note:   no known conversion for argument 1 from 'std::unique_ptr<PKW>' to 'std::basic_ostream<char>::__streambuf_type*' {aka 'std::basic_streambuf<char>*'}
+  120 |     operator<<(__streambuf_type* __sbin)
+      |                ~~~~~~~~~~~~~~~~~~^~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\basic_string.h:48,
+                 from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\string_view:666:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::basic_string_view<_CharT, _Traits>)'
+  666 |     operator<<(basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\string_view:666:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   'std::unique_ptr<PKW>' is not derived from 'std::basic_string_view<_CharT, _Traits>'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6530:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+ 6530 |     operator<<(basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6530:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   'std::unique_ptr<PKW>' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\ios_base.h:46,
+                 from c:\mingw64\include\c++\11.2.0\ios:42,
+                 from c:\mingw64\include\c++\11.2.0\ostream:38,
+                 from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\system_error:263:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)'
+  263 |     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\system_error:263:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'const std::error_code&'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:506:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)'
+  506 |     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:506:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   deduced conflicting types for parameter '_CharT' ('char' and 'std::unique_ptr<PKW>')
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:511:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)'
+  511 |     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:511:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'char'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:517:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)'
+  517 |     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:517:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'char'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:523:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)'
+  523 |     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:523:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'signed char'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:528:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)'
+  528 |     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:528:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'unsigned char'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:589:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)'
+  589 |     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:589:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   mismatched types 'const _CharT*' and 'std::unique_ptr<PKW>'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\ostream:826,
+                 from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\ostream.tcc:321:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)'
+  321 |     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'const char*'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:606:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)'
+  606 |     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:606:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'const char*'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:619:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)'
+  619 |     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:619:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'const signed char*'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:624:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)'
+  624 |     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:624:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'const unsigned char*'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\ostream:747:5: note: candidate: 'template<class _Ostream, class _Tp> _Ostream&& std::operator<<(_Ostream&&, const _Tp&)'
+  747 |     operator<<(_Ostream&& __os, const _Tp& __x)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\ostream:747:5: note:   template argument deduction/substitution failed:
+c:\mingw64\include\c++\11.2.0\ostream: In substitution of 'template<class _Ostream, class _Tp> _Ostream&& std::operator<<(_Ostream&&, const _Tp&) [with _Ostream = std::basic_ostream<char>&; _Tp = std::unique_ptr<PKW>]':
+..\main.cpp:323:16:   required from here
+c:\mingw64\include\c++\11.2.0\ostream:747:5: error: no type named 'type' in 'struct std::enable_if<false, void>'
+In file included from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\iomanip:79:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)'
+   79 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\iomanip:79:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'std::_Resetiosflags'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\iomanip:109:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)'
+  109 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\iomanip:109:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'std::_Setiosflags'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\iomanip:143:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)'
+  143 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\iomanip:143:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'std::_Setbase'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\iomanip:178:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>)'
+  178 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\iomanip:178:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   'std::unique_ptr<PKW>' is not derived from 'std::_Setfill<_CharT>'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\iomanip:208:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)'
+  208 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\iomanip:208:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'std::_Setprecision'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\iomanip:238:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)'
+  238 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\iomanip:238:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   cannot convert 'fF1' (type 'std::unique_ptr<PKW>') to type 'std::_Setw'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\iomanip:311:5: note: candidate: 'template<class _CharT, class _Traits, class _MoneyT> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_money<_MoneyT>)'
+  311 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\iomanip:311:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   'std::unique_ptr<PKW>' is not derived from 'std::_Put_money<_MoneyT>'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\iomanip:363:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_time<_CharT>)'
+  363 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_time<_CharT> __f)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\iomanip:363:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   'std::unique_ptr<PKW>' is not derived from 'std::_Put_time<_CharT>'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+In file included from c:\mingw64\include\c++\11.2.0\memory:77,
+                 from ..\main.cpp:11:
+c:\mingw64\include\c++\11.2.0\bits\shared_ptr.h:70:5: note: candidate: 'template<class _Ch, class _Tr, class _Tp, __gnu_cxx::_Lock_policy _Lp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__shared_ptr<_Tp, _Lp>&)'
+   70 |     operator<<(std::basic_ostream<_Ch, _Tr>& __os,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\shared_ptr.h:70:5: note:   template argument deduction/substitution failed:
+..\main.cpp:323:30: note:   'std::unique_ptr<PKW>' is not derived from 'const std::__shared_ptr<_Tp, _Lp>'
+  323 |                 std::cout << fF1 << std::endl;
+      |                              ^~~
+..\main.cpp:23:15: note: candidate: 'std::ostream& operator<<(std::ostream&, const Simulationsobjekt&)'
+   23 | std::ostream& operator<<(std::ostream &o, const Simulationsobjekt &s) {
+      |               ^~~~~~~~
+..\main.cpp:23:68: note:   no known conversion for argument 2 from 'std::unique_ptr<PKW>' to 'const Simulationsobjekt&'
+   23 | std::ostream& operator<<(std::ostream &o, const Simulationsobjekt &s) {
+      |                                           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+Info: Nothing to build for Aufgabenblock_1
+19:21:52 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+19:25:19 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_2
+19:31:42 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2
+19:38:03 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+21:58:42 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_2
+22:01:58 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+22:02:51 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+22:19:21 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Losfahren.o "..\\Losfahren.cpp" 
+..\Losfahren.cpp: In member function 'virtual void Losfahren::vBearbeiten()':
+..\Losfahren.cpp:23:24: error: expected ';' before '{' token
+   23 | Losfahren::~Losfahren() {
+      |                        ^~
+      |                        ;
+..\Losfahren.cpp:25:2: error: expected '}' at end of input
+   25 | }
+      |  ^
+..\Losfahren.cpp:20:30: note: to match this '{'
+   20 | void Losfahren::vBearbeiten(){
+      |                              ^
+Info: Nothing to build for Aufgabenblock_1
+22:19:38 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Simulationsobjekt.o "..\\Simulationsobjekt.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+..\Fahrzeug.cpp: In member function 'std::unique_ptr<Verhalten> Fahrzeug::getVerhalten()':
+..\Fahrzeug.cpp:167:16: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = Verhalten; _Dp = std::default_delete<Verhalten>]'
+  167 |         return p_pVerhalten;
+      |                ^~~~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\Fahrzeug.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:468:7: note: declared here
+  468 |       unique_ptr(const unique_ptr&) = delete;
+      |       ^~~~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+22:20:21 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Streckenende.o "..\\Streckenende.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrausnahme.o "..\\Fahrausnahme.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Losfahren.o "..\\Losfahren.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+22:21:29 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+22:22:26 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+22:23:12 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+22:23:24 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+22:25:25 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+22:25:45 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+22:26:02 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+22:26:26 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 

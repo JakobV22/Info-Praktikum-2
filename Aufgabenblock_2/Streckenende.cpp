@@ -19,9 +19,16 @@ Streckenende::Streckenende(Fahrzeug& rFahrzeug, Weg& rWeg):
 	// TODO Auto-generated constructor stub
 
 }
+/**
+ * wird bei throw von Streckenende aufgerufen
+ * Gibt Meldung über Ausnahme aus
+ * Setzt richtige Werte für Gesamtstrecke und Abschnitt für Fahrzeug Objekt
+ */
 void Streckenende::vBearbeiten() {
-	std::cout << "'Ausnahme: Losfahren' ist aufgetreten für Fahrzeug: "
-			<< p_pFahrzeug->vGetName() << " auf Weg: " << p_pWeg->vGetName();
+	std::cout << "'Ausnahme: Streckenende ist aufgetreten für Fahrzeug: "
+			<< p_pFahrzeug->vGetName() << " auf Weg: " << p_pWeg->vGetName() << std::endl;
+	p_pFahrzeug->setGesamtstrecke(p_pFahrzeug->getGesamtstrecke() + (p_pWeg->dGetLaenge()- p_pFahrzeug->getAbschnittStrecke()));
+	p_pFahrzeug->setAbschnittStrecke(p_pWeg->dGetLaenge());
 }
 Streckenende::~Streckenende() {
 	// TODO Auto-generated destructor stub

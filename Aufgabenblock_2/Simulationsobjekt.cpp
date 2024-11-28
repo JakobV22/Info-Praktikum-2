@@ -55,3 +55,6 @@ std::string Simulationsobjekt::vGetName(){
 
 }
 
+double Simulationsobjekt::getLetzteAktualisierung(){
+	return p_dLetzteAktualisierung;
+}

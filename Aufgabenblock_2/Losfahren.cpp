@@ -18,9 +18,8 @@ Losfahren::Losfahren(Fahrzeug& rFahrzeug, Weg& rWeg):
 
 }
 void Losfahren::vBearbeiten(){
-	std::cout << "'Ausnahme: Losfahren' ist aufgetreten für Fahrzeug: " << p_pFahrzeug->vGetName() << " auf Weg: " << p_pWeg->vGetName();
+	std::cout << "'Ausnahme: Losfahren' ist aufgetreten für Fahrzeug: " << p_pFahrzeug->vGetName() << " auf Weg: " << p_pWeg->vGetName()<< std::endl;
 }
-
 Losfahren::~Losfahren() {
 	// TODO Auto-generated destructor stub
 }

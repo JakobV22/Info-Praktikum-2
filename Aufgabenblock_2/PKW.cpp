@@ -72,14 +72,15 @@ void PKW::vSimulieren() {
 
 	if (p_dLetzteAktualisierung != dGlobaleZeit) {
 		double dZeitVergangen = dGlobaleZeit - p_dLetzteAktualisierung;
-
+		double dStreckeGefahren = p_pVerhalten->dStrecke(*this, dZeitVergangen);
 		p_dZeit += dZeitVergangen;
 		p_dLetzteAktualisierung = dGlobaleZeit;
 
 		if (p_dTankinhalt == 0)
 			return;
 		else {
-			p_dGesamtstrecke += (dZeitVergangen * dGeschwindigkeit());
+			p_dGesamtstrecke += dStreckeGefahren;
+			p_dAbschnittStrecke += dStreckeGefahren;
 			double dBenzinVerbraucht = (dZeitVergangen * dGeschwindigkeit() * p_dVerbrauch) / 100.00;
 			p_dTankinhalt -= dBenzinVerbraucht;
 			if (p_dTankinhalt < 0)
@@ -97,6 +98,10 @@ void PKW::vAusgeben(std::ostream& o) const{
 	Fahrzeug::vAusgeben(o);
 	o << std::setw(20) << (p_dGesamtstrecke * p_dVerbrauch)/100.00 << std::setw(15) << p_dTankinhalt << std::setw(15) << dGeschwindigkeit();
 }
+
+/**
+ * returned maximale Geschwindigkeit des PKWs (berücksichtigt jedoch Tempolimit)
+ */
 double PKW::dGeschwindigkeit() const{
 	if (p_dMaxGeschwindigkeit > p_pVerhalten->getWeg()->dGetTempolimit()){
 		return p_pVerhalten->getWeg()->dGetTempolimit();

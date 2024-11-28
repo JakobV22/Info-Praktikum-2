@@ -289,13 +289,13 @@ void vAufgabe_4() {
 }
 
 void vAufgabe_5() {
-	Weg Weg1("TestWeg", 100);
-	std::unique_ptr<Fahrzeug> fF1 = std::make_unique<Fahrzeug>("fF1", 30);
-	std::unique_ptr<Fahrzeug> fF2 = std::make_unique<Fahrzeug>("fF2", 50);
-	std::unique_ptr<Fahrzeug> fF3 = std::make_unique<Fahrzeug>("fF3", 80);
-	std::unique_ptr<Fahrzeug> fFp1 = std::make_unique<Fahrzeug>("fFp1", 30);
-	std::unique_ptr<Fahrzeug> fFp2 = std::make_unique<Fahrzeug>("fFp2", 50);
-	std::unique_ptr<Fahrzeug> fFp3 = std::make_unique<Fahrzeug>("fFp3", 80);
+	Weg Weg1("TestWeg", 100, Tempolimit::Innerorts);
+	std::unique_ptr<PKW> fF1 = std::make_unique<PKW>("fF1", 30, 5);
+	std::unique_ptr<PKW> fF2 = std::make_unique<PKW>("fF2", 50, 5);
+	std::unique_ptr<PKW> fF3 = std::make_unique<PKW>("fF3", 80, 5);
+	std::unique_ptr<PKW> fFp1 = std::make_unique<PKW>("fFp1", 30, 5);
+	std::unique_ptr<PKW> fFp2 = std::make_unique<PKW>("fFp2", 50, 5);
+	std::unique_ptr<PKW> fFp3 = std::make_unique<PKW>("fFp3", 80, 5);
 	Weg1.vAnnahme(move(fF1));
 	Weg1.vAnnahme(move(fF2));
 	Weg1.vAnnahme(move(fF3));
@@ -312,8 +312,29 @@ void vAufgabe_5() {
 	}
 
 }
+void vAufgabe_6() {
+	Weg Weg1("TestWeg", 100, Tempolimit::Innerorts);
+	Weg Weg2("TestWeg2", 80, Tempolimit::Außerorts);
+	std::unique_ptr<PKW> fF1 = std::make_unique<PKW>("Fiat", 30, 5);
+	std::unique_ptr<PKW> fF2 = std::make_unique<PKW>("Audi", 100, 5);
+	std::unique_ptr<PKW> fF3 = std::make_unique<PKW>("FiatP", 30, 5);
+	std::unique_ptr<PKW> fF4 = std::make_unique<PKW>("AudiP", 100, 5);
+
+	Weg1.vAnnahme(move(fF1));
+	Weg1.vAnnahme(move(fF4), 3);
+	Weg2.vAnnahme(move(fF2));
+	Weg2.vAnnahme(move(fF3), 3.1);
+
+	for (; dGlobaleZeit <= 4; dGlobaleZeit += 0.3) {
+		std::cout << "GLOBALE ZEIT: " << dGlobaleZeit << std::endl;
+		Weg1.vSimulieren();
+		Weg2.vSimulieren();
+		std::cout << Weg1 << std::endl;
+		std::cout << Weg2 << std::endl;
+	}
+}
 int main() {
-	vAufgabe_5();
+	vAufgabe_6();
 
 }
 
