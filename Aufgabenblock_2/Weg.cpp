@@ -27,10 +27,12 @@ Weg::~Weg() {
 /**
  * returnt Tempolimit aus enum Klasse als double
  */
-double Weg::dGetTempolimit() {
+double Weg::dGetTempolimit() const {
 	return (double) (p_eTempolimit);
 }
 void Weg::vSimulieren(){
+
+	//Simulieren
 	for(auto it = p_pFahrzeuge.begin(); it != p_pFahrzeuge.end(); it++){
 		try {
 		(*it)->vSimulieren();
@@ -38,6 +40,10 @@ void Weg::vSimulieren(){
 		catch (Fahrausnahme& e){
 			e.vBearbeiten();
 		}
+	}
+	//Zeichnen
+	for(auto it = p_pFahrzeuge.begin(); it != p_pFahrzeuge.end(); it++){
+			(*it)->vZeichnen(*this);
 	}
 }
 void Weg::vAusgeben(std::ostream& o) const{
@@ -54,7 +60,7 @@ void Weg::vAusgeben(std::ostream& o) const{
 
 
 }
-void Weg::vKopf(){
+void Weg::vKopf() const{
 	std::cout << std::resetiosflags(std::ios::right)
 			<< std::setiosflags(std::ios::left) << std::setw(3) << "ID"
 			<< std::resetiosflags(std::ios::left)
@@ -74,7 +80,7 @@ void Weg::vKopf(){
 /**
  * Getter Funktion
  */
-double Weg::dGetLaenge(){
+double Weg::dGetLaenge() const{
 	return p_dLaenge;
 }
 
@@ -88,6 +94,10 @@ void Weg::vAnnahme(std::unique_ptr<Fahrzeug> pFahrzeug){
 	pFahrzeug->vNeueStrecke(*this);
 	p_pFahrzeuge.push_back(move(pFahrzeug));
 }
+
+/**
+ * für Parkende Autos
+ */
 void Weg::vAnnahme (std::unique_ptr<Fahrzeug> pFahrzeug, double dStartzeitpunkt){
 	pFahrzeug->vNeueStrecke(*this, dStartzeitpunkt);
 		p_pFahrzeuge.push_front(move(pFahrzeug));

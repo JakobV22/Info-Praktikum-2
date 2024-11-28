@@ -50,11 +50,11 @@ void Simulationsobjekt::vSimulieren() {
 	}
 
 }
-std::string Simulationsobjekt::vGetName(){
+std::string Simulationsobjekt::vGetName() const{
 	return p_sName;
 
 }
 
-double Simulationsobjekt::getLetzteAktualisierung(){
+double Simulationsobjekt::getLetzteAktualisierung() const{
 	return p_dLetzteAktualisierung;
 }

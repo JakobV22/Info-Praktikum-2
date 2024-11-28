@@ -40,11 +40,12 @@ public:
 	virtual void operator =(const Fahrzeug& fFahrzeug2);
 	void vNeueStrecke(Weg& rWeg);
 	void vNeueStrecke(Weg& rWeg, double dStartzeitpunkt);
-	double getAbschnittStrecke();
-	double getGesamtstrecke();
-	std::string getName();
+	double getAbschnittStrecke() const;
+	double getGesamtstrecke() const ;
+	void setVerhalten(std::unique_ptr<Verhalten> pVerhalten);
 	void setGesamtstrecke(double dGesamtstrecke);
 	void setAbschnittStrecke(double dAbschnittStrecke);
+	virtual void vZeichnen(const Weg&) const;
 
 };
 

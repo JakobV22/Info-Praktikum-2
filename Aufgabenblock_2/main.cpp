@@ -12,6 +12,7 @@
 #include <vector>
 #include <string.h>
 #include <math.h>
+#include "SimuClient.h"
 
 extern double dGlobaleZeit = 0.0;
 typedef std::unique_ptr<Fahrzeug> u_ptrFahrzeug;
@@ -313,8 +314,8 @@ void vAufgabe_5() {
 
 }
 void vAufgabe_6() {
-	Weg Weg1("TestWeg", 100, Tempolimit::Innerorts);
-	Weg Weg2("TestWeg2", 80, Tempolimit::Außerorts);
+	Weg Weg1("TestWeg", 500, Tempolimit::Innerorts);
+	Weg Weg2("TestWeg2", 500, Tempolimit::Außerorts);
 	std::unique_ptr<PKW> fF1 = std::make_unique<PKW>("Fiat", 30, 5);
 	std::unique_ptr<PKW> fF2 = std::make_unique<PKW>("Audi", 100, 5);
 	std::unique_ptr<PKW> fF3 = std::make_unique<PKW>("FiatP", 30, 5);
@@ -323,12 +324,17 @@ void vAufgabe_6() {
 	Weg1.vAnnahme(move(fF1));
 	Weg1.vAnnahme(move(fF4), 3);
 	Weg2.vAnnahme(move(fF2));
-	Weg2.vAnnahme(move(fF3), 3.1);
-
-	for (; dGlobaleZeit <= 4; dGlobaleZeit += 0.3) {
+	Weg2.vAnnahme(move(fF3), 3);
+	bInitialisiereGrafik(800, 800);
+	int iCoords[] = {200, 200, 600, 500};
+	bZeichneStrasse(Weg1.vGetName(), Weg2.vGetName(), 500, 2, iCoords);
+	//vSleep(10000);
+	for (; dGlobaleZeit <= 10; dGlobaleZeit += 0.25) {
+		vSetzeZeit(dGlobaleZeit);
 		std::cout << "GLOBALE ZEIT: " << dGlobaleZeit << std::endl;
 		Weg1.vSimulieren();
 		Weg2.vSimulieren();
+		vSleep(100);
 		std::cout << Weg1 << std::endl;
 		std::cout << Weg2 << std::endl;
 	}

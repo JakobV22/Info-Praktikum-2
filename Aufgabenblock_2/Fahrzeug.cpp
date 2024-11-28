@@ -11,6 +11,7 @@
 #include "Fahren.h"
 #include "Parken.h"
 
+
 /**
  * Standardkonstruktor
  * legt Erstellungszeitpunkt als Zeitpunkt der letzten Aktualisierung fest
@@ -51,7 +52,7 @@ Fahrzeug::~Fahrzeug() {
 /**
  * vKopf dient zur Ausgabe des Kopfes der Tabelle
  */
-void Fahrzeug::vKopf() {
+void Fahrzeug::vKopf(){
 	std::cout << std::resetiosflags(std::ios::right)
 			<< std::setiosflags(std::ios::left) << std::setw(5) << "ID"
 			<< std::resetiosflags(std::ios::left)
@@ -148,19 +149,22 @@ void Fahrzeug::vNeueStrecke(Weg& rWeg, double dStartzeitpunkt){
 	p_dAbschnittStrecke = 0;
 
 }
-double Fahrzeug::getAbschnittStrecke(){
+double Fahrzeug::getAbschnittStrecke() const{
 	return p_dAbschnittStrecke;
 }
-double Fahrzeug::getGesamtstrecke(){
+double Fahrzeug::getGesamtstrecke() const{
 	return p_dGesamtstrecke;
-}
-std::string Fahrzeug::getName(){
-	return p_sName;
 }
 void Fahrzeug::setGesamtstrecke(double dGesamtstrecke){
 	p_dGesamtstrecke = dGesamtstrecke;
 }
 void Fahrzeug::setAbschnittStrecke(double dAbschnittStrecke){
 	p_dAbschnittStrecke = dAbschnittStrecke;
+}
+void Fahrzeug::vZeichnen(const Weg&) const{
+
+}
+void Fahrzeug::setVerhalten(std::unique_ptr<Verhalten> pVerhalten){
+			p_pVerhalten = move(move(pVerhalten));							//alte Instanz gelöscht da unqiue ptr
 }
 

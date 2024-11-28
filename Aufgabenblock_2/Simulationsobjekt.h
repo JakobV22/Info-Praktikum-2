@@ -30,8 +30,8 @@ public:
 	virtual ~Simulationsobjekt();
 	virtual void vSimulieren() = 0;
 	virtual void vAusgeben(std::ostream& o) const;
-	std::string vGetName();
-	double getLetzteAktualisierung();
+	std::string vGetName() const;
+	double getLetzteAktualisierung() const;
 };
 
 #endif /* SIMULATIONSOBJEKT_H_ */

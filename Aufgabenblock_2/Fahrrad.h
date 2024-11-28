@@ -20,6 +20,7 @@ public:
 	virtual double dTanken(double dMenge = std::numeric_limits<double>::infinity());
 	virtual double dGeschwindigkeit() const override;
 	virtual void vAusgeben(std::ostream& o) const override;
+	virtual void vZeichnen(const Weg& rWeg) const override;
 
 };
 

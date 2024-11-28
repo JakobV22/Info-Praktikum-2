@@ -7,6 +7,8 @@
 
 #include "Fahrrad.h"
 #include "Fahrzeug.h"
+#include "Weg.h"
+#include "SimuClient.h"
 
 /**
  * Standardkonstruktor
@@ -62,6 +64,10 @@ void Fahrrad::vAusgeben(std::ostream& o) const{
 	o << std::setw(20) << "" << std::setw(15) << "" << std::setw(15)
 			<< dGeschwindigkeit();
 
+}
+void  Fahrrad::vZeichnen(const Weg& rWeg) const{
+	double dRelPos = (getAbschnittStrecke() / rWeg.dGetLaenge());
+	bZeichneFahrrad(p_sName, rWeg.vGetName(), dRelPos, dGeschwindigkeit());
 }
 
 /**

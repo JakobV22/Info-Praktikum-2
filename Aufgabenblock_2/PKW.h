@@ -30,6 +30,7 @@ public:
 	virtual void vAusgeben (std::ostream& o) const override;
 	virtual double dGeschwindigkeit() const override;
 	virtual ~PKW();
+	virtual void vZeichnen(const Weg& rWeg) const override;
 };
 
 #endif /* PKW_H_ */

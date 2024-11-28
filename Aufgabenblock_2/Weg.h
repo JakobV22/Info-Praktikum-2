@@ -23,11 +23,11 @@ public:
 	Weg();
 	Weg(std::string sName, double dLaenge, Tempolimit eTempolimit = Tempolimit::Autobahn);
 	virtual ~Weg();
-	double dGetTempolimit();
+	double dGetTempolimit() const;
 	virtual void vSimulieren() override;
 	virtual void vAusgeben(std::ostream& o) const override;
-	void vKopf();
-	double dGetLaenge();
+	void vKopf() const;
+	double dGetLaenge() const;
 	void vAnnahme(std::unique_ptr<Fahrzeug> pFahrzeug);
 	void vAnnahme (std::unique_ptr<Fahrzeug> pFahrzeug, double dStartzeitpunkt);
 };

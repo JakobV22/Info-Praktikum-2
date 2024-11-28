@@ -7,7 +7,9 @@
 
 #include "PKW.h"
 #include "Weg.h"
+#include "Simulationsobjekt.h"
 #include "Verhalten.h"
+#include "SimuClient.h"
 
 /**
  * Standardkonstruktor
@@ -108,6 +110,11 @@ double PKW::dGeschwindigkeit() const{
 
 	}
 	else return p_dMaxGeschwindigkeit;
+}
+
+void  PKW::vZeichnen(const Weg& rWeg) const{
+	double dRelPos = (getAbschnittStrecke() / rWeg.dGetLaenge());
+	bZeichnePKW(p_sName, rWeg.vGetName(), dRelPos, dGeschwindigkeit(), p_dTankinhalt);
 }
 PKW::~PKW() {
 	// TODO Auto-generated destructor stub

@@ -8214,3 +8214,411 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.oomph.setup.ui 1 0 2024-11-28 21:53:12.626
 !MESSAGE Setup tasks were performed during startup updating 4 preferences. See 'C:\Users\vogel\cpp-2023-09\eclipse\configuration\org.eclipse.oomph.setup\setup.log' for details
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:35:48.825
+!MESSAGE Unexpected overload for binary operator 14: 'operator |'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:35:58.091
+!MESSAGE Unexpected overload for binary operator 14: 'operator |'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:09.658
+!MESSAGE Unexpected overload for binary operator 28: 'operator =='
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:09.661
+!MESSAGE Unexpected overload for binary operator 28: 'operator =='
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:09.663
+!MESSAGE Unexpected overload for binary operator 28: 'operator =='
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:14.382
+!MESSAGE Unexpected overload for binary operator 14: 'operator |'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:14.815
+!MESSAGE Error: <anonymous> is not a member of has_value_types
+!STACK 0
+java.lang.IllegalArgumentException: <anonymous> is not a member of has_value_types
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.ClassTypeHelper.invalidMember(ClassTypeHelper.java:1155)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.ClassTypeHelper.getVisibility(ClassTypeHelper.java:1081)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPClassTemplate.getVisibility(CPPClassTemplate.java:281)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.getVisibility(PDOMCPPLinkage.java:933)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.addChild(PDOMCPPLinkage.java:943)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.createBinding(PDOMCPPLinkage.java:895)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.addBinding(PDOMCPPLinkage.java:710)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.adaptOrAddBinding(PDOMCPPLinkage.java:1311)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.adaptOrAddParent(PDOMCPPLinkage.java:1306)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.addBinding(PDOMCPPLinkage.java:702)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.adaptOrAddBinding(PDOMCPPLinkage.java:1311)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.adaptOrAddParent(PDOMCPPLinkage.java:1306)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.addBinding(PDOMCPPLinkage.java:702)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.addBinding(PDOMCPPLinkage.java:630)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMFile.createPDOMName(PDOMFile.java:524)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMFile.addNames(PDOMFile.java:490)
+	at org.eclipse.cdt.internal.core.pdom.WritablePDOM.addFileContent(WritablePDOM.java:158)
+	at org.eclipse.cdt.internal.core.index.WritableCIndex.setFileContent(WritableCIndex.java:90)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.storeFileInIndex(PDOMWriter.java:692)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.storeSymbolsInIndex(PDOMWriter.java:330)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.addSymbols(PDOMWriter.java:287)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.writeToIndex(AbstractIndexerTask.java:1295)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseFile(AbstractIndexerTask.java:1107)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:910)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:572)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:164)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:14.819
+!MESSAGE Error: <anonymous> is not a member of has_error_types
+!STACK 0
+java.lang.IllegalArgumentException: <anonymous> is not a member of has_error_types
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.ClassTypeHelper.invalidMember(ClassTypeHelper.java:1155)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.ClassTypeHelper.getVisibility(ClassTypeHelper.java:1081)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPClassTemplate.getVisibility(CPPClassTemplate.java:281)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.getVisibility(PDOMCPPLinkage.java:933)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.addChild(PDOMCPPLinkage.java:943)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.createBinding(PDOMCPPLinkage.java:895)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.addBinding(PDOMCPPLinkage.java:710)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.adaptOrAddBinding(PDOMCPPLinkage.java:1311)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.adaptOrAddParent(PDOMCPPLinkage.java:1306)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.addBinding(PDOMCPPLinkage.java:702)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.adaptOrAddBinding(PDOMCPPLinkage.java:1311)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.adaptOrAddParent(PDOMCPPLinkage.java:1306)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.addBinding(PDOMCPPLinkage.java:702)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.addBinding(PDOMCPPLinkage.java:630)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMFile.createPDOMName(PDOMFile.java:524)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMFile.addNames(PDOMFile.java:490)
+	at org.eclipse.cdt.internal.core.pdom.WritablePDOM.addFileContent(WritablePDOM.java:158)
+	at org.eclipse.cdt.internal.core.index.WritableCIndex.setFileContent(WritableCIndex.java:90)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.storeFileInIndex(PDOMWriter.java:692)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.storeSymbolsInIndex(PDOMWriter.java:330)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.addSymbols(PDOMWriter.java:287)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.writeToIndex(AbstractIndexerTask.java:1295)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseFile(AbstractIndexerTask.java:1107)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:910)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:572)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:164)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.698
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.699
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.699
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.700
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.700
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.701
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.701
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.702
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.702
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.702
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.703
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.703
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.703
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.704
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.704
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.705
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.706
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.706
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.706
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.707
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.707
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.707
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.708
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.708
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.708
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.709
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.709
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.710
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.710
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:20.710
+!MESSAGE Unexpected overload for binary operator 14: 'operator |'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:37.701
+!MESSAGE Unexpected overload for binary operator 14: 'operator |'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:46.805
+!MESSAGE Unexpected overload for binary operator 28: 'operator =='
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:46.807
+!MESSAGE Unexpected overload for binary operator 28: 'operator =='
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:46.809
+!MESSAGE Unexpected overload for binary operator 28: 'operator =='
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:50.525
+!MESSAGE Unexpected overload for binary operator 14: 'operator |'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:50.744
+!MESSAGE Error: <anonymous> is not a member of has_value_types
+!STACK 0
+java.lang.IllegalArgumentException: <anonymous> is not a member of has_value_types
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.ClassTypeHelper.invalidMember(ClassTypeHelper.java:1155)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.ClassTypeHelper.getVisibility(ClassTypeHelper.java:1081)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPClassTemplate.getVisibility(CPPClassTemplate.java:281)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.getVisibility(PDOMCPPLinkage.java:933)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.addChild(PDOMCPPLinkage.java:943)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.createBinding(PDOMCPPLinkage.java:895)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.addBinding(PDOMCPPLinkage.java:710)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.adaptOrAddBinding(PDOMCPPLinkage.java:1311)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.adaptOrAddParent(PDOMCPPLinkage.java:1306)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.addBinding(PDOMCPPLinkage.java:702)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.adaptOrAddBinding(PDOMCPPLinkage.java:1311)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.adaptOrAddParent(PDOMCPPLinkage.java:1306)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.addBinding(PDOMCPPLinkage.java:702)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.addBinding(PDOMCPPLinkage.java:630)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMFile.createPDOMName(PDOMFile.java:524)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMFile.addNames(PDOMFile.java:490)
+	at org.eclipse.cdt.internal.core.pdom.WritablePDOM.addFileContent(WritablePDOM.java:158)
+	at org.eclipse.cdt.internal.core.index.WritableCIndex.setFileContent(WritableCIndex.java:90)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.storeFileInIndex(PDOMWriter.java:692)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.storeSymbolsInIndex(PDOMWriter.java:330)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.addSymbols(PDOMWriter.java:287)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.writeToIndex(AbstractIndexerTask.java:1295)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseFile(AbstractIndexerTask.java:1107)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:910)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:572)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:164)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMRebuildTask.run(PDOMRebuildTask.java:94)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:50.746
+!MESSAGE Error: <anonymous> is not a member of has_error_types
+!STACK 0
+java.lang.IllegalArgumentException: <anonymous> is not a member of has_error_types
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.ClassTypeHelper.invalidMember(ClassTypeHelper.java:1155)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.ClassTypeHelper.getVisibility(ClassTypeHelper.java:1081)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPClassTemplate.getVisibility(CPPClassTemplate.java:281)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.getVisibility(PDOMCPPLinkage.java:933)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.addChild(PDOMCPPLinkage.java:943)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.createBinding(PDOMCPPLinkage.java:895)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.addBinding(PDOMCPPLinkage.java:710)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.adaptOrAddBinding(PDOMCPPLinkage.java:1311)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.adaptOrAddParent(PDOMCPPLinkage.java:1306)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.addBinding(PDOMCPPLinkage.java:702)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.adaptOrAddBinding(PDOMCPPLinkage.java:1311)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.adaptOrAddParent(PDOMCPPLinkage.java:1306)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.addBinding(PDOMCPPLinkage.java:702)
+	at org.eclipse.cdt.internal.core.pdom.dom.cpp.PDOMCPPLinkage.addBinding(PDOMCPPLinkage.java:630)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMFile.createPDOMName(PDOMFile.java:524)
+	at org.eclipse.cdt.internal.core.pdom.dom.PDOMFile.addNames(PDOMFile.java:490)
+	at org.eclipse.cdt.internal.core.pdom.WritablePDOM.addFileContent(WritablePDOM.java:158)
+	at org.eclipse.cdt.internal.core.index.WritableCIndex.setFileContent(WritableCIndex.java:90)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.storeFileInIndex(PDOMWriter.java:692)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.storeSymbolsInIndex(PDOMWriter.java:330)
+	at org.eclipse.cdt.internal.core.pdom.PDOMWriter.addSymbols(PDOMWriter.java:287)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.writeToIndex(AbstractIndexerTask.java:1295)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseFile(AbstractIndexerTask.java:1107)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:910)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:572)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:164)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMRebuildTask.run(PDOMRebuildTask.java:94)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:160)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.815
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.816
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.816
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.817
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.817
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.818
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.818
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.819
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.819
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.820
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.820
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.821
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.821
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.821
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.822
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.822
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.822
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.823
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.823
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.823
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.824
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.824
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.824
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.825
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.825
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.825
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.826
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.826
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.826
+!MESSAGE Unexpected overload for binary operator 6: 'operator <<'
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-11-28 22:36:53.826
+!MESSAGE Unexpected overload for binary operator 14: 'operator |'
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-11-28 22:36:55.356
+!MESSAGE Indexed 'Aufgabenblock_2' (14 sources, 1.720 headers) in 32 sec: 149.466 declarations; 332.512 references; 0 unresolved inclusions; 1 syntax errors; 173 unresolved names (0,036 %)
+!SESSION 2024-11-28 23:11:51.463 -----------------------------------------------
+eclipse.buildId=4.31.0.20240307-1200
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-11-28 23:12:00.959
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\vogel'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.director 2 10054 2024-11-28 23:12:13.956
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2024-11-28 23:12:13.957
+!MESSAGE Software being installed: artificial_root 1.0.0.v1732831931421
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2024-11-28 23:12:13.957
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-11-28 23:12:13.957
+!MESSAGE Mylyn WikiText Help UI 3.0.48.202308291007 (org.eclipse.mylyn.wikitext.help.ui 3.0.48.202308291007)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-11-28 23:12:13.957
+!MESSAGE Mylyn WikiText Help UI 4.2.0.v20240130-0811 (org.eclipse.mylyn.wikitext.help.ui 4.2.0.v20240130-0811)
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2024-11-28 23:12:13.957
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-11-28 23:12:13.957
+!MESSAGE From: artificial_root 1.0.0.v1732831931421
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-11-28 23:12:13.957
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.wikitext.feature.feature.group 4.2.0.v20240302-0923
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2024-11-28 23:12:13.957
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-11-28 23:12:13.957
+!MESSAGE From: artificial_root 1.0.0.v1732831931421
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-11-28 23:12:13.957
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.wikitext_feature.feature.group 0.0.0
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2024-11-28 23:12:13.957
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-11-28 23:12:13.957
+!MESSAGE From: Mylyn WikiText Editors 3.0.48.202308291007 (org.eclipse.mylyn.wikitext.editors_feature.feature.group 3.0.48.202308291007)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-11-28 23:12:13.957
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.wikitext.help.ui [3.0.48.202308291007,3.0.48.202308291007]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2024-11-28 23:12:13.957
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-11-28 23:12:13.957
+!MESSAGE From: Mylyn WikiText 4.2.0.v20240302-0923 (org.eclipse.mylyn.wikitext.feature.feature.group 4.2.0.v20240302-0923)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-11-28 23:12:13.957
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.wikitext.help.ui [4.2.0.v20240130-0811,4.2.0.v20240130-0811]
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2024-11-28 23:12:13.957
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-11-28 23:12:13.957
+!MESSAGE From: Mylyn WikiText 3.0.48.202308291007 (org.eclipse.mylyn.wikitext_feature.feature.group 3.0.48.202308291007)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2024-11-28 23:12:13.957
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.eclipse.mylyn.wikitext.editors_feature.feature.group [3.0.48.202308291007,3.0.48.202308291007]
+
+!ENTRY org.eclipse.oomph.setup.ui 1 0 2024-11-28 23:12:13.959
+!MESSAGE Setup tasks were performed during startup updating 4 preferences. See 'C:\Users\vogel\cpp-2023-09\eclipse\configuration\org.eclipse.oomph.setup\setup.log' for details

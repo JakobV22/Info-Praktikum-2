@@ -5475,3 +5475,440 @@ g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahre
 Info: Internal Builder is used for build
 g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
 g++ -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o 
+Info: Nothing to build for Aufgabenblock_1
+22:32:56 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 -O0 -g3 -Wall -c -fmessage-length=0 -o SimuClientSocket.o "..\\SimuClientSocket.cpp" 
+In file included from ..\SimuClientSocket.cpp:1:
+..\SimuClientSocket.h:5:10: fatal error: boost/asio.hpp: No such file or directory
+    5 | #include <boost/asio.hpp>
+      |          ^~~~~~~~~~~~~~~~
+compilation terminated.
+Info: Nothing to build for Aufgabenblock_1
+22:35:45 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Losfahren.o "..\\Losfahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o SimuClientSocket.o "..\\SimuClientSocket.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o SimuClient.o "..\\SimuClient.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:16:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   16 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:271:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  271 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Streckenende.o "..\\Streckenende.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Simulationsobjekt.o "..\\Simulationsobjekt.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrausnahme.o "..\\Fahrausnahme.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+22:45:22 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:17:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   17 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_6()':
+..\main.cpp:329:24: error: no matching function for call to 'bZeichneStrasse(const char [9], const char [10], int, int, <brace-enclosed initializer list>)'
+  329 |         bZeichneStrasse("Mannheim", "Bielefeld", 500, 2, {200, 200, 600, 500});
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\main.cpp:15:
+..\SimuClient.h:32:21: note: candidate: 'bool bZeichneStrasse(const string&, const string&, int, int, int*)'
+   32 | SIMUCLIENT_API bool bZeichneStrasse(const std::string& nameHinweg, const std::string& nameRueckweg, int iLaenge, int iAnzahlKoordinaten, int* pFeldKoordinaten);
+      |                     ^~~~~~~~~~~~~~~
+..\SimuClient.h:32:143: note:   no known conversion for argument 5 from '<brace-enclosed initializer list>' to 'int*'
+   32 | SIMUCLIENT_API bool bZeichneStrasse(const std::string& nameHinweg, const std::string& nameRueckweg, int iLaenge, int iAnzahlKoordinaten, int* pFeldKoordinaten);
+      |                                                                                                                                          ~~~~~^~~~~~~~~~~~~~~~
+..\SimuClient.h:67:21: note: candidate: 'bool bZeichneStrasse(const char*, const char*, int, int, int*)'
+   67 | SIMUCLIENT_API bool bZeichneStrasse(const char* nameHinweg, const char* nameRueckweg, int iLaenge, int iAnzahlKoordinaten, int* pFeldKoordinaten);
+      |                     ^~~~~~~~~~~~~~~
+..\SimuClient.h:67:129: note:   no known conversion for argument 5 from '<brace-enclosed initializer list>' to 'int*'
+   67 | SIMUCLIENT_API bool bZeichneStrasse(const char* nameHinweg, const char* nameRueckweg, int iLaenge, int iAnzahlKoordinaten, int* pFeldKoordinaten);
+      |                                                                                                                            ~~~~~^~~~~~~~~~~~~~~~
+..\SimuClient.h:68:21: note: candidate: 'bool bZeichneStrasse(const string&, const char*, int, int, int*)'
+   68 | SIMUCLIENT_API bool bZeichneStrasse(const std::string& nameHinweg, const char* nameRueckweg, int iLaenge, int iAnzahlKoordinaten, int* pFeldKoordinaten);
+      |                     ^~~~~~~~~~~~~~~
+..\SimuClient.h:68:136: note:   no known conversion for argument 5 from '<brace-enclosed initializer list>' to 'int*'
+   68 | SIMUCLIENT_API bool bZeichneStrasse(const std::string& nameHinweg, const char* nameRueckweg, int iLaenge, int iAnzahlKoordinaten, int* pFeldKoordinaten);
+      |                                                                                                                                   ~~~~~^~~~~~~~~~~~~~~~
+..\SimuClient.h:69:21: note: candidate: 'bool bZeichneStrasse(const char*, const string&, int, int, int*)'
+   69 | SIMUCLIENT_API bool bZeichneStrasse(const char* nameHinweg, const std::string& nameRueckweg, int iLaenge, int iAnzahlKoordinaten, int* pFeldKoordinaten);
+      |                     ^~~~~~~~~~~~~~~
+..\SimuClient.h:69:136: note:   no known conversion for argument 5 from '<brace-enclosed initializer list>' to 'int*'
+   69 | SIMUCLIENT_API bool bZeichneStrasse(const char* nameHinweg, const std::string& nameRueckweg, int iLaenge, int iAnzahlKoordinaten, int* pFeldKoordinaten);
+      |                                                                                                                                   ~~~~~^~~~~~~~~~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+22:47:23 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:17:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   17 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+22:48:29 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:17:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   17 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+22:49:14 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:17:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   17 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+23:01:33 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+In file included from ..\Parken.cpp:9:
+..\Fahrzeug.h:35:29: error: static member function 'static void Fahrzeug::vKopf()' cannot have cv-qualifier
+   35 |         static void vKopf() const;
+      |                             ^~~~~
+Info: Nothing to build for Aufgabenblock_1
+23:05:31 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+In file included from ..\Weg.cpp:9:
+..\Fahrzeug.h:35:29: error: static member function 'static void Fahrzeug::vKopf()' cannot have cv-qualifier
+   35 |         static void vKopf() const;
+      |                             ^~~~~
+..\Weg.cpp:57:6: error: no declaration matches 'void Weg::vKopf() const'
+   57 | void Weg::vKopf() const{
+      |      ^~~
+In file included from ..\Weg.cpp:8:
+..\Weg.h:29:14: note: candidate is: 'void Weg::vKopf()'
+   29 |         void vKopf();
+      |              ^~~~~
+..\Weg.h:15:7: note: 'class Weg' defined here
+   15 | class Weg: public Simulationsobjekt {
+      |       ^~~
+Info: Nothing to build for Aufgabenblock_1
+23:06:11 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+In file included from ..\Fahrzeug.cpp:8:
+..\Fahrzeug.h:35:29: error: static member function 'static void Fahrzeug::vKopf()' cannot have cv-qualifier
+   35 |         static void vKopf() const;
+      |                             ^~~~~
+..\Fahrzeug.cpp:54:24: error: static member function 'static void Fahrzeug::vKopf()' declared with type qualifiers
+   54 | void Fahrzeug::vKopf() const{
+      |                        ^~~~~
+..\Fahrzeug.cpp:160:6: error: no declaration matches 'void Fahrzeug::setAbschnittStrecke(double)'
+  160 | void Fahrzeug::setAbschnittStrecke(double dAbschnittStrecke){
+      |      ^~~~~~~~
+In file included from ..\Fahrzeug.cpp:8:
+..\Fahrzeug.h:47:14: note: candidate is: 'void Fahrzeug::setAbschnittStrecke(double) const'
+   47 |         void setAbschnittStrecke(double dAbschnittStrecke) const;
+      |              ^~~~~~~~~~~~~~~~~~~
+..\Fahrzeug.h:17:7: note: 'class Fahrzeug' defined here
+   17 | class Fahrzeug: public Simulationsobjekt {
+      |       ^~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+23:06:40 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrausnahme.o "..\\Fahrausnahme.cpp" 
+In file included from ..\Fahrausnahme.cpp:10:
+..\Fahrzeug.h:35:29: error: static member function 'static void Fahrzeug::vKopf()' cannot have cv-qualifier
+   35 |         static void vKopf() const;
+      |                             ^~~~~
+Info: Nothing to build for Aufgabenblock_1
+23:07:44 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+..\PKW.cpp: In member function 'virtual void PKW::vZeichnen(const Weg&) const':
+..\PKW.cpp:115:9: error: 'bZeichnePKW' was not declared in this scope; did you mean 'vZeichnen'?
+  115 |         bZeichnePKW(p_sName, rWeg.vGetName(), (getAbschnittStrecke() / rWeg.dGetLaenge()), dGeschwindigkeit(), p_dTankinhalt);
+      |         ^~~~~~~~~~~
+      |         vZeichnen
+Info: Nothing to build for Aufgabenblock_1
+23:09:05 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Simulationsobjekt.o "..\\Simulationsobjekt.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Losfahren.o "..\\Losfahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:17:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   17 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = Fahrzeug; _Args = {std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, double&}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<Fahrzeug>]':
+..\main.cpp:143:58:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: invalid new-expression of abstract class type 'Fahrzeug'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\main.cpp:7:
+..\Fahrzeug.h:17:7: note:   because the following virtual functions are pure within 'Fahrzeug':
+   17 | class Fahrzeug: public Simulationsobjekt {
+      |       ^~~~~~~~
+..\Fahrzeug.h:48:22: note:     'virtual void Fahrzeug::vZeichnen(const Weg&) const'
+   48 |         virtual void vZeichnen(const Weg&) const = 0;
+      |                      ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = Fahrzeug; _Args = {std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<Fahrzeug>]':
+..\main.cpp:203:61:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: invalid new-expression of abstract class type 'Fahrzeug'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+23:11:44 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:17:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   17 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = Fahrzeug; _Args = {std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, double&}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<Fahrzeug>]':
+..\main.cpp:143:58:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: invalid new-expression of abstract class type 'Fahrzeug'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\main.cpp:7:
+..\Fahrzeug.h:17:7: note:   because the following virtual functions are pure within 'Fahrzeug':
+   17 | class Fahrzeug: public Simulationsobjekt {
+      |       ^~~~~~~~
+..\Fahrzeug.h:48:22: note:     'virtual void Fahrzeug::vZeichnen(const Weg&) const'
+   48 |         virtual void vZeichnen(const Weg&) const = 0;
+      |                      ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = Fahrzeug; _Args = {std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<Fahrzeug>]':
+..\main.cpp:203:61:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: invalid new-expression of abstract class type 'Fahrzeug'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+23:12:51 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrausnahme.o "..\\Fahrausnahme.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Streckenende.o "..\\Streckenende.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:17:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   17 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = Fahrzeug; _Args = {std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, double&}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<Fahrzeug>]':
+..\main.cpp:143:58:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: invalid new-expression of abstract class type 'Fahrzeug'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\main.cpp:7:
+..\Fahrzeug.h:17:7: note:   because the following virtual functions are pure within 'Fahrzeug':
+   17 | class Fahrzeug: public Simulationsobjekt {
+      |       ^~~~~~~~
+..\Fahrzeug.h:48:22: note:     'virtual void Fahrzeug::vZeichnen(const Weg&) const'
+   48 |         virtual void vZeichnen(const Weg&) const = 0;
+      |                      ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = Fahrzeug; _Args = {std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<Fahrzeug>]':
+..\main.cpp:203:61:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: invalid new-expression of abstract class type 'Fahrzeug'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+23:13:44 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Streckenende.o "..\\Streckenende.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:17:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   17 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrausnahme.o "..\\Fahrausnahme.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Losfahren.o "..\\Losfahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: Fahrzeug.o:Fahrzeug.cpp:(.rdata$_ZTV8Fahrzeug[_ZTV8Fahrzeug]+0x48): undefined reference to `Fahrzeug::vZeichnen(Weg const&) const'
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for Aufgabenblock_1
+23:15:13 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+23:18:32 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+23:19:37 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:17:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   17 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+23:20:43 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:17:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   17 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+23:35:23 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Streckenende.o "..\\Streckenende.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrausnahme.o "..\\Fahrausnahme.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:17:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   17 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Losfahren.o "..\\Losfahren.cpp" 
+..\Losfahren.cpp: In member function 'virtual void Losfahren::vBearbeiten()':
+..\Losfahren.cpp:24:74: error: 'rWeg' was not declared in this scope; did you mean 'Weg'?
+   24 |         std::unique_ptr<Fahren> pNewVerhalten = std::make_unique<Fahren>(rWeg);
+      |                                                                          ^~~~
+      |                                                                          Weg
+..\Losfahren.cpp:26:30: error: 'double Fahrzeug::p_dAbschnittStrecke' is protected within this context
+   26 |                 p_pFahrzeug->p_dAbschnittStrecke = 0;
+      |                              ^~~~~~~~~~~~~~~~~~~
+In file included from ..\Losfahren.cpp:9:
+..\Fahrzeug.h:24:16: note: declared protected here
+   24 |         double p_dAbschnittStrecke = 0;
+      |                ^~~~~~~~~~~~~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+23:36:23 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Losfahren.o "..\\Losfahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+23:39:57 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:17:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   17 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+23:40:45 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:17:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   17 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_2
