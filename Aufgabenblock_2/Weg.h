@@ -9,14 +9,15 @@
 #define WEG_H_
 #include "Simulationsobjekt.h"
 #include "Tempolimit.h"
-class Fahrzeug;
+#include "vertagt_liste.h"
 
+class Fahrzeug;
 
 class Weg: public Simulationsobjekt {
 
 protected:
 	double p_dLaenge = 0;
-	std::list<std::unique_ptr<Fahrzeug>> p_pFahrzeuge;
+	vertagt::VListe<std::unique_ptr<Fahrzeug>> p_pFahrzeuge;
 	Tempolimit p_eTempolimit = Tempolimit::Autobahn;
 
 public:
@@ -30,6 +31,7 @@ public:
 	double dGetLaenge() const;
 	void vAnnahme(std::unique_ptr<Fahrzeug> pFahrzeug);
 	void vAnnahme (std::unique_ptr<Fahrzeug> pFahrzeug, double dStartzeitpunkt);
+	std::unique_ptr<Fahrzeug> pAbgabe(const Fahrzeug& rFahrzeug);
 };
 
 #endif /* WEG_H_ */

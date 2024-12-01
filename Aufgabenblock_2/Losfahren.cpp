@@ -21,9 +21,9 @@ Losfahren::Losfahren(Fahrzeug& rFahrzeug, Weg& rWeg):
 }
 void Losfahren::vBearbeiten(){
 	std::cout << "'Ausnahme: Losfahren' ist aufgetreten für Fahrzeug: " << p_pFahrzeug->vGetName() << " auf Weg: " << p_pWeg->vGetName()<< std::endl;
-	std::unique_ptr<Fahren> pNewVerhalten = std::make_unique<Fahren>(*p_pWeg);
-	p_pFahrzeug->setVerhalten(move(pNewVerhalten));
-		///////////
+	std::unique_ptr<Fahrzeug> pFahrzeug = move(p_pWeg->pAbgabe(*p_pFahrzeug));
+	p_pWeg->vAnnahme(move(pFahrzeug));
+
 }
 Losfahren::~Losfahren() {
 	// TODO Auto-generated destructor stub

@@ -5912,3 +5912,1803 @@ g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\
 g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
 Info: Nothing to build for Aufgabenblock_2
 Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+17:49:26 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrausnahme.o "..\\Fahrausnahme.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:17:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   17 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Streckenende.o "..\\Streckenende.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Losfahren.o "..\\Losfahren.cpp" 
+..\Losfahren.cpp: In member function 'virtual void Losfahren::vBearbeiten()':
+..\Losfahren.cpp:24:35: error: expected unqualified-id before '=' token
+   24 |         std::unique_ptr<Fahrzeug> = move(p_pWeg->pAbgabe(*p_pFahrzeug));
+      |                                   ^
+..\Losfahren.cpp:25:25: error: no matching function for call to 'Weg::vAnnahme(Fahrzeug*&)'
+   25 |         p_pWeg->vAnnahme(p_pFahrzeug);
+      |         ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+In file included from ..\Losfahren.cpp:10:
+..\Weg.h:31:14: note: candidate: 'void Weg::vAnnahme(std::unique_ptr<Fahrzeug>)'
+   31 |         void vAnnahme(std::unique_ptr<Fahrzeug> pFahrzeug);
+      |              ^~~~~~~~
+..\Weg.h:31:49: note:   no known conversion for argument 1 from 'Fahrzeug*' to 'std::unique_ptr<Fahrzeug>'
+   31 |         void vAnnahme(std::unique_ptr<Fahrzeug> pFahrzeug);
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+..\Weg.h:32:14: note: candidate: 'void Weg::vAnnahme(std::unique_ptr<Fahrzeug>, double)'
+   32 |         void vAnnahme (std::unique_ptr<Fahrzeug> pFahrzeug, double dStartzeitpunkt);
+      |              ^~~~~~~~
+..\Weg.h:32:14: note:   candidate expects 2 arguments, 1 provided
+Info: Nothing to build for Aufgabenblock_1
+17:56:10 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+..\Weg.cpp: In member function 'std::unique_ptr<Fahrzeug> Weg::pAbgabe(const Fahrzeug&)':
+..\Weg.cpp:111:25: error: no match for 'operator==' (operand types are 'std::unique_ptr<Fahrzeug>' and 'const Fahrzeug*')
+  111 |                 if (*it == &rFahrzeug) {
+      |                     ~~~ ^~ ~~~~~~~~~~
+      |                     |      |
+      |                     |      const Fahrzeug*
+      |                     std::unique_ptr<Fahrzeug>
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:64,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_pair.h:466:5: note: candidate: 'template<class _T1, class _T2> constexpr bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)'
+  466 |     operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_pair.h:466:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::pair<_T1, _T2>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:67,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:419:5: note: candidate: 'template<class _Iterator> constexpr bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)'
+  419 |     operator==(const reverse_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:419:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::reverse_iterator<_Iterator>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:67,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:458:5: note: candidate: 'template<class _IteratorL, class _IteratorR> constexpr bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)'
+  458 |     operator==(const reverse_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:458:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::reverse_iterator<_Iterator>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:67,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:1533:5: note: candidate: 'template<class _IteratorL, class _IteratorR> constexpr bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)'
+ 1533 |     operator==(const move_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:1533:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::move_iterator<_IteratorL>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:67,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:1601:5: note: candidate: 'template<class _Iterator> constexpr bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)'
+ 1601 |     operator==(const move_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:1601:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::move_iterator<_IteratorL>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:40,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\postypes.h:222:5: note: candidate: 'template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)'
+  222 |     operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\postypes.h:222:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::fpos<_StateT>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\string:41,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\allocator.h:230:5: note: candidate: 'template<class _T1, class _T2> bool std::operator==(const std::allocator<_CharT>&, const std::allocator<_T2>&)'
+  230 |     operator==(const allocator<_T1>&, const allocator<_T2>&)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\allocator.h:230:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::allocator<_CharT>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\basic_string.h:48,
+                 from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\string_view:534:5: note: candidate: 'template<class _CharT, class _Traits> constexpr bool std::operator==(std::basic_string_view<_CharT, _Traits>, std::basic_string_view<_CharT, _Traits>)'
+  534 |     operator==(basic_string_view<_CharT, _Traits> __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\string_view:534:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'std::basic_string_view<_CharT, _Traits>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\basic_string.h:48,
+                 from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\string_view:540:5: note: candidate: 'template<class _CharT, class _Traits> constexpr bool std::operator==(std::basic_string_view<_CharT, _Traits>, std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >)'
+  540 |     operator==(basic_string_view<_CharT, _Traits> __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\string_view:540:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'std::basic_string_view<_CharT, _Traits>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\basic_string.h:48,
+                 from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\string_view:563:5: note: candidate: 'template<class _CharT, class _Traits> constexpr bool std::operator==(std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >, std::basic_string_view<_CharT, _Traits>)'
+  563 |     operator==(__type_identity_t<basic_string_view<_CharT, _Traits>> __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\string_view:563:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   mismatched types 'std::basic_string_view<_CharT, _Traits>' and 'const Fahrzeug*'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6225:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+ 6225 |     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6225:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6233:5: note: candidate: 'template<class _CharT> typename __gnu_cxx::__enable_if<std::__is_char<_Tp>::__value, bool>::__type std::operator==(const std::__cxx11::basic_string<_CharT>&, const std::__cxx11::basic_string<_CharT>&)'
+ 6233 |     operator==(const basic_string<_CharT>& __lhs,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6233:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::__cxx11::basic_string<_CharT>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6247:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const _CharT*)'
+ 6247 |     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6247:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6288:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+ 6288 |     operator==(const _CharT* __lhs,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6288:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   mismatched types 'const _CharT*' and 'std::unique_ptr<Fahrzeug>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_facets.h:48,
+                 from c:\mingw64\include\c++\11.2.0\bits\basic_ios.h:37,
+                 from c:\mingw64\include\c++\11.2.0\ios:44,
+                 from c:\mingw64\include\c++\11.2.0\ostream:38,
+                 from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\streambuf_iterator.h:226:5: note: candidate: 'template<class _CharT, class _Traits> bool std::operator==(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)'
+  226 |     operator==(const istreambuf_iterator<_CharT, _Traits>& __a,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\streambuf_iterator.h:226:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::istreambuf_iterator<_CharT, _Traits>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\tuple:39,
+                 from c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:37,
+                 from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\array:276:5: note: candidate: 'template<class _Tp, long long unsigned int _Nm> bool std::operator==(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)'
+  276 |     operator==(const array<_Tp, _Nm>& __one, const array<_Tp, _Nm>& __two)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\array:276:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::array<_Tp, _Nm>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:37,
+                 from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\tuple:1513:5: note: candidate: 'template<class ... _TElements, class ... _UElements> constexpr bool std::operator==(const std::tuple<_Tps ...>&, const std::tuple<_UTypes ...>&)'
+ 1513 |     operator==(const tuple<_TElements...>& __t,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\tuple:1513:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::tuple<_Tps ...>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:753:5: note: candidate: 'template<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator==(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)'
+  753 |     operator==(const unique_ptr<_Tp, _Dp>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:753:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   mismatched types 'const std::unique_ptr<_Up, _Ep>' and 'const Fahrzeug*'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:760:5: note: candidate: 'template<class _Tp, class _Dp> bool std::operator==(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)'
+  760 |     operator==(const unique_ptr<_Tp, _Dp>& __x, nullptr_t) noexcept
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:760:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:28: note:   cannot convert '& rFahrzeug' (type 'const Fahrzeug*') to type 'std::nullptr_t'
+  111 |                 if (*it == &rFahrzeug) {
+      |                            ^~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:767:5: note: candidate: 'template<class _Tp, class _Dp> bool std::operator==(std::nullptr_t, const std::unique_ptr<_Tp, _Dp>&)'
+  767 |     operator==(nullptr_t, const unique_ptr<_Tp, _Dp>& __x) noexcept
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:767:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   mismatched types 'const std::unique_ptr<_Tp, _Dp>' and 'const Fahrzeug*'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\list:63,
+                 from ..\Simulationsobjekt.h:13,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1995:5: note: candidate: 'template<class _Tp, class _Alloc> bool std::operator==(const std::__cxx11::list<_Tp, _Alloc>&, const std::__cxx11::list<_Tp, _Alloc>&)'
+ 1995 |     operator==(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1995:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::__cxx11::list<_Tp, _Alloc>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\ios_base.h:46,
+                 from c:\mingw64\include\c++\11.2.0\ios:42,
+                 from c:\mingw64\include\c++\11.2.0\ostream:38,
+                 from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\system_error:344:3: note: candidate: 'bool std::operator==(const std::error_code&, const std::error_code&)'
+  344 |   operator==(const error_code& __lhs, const error_code& __rhs) noexcept
+      |   ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\system_error:344:32: note:   no known conversion for argument 1 from 'std::unique_ptr<Fahrzeug>' to 'const std::error_code&'
+  344 |   operator==(const error_code& __lhs, const error_code& __rhs) noexcept
+      |              ~~~~~~~~~~~~~~~~~~^~~~~
+c:\mingw64\include\c++\11.2.0\system_error:351:3: note: candidate: 'bool std::operator==(const std::error_code&, const std::error_condition&)'
+  351 |   operator==(const error_code& __lhs, const error_condition& __rhs) noexcept
+      |   ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\system_error:351:32: note:   no known conversion for argument 1 from 'std::unique_ptr<Fahrzeug>' to 'const std::error_code&'
+  351 |   operator==(const error_code& __lhs, const error_condition& __rhs) noexcept
+      |              ~~~~~~~~~~~~~~~~~~^~~~~
+c:\mingw64\include\c++\11.2.0\system_error:359:3: note: candidate: 'bool std::operator==(const std::error_condition&, const std::error_condition&)'
+  359 |   operator==(const error_condition& __lhs,
+      |   ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\system_error:359:37: note:   no known conversion for argument 1 from 'std::unique_ptr<Fahrzeug>' to 'const std::error_condition&'
+  359 |   operator==(const error_condition& __lhs,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+c:\mingw64\include\c++\11.2.0\system_error:392:3: note: candidate: 'bool std::operator==(const std::error_condition&, const std::error_code&)'
+  392 |   operator==(const error_condition& __lhs, const error_code& __rhs) noexcept
+      |   ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\system_error:392:37: note:   no known conversion for argument 1 from 'std::unique_ptr<Fahrzeug>' to 'const std::error_condition&'
+  392 |   operator==(const error_condition& __lhs, const error_code& __rhs) noexcept
+      |              ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+..\Weg.cpp:114:36: warning: moving a local object in a return statement prevents copy elision [-Wpessimizing-move]
+  114 |                         return move(pTemp);
+      |                                ~~~~^~~~~~~
+..\Weg.cpp:114:36: note: remove 'std::move' call
+Info: Nothing to build for Aufgabenblock_1
+17:56:49 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+..\Weg.cpp: In member function 'std::unique_ptr<Fahrzeug> Weg::pAbgabe(const Fahrzeug&)':
+..\Weg.cpp:111:25: error: no match for 'operator==' (operand types are 'std::unique_ptr<Fahrzeug>' and 'const Fahrzeug*')
+  111 |                 if (*it == &rFahrzeug) {
+      |                     ~~~ ^~ ~~~~~~~~~~
+      |                     |      |
+      |                     |      const Fahrzeug*
+      |                     std::unique_ptr<Fahrzeug>
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:64,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_pair.h:466:5: note: candidate: 'template<class _T1, class _T2> constexpr bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)'
+  466 |     operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_pair.h:466:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::pair<_T1, _T2>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:67,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:419:5: note: candidate: 'template<class _Iterator> constexpr bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)'
+  419 |     operator==(const reverse_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:419:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::reverse_iterator<_Iterator>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:67,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:458:5: note: candidate: 'template<class _IteratorL, class _IteratorR> constexpr bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)'
+  458 |     operator==(const reverse_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:458:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::reverse_iterator<_Iterator>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:67,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:1533:5: note: candidate: 'template<class _IteratorL, class _IteratorR> constexpr bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)'
+ 1533 |     operator==(const move_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:1533:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::move_iterator<_IteratorL>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:67,
+                 from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:1601:5: note: candidate: 'template<class _Iterator> constexpr bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)'
+ 1601 |     operator==(const move_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_iterator.h:1601:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::move_iterator<_IteratorL>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:40,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\postypes.h:222:5: note: candidate: 'template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)'
+  222 |     operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\postypes.h:222:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::fpos<_StateT>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\string:41,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\allocator.h:230:5: note: candidate: 'template<class _T1, class _T2> bool std::operator==(const std::allocator<_CharT>&, const std::allocator<_T2>&)'
+  230 |     operator==(const allocator<_T1>&, const allocator<_T2>&)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\allocator.h:230:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::allocator<_CharT>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\basic_string.h:48,
+                 from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\string_view:534:5: note: candidate: 'template<class _CharT, class _Traits> constexpr bool std::operator==(std::basic_string_view<_CharT, _Traits>, std::basic_string_view<_CharT, _Traits>)'
+  534 |     operator==(basic_string_view<_CharT, _Traits> __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\string_view:534:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'std::basic_string_view<_CharT, _Traits>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\basic_string.h:48,
+                 from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\string_view:540:5: note: candidate: 'template<class _CharT, class _Traits> constexpr bool std::operator==(std::basic_string_view<_CharT, _Traits>, std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >)'
+  540 |     operator==(basic_string_view<_CharT, _Traits> __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\string_view:540:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'std::basic_string_view<_CharT, _Traits>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\basic_string.h:48,
+                 from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\string_view:563:5: note: candidate: 'template<class _CharT, class _Traits> constexpr bool std::operator==(std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >, std::basic_string_view<_CharT, _Traits>)'
+  563 |     operator==(__type_identity_t<basic_string_view<_CharT, _Traits>> __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\string_view:563:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   mismatched types 'std::basic_string_view<_CharT, _Traits>' and 'const Fahrzeug*'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6225:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+ 6225 |     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6225:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6233:5: note: candidate: 'template<class _CharT> typename __gnu_cxx::__enable_if<std::__is_char<_Tp>::__value, bool>::__type std::operator==(const std::__cxx11::basic_string<_CharT>&, const std::__cxx11::basic_string<_CharT>&)'
+ 6233 |     operator==(const basic_string<_CharT>& __lhs,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6233:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::__cxx11::basic_string<_CharT>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6247:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const _CharT*)'
+ 6247 |     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6247:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\string:55,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6288:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+ 6288 |     operator==(const _CharT* __lhs,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\basic_string.h:6288:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   mismatched types 'const _CharT*' and 'std::unique_ptr<Fahrzeug>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_facets.h:48,
+                 from c:\mingw64\include\c++\11.2.0\bits\basic_ios.h:37,
+                 from c:\mingw64\include\c++\11.2.0\ios:44,
+                 from c:\mingw64\include\c++\11.2.0\ostream:38,
+                 from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\streambuf_iterator.h:226:5: note: candidate: 'template<class _CharT, class _Traits> bool std::operator==(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)'
+  226 |     operator==(const istreambuf_iterator<_CharT, _Traits>& __a,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\streambuf_iterator.h:226:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::istreambuf_iterator<_CharT, _Traits>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\tuple:39,
+                 from c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:37,
+                 from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\array:276:5: note: candidate: 'template<class _Tp, long long unsigned int _Nm> bool std::operator==(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)'
+  276 |     operator==(const array<_Tp, _Nm>& __one, const array<_Tp, _Nm>& __two)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\array:276:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::array<_Tp, _Nm>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:37,
+                 from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\tuple:1513:5: note: candidate: 'template<class ... _TElements, class ... _UElements> constexpr bool std::operator==(const std::tuple<_Tps ...>&, const std::tuple<_UTypes ...>&)'
+ 1513 |     operator==(const tuple<_TElements...>& __t,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\tuple:1513:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::tuple<_Tps ...>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:753:5: note: candidate: 'template<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator==(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)'
+  753 |     operator==(const unique_ptr<_Tp, _Dp>& __x,
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:753:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   mismatched types 'const std::unique_ptr<_Up, _Ep>' and 'const Fahrzeug*'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:760:5: note: candidate: 'template<class _Tp, class _Dp> bool std::operator==(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)'
+  760 |     operator==(const unique_ptr<_Tp, _Dp>& __x, nullptr_t) noexcept
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:760:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:28: note:   cannot convert '& rFahrzeug' (type 'const Fahrzeug*') to type 'std::nullptr_t'
+  111 |                 if (*it == &rFahrzeug) {
+      |                            ^~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:767:5: note: candidate: 'template<class _Tp, class _Dp> bool std::operator==(std::nullptr_t, const std::unique_ptr<_Tp, _Dp>&)'
+  767 |     operator==(nullptr_t, const unique_ptr<_Tp, _Dp>& __x) noexcept
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:767:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   mismatched types 'const std::unique_ptr<_Tp, _Dp>' and 'const Fahrzeug*'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\list:63,
+                 from ..\Simulationsobjekt.h:13,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1995:5: note: candidate: 'template<class _Tp, class _Alloc> bool std::operator==(const std::__cxx11::list<_Tp, _Alloc>&, const std::__cxx11::list<_Tp, _Alloc>&)'
+ 1995 |     operator==(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+      |     ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1995:5: note:   template argument deduction/substitution failed:
+..\Weg.cpp:111:29: note:   'std::unique_ptr<Fahrzeug>' is not derived from 'const std::__cxx11::list<_Tp, _Alloc>'
+  111 |                 if (*it == &rFahrzeug) {
+      |                             ^~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\ios_base.h:46,
+                 from c:\mingw64\include\c++\11.2.0\ios:42,
+                 from c:\mingw64\include\c++\11.2.0\ostream:38,
+                 from c:\mingw64\include\c++\11.2.0\iostream:39,
+                 from ..\Simulationsobjekt.h:10,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\system_error:344:3: note: candidate: 'bool std::operator==(const std::error_code&, const std::error_code&)'
+  344 |   operator==(const error_code& __lhs, const error_code& __rhs) noexcept
+      |   ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\system_error:344:32: note:   no known conversion for argument 1 from 'std::unique_ptr<Fahrzeug>' to 'const std::error_code&'
+  344 |   operator==(const error_code& __lhs, const error_code& __rhs) noexcept
+      |              ~~~~~~~~~~~~~~~~~~^~~~~
+c:\mingw64\include\c++\11.2.0\system_error:351:3: note: candidate: 'bool std::operator==(const std::error_code&, const std::error_condition&)'
+  351 |   operator==(const error_code& __lhs, const error_condition& __rhs) noexcept
+      |   ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\system_error:351:32: note:   no known conversion for argument 1 from 'std::unique_ptr<Fahrzeug>' to 'const std::error_code&'
+  351 |   operator==(const error_code& __lhs, const error_condition& __rhs) noexcept
+      |              ~~~~~~~~~~~~~~~~~~^~~~~
+c:\mingw64\include\c++\11.2.0\system_error:359:3: note: candidate: 'bool std::operator==(const std::error_condition&, const std::error_condition&)'
+  359 |   operator==(const error_condition& __lhs,
+      |   ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\system_error:359:37: note:   no known conversion for argument 1 from 'std::unique_ptr<Fahrzeug>' to 'const std::error_condition&'
+  359 |   operator==(const error_condition& __lhs,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+c:\mingw64\include\c++\11.2.0\system_error:392:3: note: candidate: 'bool std::operator==(const std::error_condition&, const std::error_code&)'
+  392 |   operator==(const error_condition& __lhs, const error_code& __rhs) noexcept
+      |   ^~~~~~~~
+c:\mingw64\include\c++\11.2.0\system_error:392:37: note:   no known conversion for argument 1 from 'std::unique_ptr<Fahrzeug>' to 'const std::error_condition&'
+  392 |   operator==(const error_condition& __lhs, const error_code& __rhs) noexcept
+      |              ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+Info: Nothing to build for Aufgabenblock_1
+18:01:32 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+..\Weg.cpp: In member function 'std::unique_ptr<Fahrzeug> Weg::pAbgabe(const Fahrzeug&)':
+..\Weg.cpp:111:26: error: no match for 'operator==' (operand types are 'Fahrzeug' and 'const Fahrzeug')
+  111 |                 if (**it == rFahrzeug) {
+      |                     ~~~~ ^~ ~~~~~~~~~
+      |                     |       |
+      |                     |       const Fahrzeug
+      |                     Fahrzeug
+Info: Nothing to build for Aufgabenblock_1
+18:04:31 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:17:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   17 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:272:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  272 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrausnahme.o "..\\Fahrausnahme.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+..\Weg.cpp: In member function 'std::unique_ptr<Fahrzeug> Weg::pAbgabe(const Fahrzeug&)':
+..\Weg.cpp:111:58: error: expected ')' before '{' token
+  111 |                 if (((*it)->getID() == rFahrzeug.getID()) {
+      |                    ~                                     ^~
+      |                                                          )
+..\Weg.cpp:118:9: error: expected primary-expression before '}' token
+  118 |         }
+      |         ^
+Info: Nothing to build for Aufgabenblock_1
+18:05:40 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Streckenende.o "..\\Streckenende.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Losfahren.o "..\\Losfahren.cpp" 
+..\Losfahren.cpp: In member function 'virtual void Losfahren::vBearbeiten()':
+..\Losfahren.cpp:25:25: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+   25 |         p_pWeg->vAnnahme(pFahrzeug);
+      |         ~~~~~~~~~~~~~~~~^~~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\Losfahren.cpp:9:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:468:7: note: declared here
+  468 |       unique_ptr(const unique_ptr&) = delete;
+      |       ^~~~~~~~~~
+In file included from ..\Losfahren.cpp:10:
+..\Weg.h:31:49: note:   initializing argument 1 of 'void Weg::vAnnahme(std::unique_ptr<Fahrzeug>)'
+   31 |         void vAnnahme(std::unique_ptr<Fahrzeug> pFahrzeug);
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+18:07:09 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Losfahren.o "..\\Losfahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Parken.o "..\\Parken.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+18:16:38 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Streckenende.o "..\\Streckenende.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Losfahren.o "..\\Losfahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+19:43:09 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+In file included from ..\vertagt_liste.h:3,
+                 from ..\main.cpp:16:
+..\vertagt_aktion.h: In member function 'void vertagt::VErase<T>::vAusfuehren()':
+..\vertagt_aktion.h:73:52: error: 'it' was not declared in this scope; did you mean 'int'?
+   73 |                         VAktion<T>::p_pListe.erase(it);
+      |                                                    ^~
+      |                                                    int
+In file included from ..\main.cpp:16:
+..\vertagt_liste.h: In constructor 'vertagt::VListe<T>::VListe(std::__cxx11::list<T>&)':
+..\vertagt_liste.h:25:52: error: mem-initializer for 'vertagt::VListe<T>::p_objekte' follows constructor delegation
+   25 |                         VListe(), p_objekte(objekte) {
+      |                                                    ^
+..\main.cpp: At global scope:
+..\main.cpp:19:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   19 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:274:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  274 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\list:64,
+                 from ..\Simulationsobjekt.h:13,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\list.tcc: In instantiation of 'void std::__cxx11::list<_Tp, _Alloc>::_M_assign_dispatch(_InputIterator, _InputIterator, std::__false_type) [with _InputIterator = std::_List_const_iterator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >; _Tp = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >]':
+c:\mingw64\include\c++\11.2.0\bits\list.tcc:286:22:   required from 'std::__cxx11::list<_Tp, _Alloc>& std::__cxx11::list<_Tp, _Alloc>::operator=(const std::__cxx11::list<_Tp, _Alloc>&) [with _Tp = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >]'
+..\vertagt_liste.h:22:14:   required from 'vertagt::VListe<T>::VListe() [with T = int]'
+..\vertagt_liste.h:25:31:   required from 'vertagt::VListe<T>::VListe(std::__cxx11::list<T>&) [with T = int]'
+..\main.cpp:349:31:   required from here
+c:\mingw64\include\c++\11.2.0\bits\list.tcc:316:21: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>& std::unique_ptr<_Tp, _Dp>::operator=(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = vertagt::VAktion<int>; _Dp = std::default_delete<vertagt::VAktion<int> >]'
+  316 |           *__first1 = *__first2;
+      |           ~~~~~~~~~~^~~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:469:19: note: declared here
+  469 |       unique_ptr& operator=(const unique_ptr&) = delete;
+      |                   ^~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+19:44:43 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:19:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   19 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:274:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  274 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\list:64,
+                 from ..\Simulationsobjekt.h:13,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\list.tcc: In instantiation of 'void std::__cxx11::list<_Tp, _Alloc>::_M_assign_dispatch(_InputIterator, _InputIterator, std::__false_type) [with _InputIterator = std::_List_const_iterator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >; _Tp = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >]':
+c:\mingw64\include\c++\11.2.0\bits\list.tcc:286:22:   required from 'std::__cxx11::list<_Tp, _Alloc>& std::__cxx11::list<_Tp, _Alloc>::operator=(const std::__cxx11::list<_Tp, _Alloc>&) [with _Tp = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >]'
+..\vertagt_liste.h:28:16:   required from 'vertagt::VListe<T>::VListe(std::__cxx11::list<T>&) [with T = int]'
+..\main.cpp:349:31:   required from here
+c:\mingw64\include\c++\11.2.0\bits\list.tcc:316:21: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>& std::unique_ptr<_Tp, _Dp>::operator=(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = vertagt::VAktion<int>; _Dp = std::default_delete<vertagt::VAktion<int> >]'
+  316 |           *__first1 = *__first2;
+      |           ~~~~~~~~~~^~~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:469:19: note: declared here
+  469 |       unique_ptr& operator=(const unique_ptr&) = delete;
+      |                   ^~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+19:47:02 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:19:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   19 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:274:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  274 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+19:51:40 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:19:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   19 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:274:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  274 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_6a()':
+..\main.cpp:352:14: error: declaration of 'auto it' has no initializer
+  352 |         for (auto it; it != vListe.end(); it++) {
+      |              ^~~~
+..\main.cpp:357:14: error: declaration of 'auto it' has no initializer
+  357 |         for (auto it; it != vListe.end(); it++) {
+      |              ^~~~
+..\main.cpp:363:14: error: declaration of 'auto it' has no initializer
+  363 |         for (auto it; it != vListe.end(); it++) {
+      |              ^~~~
+Info: Nothing to build for Aufgabenblock_1
+19:52:20 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:19:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   19 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:274:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  274 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+19:52:36 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:19:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   19 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:274:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  274 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+19:54:19 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:19:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   19 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:274:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  274 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\main.cpp:16:
+..\vertagt_liste.h: In instantiation of 'void vertagt::VListe<T>::erase(vertagt::VListe<T>::iterator) [with T = int; vertagt::VListe<T>::iterator = std::__cxx11::list<int>::iterator]':
+..\main.cpp:359:16:   required from here
+..\vertagt_liste.h:82:37: error: no matching function for call to 'std::__cxx11::list<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >, std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > > >::push_back(std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >&)'
+   82 |                 p_aktionen.push_back(pErase);
+      |                 ~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\list:63,
+                 from ..\Simulationsobjekt.h:13,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1211:7: note: candidate: 'void std::__cxx11::list<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >; std::__cxx11::list<_Tp, _Alloc>::value_type = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >]'
+ 1211 |       push_back(const value_type& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1211:35: note:   no known conversion for argument 1 from 'std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >' to 'const value_type&' {aka 'const std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >&'}
+ 1211 |       push_back(const value_type& __x)
+      |                 ~~~~~~~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1216:7: note: candidate: 'void std::__cxx11::list<_Tp, _Alloc>::push_back(std::__cxx11::list<_Tp, _Alloc>::value_type&&) [with _Tp = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >; std::__cxx11::list<_Tp, _Alloc>::value_type = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >]'
+ 1216 |       push_back(value_type&& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1216:30: note:   no known conversion for argument 1 from 'std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >' to 'std::__cxx11::list<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >, std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > > >::value_type&&' {aka 'std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >&&'}
+ 1216 |       push_back(value_type&& __x)
+      |                 ~~~~~~~~~~~~~^~~
+19:54:22 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:19:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   19 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:274:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  274 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\main.cpp:16:
+..\vertagt_liste.h: In instantiation of 'void vertagt::VListe<T>::erase(vertagt::VListe<T>::iterator) [with T = int; vertagt::VListe<T>::iterator = std::__cxx11::list<int>::iterator]':
+..\main.cpp:359:16:   required from here
+..\vertagt_liste.h:82:37: error: no matching function for call to 'std::__cxx11::list<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >, std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > > >::push_back(std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >&)'
+   82 |                 p_aktionen.push_back(pErase);
+      |                 ~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\list:63,
+                 from ..\Simulationsobjekt.h:13,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1211:7: note: candidate: 'void std::__cxx11::list<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >; std::__cxx11::list<_Tp, _Alloc>::value_type = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >]'
+ 1211 |       push_back(const value_type& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1211:35: note:   no known conversion for argument 1 from 'std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >' to 'const value_type&' {aka 'const std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >&'}
+ 1211 |       push_back(const value_type& __x)
+      |                 ~~~~~~~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1216:7: note: candidate: 'void std::__cxx11::list<_Tp, _Alloc>::push_back(std::__cxx11::list<_Tp, _Alloc>::value_type&&) [with _Tp = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >; std::__cxx11::list<_Tp, _Alloc>::value_type = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >]'
+ 1216 |       push_back(value_type&& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1216:30: note:   no known conversion for argument 1 from 'std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >' to 'std::__cxx11::list<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >, std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > > >::value_type&&' {aka 'std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >&&'}
+ 1216 |       push_back(value_type&& __x)
+      |                 ~~~~~~~~~~~~~^~~
+Info: Nothing to build for Aufgabenblock_1
+19:59:21 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:19:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   19 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:274:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  274 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\main.cpp:16:
+..\vertagt_liste.h: In instantiation of 'void vertagt::VListe<T>::erase(vertagt::VListe<T>::iterator) [with T = int; vertagt::VListe<T>::iterator = std::__cxx11::list<int>::iterator]':
+..\main.cpp:359:16:   required from here
+..\vertagt_liste.h:82:37: error: no matching function for call to 'std::__cxx11::list<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >, std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > > >::push_back(std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >&)'
+   82 |                 p_aktionen.push_back(pErase);
+      |                 ~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\list:63,
+                 from ..\Simulationsobjekt.h:13,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1211:7: note: candidate: 'void std::__cxx11::list<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >; std::__cxx11::list<_Tp, _Alloc>::value_type = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >]'
+ 1211 |       push_back(const value_type& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1211:35: note:   no known conversion for argument 1 from 'std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >' to 'const value_type&' {aka 'const std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >&'}
+ 1211 |       push_back(const value_type& __x)
+      |                 ~~~~~~~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1216:7: note: candidate: 'void std::__cxx11::list<_Tp, _Alloc>::push_back(std::__cxx11::list<_Tp, _Alloc>::value_type&&) [with _Tp = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >; std::__cxx11::list<_Tp, _Alloc>::value_type = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >]'
+ 1216 |       push_back(value_type&& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1216:30: note:   no known conversion for argument 1 from 'std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >' to 'std::__cxx11::list<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >, std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > > >::value_type&&' {aka 'std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >&&'}
+ 1216 |       push_back(value_type&& __x)
+      |                 ~~~~~~~~~~~~~^~~
+In file included from ..\vertagt_liste.h:3,
+                 from ..\main.cpp:16:
+..\vertagt_aktion.h: In instantiation of 'vertagt::VAktion<T>::VAktion(std::__cxx11::list<T>&) [with T = int]':
+..\vertagt_aktion.h:69:72:   required from 'vertagt::VErase<T>::VErase(std::__cxx11::list<T>&, vertagt::VErase<T>::iterator) [with T = int; vertagt::VErase<T>::iterator = std::__cxx11::list<int>::iterator]'
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30:   required from 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = vertagt::VErase<int>; _Args = {std::__cxx11::list<int, std::allocator<int> >&, std::_List_iterator<int>&}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >]'
+..\vertagt_liste.h:78:66:   required from 'void vertagt::VListe<T>::erase(vertagt::VListe<T>::iterator) [with T = int; vertagt::VListe<T>::iterator = std::__cxx11::list<int>::iterator]'
+..\main.cpp:359:16:   required from here
+..\vertagt_aktion.h:17:50: error: invalid initialization of non-const reference of type 'std::__cxx11::list<int>&' from an rvalue of type 'std::__cxx11::list<int>*'
+   17 |                 VAktion(std::list<T>& ptListe) : p_pListe(&ptListe){}
+      |                                                  ^~~~~~~~~~~~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+20:01:42 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:19:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   19 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:274:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  274 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\main.cpp:16:
+..\vertagt_liste.h: In instantiation of 'void vertagt::VListe<T>::erase(vertagt::VListe<T>::iterator) [with T = int; vertagt::VListe<T>::iterator = std::__cxx11::list<int>::iterator]':
+..\main.cpp:359:16:   required from here
+..\vertagt_liste.h:82:37: error: no matching function for call to 'std::__cxx11::list<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >, std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > > >::push_back(std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >&)'
+   82 |                 p_aktionen.push_back(pErase);
+      |                 ~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\list:63,
+                 from ..\Simulationsobjekt.h:13,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1211:7: note: candidate: 'void std::__cxx11::list<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >; std::__cxx11::list<_Tp, _Alloc>::value_type = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >]'
+ 1211 |       push_back(const value_type& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1211:35: note:   no known conversion for argument 1 from 'std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >' to 'const value_type&' {aka 'const std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >&'}
+ 1211 |       push_back(const value_type& __x)
+      |                 ~~~~~~~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1216:7: note: candidate: 'void std::__cxx11::list<_Tp, _Alloc>::push_back(std::__cxx11::list<_Tp, _Alloc>::value_type&&) [with _Tp = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >; std::__cxx11::list<_Tp, _Alloc>::value_type = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >]'
+ 1216 |       push_back(value_type&& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1216:30: note:   no known conversion for argument 1 from 'std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >' to 'std::__cxx11::list<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >, std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > > >::value_type&&' {aka 'std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >&&'}
+ 1216 |       push_back(value_type&& __x)
+      |                 ~~~~~~~~~~~~~^~~
+Info: Nothing to build for Aufgabenblock_1
+20:04:23 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:19:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   19 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:274:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  274 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\main.cpp:16:
+..\vertagt_liste.h: In instantiation of 'void vertagt::VListe<T>::erase(vertagt::VListe<T>::iterator) [with T = int; vertagt::VListe<T>::iterator = std::__cxx11::list<int>::iterator]':
+..\main.cpp:359:16:   required from here
+..\vertagt_liste.h:82:37: error: no matching function for call to 'std::__cxx11::list<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >, std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > > >::push_back(std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >&)'
+   82 |                 p_aktionen.push_back(pErase);
+      |                 ~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\list:63,
+                 from ..\Simulationsobjekt.h:13,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1211:7: note: candidate: 'void std::__cxx11::list<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >; std::__cxx11::list<_Tp, _Alloc>::value_type = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >]'
+ 1211 |       push_back(const value_type& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1211:35: note:   no known conversion for argument 1 from 'std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >' to 'const value_type&' {aka 'const std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >&'}
+ 1211 |       push_back(const value_type& __x)
+      |                 ~~~~~~~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1216:7: note: candidate: 'void std::__cxx11::list<_Tp, _Alloc>::push_back(std::__cxx11::list<_Tp, _Alloc>::value_type&&) [with _Tp = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >; std::__cxx11::list<_Tp, _Alloc>::value_type = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >]'
+ 1216 |       push_back(value_type&& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1216:30: note:   no known conversion for argument 1 from 'std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >' to 'std::__cxx11::list<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >, std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > > >::value_type&&' {aka 'std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >&&'}
+ 1216 |       push_back(value_type&& __x)
+      |                 ~~~~~~~~~~~~~^~~
+Info: Nothing to build for Aufgabenblock_1
+20:13:30 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:19:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   19 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:274:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  274 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\main.cpp:16:
+..\vertagt_liste.h: In instantiation of 'void vertagt::VListe<T>::erase(vertagt::VListe<T>::iterator) [with T = int; vertagt::VListe<T>::iterator = std::__cxx11::list<int>::iterator]':
+..\main.cpp:359:16:   required from here
+..\vertagt_liste.h:82:37: error: no matching function for call to 'std::__cxx11::list<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >, std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > > >::push_back(std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >&)'
+   82 |                 p_aktionen.push_back(pErase);
+      |                 ~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\list:63,
+                 from ..\Simulationsobjekt.h:13,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1211:7: note: candidate: 'void std::__cxx11::list<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >; std::__cxx11::list<_Tp, _Alloc>::value_type = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >]'
+ 1211 |       push_back(const value_type& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1211:35: note:   no known conversion for argument 1 from 'std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >' to 'const value_type&' {aka 'const std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >&'}
+ 1211 |       push_back(const value_type& __x)
+      |                 ~~~~~~~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1216:7: note: candidate: 'void std::__cxx11::list<_Tp, _Alloc>::push_back(std::__cxx11::list<_Tp, _Alloc>::value_type&&) [with _Tp = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >; std::__cxx11::list<_Tp, _Alloc>::value_type = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >]'
+ 1216 |       push_back(value_type&& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1216:30: note:   no known conversion for argument 1 from 'std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >' to 'std::__cxx11::list<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >, std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > > >::value_type&&' {aka 'std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >&&'}
+ 1216 |       push_back(value_type&& __x)
+      |                 ~~~~~~~~~~~~~^~~
+In file included from ..\vertagt_liste.h:3,
+                 from ..\main.cpp:16:
+..\vertagt_aktion.h: In instantiation of 'void vertagt::VErase<T>::vAusfuehren() [with T = int]':
+..\vertagt_aktion.h:71:8:   required from here
+..\vertagt_aktion.h:73:25: error: base operand of '->' has non-pointer type 'std::__cxx11::list<int>'
+   73 |                         VAktion<T>::p_pListe->erase(p_it);
+      |                         ^~~~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+20:14:01 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:19:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   19 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:274:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  274 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\main.cpp:16:
+..\vertagt_liste.h: In instantiation of 'void vertagt::VListe<T>::erase(vertagt::VListe<T>::iterator) [with T = int; vertagt::VListe<T>::iterator = std::__cxx11::list<int>::iterator]':
+..\main.cpp:359:16:   required from here
+..\vertagt_liste.h:82:37: error: no matching function for call to 'std::__cxx11::list<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >, std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > > >::push_back(std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >&)'
+   82 |                 p_aktionen.push_back(pErase);
+      |                 ~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\list:63,
+                 from ..\Simulationsobjekt.h:13,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1211:7: note: candidate: 'void std::__cxx11::list<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >; std::__cxx11::list<_Tp, _Alloc>::value_type = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >]'
+ 1211 |       push_back(const value_type& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1211:35: note:   no known conversion for argument 1 from 'std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >' to 'const value_type&' {aka 'const std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >&'}
+ 1211 |       push_back(const value_type& __x)
+      |                 ~~~~~~~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1216:7: note: candidate: 'void std::__cxx11::list<_Tp, _Alloc>::push_back(std::__cxx11::list<_Tp, _Alloc>::value_type&&) [with _Tp = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >; std::__cxx11::list<_Tp, _Alloc>::value_type = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >]'
+ 1216 |       push_back(value_type&& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1216:30: note:   no known conversion for argument 1 from 'std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >' to 'std::__cxx11::list<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >, std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > > >::value_type&&' {aka 'std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >&&'}
+ 1216 |       push_back(value_type&& __x)
+      |                 ~~~~~~~~~~~~~^~~
+Info: Nothing to build for Aufgabenblock_1
+20:19:54 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:19:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   19 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:274:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  274 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\main.cpp:16:
+..\vertagt_liste.h: In instantiation of 'void vertagt::VListe<T>::erase(vertagt::VListe<T>::iterator) [with T = int; vertagt::VListe<T>::iterator = std::__cxx11::list<int>::iterator]':
+..\main.cpp:359:16:   required from here
+..\vertagt_liste.h:82:37: error: no matching function for call to 'std::__cxx11::list<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >, std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > > >::push_back(std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >&)'
+   82 |                 p_aktionen.push_back(pErase);
+      |                 ~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\list:63,
+                 from ..\Simulationsobjekt.h:13,
+                 from ..\Fahrzeug.h:11,
+                 from ..\main.cpp:7:
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1211:7: note: candidate: 'void std::__cxx11::list<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >; std::__cxx11::list<_Tp, _Alloc>::value_type = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >]'
+ 1211 |       push_back(const value_type& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1211:35: note:   no known conversion for argument 1 from 'std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >' to 'const value_type&' {aka 'const std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >&'}
+ 1211 |       push_back(const value_type& __x)
+      |                 ~~~~~~~~~~~~~~~~~~^~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1216:7: note: candidate: 'void std::__cxx11::list<_Tp, _Alloc>::push_back(std::__cxx11::list<_Tp, _Alloc>::value_type&&) [with _Tp = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > >; std::__cxx11::list<_Tp, _Alloc>::value_type = std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >]'
+ 1216 |       push_back(value_type&& __x)
+      |       ^~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\stl_list.h:1216:30: note:   no known conversion for argument 1 from 'std::unique_ptr<vertagt::VErase<int>, std::default_delete<vertagt::VErase<int> > >' to 'std::__cxx11::list<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >, std::allocator<std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > > > >::value_type&&' {aka 'std::unique_ptr<vertagt::VAktion<int>, std::default_delete<vertagt::VAktion<int> > >&&'}
+ 1216 |       push_back(value_type&& __x)
+      |                 ~~~~~~~~~~~~~^~~
+Info: Nothing to build for Aufgabenblock_1
+20:25:22 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:19:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   19 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:274:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  274 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+20:26:23 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:19:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   19 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:274:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  274 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+20:27:19 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:19:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   19 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:274:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  274 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+20:28:37 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:20:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   20 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:275:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  275 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+20:29:35 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:20:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   20 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:275:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  275 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_2
+20:31:18 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:20:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   20 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:275:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  275 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Aufgabenblock_2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:31:32 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+20:34:06 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:20:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   20 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:275:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  275 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+20:36:17 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:20:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   20 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:275:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  275 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_6a()':
+..\main.cpp:348:44: error: 'seed' was not declared in this scope
+  348 |                 static std::mt19937 device(seed);
+      |                                            ^~~~
+Info: Nothing to build for Aufgabenblock_1
+20:38:08 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:20:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   20 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:275:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  275 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_2
+20:38:49 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:20:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   20 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:275:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  275 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+20:39:18 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:20:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   20 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:275:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  275 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+20:39:37 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:20:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   20 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:275:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  275 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_1
+20:41:16 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:20:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   20 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:275:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  275 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+20:49:03 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrausnahme.o "..\\Fahrausnahme.cpp" 
+In file included from ..\Fahrausnahme.cpp:9:
+..\Weg.h:14:7: error: 'vertagt' has not been declared
+   14 | class vertagt::VListe;
+      |       ^~~~~~~
+..\Weg.h:20:9: error: 'vertagt' does not name a type
+   20 |         vertagt::VListe<Fahrzeug> p_pFahrzeuge;
+      |         ^~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+20:49:49 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrausnahme.o "..\\Fahrausnahme.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:20:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   20 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:275:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  275 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Losfahren.o "..\\Losfahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Streckenende.o "..\\Streckenende.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+..\Weg.cpp: In member function 'virtual void Weg::vSimulieren()':
+..\Weg.cpp:39:30: error: base operand of '->' has non-pointer type 'Fahrzeug'
+   39 |                         (*it)->vSimulieren();
+      |                              ^~
+..\Weg.cpp:46:22: error: base operand of '->' has non-pointer type 'Fahrzeug'
+   46 |                 (*it)->vZeichnen(*this);
+      |                      ^~
+..\Weg.cpp: In member function 'virtual void Weg::vAusgeben(std::ostream&) const':
+..\Weg.cpp:58:27: error: base operand of '->' has non-pointer type 'const Fahrzeug'
+   58 |                 o << (*it)->vGetName() << ", Strecke:" << (*it)->getGesamtstrecke(); // ......
+      |                           ^~
+..\Weg.cpp:58:64: error: base operand of '->' has non-pointer type 'const Fahrzeug'
+   58 |                 o << (*it)->vGetName() << ", Strecke:" << (*it)->getGesamtstrecke(); // ......
+      |                                                                ^~
+..\Weg.cpp: In member function 'void Weg::vAnnahme(std::unique_ptr<Fahrzeug>)':
+..\Weg.cpp:97:36: error: cannot convert 'std::remove_reference<std::unique_ptr<Fahrzeug>&>::type' {aka 'std::unique_ptr<Fahrzeug>'} to 'Fahrzeug'
+   97 |         p_pFahrzeuge.push_back(move(pFahrzeug));
+      |                                ~~~~^~~~~~~~~~~
+      |                                    |
+      |                                    std::remove_reference<std::unique_ptr<Fahrzeug>&>::type {aka std::unique_ptr<Fahrzeug>}
+In file included from ..\Weg.h:12,
+                 from ..\Weg.cpp:8:
+..\vertagt_liste.h:58:26: note:   initializing argument 1 of 'void vertagt::VListe<T>::push_back(T) [with T = Fahrzeug]'
+   58 |         void push_back(T obj) {
+      |                        ~~^~~
+..\Weg.cpp: In member function 'void Weg::vAnnahme(std::unique_ptr<Fahrzeug>, double)':
+..\Weg.cpp:106:37: error: cannot convert 'std::remove_reference<std::unique_ptr<Fahrzeug>&>::type' {aka 'std::unique_ptr<Fahrzeug>'} to 'Fahrzeug'
+  106 |         p_pFahrzeuge.push_front(move(pFahrzeug));
+      |                                 ~~~~^~~~~~~~~~~
+      |                                     |
+      |                                     std::remove_reference<std::unique_ptr<Fahrzeug>&>::type {aka std::unique_ptr<Fahrzeug>}
+In file included from ..\Weg.h:12,
+                 from ..\Weg.cpp:8:
+..\vertagt_liste.h:67:27: note:   initializing argument 1 of 'void vertagt::VListe<T>::push_front(T) [with T = Fahrzeug]'
+   67 |         void push_front(T obj) {
+      |                         ~~^~~
+..\Weg.cpp: In member function 'std::unique_ptr<Fahrzeug> Weg::pAbgabe(const Fahrzeug&)':
+..\Weg.cpp:110:26: error: base operand of '->' has non-pointer type 'Fahrzeug'
+  110 |                 if ((*it)->getID() == rFahrzeug.getID()) {
+      |                          ^~
+..\Weg.cpp:111:75: error: 'move' was not declared in this scope; did you mean 'std::move'?
+  111 |                                         std::unique_ptr<Fahrzeug> pTemp = move(*it);
+      |                                                                           ^~~~
+      |                                                                           std::move
+In file included from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:644:5: note: 'std::move' declared here
+  644 |     move(_II __first, _II __last, _OI __result)
+      |     ^~~~
+In file included from c:\mingw64\include\c++\11.2.0\list:64,
+                 from ..\Simulationsobjekt.h:13,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\list.tcc: In instantiation of 'void std::__cxx11::list<_Tp, _Alloc>::_M_assign_dispatch(_InputIterator, _InputIterator, std::__false_type) [with _InputIterator = std::_List_const_iterator<std::unique_ptr<vertagt::VAktion<Fahrzeug>, std::default_delete<vertagt::VAktion<Fahrzeug> > > >; _Tp = std::unique_ptr<vertagt::VAktion<Fahrzeug>, std::default_delete<vertagt::VAktion<Fahrzeug> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<Fahrzeug>, std::default_delete<vertagt::VAktion<Fahrzeug> > > >]':
+c:\mingw64\include\c++\11.2.0\bits\list.tcc:286:22:   required from 'std::__cxx11::list<_Tp, _Alloc>& std::__cxx11::list<_Tp, _Alloc>::operator=(const std::__cxx11::list<_Tp, _Alloc>&) [with _Tp = std::unique_ptr<vertagt::VAktion<Fahrzeug>, std::default_delete<vertagt::VAktion<Fahrzeug> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<Fahrzeug>, std::default_delete<vertagt::VAktion<Fahrzeug> > > >]'
+..\vertagt_liste.h:22:14:   required from 'vertagt::VListe<T>::VListe() [with T = Fahrzeug]'
+..\Weg.cpp:15:21:   required from here
+c:\mingw64\include\c++\11.2.0\bits\list.tcc:316:21: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>& std::unique_ptr<_Tp, _Dp>::operator=(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = vertagt::VAktion<Fahrzeug>; _Dp = std::default_delete<vertagt::VAktion<Fahrzeug> >]'
+  316 |           *__first1 = *__first2;
+      |           ~~~~~~~~~~^~~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:469:19: note: declared here
+  469 |       unique_ptr& operator=(const unique_ptr&) = delete;
+      |                   ^~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+20:50:30 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+..\Weg.cpp: In member function 'virtual void Weg::vSimulieren()':
+..\Weg.cpp:39:30: error: base operand of '->' has non-pointer type 'Fahrzeug'
+   39 |                         (*it)->vSimulieren();
+      |                              ^~
+..\Weg.cpp:46:22: error: base operand of '->' has non-pointer type 'Fahrzeug'
+   46 |                 (*it)->vZeichnen(*this);
+      |                      ^~
+..\Weg.cpp: In member function 'virtual void Weg::vAusgeben(std::ostream&) const':
+..\Weg.cpp:58:27: error: base operand of '->' has non-pointer type 'const Fahrzeug'
+   58 |                 o << (*it)->vGetName() << ", Strecke:" << (*it)->getGesamtstrecke(); // ......
+      |                           ^~
+..\Weg.cpp:58:64: error: base operand of '->' has non-pointer type 'const Fahrzeug'
+   58 |                 o << (*it)->vGetName() << ", Strecke:" << (*it)->getGesamtstrecke(); // ......
+      |                                                                ^~
+..\Weg.cpp: In member function 'void Weg::vAnnahme(std::unique_ptr<Fahrzeug>)':
+..\Weg.cpp:97:36: error: cannot convert 'std::remove_reference<std::unique_ptr<Fahrzeug>&>::type' {aka 'std::unique_ptr<Fahrzeug>'} to 'Fahrzeug'
+   97 |         p_pFahrzeuge.push_back(move(pFahrzeug));
+      |                                ~~~~^~~~~~~~~~~
+      |                                    |
+      |                                    std::remove_reference<std::unique_ptr<Fahrzeug>&>::type {aka std::unique_ptr<Fahrzeug>}
+In file included from ..\Weg.h:12,
+                 from ..\Weg.cpp:8:
+..\vertagt_liste.h:58:26: note:   initializing argument 1 of 'void vertagt::VListe<T>::push_back(T) [with T = Fahrzeug]'
+   58 |         void push_back(T obj) {
+      |                        ~~^~~
+..\Weg.cpp: In member function 'void Weg::vAnnahme(std::unique_ptr<Fahrzeug>, double)':
+..\Weg.cpp:106:37: error: cannot convert 'std::remove_reference<std::unique_ptr<Fahrzeug>&>::type' {aka 'std::unique_ptr<Fahrzeug>'} to 'Fahrzeug'
+  106 |         p_pFahrzeuge.push_front(move(pFahrzeug));
+      |                                 ~~~~^~~~~~~~~~~
+      |                                     |
+      |                                     std::remove_reference<std::unique_ptr<Fahrzeug>&>::type {aka std::unique_ptr<Fahrzeug>}
+In file included from ..\Weg.h:12,
+                 from ..\Weg.cpp:8:
+..\vertagt_liste.h:67:27: note:   initializing argument 1 of 'void vertagt::VListe<T>::push_front(T) [with T = Fahrzeug]'
+   67 |         void push_front(T obj) {
+      |                         ~~^~~
+..\Weg.cpp: In member function 'std::unique_ptr<Fahrzeug> Weg::pAbgabe(const Fahrzeug&)':
+..\Weg.cpp:110:26: error: base operand of '->' has non-pointer type 'Fahrzeug'
+  110 |                 if ((*it)->getID() == rFahrzeug.getID()) {
+      |                          ^~
+..\Weg.cpp:111:75: error: 'move' was not declared in this scope; did you mean 'std::move'?
+  111 |                                         std::unique_ptr<Fahrzeug> pTemp = move(*it);
+      |                                                                           ^~~~
+      |                                                                           std::move
+In file included from c:\mingw64\include\c++\11.2.0\bits\char_traits.h:39,
+                 from c:\mingw64\include\c++\11.2.0\string:40,
+                 from ..\Simulationsobjekt.h:9,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\stl_algobase.h:644:5: note: 'std::move' declared here
+  644 |     move(_II __first, _II __last, _OI __result)
+      |     ^~~~
+In file included from c:\mingw64\include\c++\11.2.0\list:64,
+                 from ..\Simulationsobjekt.h:13,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\list.tcc: In instantiation of 'void std::__cxx11::list<_Tp, _Alloc>::_M_assign_dispatch(_InputIterator, _InputIterator, std::__false_type) [with _InputIterator = std::_List_const_iterator<std::unique_ptr<vertagt::VAktion<Fahrzeug>, std::default_delete<vertagt::VAktion<Fahrzeug> > > >; _Tp = std::unique_ptr<vertagt::VAktion<Fahrzeug>, std::default_delete<vertagt::VAktion<Fahrzeug> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<Fahrzeug>, std::default_delete<vertagt::VAktion<Fahrzeug> > > >]':
+c:\mingw64\include\c++\11.2.0\bits\list.tcc:286:22:   required from 'std::__cxx11::list<_Tp, _Alloc>& std::__cxx11::list<_Tp, _Alloc>::operator=(const std::__cxx11::list<_Tp, _Alloc>&) [with _Tp = std::unique_ptr<vertagt::VAktion<Fahrzeug>, std::default_delete<vertagt::VAktion<Fahrzeug> > >; _Alloc = std::allocator<std::unique_ptr<vertagt::VAktion<Fahrzeug>, std::default_delete<vertagt::VAktion<Fahrzeug> > > >]'
+..\vertagt_liste.h:22:14:   required from 'vertagt::VListe<T>::VListe() [with T = Fahrzeug]'
+..\Weg.cpp:15:21:   required from here
+c:\mingw64\include\c++\11.2.0\bits\list.tcc:316:21: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>& std::unique_ptr<_Tp, _Dp>::operator=(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = vertagt::VAktion<Fahrzeug>; _Dp = std::default_delete<vertagt::VAktion<Fahrzeug> >]'
+  316 |           *__first1 = *__first2;
+      |           ~~~~~~~~~~^~~~~~~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:469:19: note: declared here
+  469 |       unique_ptr& operator=(const unique_ptr&) = delete;
+      |                   ^~~~~~~~
+Info: Nothing to build for Aufgabenblock_1
+20:56:57 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrausnahme.o "..\\Fahrausnahme.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Streckenende.o "..\\Streckenende.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Losfahren.o "..\\Losfahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:20:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   20 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:275:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  275 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+..\Weg.cpp: In constructor 'Weg::Weg()':
+..\Weg.cpp:15:35: error: use of deleted function 'vertagt::VListe<T>::VListe() [with T = std::unique_ptr<Fahrzeug>]'
+   15 |                 Simulationsobjekt() {
+      |                                   ^
+In file included from ..\Weg.h:12,
+                 from ..\Weg.cpp:8:
+..\vertagt_liste.h:19:9: note: declared here
+   19 |         VListe() = delete;
+      |         ^~~~~~
+..\Weg.cpp: In constructor 'Weg::Weg(std::string, double, Tempolimit)':
+..\Weg.cpp:21:88: error: use of deleted function 'vertagt::VListe<T>::VListe() [with T = std::unique_ptr<Fahrzeug>]'
+   21 |                 Simulationsobjekt(sName), p_dLaenge(dLaenge), p_eTempolimit(eTempolimit) {
+      |                                                                                        ^
+In file included from ..\Weg.h:12,
+                 from ..\Weg.cpp:8:
+..\vertagt_liste.h:19:9: note: declared here
+   19 |         VListe() = delete;
+      |         ^~~~~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = vertagt::VPushBack<std::unique_ptr<Fahrzeug> >; _Args = {std::__cxx11::list<std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> >, std::allocator<std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> > > >&, std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> >&}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<vertagt::VPushBack<std::unique_ptr<Fahrzeug> >, std::default_delete<vertagt::VPushBack<std::unique_ptr<Fahrzeug> > > >]':
+..\vertagt_liste.h:57:35:   required from 'void vertagt::VListe<T>::push_back(T) [with T = std::unique_ptr<Fahrzeug>]'
+..\Weg.cpp:97:24:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:468:7: note: declared here
+  468 |       unique_ptr(const unique_ptr&) = delete;
+      |       ^~~~~~~~~~
+In file included from ..\vertagt_liste.h:3,
+                 from ..\Weg.h:12,
+                 from ..\Weg.cpp:8:
+..\vertagt_aktion.h:31:50: note:   initializing argument 2 of 'vertagt::VPushBack<T>::VPushBack(std::__cxx11::list<T>&, T) [with T = std::unique_ptr<Fahrzeug>]'
+   31 |                 VPushBack(std::list<T>& liste, T obj) : VAktion<T>(liste), p_objekt(std::move(obj))     {}
+      |                                                ~~^~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = vertagt::VPushFront<std::unique_ptr<Fahrzeug> >; _Args = {std::__cxx11::list<std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> >, std::allocator<std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> > > >&, std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> >&}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<vertagt::VPushFront<std::unique_ptr<Fahrzeug> >, std::default_delete<vertagt::VPushFront<std::unique_ptr<Fahrzeug> > > >]':
+..\vertagt_liste.h:66:19:   required from 'void vertagt::VListe<T>::push_front(T) [with T = std::unique_ptr<Fahrzeug>]'
+..\Weg.cpp:106:25:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:468:7: note: declared here
+  468 |       unique_ptr(const unique_ptr&) = delete;
+      |       ^~~~~~~~~~
+In file included from ..\vertagt_liste.h:3,
+                 from ..\Weg.h:12,
+                 from ..\Weg.cpp:8:
+..\vertagt_aktion.h:49:59: note:   initializing argument 2 of 'vertagt::VPushFront<T>::VPushFront(std::__cxx11::list<T>&, T) [with T = std::unique_ptr<Fahrzeug>]'
+   49 |                         VPushFront(std::list<T>& liste, T obj) : VAktion<T>(liste), p_objekt(std::move(obj))    {}
+      |                                                         ~~^~~
+Info: Nothing to build for Aufgabenblock_1
+20:58:08 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrausnahme.o "..\\Fahrausnahme.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = vertagt::VPushBack<std::unique_ptr<Fahrzeug> >; _Args = {std::__cxx11::list<std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> >, std::allocator<std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> > > >&, std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> >&}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<vertagt::VPushBack<std::unique_ptr<Fahrzeug> >, std::default_delete<vertagt::VPushBack<std::unique_ptr<Fahrzeug> > > >]':
+..\vertagt_liste.h:57:35:   required from 'void vertagt::VListe<T>::push_back(T) [with T = std::unique_ptr<Fahrzeug>]'
+..\Weg.cpp:97:24:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:468:7: note: declared here
+  468 |       unique_ptr(const unique_ptr&) = delete;
+      |       ^~~~~~~~~~
+In file included from ..\vertagt_liste.h:3,
+                 from ..\Weg.h:12,
+                 from ..\Weg.cpp:8:
+..\vertagt_aktion.h:31:50: note:   initializing argument 2 of 'vertagt::VPushBack<T>::VPushBack(std::__cxx11::list<T>&, T) [with T = std::unique_ptr<Fahrzeug>]'
+   31 |                 VPushBack(std::list<T>& liste, T obj) : VAktion<T>(liste), p_objekt(std::move(obj))     {}
+      |                                                ~~^~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = vertagt::VPushFront<std::unique_ptr<Fahrzeug> >; _Args = {std::__cxx11::list<std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> >, std::allocator<std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> > > >&, std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> >&}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<vertagt::VPushFront<std::unique_ptr<Fahrzeug> >, std::default_delete<vertagt::VPushFront<std::unique_ptr<Fahrzeug> > > >]':
+..\vertagt_liste.h:66:19:   required from 'void vertagt::VListe<T>::push_front(T) [with T = std::unique_ptr<Fahrzeug>]'
+..\Weg.cpp:106:25:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:468:7: note: declared here
+  468 |       unique_ptr(const unique_ptr&) = delete;
+      |       ^~~~~~~~~~
+In file included from ..\vertagt_liste.h:3,
+                 from ..\Weg.h:12,
+                 from ..\Weg.cpp:8:
+..\vertagt_aktion.h:49:59: note:   initializing argument 2 of 'vertagt::VPushFront<T>::VPushFront(std::__cxx11::list<T>&, T) [with T = std::unique_ptr<Fahrzeug>]'
+   49 |                         VPushFront(std::list<T>& liste, T obj) : VAktion<T>(liste), p_objekt(std::move(obj))    {}
+      |                                                         ~~^~~
+Info: Nothing to build for Aufgabenblock_1
+21:02:45 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Streckenende.o "..\\Streckenende.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:20:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   20 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:275:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  275 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrausnahme.o "..\\Fahrausnahme.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Losfahren.o "..\\Losfahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = vertagt::VPushBack<std::unique_ptr<Fahrzeug> >; _Args = {std::__cxx11::list<std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> >, std::allocator<std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> > > >&, std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> >&}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<vertagt::VPushBack<std::unique_ptr<Fahrzeug> >, std::default_delete<vertagt::VPushBack<std::unique_ptr<Fahrzeug> > > >]':
+..\vertagt_liste.h:57:35:   required from 'void vertagt::VListe<T>::push_back(T) [with T = std::unique_ptr<Fahrzeug>]'
+..\Weg.cpp:97:24:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:468:7: note: declared here
+  468 |       unique_ptr(const unique_ptr&) = delete;
+      |       ^~~~~~~~~~
+In file included from ..\vertagt_liste.h:3,
+                 from ..\Weg.h:12,
+                 from ..\Weg.cpp:8:
+..\vertagt_aktion.h:31:50: note:   initializing argument 2 of 'vertagt::VPushBack<T>::VPushBack(std::__cxx11::list<T>&, T) [with T = std::unique_ptr<Fahrzeug>]'
+   31 |                 VPushBack(std::list<T>& liste, T obj) : VAktion<T>(liste), p_objekt(std::move(obj))     {}
+      |                                                ~~^~~
+In file included from c:\mingw64\include\c++\11.2.0\bits\locale_conv.h:41,
+                 from c:\mingw64\include\c++\11.2.0\locale:43,
+                 from c:\mingw64\include\c++\11.2.0\iomanip:43,
+                 from ..\Simulationsobjekt.h:12,
+                 from ..\Weg.h:10,
+                 from ..\Weg.cpp:8:
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h: In instantiation of 'typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...) [with _Tp = vertagt::VPushFront<std::unique_ptr<Fahrzeug> >; _Args = {std::__cxx11::list<std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> >, std::allocator<std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> > > >&, std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> >&}; typename std::_MakeUniq<_Tp>::__single_object = std::unique_ptr<vertagt::VPushFront<std::unique_ptr<Fahrzeug> >, std::default_delete<vertagt::VPushFront<std::unique_ptr<Fahrzeug> > > >]':
+..\vertagt_liste.h:66:19:   required from 'void vertagt::VListe<T>::push_front(T) [with T = std::unique_ptr<Fahrzeug>]'
+..\Weg.cpp:106:25:   required from here
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:962:30: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = Fahrzeug; _Dp = std::default_delete<Fahrzeug>]'
+  962 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+c:\mingw64\include\c++\11.2.0\bits\unique_ptr.h:468:7: note: declared here
+  468 |       unique_ptr(const unique_ptr&) = delete;
+      |       ^~~~~~~~~~
+In file included from ..\vertagt_liste.h:3,
+                 from ..\Weg.h:12,
+                 from ..\Weg.cpp:8:
+..\vertagt_aktion.h:49:59: note:   initializing argument 2 of 'vertagt::VPushFront<T>::VPushFront(std::__cxx11::list<T>&, T) [with T = std::unique_ptr<Fahrzeug>]'
+   49 |                         VPushFront(std::list<T>& liste, T obj) : VAktion<T>(liste), p_objekt(std::move(obj))    {}
+      |                                                         ~~^~~
+Info: Nothing to build for Aufgabenblock_1
+21:06:17 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrausnahme.o "..\\Fahrausnahme.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:20:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   20 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:275:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  275 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+In file included from ..\Weg.h:12,
+                 from ..\main.cpp:10:
+..\vertagt_liste.h: In instantiation of 'void vertagt::VListe<T>::push_back(T) [with T = int]':
+..\main.cpp:383:18:   required from here
+..\vertagt_liste.h:57:79: error: 'move' was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+   57 |                                 std::make_unique<VPushBack<T>>(p_objekte, move(obj));
+      |                                                                           ~~~~^~~~~
+In file included from c:\mingw64\include\c++\11.2.0\algorithm:74,
+                 from ..\main.cpp:72:
+c:\mingw64\include\c++\11.2.0\pstl\glue_algorithm_defs.h:353:1: note: 'template<class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2> __pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator> std::move(_ExecutionPolicy&&, _ForwardIterator1, _ForwardIterator1, _ForwardIterator2)' declared here, later in the translation unit
+  353 | move(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _ForwardIterator1 __last, _ForwardIterator2 __d_first);
+      | ^~~~
+In file included from ..\Weg.h:12,
+                 from ..\main.cpp:10:
+..\vertagt_liste.h: In instantiation of 'void vertagt::VListe<T>::push_front(T) [with T = int]':
+..\main.cpp:384:19:   required from here
+..\vertagt_liste.h:66:63: error: 'move' was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+   66 |                                 VPushFront<T>>(p_objekte, move(obj));
+      |                                                           ~~~~^~~~~
+In file included from c:\mingw64\include\c++\11.2.0\algorithm:74,
+                 from ..\main.cpp:72:
+c:\mingw64\include\c++\11.2.0\pstl\glue_algorithm_defs.h:353:1: note: 'template<class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2> __pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator> std::move(_ExecutionPolicy&&, _ForwardIterator1, _ForwardIterator1, _ForwardIterator2)' declared here, later in the translation unit
+  353 | move(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _ForwardIterator1 __last, _ForwardIterator2 __d_first);
+      | ^~~~
+Info: Nothing to build for Aufgabenblock_1
+21:06:58 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Streckenende.o "..\\Streckenende.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrausnahme.o "..\\Fahrausnahme.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Losfahren.o "..\\Losfahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:20:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   20 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:275:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  275 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: Weg.o: in function `Weg::Weg()':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_2\Debug/../Weg.cpp:15: undefined reference to `vertagt::VListe<std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> > >::VListe()'
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: Weg.o: in function `Weg::Weg(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double, Tempolimit)':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_2\Debug/../Weg.cpp:21: undefined reference to `vertagt::VListe<std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> > >::VListe()'
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for Aufgabenblock_1
+21:08:33 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: Weg.o: in function `Weg::Weg()':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_2\Debug/../Weg.cpp:15: undefined reference to `vertagt::VListe<std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> > >::VListe()'
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: Weg.o: in function `Weg::Weg(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double, Tempolimit)':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_2\Debug/../Weg.cpp:21: undefined reference to `vertagt::VListe<std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> > >::VListe()'
+collect2.exe: error: ld returned 1 exit status
+21:09:35 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: Weg.o: in function `Weg::Weg()':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_2\Debug/../Weg.cpp:15: undefined reference to `vertagt::VListe<std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> > >::VListe()'
+c:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: Weg.o: in function `Weg::Weg(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double, Tempolimit)':
+C:\Users\vogel\eclipse-workspace\InfoPraktikum2\Aufgabenblock_2\Debug/../Weg.cpp:21: undefined reference to `vertagt::VListe<std::unique_ptr<Fahrzeug, std::default_delete<Fahrzeug> > >::VListe()'
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for Aufgabenblock_1
+21:12:15 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrzeug.o "..\\Fahrzeug.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o PKW.o "..\\PKW.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Losfahren.o "..\\Losfahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrrad.o "..\\Fahrrad.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Streckenende.o "..\\Streckenende.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahren.o "..\\Fahren.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Fahrausnahme.o "..\\Fahrausnahme.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:20:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   20 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:275:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  275 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Verhalten.o "..\\Verhalten.cpp" 
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o Weg.o "..\\Weg.cpp" 
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_1
+21:13:16 **** Incremental Build of configuration Debug for project Aufgabenblock_2 ****
+Info: Internal Builder is used for build
+g++ -std=c++17 "-IC:\\boost" -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp:20:15: warning: 'dGlobaleZeit' initialized and declared 'extern'
+   20 | extern double dGlobaleZeit = 0.0;
+      |               ^~~~~~~~~~~~
+..\main.cpp: In function 'void vAufgabe_AB1()':
+..\main.cpp:275:35: warning: comparison of integer expressions of different signedness: 'int' and 'std::vector<std::unique_ptr<Fahrzeug> >::size_type' {aka 'long long unsigned int'} [-Wsign-compare]
+  275 |                 for (int i = 0; i < vecFahrzeuge.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~
+g++ "-LC:\\boost\\libs" -o Aufgabenblock_2.exe Fahrausnahme.o Fahren.o Fahrrad.o Fahrzeug.o Losfahren.o PKW.o Parken.o SimuClient.o SimuClientSocket.o Simulationsobjekt.o Streckenende.o Verhalten.o Weg.o main.o -lws2_32 
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_2
+Info: Nothing to build for Aufgabenblock_2

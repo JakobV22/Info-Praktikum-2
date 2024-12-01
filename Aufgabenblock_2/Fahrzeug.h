@@ -46,6 +46,7 @@ public:
 	void setGesamtstrecke(double dGesamtstrecke);
 	void setAbschnittStrecke(double dAbschnittStrecke);
 	virtual void vZeichnen(const Weg&) const;
+	int getID() const;
 
 };
 

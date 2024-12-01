@@ -13,6 +13,9 @@
 #include <string.h>
 #include <math.h>
 #include "SimuClient.h"
+#include "vertagt_liste.h"
+#include <random>
+#include "stdlib.h"
 
 extern double dGlobaleZeit = 0.0;
 typedef std::unique_ptr<Fahrzeug> u_ptrFahrzeug;
@@ -326,7 +329,7 @@ void vAufgabe_6() {
 	Weg2.vAnnahme(move(fF2));
 	Weg2.vAnnahme(move(fF3), 3);
 	bInitialisiereGrafik(800, 800);
-	int iCoords[] = {200, 200, 600, 500};
+	int iCoords[] = { 200, 200, 600, 500 };
 	bZeichneStrasse(Weg1.vGetName(), Weg2.vGetName(), 500, 2, iCoords);
 	//vSleep(10000);
 	for (; dGlobaleZeit <= 10; dGlobaleZeit += 0.25) {
@@ -338,6 +341,63 @@ void vAufgabe_6() {
 		std::cout << Weg1 << std::endl;
 		std::cout << Weg2 << std::endl;
 	}
+}
+void vAufgabe_6a() {
+	std::list<int> lListe;
+	int seed = 1;
+	static std::mt19937 device(seed);
+	std::uniform_int_distribution<int> dist(1, 10);
+	for (int i = 0; i < 10; i++) {
+
+		int iRanNum = dist(device);
+		lListe.push_back(iRanNum);
+	}
+	vertagt::VListe vListe(lListe);
+
+	//Liste ausgeben
+	for (vertagt::VListe<int>::iterator it = vListe.begin(); it != vListe.end();
+			it++) {
+		std::cout << *it << " ";
+	}
+	std::cout << "\n" << std::endl;
+	//alle elemente >5 löschen
+	for (vertagt::VListe<int>::iterator it = vListe.begin(); it != vListe.end();
+			it++) {
+		if (*it > 5) {
+			vListe.erase(it);
+		}
+	}
+	//Liste ausgeben
+	for (vertagt::VListe<int>::iterator it = vListe.begin(); it != vListe.end();
+			it++) {
+		std::cout << *it << " ";
+	}
+	std::cout << "\n" << std::endl;
+	vListe.vAktualisieren();
+	//Liste ausgeben
+	for (vertagt::VListe<int>::iterator it = vListe.begin(); it != vListe.end();
+			it++) {
+		std::cout << *it << " ";
+	}
+	std::cout << "\n" << std::endl;
+	vListe.push_back(3);
+	vListe.push_front(7);
+	//Liste ausgeben
+	for (vertagt::VListe<int>::iterator it = vListe.begin(); it != vListe.end();
+			it++) {
+		std::cout << *it << " ";
+	}
+	std::cout << "\n" << std::endl;
+
+	vListe.vAktualisieren();
+
+	//Liste ausgeben
+	for (vertagt::VListe<int>::iterator it = vListe.begin(); it != vListe.end();
+			it++) {
+		std::cout << *it << " ";
+	}
+	std::cout << "\n" << std::endl;
+
 }
 int main() {
 	vAufgabe_6();

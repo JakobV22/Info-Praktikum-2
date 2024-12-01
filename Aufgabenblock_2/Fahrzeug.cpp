@@ -167,4 +167,7 @@ void Fahrzeug::vZeichnen(const Weg&) const{
 void Fahrzeug::setVerhalten(std::unique_ptr<Verhalten> pVerhalten){
 			p_pVerhalten = move(move(pVerhalten));							//alte Instanz gelöscht da unqiue ptr
 }
+int Fahrzeug::getID() const{
+	return p_iID;
+}
 
