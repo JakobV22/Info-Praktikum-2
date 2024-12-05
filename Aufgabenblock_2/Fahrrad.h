@@ -11,6 +11,13 @@
 #define FAHRRAD_H_
 #include "Fahrzeug.h"
 
+/**
+ * Unterklasse von Fahrzeug
+ * Geschwindigkeit nimmt mit zunehmender Strecke ab
+ * Tanken default 0
+ * andere Zeichnung
+ */
+
 class Fahrrad: public Fahrzeug {
 public:
 	Fahrrad();

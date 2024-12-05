@@ -9,6 +9,11 @@
 #define PARKEN_H_
 #include "Verhalten.h"
 
+/**
+ * Verhalten eines Parkenden Fahtzeugs mit bestimmtem Startzeitpunkt
+ * Verantwortlich für throw der Exception "Losfahren" durch dStrecke()
+ */
+
 
 class Parken: public Verhalten {
 

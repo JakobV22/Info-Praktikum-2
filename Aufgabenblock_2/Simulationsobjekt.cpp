@@ -7,6 +7,11 @@
 
 #include "Simulationsobjekt.h"
 
+
+/**
+ * Standardkonstruktor
+ *
+ */
 Simulationsobjekt::Simulationsobjekt() {
 	p_dLetzteAktualisierung = dGlobaleZeit;
 		std::cout << "Objekt wurde mit Standardkonstruktor erstellt: " << p_sName
@@ -14,6 +19,9 @@ Simulationsobjekt::Simulationsobjekt() {
 
 }
 
+/**
+ * Nichtstandardkonstruktor (Name)
+ */
 Simulationsobjekt::Simulationsobjekt(std::string sName) :
 		p_sName(sName) {
 	p_dLetzteAktualisierung = dGlobaleZeit;
@@ -30,6 +38,9 @@ Simulationsobjekt::~Simulationsobjekt() {
 			<< ", " << p_iID << std::endl;
 }
 
+/**
+ * Gibt Daten des Objekts in bestimmtem Format aus (wird in Unterklassen erweitert)
+ */
 void Simulationsobjekt::vAusgeben(std::ostream& o) const{
 	o << std::resetiosflags(std::ios::left)
 			<< std::setiosflags(std::ios::right) << std::setw(3) << p_iID
@@ -39,6 +50,7 @@ void Simulationsobjekt::vAusgeben(std::ostream& o) const{
 }
 /**
  * vSimulieren setzt neue lokale Zeit und neuen Zeitpunkt letzter Aktualisierung
+ * virtual
  */
 void Simulationsobjekt::vSimulieren() {
 

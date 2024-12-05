@@ -12,6 +12,7 @@
 #include <vector>
 #include <string.h>
 #include <math.h>
+#include <iomanip>
 #include "SimuClient.h"
 #include "vertagt_liste.h"
 #include <random>
@@ -332,9 +333,9 @@ void vAufgabe_6() {
 	int iCoords[] = { 200, 200, 600, 500 };
 	bZeichneStrasse(Weg1.vGetName(), Weg2.vGetName(), 500, 2, iCoords);
 	//vSleep(10000);
-	for (; dGlobaleZeit <= 10; dGlobaleZeit += 0.25) {
+	for (; dGlobaleZeit <= 10; dGlobaleZeit += 0.4) {
 		vSetzeZeit(dGlobaleZeit);
-		std::cout << "GLOBALE ZEIT: " << dGlobaleZeit << std::endl;
+		std::cout << std::setprecision(std::numeric_limits<long double>::digits10 + 1)<< "GLOBALE ZEIT: " << dGlobaleZeit << std::endl;
 		Weg1.vSimulieren();
 		Weg2.vSimulieren();
 		vSleep(100);

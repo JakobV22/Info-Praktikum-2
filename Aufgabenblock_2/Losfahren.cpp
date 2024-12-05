@@ -19,6 +19,11 @@ Losfahren::Losfahren(Fahrzeug& rFahrzeug, Weg& rWeg):
 		Fahrausnahme(rFahrzeug, rWeg){
 
 }
+/**
+ * Aufruf bei Losfahren Exception eines Parkenden Autos
+ * Weg->Abgabe des entsprechenden Fahrzeugs
+ * Weg->vAnnahme des quasi identischen Fahrzeugs (neues Verhalten: Fahren)
+ */
 void Losfahren::vBearbeiten(){
 	std::cout << "'Ausnahme: Losfahren' ist aufgetreten für Fahrzeug: " << p_pFahrzeug->vGetName() << " auf Weg: " << p_pWeg->vGetName()<< std::endl;
 	std::unique_ptr<Fahrzeug> pFahrzeug = move(p_pWeg->pAbgabe(*p_pFahrzeug));

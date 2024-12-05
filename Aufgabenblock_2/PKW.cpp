@@ -32,8 +32,6 @@ PKW::PKW(std::string sName, double dMaxGeschwindigkeit, const double dVerbrauch)
 	p_dTankinhalt = p_dTankvolumen / 2.00;
 }
 
-
-
 /**
  * Konstruktor
  * ruft entsprechnden Konstruktor der Klasse Fahrzeug auf um zusätzlche Attribute zu initialisieren
@@ -45,8 +43,6 @@ PKW::PKW(std::string sName, double dMaxGeschwindigkeit, const double dVerbrauch,
 				dTankvolumen) {
 	p_dTankinhalt = p_dTankvolumen / 2.00;
 }
-
-
 
 /**
  * Überlädt Fahrzeug::dTanken
@@ -69,54 +65,61 @@ double PKW::dTanken(double dMenge) {
  * Überlädt Fahrzeug::Simulieren
  * Überprüft Tankinhalt (nötig zum Fahren)
  * Berechnet zusätzlich zur Gesamtstrecke auch neuen Tankinhalt
+ * Berrechnet zurückgelegte Strecke durch Verhalten->dStrecke, wirft ggf Exceptions (je nach Verhalten)
  */
 void PKW::vSimulieren() {
-
+	if (p_dTankinhalt == 0)
+		return;
 	if (p_dLetzteAktualisierung != dGlobaleZeit) {
 		double dZeitVergangen = dGlobaleZeit - p_dLetzteAktualisierung;
 		double dStreckeGefahren = p_pVerhalten->dStrecke(*this, dZeitVergangen);
 		p_dZeit += dZeitVergangen;
 		p_dLetzteAktualisierung = dGlobaleZeit;
 
-		if (p_dTankinhalt == 0)
-			return;
-		else {
-			p_dGesamtstrecke += dStreckeGefahren;
-			p_dAbschnittStrecke += dStreckeGefahren;
-			double dBenzinVerbraucht = (dZeitVergangen * dGeschwindigkeit() * p_dVerbrauch) / 100.00;
-			p_dTankinhalt -= dBenzinVerbraucht;
-			if (p_dTankinhalt < 0)
-				p_dTankinhalt = 0;
-		}
-
+		p_dGesamtstrecke += dStreckeGefahren;
+		p_dAbschnittStrecke += dStreckeGefahren;
+		double dBenzinVerbraucht = (dZeitVergangen * dGeschwindigkeit()
+				* p_dVerbrauch) / 100.00;
+		p_dTankinhalt -= dBenzinVerbraucht;
+		if (p_dTankinhalt < 0)
+			p_dTankinhalt = 0;
 	}
+
 }
+
 
 /**
  * Überlädt Fahrzeug::vAusgeben
  * gibt zusätzlich Gesamtverbrauch und aktuellen Tankinhakt in zu vKopf passendem Format aus
  */
-void PKW::vAusgeben(std::ostream& o) const{
-	Fahrzeug::vAusgeben(o);
-	o << std::setw(20) << (p_dGesamtstrecke * p_dVerbrauch)/100.00 << std::setw(15) << p_dTankinhalt << std::setw(15) << dGeschwindigkeit();
+void PKW::vAusgeben(std::ostream &o) const {
+Fahrzeug::vAusgeben(o);
+o << std::setw(20) << (p_dGesamtstrecke * p_dVerbrauch) / 100.00
+		<< std::setw(15) << p_dTankinhalt << std::setw(15)
+		<< dGeschwindigkeit();
 }
 
 /**
  * returned maximale Geschwindigkeit des PKWs (berücksichtigt jedoch Tempolimit)
  */
-double PKW::dGeschwindigkeit() const{
-	if (p_dMaxGeschwindigkeit > p_pVerhalten->getWeg()->dGetTempolimit()){
-		return p_pVerhalten->getWeg()->dGetTempolimit();
+double PKW::dGeschwindigkeit() const {
+if (p_dMaxGeschwindigkeit > p_pVerhalten->getWeg()->dGetTempolimit()) {
+	return p_pVerhalten->getWeg()->dGetTempolimit();
 
-	}
-	else return p_dMaxGeschwindigkeit;
+} else
+	return p_dMaxGeschwindigkeit;
 }
 
-void  PKW::vZeichnen(const Weg& rWeg) const{
-	double dRelPos = (getAbschnittStrecke() / rWeg.dGetLaenge());
-	bZeichnePKW(p_sName, rWeg.vGetName(), dRelPos, dGeschwindigkeit(), p_dTankinhalt);
+/**
+ * Überladung von Fahrzeug::vZeichnen
+ * da PKW und Fahrrad unterschiedlich gezeichnet werden
+ */
+void PKW::vZeichnen(const Weg &rWeg) const {
+double dRelPos = (getAbschnittStrecke() / rWeg.dGetLaenge());
+bZeichnePKW(p_sName, rWeg.vGetName(), dRelPos, dGeschwindigkeit(),
+		p_dTankinhalt);
 }
 PKW::~PKW() {
-	// TODO Auto-generated destructor stub
+// TODO Auto-generated destructor stub
 }
 

@@ -11,6 +11,13 @@
 #include "Tempolimit.h"
 #include "vertagt_liste.h"
 
+/**
+ * Klasse Weg verwaltet die Fahrzeuge auf dem jeweiligen Weg (in VListe)
+ * Simuliert alle Fahrzeuge in Liste
+ * Besitzt ein Tempolimit und kann dieses Abfragen
+ * Nimmt neue Fahrzeuge auf (Fahrend und Parkend möglich), löst dabei für jeweiliges Fahrzeug Trennung von altem Weg aus
+ * Kann Fahrzeuge abgeben (werden momentan aus Liste gelöscht und somit generell)
+ */
 class Fahrzeug;
 
 class Weg: public Simulationsobjekt {

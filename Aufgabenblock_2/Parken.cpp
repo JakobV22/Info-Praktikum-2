@@ -8,6 +8,8 @@
 #include "Parken.h"
 #include "Fahrzeug.h"
 #include "Losfahren.h"
+
+
 Parken::Parken() {
 	// TODO Auto-generated constructor stub
 
@@ -19,6 +21,11 @@ Parken::Parken(Weg& rWeg, double dStartzeitpunkt):
 Parken::~Parken() {
 	// TODO Auto-generated destructor stub
 }
+
+/**
+ * Wenn Startzeitpunkt noch nicht erreicht: return 0
+ * wenn erreicht: throw Exception "Losfahren"
+ */
 double Parken::dStrecke(Fahrzeug& aFzg, double dZeitintervall){
 	if (dGlobaleZeit + std::numeric_limits<double>::epsilon() < p_dStartzeitpunkt) return 0;
 	else{

@@ -81,7 +81,8 @@ void Fahrzeug::vAusgeben(std::ostream &o) const {
 
 /**
  * Simulationsobjekt::vSimulieren setzt neue lokale Zeit und neuen Zeitpunkt letzter Aktualisierung
- * Überladung für Unterklasse Fahrzeug errechnet zudem neue Gesamtstrecke
+ * dSTrecke() von Fahrzeugattribut "Verhalten" errechnet gefahrenene Strecke und wirft eventuelle Exceptions (je nach VErhalten)
+ * setzt dementsprechend )sofern keine Exceptions) neue Gesamt- und Abschnittstrecke
  */
 void Fahrzeug::vSimulieren() {
 
@@ -141,7 +142,7 @@ void Fahrzeug::vNeueStrecke(Weg& rWeg){
 }
 
 /**
- * Überladung von neueStrecke für den Fall: Parkende Autos
+ * Überladung von vNeueStrecke für den Fall: Parkende Autos mit argument Startzeitpunkt
  */
 void Fahrzeug::vNeueStrecke(Weg& rWeg, double dStartzeitpunkt){
 	std::unique_ptr<Parken> pNewVerhalten = std::make_unique<Parken>(rWeg, dStartzeitpunkt);
@@ -161,6 +162,8 @@ void Fahrzeug::setGesamtstrecke(double dGesamtstrecke){
 void Fahrzeug::setAbschnittStrecke(double dAbschnittStrecke){
 	p_dAbschnittStrecke = dAbschnittStrecke;
 }
+
+//als virtual vorgesehen
 void Fahrzeug::vZeichnen(const Weg&) const{
 
 }

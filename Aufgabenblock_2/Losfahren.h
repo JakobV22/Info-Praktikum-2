@@ -8,6 +8,8 @@
 #ifndef LOSFAHREN_H_
 #define LOSFAHREN_H_
 #include "Fahrausnahme.h"
+
+// Exception für Parkende Autos bei Startzeitpunkt
 class Losfahren: public Fahrausnahme {
 public:
 	Losfahren();

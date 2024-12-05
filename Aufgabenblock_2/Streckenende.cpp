@@ -23,6 +23,7 @@ Streckenende::Streckenende(Fahrzeug& rFahrzeug, Weg& rWeg):
  * wird bei throw von Streckenende aufgerufen
  * Gibt Meldung über Ausnahme aus
  * Setzt richtige Werte für Gesamtstrecke und Abschnitt für Fahrzeug Objekt
+ * leitet Abgabe durch den entsprechenden Weg ein (und damit Löschen des Fahzeuug Objektes aus der Liste des Weges + generell)
  */
 void Streckenende::vBearbeiten() {
 	std::cout << "'Ausnahme: Streckenende ist aufgetreten für Fahrzeug: "

@@ -5,6 +5,8 @@
  *      Author: vogel
  *
  *      erbt von Basisklasse Fahrzeug
+ *      besitzt VVerbauch, Tankvolumen, Tankinhalt
+ *      Berücksichtigt diese und Tempolimit in Simulation
  */
 
 #ifndef PKW_H_

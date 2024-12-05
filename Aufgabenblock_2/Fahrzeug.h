@@ -12,6 +12,16 @@
 #ifndef FAHRZEUG_H_
 #define FAHRZEUG_H_
 extern double dGlobaleZeit;
+
+
+/**
+ *
+ * Fahrzeug Basisklasse (Kinder: PKW, Fahrrad)
+ * Errechnet und Aktualisiert Gesamt-, Abschnittstrecken
+ * Besitzt Atrribut Verhalten (Fahren oder Parken)
+ * Fahreuge betankbar
+ * können Weg mit vNeueStrecke den Weg wechseln
+ */
 class Verhalten;
 class Weg;
 class Fahrzeug: public Simulationsobjekt {

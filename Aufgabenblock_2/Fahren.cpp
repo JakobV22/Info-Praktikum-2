@@ -22,6 +22,11 @@ Fahren::~Fahren() {
 	// TODO Auto-generated destructor stub
 }
 
+/**
+ * Errechnet in gegebenem Zeitintervall zurückgelegte Strecke
+ * Falls diese + vorherige Abschnittstrecke größer als Weg-Länge: Exception Streckenende
+ * sonst return zurückgelegte Strecke
+ */
 double Fahren::dStrecke (Fahrzeug& aFzg, double dZeitIntervall){
 				double dZurueckgelegt = (dZeitIntervall * aFzg.dGeschwindigkeit());
 				if (dZurueckgelegt + aFzg.getAbschnittStrecke() >= p_pWeg->dGetLaenge()){

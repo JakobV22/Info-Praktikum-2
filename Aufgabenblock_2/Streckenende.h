@@ -8,6 +8,11 @@
 #ifndef STRECKENENDE_H_
 #define STRECKENENDE_H_
 #include "Fahrausnahme.h"
+
+/**
+ * Exception für Fahrende Autos, die Ende des Weges erreichen
+ * Verantwortlich für Löschen des Fahrzeugs aus Liste des entsprechnenden Weges
+ */
 class Streckenende: public Fahrausnahme {
 public:
 	Streckenende();

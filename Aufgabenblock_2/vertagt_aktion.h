@@ -10,7 +10,7 @@ namespace vertagt
 	class VAktion
 	{
 	protected:
-		std::list<T>& p_pListe;  // Zeiger auf Liste der Objekte--- kein zeiger hä REFF
+		std::list<T>& p_pListe;  // Zeiger auf Liste der Objekte - Referenz...
 
 	public:
 	    VAktion() = delete; // Benötigt man einen Standardkonstruktor?		Nein?

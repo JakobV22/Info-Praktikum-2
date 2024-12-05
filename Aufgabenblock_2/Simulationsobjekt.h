@@ -5,6 +5,10 @@
  *      Author: vogel
  */
 
+/**
+ * Basisklasse für Fahrzeuge und Wege
+ * virtual
+ */
 
 #include <string>
 #include <iostream>

@@ -56,7 +56,7 @@ double Fahrrad::dGeschwindigkeit() const {
 
 
 /**
- * Überlädt Fahrzeug::Asugeben
+ * Überlädt Fahrzeug::Ausgeben
  * Fügt zusätzliche Asugabe von aktueller Geschwindigkeit in passendem Format hinzu
  */
 void Fahrrad::vAusgeben(std::ostream& o) const{
@@ -65,6 +65,10 @@ void Fahrrad::vAusgeben(std::ostream& o) const{
 			<< dGeschwindigkeit();
 
 }
+/**
+ * override von vZeichnen für generische Fahrzeuge
+ * Zeichnung für Fahrräder anders als für PKWs
+ */
 void  Fahrrad::vZeichnen(const Weg& rWeg) const{
 	double dRelPos = (getAbschnittStrecke() / rWeg.dGetLaenge());
 	bZeichneFahrrad(p_sName, rWeg.vGetName(), dRelPos, dGeschwindigkeit());

@@ -31,6 +31,13 @@ Weg::~Weg() {
 double Weg::dGetTempolimit() const {
 	return (double) (p_eTempolimit);
 }
+
+/**
+ * Simuliert jedes Fahrzeug aus der Fahrzeugliste einzelnd
+ * Fängt ggf Exceptions up und ruft die entsprechende Bearbeitungsfunktion auf
+ * Aktualisiert Fahrzeugliste am Anfang und Ende (ganze Liste auf einmal)
+ * Zeichnet alle Fahrzeuge
+ */
 void Weg::vSimulieren() {
 
 	//Simulieren
@@ -48,6 +55,9 @@ void Weg::vSimulieren() {
 		(*it)->vZeichnen(*this);
 	}
 }
+/**
+ * Gibt Daten des Weges und Fahrzeuge auf diesem Weg in bestimmtem Format aus
+ */
 void Weg::vAusgeben(std::ostream &o) const {
 	Simulationsobjekt::vAusgeben(o);
 	o << std::resetiosflags(std::ios::right) << std::setiosflags(std::ios::left)
@@ -91,6 +101,7 @@ double Weg::dGetLaenge() const {
 
 /**
  * Fahrzeug unique ptr wird auf neuem Weg aufgenommen
+ *
  * Fahrzeug Objekt ruft neueStrecke Funktion auf
  * unique ptr wird anschließend in Fahrzeugliste des Wegobjektes gemoved
  */
@@ -107,6 +118,12 @@ void Weg::vAnnahme(std::unique_ptr<Fahrzeug> pFahrzeug,
 	pFahrzeug->vNeueStrecke(*this, dStartzeitpunkt);
 	p_pFahrzeuge.push_front(move(pFahrzeug));
 }
+
+/**
+ * Sucht übergebenes Fahrzeug in Liste anhand ID
+ * Speichert unique:ptr auf dieses (für return)
+ * Löscht Listeneintrag
+ */
 std::unique_ptr<Fahrzeug> Weg::pAbgabe(const Fahrzeug &rFahrzeug) {
 	for (auto it = p_pFahrzeuge.begin(); it != p_pFahrzeuge.end(); it++) {
 		if ((*it)->getID() == rFahrzeug.getID()) {

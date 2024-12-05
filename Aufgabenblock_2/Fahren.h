@@ -10,6 +10,8 @@
 #include "Verhalten.h"
 #include "Fahrzeug.h"
 
+//Verhalten eines Fahrenden Autos
+//Verantwortlich für das throwen von Streckenende in dStrecke()
 
 class Fahren: public Verhalten {
 public:

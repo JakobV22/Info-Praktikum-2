@@ -9,6 +9,9 @@
 #ifndef FAHRAUSNAHME_H_
 #define FAHRAUSNAHME_H_
 
+
+//Basisklasse für "Streckenende" und "Losfahren"
+
 class Fahrzeug;
 class Weg;
 
@@ -21,6 +24,7 @@ protected:
 public:
 	Fahrausnahme();
 	Fahrausnahme(Fahrzeug& rFahrzeug, Weg& rWeg);
+;
 	virtual void vBearbeiten() = 0;
 	virtual ~Fahrausnahme();
 };

@@ -2,13 +2,15 @@
 
 #include "vertagt_aktion.h"
 #include <list>
-
+/**
+ * Vertagt liste zur Verzögerung von Schreibe-Listenoperationen bis vAktualisieren (um Iteratoren nicht zu verlieren)
+ */
 namespace vertagt {
 template<class T>
 class VListe {
 private:
-	std::list<T> p_objekte;
-	std::list<std::unique_ptr<VAktion<T>>> p_aktionen;
+	std::list<T> p_objekte;		//eigentliche Liste der Objekte
+	std::list<std::unique_ptr<VAktion<T>>> p_aktionen;		//Liste der auszuführenden Aktionen
 
 public:
 	// Typdefinitionen
@@ -19,7 +21,7 @@ public:
 	VListe(){
 
 	}
-	// Benötigt man einen Standardkonstruktor?		Jo?
+	// Benötigt man einen Standardkonstruktor?  Ja, weil Weg mit Instanz von VListe  instanziert wird
 
 	VListe(std::list<T> &objekte) :
 			p_objekte(objekte) {
