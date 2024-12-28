@@ -9,6 +9,7 @@
  *      enthält grundlegende Methoden
  */
 #include "Simulationsobjekt.h"
+#include <memory>
 #ifndef FAHRZEUG_H_
 #define FAHRZEUG_H_
 extern double dGlobaleZeit;
