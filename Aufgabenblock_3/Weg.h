@@ -18,7 +18,10 @@
  * Nimmt neue Fahrzeuge auf (Fahrend und Parkend möglich), löst dabei für jeweiliges Fahrzeug Trennung von altem Weg aus
  * Kann Fahrzeuge abgeben (werden momentan aus Liste gelöscht und somit generell)
  */
+
 class Fahrzeug;
+class Kreuzung;
+
 
 class Weg: public Simulationsobjekt {
 
@@ -28,11 +31,13 @@ protected:
 	Tempolimit p_eTempolimit = Tempolimit::Autobahn;
 	bool p_bUeberholverbot;
 	double p_dVirtuelleSchranke = 0;
+	const std::weak_ptr<Kreuzung> p_pZielkreuzung;
+	std::weak_ptr<Weg> p_pRueckweg;
 
 public:
 	Weg();
 	Weg(std::string sName, double dLaenge, Tempolimit eTempolimit =
-			Tempolimit::Autobahn, bool bUeberholverbot = true);
+			Tempolimit::Autobahn, bool bUeberholverbot = true, std::shared_ptr<Kreuzung> pZielkreuzung = nullptr);
 	virtual ~Weg();
 	double dGetTempolimit() const;
 	virtual void vSimulieren() override;
@@ -44,6 +49,10 @@ public:
 	std::unique_ptr<Fahrzeug> pAbgabe(const Fahrzeug &rFahrzeug);
 	void setVirtuelleSchranke(double dPosition);
 	double getVirtuelleSchranke();
+	std::shared_ptr<Kreuzung> pGetZielkreuzung();
+	std::shared_ptr<Weg> pGetRueckweg();
+	void setRueckweg(std::shared_ptr<Weg> pRueckweg);
+
 };
 
 #endif /* WEG_H_ */

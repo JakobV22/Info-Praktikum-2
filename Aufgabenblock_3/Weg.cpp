@@ -11,14 +11,17 @@
 #include "Streckenende.h"
 
 
+
+
 Weg::Weg() :
 		Simulationsobjekt() {
 	// TODO Auto-generated constructor stub
 
 }
-Weg::Weg(std::string sName, double dLaenge, Tempolimit eTempolimit, bool bUeberholverbot) :
+Weg::Weg(std::string sName, double dLaenge, Tempolimit eTempolimit, bool bUeberholverbot, std::shared_ptr<Kreuzung> pZielkreuzung) :
 
-		Simulationsobjekt(sName), p_dLaenge(dLaenge), p_eTempolimit(eTempolimit), p_bUeberholverbot(bUeberholverbot) {
+		Simulationsobjekt(sName), p_dLaenge(dLaenge), p_eTempolimit(eTempolimit), p_bUeberholverbot(bUeberholverbot),p_pZielkreuzung(pZielkreuzung) {
+
 }
 
 Weg::~Weg() {
@@ -148,4 +151,13 @@ double Weg::getVirtuelleSchranke(){
 	return p_dVirtuelleSchranke;
 	}
 	else return p_dLaenge;
+}
+std::shared_ptr<Kreuzung> Weg::pGetZielkreuzung(){
+	return p_pZielkreuzung.lock();
+}
+std::shared_ptr<Weg> Weg::pGetRueckweg(){
+	return p_pRueckweg.lock();
+}
+void Weg::setRueckweg(std::shared_ptr<Weg> pRueckweg){
+	p_pRueckweg = pRueckweg;
 }
