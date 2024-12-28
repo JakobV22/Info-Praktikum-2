@@ -320,7 +320,7 @@ void vAufgabe_5() {
 void vAufgabe_6() {
 	Weg Weg1("TestWeg", 500, Tempolimit::Innerorts);
 	Weg Weg2("TestWeg2", 500, Tempolimit::Außerorts);
-	std::unique_ptr<PKW> fF1 = std::make_unique<PKW>("Fiat", 30, 5);
+	std::unique_ptr<PKW> fF1 = std::make_unique<PKW>("Fiat", 30, 10);
 	std::unique_ptr<PKW> fF2 = std::make_unique<PKW>("Audi", 100, 5);
 	std::unique_ptr<PKW> fF3 = std::make_unique<PKW>("FiatP", 30, 5);
 	std::unique_ptr<PKW> fF4 = std::make_unique<PKW>("AudiP", 100, 5);
@@ -335,7 +335,7 @@ void vAufgabe_6() {
 	//vSleep(10000);
 	for (; dGlobaleZeit <= 15; dGlobaleZeit += 0.4) {
 		vSetzeZeit(dGlobaleZeit);
-		std::cout << std::setprecision(std::numeric_limits<long double>::digits10 + 1)<< "GLOBALE ZEIT: " << dGlobaleZeit << std::endl;
+		//std::cout << std::setprecision(std::numeric_limits<long double>::digits10 + 1)<< "GLOBALE ZEIT: " << dGlobaleZeit << std::endl;
 		Weg1.vSimulieren();
 		Weg2.vSimulieren();
 		vSleep(100);
