@@ -161,3 +161,4 @@ std::shared_ptr<Weg> Weg::pGetRueckweg(){
 void Weg::setRueckweg(std::shared_ptr<Weg> pRueckweg){
 	p_pRueckweg = pRueckweg;
 }
+

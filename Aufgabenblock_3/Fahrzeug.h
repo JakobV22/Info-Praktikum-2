@@ -23,6 +23,13 @@ extern double dGlobaleZeit;
  * Fahreuge betankbar
  * können Weg mit vNeueStrecke den Weg wechseln
  */
+
+
+
+
+
+
+
 class Verhalten;
 class Weg;
 class Fahrzeug: public Simulationsobjekt {

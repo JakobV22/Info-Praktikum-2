@@ -12,6 +12,7 @@
 #include "Parken.h"
 
 
+
 /**
  * Standardkonstruktor
  * legt Erstellungszeitpunkt als Zeitpunkt der letzten Aktualisierung fest

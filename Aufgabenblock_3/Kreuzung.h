@@ -11,7 +11,9 @@
 #include <memory>
 
 class Weg;
-enum class Tempolimit;
+class Fahrzeug;
+enum class Tempolimit
+;
 class Kreuzung: public Simulationsobjekt {
 
 protected:
@@ -19,8 +21,18 @@ protected:
 	double p_dTankstelle;
 public:
 	Kreuzung();
+	Kreuzung(std::string sName, double dTankstelle = 0);
 	virtual ~Kreuzung();
-	static void vVerbinde(std::string sWeg1, std::string sWeg2, double dWeglaenge, std::shared_ptr<Kreuzung> pKreuzung1, std::shared_ptr<Kreuzung> pKreuzung2, Tempolimit tTempolimit, bool bUeberholverbot);
+	static void vVerbinde(std::string sWeg1, std::string sWeg2,
+			double dWeglaenge, std::shared_ptr<Kreuzung> pKreuzung1,
+			std::shared_ptr<Kreuzung> pKreuzung2, Tempolimit tTempolimit,
+			bool bUeberholverbot = true);
+	void vTanken(Fahrzeug &rFahrzeug);
+	void vAnnahme(std::unique_ptr<Fahrzeug> pFahrzeug, double dStartzeitpunkt);
+	void vSimulieren();
+	double dGetTankstelle();
+	std::shared_ptr<Weg> pZufaelligerWeg(Weg&);
+
 };
 
 #endif /* KREUZUNG_H_ */

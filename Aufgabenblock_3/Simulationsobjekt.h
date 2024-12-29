@@ -38,4 +38,6 @@ public:
 	double getLetzteAktualisierung() const;
 };
 
+std::ostream& operator<<(std::ostream &o, const Simulationsobjekt &s);
+
 #endif /* SIMULATIONSOBJEKT_H_ */

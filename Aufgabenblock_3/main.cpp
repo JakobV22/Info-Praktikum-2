@@ -8,6 +8,7 @@
 #include "PKW.h"
 #include "Fahrrad.h"
 #include "Weg.h"
+#include "Kreuzung.h"
 #include <memory>
 #include <vector>
 #include <string.h>
@@ -21,15 +22,6 @@
 extern double dGlobaleZeit = 0.0;
 typedef std::unique_ptr<Fahrzeug> u_ptrFahrzeug;
 
-/**
- * Überladung des << Operators für ostream Objekte
- * Ermöglicht das direkte und geordnete Ausgeben von Attributen von Fahrzeug Objekten
- */
-std::ostream& operator<<(std::ostream &o, const Simulationsobjekt &s) {
-	s.vAusgeben(o);
-	return o;
-
-}
 /**
  * Simuliert alle Fahrzeug Objekte aus Vektor über bestimmte Zeit
  *  Gibt aktualisierte Daten jeweils über Konsole aus
@@ -287,36 +279,36 @@ void vAufgabe_AB1() {
 	char c;
 	std::cin >> c;
 }
-void vAufgabe_4() {
-	Weg *wTestWeg = new Weg("moin", 100);
-	wTestWeg->vKopf();
-	std::cout << *wTestWeg << std::endl;
-}
+//void vAufgabe_4() {
+//	Weg *wTestWeg = new Weg("moin", 100);
+//	wTestWeg->vKopf();
+//	std::cout << *wTestWeg << std::endl;
+//}
 
-void vAufgabe_5() {
-	Weg Weg1("TestWeg", 100, Tempolimit::Innerorts);
-	std::unique_ptr<PKW> fF1 = std::make_unique<PKW>("fF1", 30, 5);
-	std::unique_ptr<PKW> fF2 = std::make_unique<PKW>("fF2", 50, 5);
-	std::unique_ptr<PKW> fF3 = std::make_unique<PKW>("fF3", 80, 5);
-	std::unique_ptr<PKW> fFp1 = std::make_unique<PKW>("fFp1", 30, 5);
-	std::unique_ptr<PKW> fFp2 = std::make_unique<PKW>("fFp2", 50, 5);
-	std::unique_ptr<PKW> fFp3 = std::make_unique<PKW>("fFp3", 80, 5);
-	Weg1.vAnnahme(move(fF1));
-	Weg1.vAnnahme(move(fF2));
-	Weg1.vAnnahme(move(fF3));
-	Weg1.vAnnahme(move(fFp1), 0.5);
-	Weg1.vAnnahme(move(fFp2), 1);
-	Weg1.vAnnahme(move(fFp3), 2);
-	Weg1.vKopf();
-	std::cout << Weg1 << std::endl;
-
-	for (; dGlobaleZeit <= 3; dGlobaleZeit += 0.5) {
-		std::cout << "GLOBALE ZEIT: " << dGlobaleZeit << std::endl;
-		Weg1.vSimulieren();
-		std::cout << Weg1 << std::endl;
-	}
-
-}
+//void vAufgabe_5() {
+//	Weg Weg1("TestWeg", 100, Tempolimit::Innerorts);
+//	std::unique_ptr<PKW> fF1 = std::make_unique<PKW>("fF1", 30, 5);
+//	std::unique_ptr<PKW> fF2 = std::make_unique<PKW>("fF2", 50, 5);
+//	std::unique_ptr<PKW> fF3 = std::make_unique<PKW>("fF3", 80, 5);
+//	std::unique_ptr<PKW> fFp1 = std::make_unique<PKW>("fFp1", 30, 5);
+//	std::unique_ptr<PKW> fFp2 = std::make_unique<PKW>("fFp2", 50, 5);
+//	std::unique_ptr<PKW> fFp3 = std::make_unique<PKW>("fFp3", 80, 5);
+//	Weg1.vAnnahme(move(fF1));
+//	Weg1.vAnnahme(move(fF2));
+//	Weg1.vAnnahme(move(fF3));
+//	Weg1.vAnnahme(move(fFp1), 0.5);
+//	Weg1.vAnnahme(move(fFp2), 1);
+//	Weg1.vAnnahme(move(fFp3), 2);
+//	Weg1.vKopf();
+//	std::cout << Weg1 << std::endl;
+//
+//	for (; dGlobaleZeit <= 3; dGlobaleZeit += 0.5) {
+//		std::cout << "GLOBALE ZEIT: " << dGlobaleZeit << std::endl;
+//		Weg1.vSimulieren();
+//		std::cout << Weg1 << std::endl;
+//	}
+//
+//}
 void vAufgabe_6() {
 	Weg Weg1("TestWeg", 500, Tempolimit::Innerorts);
 	Weg Weg2("TestWeg2", 500, Tempolimit::Außerorts);
@@ -332,7 +324,7 @@ void vAufgabe_6() {
 	bInitialisiereGrafik(800, 800);
 	int iCoords[] = { 200, 200, 600, 500 };
 	bZeichneStrasse(Weg1.vGetName(), Weg2.vGetName(), 500, 2, iCoords);
-	//vSleep(10000);
+	vSleep(10000);
 	for (; dGlobaleZeit <= 15; dGlobaleZeit += 0.4) {
 		vSetzeZeit(dGlobaleZeit);
 		//std::cout << std::setprecision(std::numeric_limits<long double>::digits10 + 1)<< "GLOBALE ZEIT: " << dGlobaleZeit << std::endl;
@@ -342,6 +334,7 @@ void vAufgabe_6() {
 		std::cout << Weg1 << std::endl;
 		std::cout << Weg2 << std::endl;
 	}
+
 }
 void vAufgabe_6a() {
 	std::list<int> lListe;
@@ -400,6 +393,82 @@ void vAufgabe_6a() {
 	std::cout << "\n" << std::endl;
 
 }
+
+void vAufgabe_7() {
+
+	bInitialisiereGrafik(1000, 800);
+
+	std::list<std::shared_ptr<Kreuzung>> pKreuzungen;
+
+	std::shared_ptr<Kreuzung> Kr1 = std::make_shared<Kreuzung>("Kr1");
+	std::shared_ptr<Kreuzung> Kr2 = std::make_shared<Kreuzung>("Kr2", 1000);
+	std::shared_ptr<Kreuzung> Kr3 = std::make_shared<Kreuzung>("Kr3");
+	std::shared_ptr<Kreuzung> Kr4 = std::make_shared<Kreuzung>("Kr4");
+
+	Kreuzung::vVerbinde("W12", "W21", 40, Kr1, Kr2, Tempolimit::Innerorts); //Straße 1
+	Kreuzung::vVerbinde("W23a", "W32a", 115, Kr2, Kr3, Tempolimit::Autobahn,
+			false); //Straße 2
+	Kreuzung::vVerbinde("W23b", "W32b", 40, Kr2, Kr3, Tempolimit::Innerorts); //Straße 3
+	Kreuzung::vVerbinde("W24", "W42", 55, Kr2, Kr4, Tempolimit::Innerorts); //Straße 4
+	Kreuzung::vVerbinde("W34", "W43", 85, Kr3, Kr4, Tempolimit::Autobahn,
+			false); //Straße 5
+	Kreuzung::vVerbinde("W44a", "W44b", 130, Kr4, Kr4, Tempolimit::Innerorts,
+			false); //Straße 6
+
+	pKreuzungen.push_back(move(Kr1));
+	pKreuzungen.push_back(move(Kr2));
+	pKreuzungen.push_back(move(Kr3));
+	pKreuzungen.push_back(move(Kr4));
+
+
+
+	bZeichneKreuzung(680, 40); //kr1
+	bZeichneKreuzung(680, 300); //kr2
+	bZeichneKreuzung(680, 570); //kr3
+	bZeichneKreuzung(320, 300); //kr4
+
+	int iCoords1[] = { 680, 40, 680, 300 };
+	bZeichneStrasse("W12", "W21", 40, 2, iCoords1); //1
+
+	int iCoords2[] = { 680, 300, 850, 300, 970, 390, 970, 500, 850, 570, 680,
+			570 };
+	bZeichneStrasse("W23a", "W32a", 115, 6, iCoords2); //2
+
+	int iCoords3[] = { 680, 570, 680, 300 };
+	bZeichneStrasse("W23b", "W32b", 40, 2, iCoords3); //3
+
+	int iCoords4[] = { 680, 300, 320, 300 };
+	bZeichneStrasse("W24", "W42", 55, 2, iCoords4); //4
+
+	int iCoords5[] = { 680, 570, 500, 570, 350, 510, 320, 420, 320, 300 };
+	bZeichneStrasse("W34", "W43", 85, 5, iCoords5); //5
+
+	int iCoords6[] = { 320, 300, 320, 150, 200, 60, 80, 90, 70, 250, 170, 300,
+			320, 300 };
+	bZeichneStrasse("W44a", "W44b", 130, 7, iCoords6); //6
+
+	std::unique_ptr<PKW> fF1 = std::make_unique<PKW>("Fiat1", 30, 10);
+	std::unique_ptr<PKW> fF2 = std::make_unique<PKW>("Audi1", 100, 5);
+	std::unique_ptr<PKW> fF3 = std::make_unique<PKW>("Fiat2", 30, 5);
+	std::unique_ptr<PKW> fF4 = std::make_unique<PKW>("Audi2", 100, 5);
+	Kr1->vAnnahme(move(fF1), 1);
+	Kr1->vAnnahme(move(fF2), 3);
+	Kr1->vAnnahme(move(fF3), 5);
+	Kr1->vAnnahme(move(fF4), 7);
+
+	for (; dGlobaleZeit <= 10; dGlobaleZeit += 0.1) {
+		vSetzeZeit(dGlobaleZeit);
+		for (auto it = pKreuzungen.begin(); it != pKreuzungen.end(); it++) {
+			(*it)->vSimulieren();
+		}
+
+		vSleep(100);
+
+	}
+	vSleep(10000);
+	vBeendeGrafik();
+}
+
 int main() {
 	vAufgabe_6();
 

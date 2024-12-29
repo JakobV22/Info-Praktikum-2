@@ -70,3 +70,12 @@ std::string Simulationsobjekt::vGetName() const{
 double Simulationsobjekt::getLetzteAktualisierung() const{
 	return p_dLetzteAktualisierung;
 }
+/**
+ * Überladung des << Operators für ostream Objekte
+ * Ermöglicht das direkte und geordnete Ausgeben von Attributen von Fahrzeug Objekten
+ */
+std::ostream& operator<<(std::ostream &o, const Simulationsobjekt &s) {
+	s.vAusgeben(o);
+	return o;
+
+}
