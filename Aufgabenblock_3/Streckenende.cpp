@@ -33,16 +33,20 @@ void Streckenende::vBearbeiten() {
 	p_pFahrzeug->setGesamtstrecke(
 			p_pFahrzeug->getGesamtstrecke()
 					+ (p_pWeg->dGetLaenge() - p_pFahrzeug->getAbschnittStrecke()));	//notwendig?
+///////////////////////////////Falls Fahrzeuge immer Tanken sollen
 
+	p_pWeg->pGetZielkreuzung()->vTanken(*p_pFahrzeug);
+
+	//////////////////////////
 	std::shared_ptr<Weg> pNeuerWeg = p_pWeg->pGetZielkreuzung()->pZufaelligerWeg(*p_pWeg); //Generiert Zufälligen Weg aus Zielkreuzung
 
 			pNeuerWeg->vAnnahme(p_pWeg->pAbgabe(*p_pFahrzeug));	// Dieser Weg nimmt Fahrzeug an, während alter Weg dieses abgibt
 
 
 	std::cout << "ZEIT			:" << dGlobaleZeit << std::endl;
-	std::cout << "KREUZUNG			:" << p_pWeg->pGetZielkreuzung()->vGetName()<< ", " <<p_pWeg->pGetZielkreuzung()->dGetTankstelle()  << std::endl;
-	std::cout << "WECHSEL			:"<< pNeuerWeg->vGetName() << "->"<< p_pWeg->vGetName() << std::endl;
-	std::cout << "FAHRZEUG			:"<< *p_pFahrzeug << std::endl;
+	std::cout << "KREUZUNG		:" << p_pWeg->pGetZielkreuzung()->vGetName()<< ", " <<p_pWeg->pGetZielkreuzung()->dGetTankstelle()  << std::endl;
+	std::cout << "WECHSEL		:"<< p_pWeg->vGetName() << "->"<< pNeuerWeg->vGetName() << std::endl;
+	std::cout << "FAHRZEUG		:"<< *p_pFahrzeug << "\n \n \n" << std::endl;
 }
 Streckenende::~Streckenende() {
 	// TODO Auto-generated destructor stub

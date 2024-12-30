@@ -321,9 +321,11 @@ void vAufgabe_6() {
 	Weg1.vAnnahme(move(fF4), 3);
 	Weg2.vAnnahme(move(fF2));
 	Weg2.vAnnahme(move(fF3), 3);
-	bInitialisiereGrafik(800, 800);
+	bInitialisiereGrafik(1000, 800);
 	int iCoords[] = { 200, 200, 600, 500 };
 	bZeichneStrasse(Weg1.vGetName(), Weg2.vGetName(), 500, 2, iCoords);
+
+
 	vSleep(10000);
 	for (; dGlobaleZeit <= 15; dGlobaleZeit += 0.4) {
 		vSetzeZeit(dGlobaleZeit);
@@ -415,13 +417,6 @@ void vAufgabe_7() {
 	Kreuzung::vVerbinde("W44a", "W44b", 130, Kr4, Kr4, Tempolimit::Innerorts,
 			false); //Straße 6
 
-	pKreuzungen.push_back(move(Kr1));
-	pKreuzungen.push_back(move(Kr2));
-	pKreuzungen.push_back(move(Kr3));
-	pKreuzungen.push_back(move(Kr4));
-
-
-
 	bZeichneKreuzung(680, 40); //kr1
 	bZeichneKreuzung(680, 300); //kr2
 	bZeichneKreuzung(680, 570); //kr3
@@ -434,7 +429,7 @@ void vAufgabe_7() {
 			570 };
 	bZeichneStrasse("W23a", "W32a", 115, 6, iCoords2); //2
 
-	int iCoords3[] = { 680, 570, 680, 300 };
+	int iCoords3[] = { 680, 300, 680, 570 };
 	bZeichneStrasse("W23b", "W32b", 40, 2, iCoords3); //3
 
 	int iCoords4[] = { 680, 300, 320, 300 };
@@ -447,7 +442,7 @@ void vAufgabe_7() {
 			320, 300 };
 	bZeichneStrasse("W44a", "W44b", 130, 7, iCoords6); //6
 
-	std::unique_ptr<PKW> fF1 = std::make_unique<PKW>("Fiat1", 30, 10);
+	std::unique_ptr<PKW> fF1 = std::make_unique<PKW>("Fiat1", 31, 10);
 	std::unique_ptr<PKW> fF2 = std::make_unique<PKW>("Audi1", 100, 5);
 	std::unique_ptr<PKW> fF3 = std::make_unique<PKW>("Fiat2", 30, 5);
 	std::unique_ptr<PKW> fF4 = std::make_unique<PKW>("Audi2", 100, 5);
@@ -456,7 +451,12 @@ void vAufgabe_7() {
 	Kr1->vAnnahme(move(fF3), 5);
 	Kr1->vAnnahme(move(fF4), 7);
 
-	for (; dGlobaleZeit <= 10; dGlobaleZeit += 0.1) {
+	pKreuzungen.push_back(move(Kr1));
+	pKreuzungen.push_back(move(Kr2));
+	pKreuzungen.push_back(move(Kr3));
+	pKreuzungen.push_back(move(Kr4));
+
+	for (; dGlobaleZeit <= 15; dGlobaleZeit += 0.2) {
 		vSetzeZeit(dGlobaleZeit);
 		for (auto it = pKreuzungen.begin(); it != pKreuzungen.end(); it++) {
 			(*it)->vSimulieren();
@@ -470,7 +470,7 @@ void vAufgabe_7() {
 }
 
 int main() {
-	vAufgabe_6();
+	vAufgabe_7();
 
 }
 
