@@ -12,6 +12,7 @@
 #include "Fahrrad.h"
 #include "Kreuzung.h"
 #include "Tempolimit.h"
+#include "SimuClient.h"
 
 Simulation::Simulation() {
 	// TODO Auto-generated constructor stub
@@ -21,7 +22,7 @@ Simulation::Simulation() {
 Simulation::~Simulation() {
 	// TODO Auto-generated destructor stub
 }
-void Simulation::vEinlesen(std::istream &i) {
+void Simulation::vEinlesen(std::istream &i, bool bMitGrafik) {
 	std::string sTemp;
 	std::string sTemp2;
 	double dStartzeitpunkt;
@@ -36,9 +37,24 @@ void Simulation::vEinlesen(std::istream &i) {
 				std::shared_ptr<Kreuzung> NeuKreuzung = std::make_shared<
 						Kreuzung>();
 				i >> *NeuKreuzung;
+				auto it = pMapKreuzungen.find(NeuKreuzung->vGetName());
+				if (it != pMapKreuzungen.end()) {
+					throw std::runtime_error("Kreuzung bereits vorhanden");
+				}
 				pMapKreuzungen.insert(
 						std::pair<std::string, std::shared_ptr<Kreuzung>>(
 								NeuKreuzung->vGetName(), NeuKreuzung));
+				//für Grafik
+				if (bMitGrafik) {
+					double dXCoord;
+					double dYCoord;
+					i >> sTemp;
+					dXCoord = stod(sTemp);
+					i >> sTemp;
+					dYCoord = stod(sTemp);
+					bZeichneKreuzung(dXCoord, dYCoord);
+
+				}
 			} else if (sTemp == "STRASSE") {
 
 				// Straße Einlesen:
@@ -52,9 +68,9 @@ void Simulation::vEinlesen(std::istream &i) {
 				i >> sNameW1;
 				i >> sNameW2;
 
-				double dStrassenlaenge;
+				int iStrassenlaenge;
 				i >> sTemp;
-				dStrassenlaenge = stod(sTemp);
+				iStrassenlaenge = stoi(sTemp);
 
 				Tempolimit eTempolimit;
 				i >> sTemp;
@@ -70,35 +86,32 @@ void Simulation::vEinlesen(std::istream &i) {
 				if (stod(sTemp) == 1)
 					bUeberholverbot = 1;
 
-				std::shared_ptr<Kreuzung> pK1 = std::make_shared<Kreuzung>(
-						sNameK1);
-				std::shared_ptr<Kreuzung> pK2 = std::make_shared<Kreuzung>(
-						sNameK2);
-
 				auto it1 = pMapKreuzungen.find(sNameK1);
 				auto it2 = pMapKreuzungen.find(sNameK2);
 
-				if (it1 == pMapKreuzungen.end()) {
-					pMapKreuzungen.insert(
-							std::pair<std::string, std::shared_ptr<Kreuzung>>(
-									pK1->vGetName(), pK1));
-				} else {
-
+				if (it1 == pMapKreuzungen.end()
+						|| it2 == pMapKreuzungen.end()) {
 					throw std::runtime_error(
-							"Runtime Error: Kreuzung Bereits vorhanden");
-
-				}
-				if (it2 == pMapKreuzungen.end()) {
-					pMapKreuzungen.insert(
-							std::pair<std::string, std::shared_ptr<Kreuzung>>(
-									pK2->vGetName(), pK2));
+							"Runtime Error:Gesuchte Kreuzung nicht vorhanden (Strasse)");
 				} else {
-					throw std::runtime_error(
-							"Runtime Error: Kreuzung Bereits vorhanden");
-
+					Kreuzung::vVerbinde(sNameW1, sNameW2, iStrassenlaenge,
+							it1->second, it2->second, eTempolimit,
+							bUeberholverbot);
 				}
-				Kreuzung::vVerbinde(sNameW1, sNameW2, dStrassenlaenge, pK1, pK2,
-						eTempolimit, bUeberholverbot);
+				if(bMitGrafik){
+					int iAnzahlCoords;
+					int iTempCoord;
+					i>>sTemp;
+					iAnzahlCoords = stoi(sTemp);
+					int iCoords[2*iAnzahlCoords];
+
+					for (int j = 0; j < 2*iAnzahlCoords; j++){
+						i>>sTemp;
+						iTempCoord = stoi(sTemp);
+						iCoords[j] = iTempCoord;
+					}
+					bZeichneStrasse(sNameW1, sNameW2, iStrassenlaenge, iAnzahlCoords, iCoords);
+				}
 			} else if (sTemp == "PKW") {
 				//Einlesen PKW
 
@@ -111,7 +124,7 @@ void Simulation::vEinlesen(std::istream &i) {
 				auto it = pMapKreuzungen.find(sTemp);
 				if (it == pMapKreuzungen.end()) {
 					throw std::runtime_error(
-							"Runtime Error: Gesuchte Kreuzung nicht vorhanden");
+							"Runtime Error: Gesuchte Kreuzung nicht vorhanden (PKW)");
 
 				} else {
 					it->second->vAnnahme(move(NeuPKW), dStartzeitpunkt);
@@ -130,7 +143,7 @@ void Simulation::vEinlesen(std::istream &i) {
 				auto it = pMapKreuzungen.find(sTemp);
 				if (it == pMapKreuzungen.end()) {
 					throw std::runtime_error(
-							"Runtime Error: Gesuchte Kreuzung nicht vorhanden");
+							"Runtime Error: Gesuchte Kreuzung nicht vorhanden (Fahrrad)");
 
 				} else {
 					it->second->vAnnahme(move(NeuFahrrad), dStartzeitpunkt);
@@ -142,16 +155,19 @@ void Simulation::vEinlesen(std::istream &i) {
 
 			i >> sTemp;
 		} catch (std::exception &e) {
-			std::cout << "In Zeile " << iZeilenCounter << ":	"<< e.what();
+			std::cout << "In Zeile " << iZeilenCounter << ":	" << e.what();
+			exit(EXIT_FAILURE);
 
 		}
 
 	}
 }
-void Simulation::vSimulieren(double dDauer, double dZeitschritt){
-	for (dGlobaleZeit = 0; dGlobaleZeit<= dDauer; dGlobaleZeit += dZeitschritt){
-	for(auto it = pMapKreuzungen.begin(); it != pMapKreuzungen.end(); it++){
-		it->second->vSimulieren();
-	}
+void Simulation::vSimulieren(double dDauer, double dZeitschritt) {
+	for (dGlobaleZeit = 0; dGlobaleZeit <= dDauer; dGlobaleZeit +=
+			dZeitschritt) {
+		for (auto it = pMapKreuzungen.begin(); it != pMapKreuzungen.end();
+				it++) {
+			it->second->vSimulieren();
+		}
 	}
 }

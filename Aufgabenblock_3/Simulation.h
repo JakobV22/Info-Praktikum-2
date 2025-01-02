@@ -20,7 +20,7 @@ protected:
 public:
 	Simulation();
 	virtual ~Simulation();
-	void vEinlesen(std::istream& i);
+	void vEinlesen(std::istream& i, bool bMitGrafik = false);
 	void vSimulieren(double dDauer, double dZeitschritt);
 };
 
