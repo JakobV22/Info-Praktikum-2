@@ -98,4 +98,12 @@ std::shared_ptr<Weg> Kreuzung::pZufaelligerWeg(Weg &rWeg) {
 		return nullptr;
 
 }
+void Kreuzung::vEinlesen(std::istream &i) {
+	Simulationsobjekt::vEinlesen(i);
+	std::string Eingabe;
+	std::cout << "\n\n Volumen der Tankstelle:		";
+	i >> Eingabe;
+	double dEingabe = stod(Eingabe);
+	p_dTankstelle = dEingabe;
+}
 

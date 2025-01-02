@@ -177,3 +177,11 @@ int Fahrzeug::getID() const{
 double Fahrzeug::dGetSchranke() const{
 	return p_dAbschnittStrecke;
 }
+void Fahrzeug::vEinlesen(std::istream &i) {
+	Simulationsobjekt::vEinlesen(i);
+	std::string Eingabe;
+	std::cout << "\n\n max Geschwindigkeit:		";
+	i >> Eingabe;
+	double dEingabe = stod(Eingabe);
+	p_dMaxGeschwindigkeit = dEingabe;
+}

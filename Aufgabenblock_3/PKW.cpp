@@ -88,27 +88,26 @@ void PKW::vSimulieren() {
 
 }
 
-
 /**
  * Überlädt Fahrzeug::vAusgeben
  * gibt zusätzlich Gesamtverbrauch und aktuellen Tankinhakt in zu vKopf passendem Format aus
  */
 void PKW::vAusgeben(std::ostream &o) const {
-Fahrzeug::vAusgeben(o);
-o << std::setw(20) << (p_dGesamtstrecke * p_dVerbrauch) / 100.00
-		<< std::setw(15) << p_dTankinhalt << std::setw(15)
-		<< dGeschwindigkeit();
+	Fahrzeug::vAusgeben(o);
+	o << std::setw(20) << (p_dGesamtstrecke * p_dVerbrauch) / 100.00
+			<< std::setw(15) << p_dTankinhalt;// << std::setw(15)
+			//<< dGeschwindigkeit();
 }
 
 /**
  * returned maximale Geschwindigkeit des PKWs (berücksichtigt jedoch Tempolimit)
  */
 double PKW::dGeschwindigkeit() const {
-if (p_dMaxGeschwindigkeit > p_pVerhalten->getWeg()->dGetTempolimit()) {
-	return p_pVerhalten->getWeg()->dGetTempolimit();
+	if (p_dMaxGeschwindigkeit > p_pVerhalten->getWeg()->dGetTempolimit()) {
+		return p_pVerhalten->getWeg()->dGetTempolimit();
 
-} else
-	return p_dMaxGeschwindigkeit;
+	} else
+		return p_dMaxGeschwindigkeit;
 }
 
 /**
@@ -116,17 +115,30 @@ if (p_dMaxGeschwindigkeit > p_pVerhalten->getWeg()->dGetTempolimit()) {
  * da PKW und Fahrrad unterschiedlich gezeichnet werden
  */
 void PKW::vZeichnen(const Weg &rWeg) const {
-double dRelPos = (getAbschnittStrecke() / rWeg.dGetLaenge());
-bZeichnePKW(p_sName, rWeg.vGetName(), dRelPos, dGeschwindigkeit(),
-		p_dTankinhalt);
+	double dRelPos = (getAbschnittStrecke() / rWeg.dGetLaenge());
+	bZeichnePKW(p_sName, rWeg.vGetName(), dRelPos, dGeschwindigkeit(),
+			p_dTankinhalt);
 }
 PKW::~PKW() {
 // TODO Auto-generated destructor stub
 }
 
-double PKW::dGetSchranke() const{
-	if (p_dTankinhalt == 0){
+double PKW::dGetSchranke() const {
+	if (p_dTankinhalt == 0) {
 		return 0;					//Sonderfall
-	}
-	else return p_dAbschnittStrecke;
+	} else
+		return p_dAbschnittStrecke;
+}
+void PKW::vEinlesen(std::istream &i) {
+	Fahrzeug::vEinlesen(i);
+	std::string Eingabe;
+	std::cout << "\n\n Vebrauch:		";
+	i >> Eingabe;
+	double dEingabe = stod(Eingabe);
+	p_dVerbrauch = dEingabe;
+
+	std::cout << "\n\n Tankvolumen:		";
+	i >> Eingabe;
+	dEingabe = stod(Eingabe);
+	p_dTankvolumen = dEingabe;
 }

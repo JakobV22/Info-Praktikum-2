@@ -32,6 +32,7 @@ public:
 	void vSimulieren();
 	double dGetTankstelle();
 	std::shared_ptr<Weg> pZufaelligerWeg(Weg&);
+	virtual void vEinlesen(std::istream& i) override;
 
 };
 

@@ -16,8 +16,8 @@
 class PKW: public Fahrzeug {
 
 protected:
-	const double p_dVerbrauch = 0; //in Liter / 100km
-	const double p_dTankvolumen = 55; // in Liter
+	double p_dVerbrauch = 0; //in Liter / 100km
+	double p_dTankvolumen = 55; // in Liter
 	double p_dTankinhalt = 0;
 
 public:
@@ -34,6 +34,7 @@ public:
 	virtual ~PKW();
 	virtual void vZeichnen(const Weg& rWeg) const override;
 	double dGetSchranke() const override;
+	virtual void vEinlesen(std::istream& i) override;
 };
 
 #endif /* PKW_H_ */

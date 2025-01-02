@@ -18,6 +18,8 @@
 #include "vertagt_liste.h"
 #include <random>
 #include "stdlib.h"
+#include <fstream>
+#include "Simulation.h"
 
 extern double dGlobaleZeit = 0.0;
 typedef std::unique_ptr<Fahrzeug> u_ptrFahrzeug;
@@ -325,7 +327,6 @@ void vAufgabe_6() {
 	int iCoords[] = { 200, 200, 600, 500 };
 	bZeichneStrasse(Weg1.vGetName(), Weg2.vGetName(), 500, 2, iCoords);
 
-
 	vSleep(10000);
 	for (; dGlobaleZeit <= 15; dGlobaleZeit += 0.4) {
 		vSetzeZeit(dGlobaleZeit);
@@ -469,8 +470,57 @@ void vAufgabe_7() {
 	vBeendeGrafik();
 }
 
+void vAufgabe_8() {
+	std::ifstream f("VO.dat");
+	if (!f){
+		throw std::runtime_error("Fehler beim Einlesen der Datei");
+		return;
+	}
+
+	std::unique_ptr<Fahrrad> Fahrrad1 = std::make_unique<Fahrrad>();
+	std::unique_ptr<PKW> PKW1 = std::make_unique<PKW>();
+	std::unique_ptr<Kreuzung> Kreuzung1 = std::make_unique<Kreuzung>();
+
+	try {
+		f >> *PKW1;
+		f >> *Fahrrad1;
+		f >> *Kreuzung1;
+
+		std::cout << "\n\n" << std::endl;
+		Fahrzeug::vKopf();
+		std::cout << *Fahrrad1 << "\n" << std::endl;
+		std::cout << *PKW1 << "\n" << std::endl;
+		std::cout << *Kreuzung1 << "\n" << std::endl;
+
+	} catch (std::exception &e) {
+		std::cout << "EXCEPTION: " << e.what() << "\n\n" << std::endl;
+		return;
+
+	}
+
+}
+void  vAufgabe_8a(){
+	Simulation sim;
+	std::ifstream f("VO.dat");
+		if (!f){
+			throw std::runtime_error("Fehler beim Einlesen der Datei");
+			return;
+		}
+	sim.vEinlesen(f);
+}
+
+void vAufgabe_9(){
+	Simulation sim;
+		std::ifstream f("Simu.dat");
+			if (!f){
+				throw std::runtime_error("Fehler beim Einlesen der Datei");
+				return;
+			}
+		sim.vEinlesen(f);
+
+}
 int main() {
-	vAufgabe_7();
+	vAufgabe_8a();
 
 }
 

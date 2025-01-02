@@ -36,8 +36,10 @@ public:
 	virtual void vAusgeben(std::ostream& o) const;
 	std::string vGetName() const;
 	double getLetzteAktualisierung() const;
+	virtual void vEinlesen(std::istream& i);
 };
 
 std::ostream& operator<<(std::ostream &o, const Simulationsobjekt &s);
+std::istream& operator >>(std::istream& i, Simulationsobjekt& s);
 
 #endif /* SIMULATIONSOBJEKT_H_ */

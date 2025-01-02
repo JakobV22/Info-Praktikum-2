@@ -6,7 +6,8 @@
  */
 
 #include "Simulationsobjekt.h"
-
+#include <exception>
+#include <stdexcept>
 
 /**
  * Standardkonstruktor
@@ -14,8 +15,8 @@
  */
 Simulationsobjekt::Simulationsobjekt() {
 	p_dLetzteAktualisierung = dGlobaleZeit;
-		std::cout << "Objekt wurde mit Standardkonstruktor erstellt: " << p_sName
-				<< ", " << p_iID << std::endl;
+	std::cout << "Objekt wurde mit Standardkonstruktor erstellt: " << p_sName
+			<< ", " << p_iID << std::endl;
 
 }
 
@@ -41,10 +42,10 @@ Simulationsobjekt::~Simulationsobjekt() {
 /**
  * Gibt Daten des Objekts in bestimmtem Format aus (wird in Unterklassen erweitert)
  */
-void Simulationsobjekt::vAusgeben(std::ostream& o) const{
-	o << std::resetiosflags(std::ios::left)
-			<< std::setiosflags(std::ios::right) << std::setw(3) << p_iID
-			<< std::setw(2) << "" << std::resetiosflags(std::ios::right)
+void Simulationsobjekt::vAusgeben(std::ostream &o) const {
+	o << std::resetiosflags(std::ios::left) << std::setiosflags(std::ios::right)
+			<< std::setw(3) << p_iID << std::setw(2) << ""
+			<< std::resetiosflags(std::ios::right)
 			<< std::setiosflags(std::ios::left) << std::setw(5) << p_sName;
 
 }
@@ -62,12 +63,12 @@ void Simulationsobjekt::vSimulieren() {
 	}
 
 }
-std::string Simulationsobjekt::vGetName() const{
+std::string Simulationsobjekt::vGetName() const {
 	return p_sName;
 
 }
 
-double Simulationsobjekt::getLetzteAktualisierung() const{
+double Simulationsobjekt::getLetzteAktualisierung() const {
 	return p_dLetzteAktualisierung;
 }
 /**
@@ -78,4 +79,17 @@ std::ostream& operator<<(std::ostream &o, const Simulationsobjekt &s) {
 	s.vAusgeben(o);
 	return o;
 
+}
+void Simulationsobjekt::vEinlesen(std::istream &i) {
+	if (p_sName == ""){
+	std::string Eingabe;
+	std::cout << "\n\nName:		";
+	i >> Eingabe;
+	p_sName = Eingabe;
+	}
+	else throw std::runtime_error("Runtime Error: Kein Neues Objekt");
+}
+std::istream& operator >>(std::istream &i, Simulationsobjekt &s) {
+	s.vEinlesen(i);
+	return i;
 }

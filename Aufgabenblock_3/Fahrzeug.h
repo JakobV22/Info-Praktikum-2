@@ -66,6 +66,7 @@ public:
 	virtual void vZeichnen(const Weg&) const;
 	int getID() const;
 	virtual double dGetSchranke() const;
+	virtual void vEinlesen(std::istream& i) override;
 
 };
 
