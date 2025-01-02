@@ -132,6 +132,9 @@ void Weg::vAnnahme(std::unique_ptr<Fahrzeug> pFahrzeug,
  */
 std::unique_ptr<Fahrzeug> Weg::pAbgabe(const Fahrzeug &rFahrzeug) {
 	for (auto it = p_pFahrzeuge.begin(); it != p_pFahrzeuge.end(); it++) {
+
+		if (*it == nullptr) continue;		//alhamdulillah vertagte Liste macht Aua
+
 		if ((*it)->getID() == rFahrzeug.getID()) {
 					std::unique_ptr<Fahrzeug> pTemp = move(*it);
 					p_pFahrzeuge.erase(it);

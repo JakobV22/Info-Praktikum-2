@@ -462,7 +462,7 @@ void vAufgabe_7() {
 			(*it)->vSimulieren();
 		}
 
-		vSleep(100);
+		vSleep(20);
 
 	}
 	vSleep(10000);
