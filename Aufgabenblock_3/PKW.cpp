@@ -123,6 +123,12 @@ PKW::~PKW() {
 // TODO Auto-generated destructor stub
 }
 
+/**
+ * Gibt aktuelle Position auf STrecke für virtuelle Schranke des Überholverbotes zurück
+ * WENN TANK VOLL
+ *
+ * Ansonsten 0 als Sonderfall
+ */
 double PKW::dGetSchranke() const {
 	if (p_dTankinhalt == 0) {
 		return 0;					//Sonderfall
@@ -132,12 +138,12 @@ double PKW::dGetSchranke() const {
 void PKW::vEinlesen(std::istream &i) {
 	Fahrzeug::vEinlesen(i);
 	std::string Eingabe;
-	std::cout << "\n\n Vebrauch:		";
+
 	i >> Eingabe;
 	double dEingabe = stod(Eingabe);
 	p_dVerbrauch = dEingabe;
 
-	std::cout << "\n\n Tankvolumen:		";
+
 	i >> Eingabe;
 	dEingabe = stod(Eingabe);
 	p_dTankvolumen = dEingabe;

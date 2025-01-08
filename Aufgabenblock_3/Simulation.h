@@ -3,6 +3,9 @@
  *
  *  Created on: 02.01.2025
  *      Author: vogel
+ *
+ *
+ *	für komfortableren Ablauf der Simulation
  */
 #include <iostream>
 #include <memory>

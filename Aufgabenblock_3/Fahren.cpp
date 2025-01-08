@@ -26,6 +26,8 @@ Fahren::~Fahren() {
  * Errechnet in gegebenem Zeitintervall zurückgelegte Strecke
  * Falls diese + vorherige Abschnittstrecke größer als Weg-Länge: Exception Streckenende
  * sonst return zurückgelegte Strecke
+ *
+ * Überprüft ob Überholvorgang auf Strecke mit Überholverbot, begrenzt zu fahrende Strecke ggf
  */
 double Fahren::dStrecke (Fahrzeug& aFzg, double dZeitIntervall){
 				double dZurueckgelegt = (dZeitIntervall * aFzg.dGeschwindigkeit());

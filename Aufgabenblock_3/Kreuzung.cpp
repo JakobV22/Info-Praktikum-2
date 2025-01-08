@@ -26,6 +26,14 @@ Kreuzung::Kreuzung(std::string sName, double dTankstelle) :
 		Simulationsobjekt(sName), p_dTankstelle(dTankstelle) {
 
 }
+
+/**
+ * statische Funktion
+ * Nimmt als Argumente Name Hinweg, Name Rückweg, Weglänge, Kreuzung 1, Kreuzung 2, Tempolimit und Überholverbot
+ * Erzeugt die Wegobjekte, die jeweils auf eine Kreuzung führen
+ * Macht Wege untereinander bekannt (setRueckweg)
+ * Nimmt die Wege in die Wegliste der jeweiligen Kreuzung auf
+ */
 void Kreuzung::vVerbinde(std::string sWeg1, std::string sWeg2,
 		double dWeglaenge, std::shared_ptr<Kreuzung> pKreuzung1,
 		std::shared_ptr<Kreuzung> pKreuzung2, Tempolimit tTempolimit,
@@ -44,6 +52,12 @@ void Kreuzung::vVerbinde(std::string sWeg1, std::string sWeg2,
 	pKreuzung2->p_pWege.push_back(pWeg2);
 
 }
+
+/**
+ * Falls Tankstelle noch nicht leer:
+ * füllt übergebenes Fahrzeug komplett auf
+ * Zieht getankte Menge von Kapazität ab
+ */
 void Kreuzung::vTanken(Fahrzeug &rFahrzeug) {
 	if (p_dTankstelle > 0) {
 		double dTankmenge = rFahrzeug.dTanken(
@@ -55,6 +69,12 @@ void Kreuzung::vTanken(Fahrzeug &rFahrzeug) {
 double Kreuzung::dGetTankstelle() {
 	return p_dTankstelle;
 }
+
+/**
+ * nimmt Fahrzeug Objekt,
+ *  tankt es ggf voll
+ *  setzt es parkend auf den ersten abgehenden Weg
+ */
 void Kreuzung::vAnnahme(std::unique_ptr<Fahrzeug> pFahrzeug,
 		double dStartzeitpunkt) {
 	if (pFahrzeug != nullptr && !p_pWege.empty()) {
@@ -64,12 +84,19 @@ void Kreuzung::vAnnahme(std::unique_ptr<Fahrzeug> pFahrzeug,
 		std::cout << "Gewünschte Kreuzung nicht angebunden" << std::endl;
 
 }
+/**
+ * simuliert alle von Kreuzung abgehenden Wege
+ */
 void Kreuzung::vSimulieren() {
 	for (auto it = p_pWege.begin(); it != p_pWege.end(); it++) {
 		(*it)->vSimulieren();
 		//std::cout << *(*it)<< std::endl;
 	}
 }
+/**
+ * Gibt zufälligen Weg aus Wegliste der Kreuzung zurück
+ * nicht den übergebenen (Rückweg vom Hinweg), außer dies ist der einzige
+ */
 std::shared_ptr<Weg> Kreuzung::pZufaelligerWeg(Weg &rWeg) {
 	if (p_pWege.size() == 1) {
 		return (p_pWege.front());//falls nur 1 Weg, diesen (Rueckweg) nehmen

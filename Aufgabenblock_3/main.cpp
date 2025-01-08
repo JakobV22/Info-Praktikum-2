@@ -527,6 +527,7 @@ void vAufgabe_9a() {
 		throw std::runtime_error("Fehler beim Einlesen der Datei");
 	}
 	sim.vEinlesen(f, true);
+
 	sim.vSimulieren(15, 0.2);
 
 	vSleep(10000);

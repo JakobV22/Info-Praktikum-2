@@ -174,13 +174,21 @@ void Fahrzeug::setVerhalten(std::unique_ptr<Verhalten> pVerhalten){
 int Fahrzeug::getID() const{
 	return p_iID;
 }
+
+/**
+ * gibt aktuelle Position zurück (für virtuelle Schranke bei Überhiolverbot, in PKW überladen wegen Tank leer Fall)
+ */
 double Fahrzeug::dGetSchranke() const{
 	return p_dAbschnittStrecke;
 }
+
+/**
+ * Erweiterung von SImulationsobjekt::vEinlesen um Eingabemöglichkeit zur max Geschwindigkeit
+ */
 void Fahrzeug::vEinlesen(std::istream &i) {
 	Simulationsobjekt::vEinlesen(i);
 	std::string Eingabe;
-	std::cout << "\n\n max Geschwindigkeit:		";
+
 	i >> Eingabe;
 	double dEingabe = stod(Eingabe);
 	p_dMaxGeschwindigkeit = dEingabe;

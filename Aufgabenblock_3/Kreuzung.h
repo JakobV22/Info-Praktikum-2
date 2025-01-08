@@ -3,6 +3,11 @@
  *
  *  Created on: 28.12.2024
  *      Author: vogel
+ *
+ *
+ *
+ *  Speichert in Liste Wege, die von ihr Wegführen
+ *  Kann ggf Autos mit "Tankstelle" volltanken
  */
 
 #ifndef KREUZUNG_H_

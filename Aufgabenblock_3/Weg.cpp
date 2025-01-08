@@ -49,6 +49,7 @@ void Weg::vSimulieren() {
 	for (auto it = p_pFahrzeuge.begin(); it != p_pFahrzeuge.end(); it++) {
 		try {
 			(*it)->vSimulieren();
+			//////////////////////////////
 			double Schranke = (*it)->dGetSchranke();
 			setVirtuelleSchranke(Schranke);
 		} catch (Fahrausnahme &e) {
@@ -145,10 +146,18 @@ std::unique_ptr<Fahrzeug> Weg::pAbgabe(const Fahrzeug &rFahrzeug) {
 			}
 			return nullptr;
 		}
+/**
+ * Legt /durch Position des aktuellen (gleich vorherigen) Fahrzeugs neue Virtuelle Schranke fest
+ */
 void Weg::setVirtuelleSchranke(double dPosition){
 	if (dPosition != 0) p_dVirtuelleSchranke = dPosition;
 }
 
+/**
+ * Überprüft ob Weg ein Überholverbot hat
+ * gibt in diesem Fall die Virtuelle Schranke (Fahrzeug vor aktuell simuliertem Fahrzeug) zurück
+ * ansonsten Weglänge als natürliche Grenze
+ */
 double Weg::getVirtuelleSchranke(){
 	if (p_bUeberholverbot == true){
 	return p_dVirtuelleSchranke;

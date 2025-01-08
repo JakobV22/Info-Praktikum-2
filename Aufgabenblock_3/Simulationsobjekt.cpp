@@ -80,15 +80,23 @@ std::ostream& operator<<(std::ostream &o, const Simulationsobjekt &s) {
 	return o;
 
 }
+/**
+ * Nimmt Eingabestream
+ * Interpretiert Eingabe als Name und ändert namen des Simulationsobjektes entsprechend (nur falls noch kein Name vorhanden)
+ * wirft ggf exception, die im Hauptprogramm gefangen wird
+ */
 void Simulationsobjekt::vEinlesen(std::istream &i) {
 	if (p_sName == ""){
 	std::string Eingabe;
-	std::cout << "\n\nName:		";
 	i >> Eingabe;
 	p_sName = Eingabe;
 	}
-	else throw std::runtime_error("Runtime Error: Kein Neues Objekt");
+	else throw std::runtime_error("Runtime Error: Objekt hat bereits Namen");
 }
+
+/**
+ * Überladung des Eingabeoperators für Simulationsobjekt
+ */
 std::istream& operator >>(std::istream &i, Simulationsobjekt &s) {
 	s.vEinlesen(i);
 	return i;
