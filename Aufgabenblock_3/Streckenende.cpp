@@ -30,9 +30,7 @@ void Streckenende::vBearbeiten() {
 	std::cout << "'Ausnahme: Streckenende ist aufgetreten für Fahrzeug: "
 			<< p_pFahrzeug->vGetName() << " auf Weg: " << p_pWeg->vGetName()
 			<< std::endl;
-	p_pFahrzeug->setGesamtstrecke(
-			p_pFahrzeug->getGesamtstrecke()
-					+ (p_pWeg->dGetLaenge() - p_pFahrzeug->getAbschnittStrecke()));	//notwendig?
+	p_pFahrzeug->vZeichnen(*p_pWeg);
 ///////////////////////////////Falls Fahrzeuge immer Tanken sollen
 
 	p_pWeg->pGetZielkreuzung()->vTanken(*p_pFahrzeug);

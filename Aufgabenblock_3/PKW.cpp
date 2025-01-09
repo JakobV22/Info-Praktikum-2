@@ -79,9 +79,11 @@ void PKW::vSimulieren() {
 		p_dGesamtstrecke += dStreckeGefahren;
 		p_dAbschnittStrecke += dStreckeGefahren;
 
-		double dBenzinVerbraucht = (dZeitVergangen * dGeschwindigkeit()
+		double dBenzinVerbraucht = (dZeitVergangen * dGeschwindigkeit()		//theoretischer Wert, falls PKW tatsächlich fährt
 				* p_dVerbrauch) / 100.00;
-		p_dTankinhalt -= dBenzinVerbraucht;
+
+		if (dStreckeGefahren != 0) p_dTankinhalt -= dBenzinVerbraucht;
+
 		if (p_dTankinhalt < 0)
 			p_dTankinhalt = 0;
 	}

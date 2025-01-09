@@ -37,6 +37,12 @@ double Fahren::dStrecke (Fahrzeug& aFzg, double dZeitIntervall){
 				}
 
 				if (dZurueckgelegt + aFzg.getAbschnittStrecke() >= p_pWeg->dGetLaenge() - std::numeric_limits<double>::epsilon()) {	//falls rundungsfeheler bei Schranke am ende
+
+					aFzg.setGesamtstrecke(
+								aFzg.getGesamtstrecke()
+										+ (p_pWeg->dGetLaenge() - aFzg.getAbschnittStrecke()));	//notwendig?
+
+					aFzg.setAbschnittStrecke(p_pWeg->dGetLaenge() - std::numeric_limits<double>::epsilon());
 					throw Streckenende(aFzg, *p_pWeg);
 					//return (p_pWeg->dGetLaenge() - aFzg.getAbschnittStrecke()) ;
 				}

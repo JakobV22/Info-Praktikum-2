@@ -212,6 +212,7 @@ void Simulation::vSimulieren(double dDauer, double dZeitschritt) {
 			dZeitschritt) {
 		for (auto it = pMapKreuzungen.begin(); it != pMapKreuzungen.end();
 				it++) {
+			vSetzeZeit(dGlobaleZeit);
 			it->second->vSimulieren();
 		}
 	}
